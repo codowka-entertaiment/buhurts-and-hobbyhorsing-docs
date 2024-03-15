@@ -1,0 +1,251 @@
+\doxysection{Renderer.\+hpp}
+\hypertarget{_renderer_8hpp_source}{}\label{_renderer_8hpp_source}\index{include/TurnEngine/wrapper/Renderer.hpp@{include/TurnEngine/wrapper/Renderer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}SDL2/SDL.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <span>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Enums.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Surface.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Texture.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Window.hpp"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }TurnEngine\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }Texture;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_renderer_info}{RendererInfo}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ SDL\_RendererInfo\ info\_\{\};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ SDL\_RendererInfo\ \textcolor{keyword}{const}*\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_afb010116960ee76d6b5618080f01189d}{native\_handle}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ \&info\_;\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ SDL\_RendererInfo*\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_a2616e584ceb9a7782ae46b433d840df5}{native\_handle}}()\ noexcept\ \{\ \textcolor{keywordflow}{return}\ \&info\_;\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::string\_view\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_a7d02bd58bc4bd48f5c3455fc30829647}{name}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ info\_.name;\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ RendererFlags\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_af63915abe143271c5296f1bdf3f95e13}{flags}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}RendererFlags\textcolor{keyword}{>}(info\_.flags);\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ std::span<PixelFormatEnum\ const>\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_ade70b05ec6919b83bad670f18c48896b}{texture\_formats}}()\ const\ noexcept;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ constexpr\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_a498a5a37de1ff848ee12b3feb37309ed}{max\_texture\_width}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ info\_.max\_texture\_width;\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_a100d0f1d1e79e9bce8fa9a65351c8de3}{max\_texture\_height}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ info\_.max\_texture\_height;\ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ SDL\_Renderer*\ renderer\_;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ab430dda7fee300f89d1e1bfa83ce890d}{Renderer}}(SDL\_Renderer*\ r)\ noexcept}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ renderer\_\{r\}\ \{\}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a7cce31007bd10162ac272aefc25c26bb}{Renderer}}(\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\&\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a5614e32447c01602cc1066556b77b39f}{operator=}}(\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\&\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a15d5a6742f0ddbea701097a9bf8f5ee1}{operator=}}(\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a3f98f7e70e2d0ef8b3f2d336594d8368}{Renderer}}(\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\&\&\ other)\ noexcept}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ renderer\_(std::exchange(other.renderer\_,\ \textcolor{keyword}{nullptr}))\ \{\}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae215fd8367065d38cfba6b1904744f92}{Renderer}}(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\&\ win,\ RendererFlags\ flags,\ \textcolor{keywordtype}{int}\ device\_index\ =\ -\/1)\ noexcept;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ explicit\ \mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}(\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}}\&\ s)\ noexcept;}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \string~\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}()\ noexcept;}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a8ceef66c0be51a78f393d91d3b888e36}{destroy}}()\ noexcept;}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ constexpr\ SDL\_Renderer*\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_aecbb37928fc9f7967b71fcdf3fc0d943}{native\_handle}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ renderer\_;\ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \textcolor{keyword}{operator}\ bool()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ renderer\_\ !=\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a0b270ad0da45733d27e158609739c2a7}{is\_ok}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ renderer\_\ !=\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ BlendMode\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ab1bddf626e57b293b25dfcfd7e25addd}{draw\_blend\_mode}}()\ const\ noexcept;}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}<>\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a9edc22242d4319fa202ecbfdf97d2ae1}{draw\_color}}()\ const\ noexcept;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_renderer_info}{RendererInfo}}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a03d64c5ff64dcdd771a1892edcddafa5}{info}}()\ const\ noexcept;}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}<>\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a25d140243a1a3297ead1e37b8afe6055}{output\_size}}()\ const\ noexcept;}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\_ref}}<SDL\_Texture\ const>\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_aa42888ede488c218ff2f81de50ae62bf}{get\_target}}()\ const\ noexcept;}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\_ref}}<SDL\_Texture>\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_aa42888ede488c218ff2f81de50ae62bf}{get\_target}}()\ noexcept;}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a4c46f6b24fd85d80db508c88145f9dfe}{clear}}()\ noexcept;}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a4e99d832bab1fa5aa10a1b3c5f8743af}{copy}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ render\_rect,\ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ const\&\ txr,\ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ txr\_rect)\ noexcept;}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a4e99d832bab1fa5aa10a1b3c5f8743af}{copy}}(\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ const\&\ txr,\ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ txr\_rect)\ noexcept;}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a4e99d832bab1fa5aa10a1b3c5f8743af}{copy}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ render\_rect,\ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ const\&\ txr)\ noexcept;}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a4e99d832bab1fa5aa10a1b3c5f8743af}{copy}}(\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ const\&\ txr)\ noexcept;}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae6444050b6f3e660300962436516e9ff}{copy\_ex}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ render\_rect,\ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ const\&\ txr,\ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ txr\_rect,\ \textcolor{keywordtype}{double}\ const\ angle,\ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<\textcolor{keywordtype}{int}>\ const\&\ center,\ RendererFlip\ flip\ =\ RendererFlip::NONE)\ noexcept;}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae6444050b6f3e660300962436516e9ff}{copy\_ex}}(\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ const\&\ txr,\ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ txr\_rect,\ \textcolor{keywordtype}{double}\ angle,\ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<\textcolor{keywordtype}{int}>\ const\&\ center,\ RendererFlip\ flip\ =\ RendererFlip::NONE)\ noexcept;}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae6444050b6f3e660300962436516e9ff}{copy\_ex}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ render\_rect,\ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ const\&\ txr,\ \textcolor{keywordtype}{double}\ angle,\ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<\textcolor{keywordtype}{int}>\ const\&\ center,\ RendererFlip\ flip\ =\ RendererFlip::NONE)\ noexcept;}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae6444050b6f3e660300962436516e9ff}{copy\_ex}}(\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ const\&\ txr,\ \textcolor{keywordtype}{double}\ angle,\ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<\textcolor{keywordtype}{int}>\ const\&\ center,\ RendererFlip\ flip\ =\ RendererFlip::NONE)\ noexcept;}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae6444050b6f3e660300962436516e9ff}{copy\_ex}}(\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ const\&\ txr,\ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ txr\_rect,\ \textcolor{keywordtype}{double}\ angle\ =\ 0.0,\ RendererFlip\ flip\ =\ RendererFlip::NONE)\ noexcept;}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae6444050b6f3e660300962436516e9ff}{copy\_ex}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ render\_rect,\ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ const\&\ txr,\ \textcolor{keywordtype}{double}\ angle\ =\ 0.0,\ RendererFlip\ flip\ =\ RendererFlip::NONE)\ noexcept;}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae6444050b6f3e660300962436516e9ff}{copy\_ex}}(\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ const\&\ txr,\ \textcolor{keywordtype}{double}\ angle\ =\ 0.0,\ RendererFlip\ flip\ =\ RendererFlip::NONE)\ noexcept;}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ template<class\ Rep>}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ad26484188a7381cd99030811c10344db}{draw\_line}}(\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<Rep>\ const\&\ from,\ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<Rep>\ const\&\ to)\ noexcept;}
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ template<class\ Rep>}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a42803a9a81aedac26d24c3d411d4d48a}{draw\_lines}}(std::span<\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<Rep>\ const>\ points)\ noexcept;}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ template<class\ Rep>}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a1e903efc46aea99c689c1e94dd6f05db}{draw\_point}}(\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<Rep>\ const\&\ p)\ noexcept;}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ template<class\ Rep>}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a330b1428695b72e24e3bf0ed278d9fd9}{draw\_points}}(std::span<\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<Rep>\ const>\ points)\ noexcept;}
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ template<class\ Rep>}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a7430099ab31f83e42f31a047b22967e4}{draw\_rect}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<Rep>\ const\&\ r)\ noexcept;}
+\DoxyCodeLine{00349\ }
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a4e80970f64f655654159757c3d2ca21b}{draw\_outline}}()\ noexcept;}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ template<class\ Rep>}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a6dd0c2160d45cf4799b88d99106f060a}{draw\_rects}}(std::span<\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<Rep>\ const>\ rs)\ noexcept;}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ template<class\ Rep>}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a3acbe8b0d844c2125ab1eba5e52f21d4}{fill\_rect}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<Rep>\ const\&\ r)\ noexcept;}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a02cb369e08a1273965ac7875bc42a279}{fill\_target}}()\ noexcept;}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ template<class\ Rep>}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a562d5024d0a4deebcc64618c8ffe281b}{fill\_rects}}(std::span<\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<Rep>\ const>\ rs)\ noexcept;}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a26cbd958fb9d95cd35604038a7748312}{clip\_rect}}()\ const\ noexcept;}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae4ebc495d3cf64744911340d265e567e}{integer\_scale}}()\ const\ noexcept;}
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}<>\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae4767eac03d278d02ac805639191981d}{logical\_size}}()\ const\ noexcept;}
+\DoxyCodeLine{00403\ }
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}<\textcolor{keywordtype}{float}>\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ac6de3f78b26e7ae5e345451b8456f96b}{scale}}()\ const\ noexcept;}
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae588d8b317d79dc781a0b15b7001c0a1}{viewport}}()\ const\ noexcept;}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a22c5662f1da812ad933b9b1caa8e60d4}{is\_clip\_enabled}}()\ const\ noexcept;}
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a430adbeaba6c7bd06738b6790260d953}{present}}()\ const\ noexcept;}
+\DoxyCodeLine{00426\ }
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a40a77146eeffe07cb3ccfc5f71e64592}{read\_pixels}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ r,\ PixelFormatEnum\ fmt,\ \textcolor{keywordtype}{void}*\ pixels,\ \textcolor{keywordtype}{int}\ pitch)\ const\ noexcept;}
+\DoxyCodeLine{00437\ }
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a40a77146eeffe07cb3ccfc5f71e64592}{read\_pixels}}(PixelFormatEnum\ fmt,\ \textcolor{keywordtype}{void}*\ pixels,\ \textcolor{keywordtype}{int}\ const\ pitch)\ const\ noexcept;}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a40a77146eeffe07cb3ccfc5f71e64592}{read\_pixels}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ r,\ \textcolor{keywordtype}{void}*\ pixels,\ \textcolor{keywordtype}{int}\ pitch)\ const\ noexcept;}
+\DoxyCodeLine{00457\ }
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a40a77146eeffe07cb3ccfc5f71e64592}{read\_pixels}}(\textcolor{keywordtype}{void}*\ pixels,\ \textcolor{keywordtype}{int}\ pitch)\ const\ noexcept;}
+\DoxyCodeLine{00466\ }
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a0ed0b0bd247127143962824e638bd02a}{set\_clip\_rect}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ clip)\ noexcept;}
+\DoxyCodeLine{00473\ }
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_abdefd598ea271e441c4727e833ece4ed}{disable\_clipping}}()\ noexcept;}
+\DoxyCodeLine{00479\ }
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a7bd3dc4d2d46c56bd28bb3361c24e8d4}{set\_integer\_scale}}(\textcolor{keywordtype}{bool}\ enable)\ noexcept;}
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_aa4fd956d8989fcca20daaf7b21886199}{set\_logical\_size}}(\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}<\textcolor{keywordtype}{int}>\ const\&\ size)\ noexcept;}
+\DoxyCodeLine{00493\ }
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a4aefa07fb4de1856cd6f93036ffba422}{set\_scale}}(\mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}<\textcolor{keywordtype}{float}>\ const\&\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ac6de3f78b26e7ae5e345451b8456f96b}{scale}})\ noexcept;}
+\DoxyCodeLine{00500\ }
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_adb09950efe039b8c124dd5d7aed55145}{set\_viewport}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ r)\ noexcept;}
+\DoxyCodeLine{00507\ }
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a25a2d9d78fff8ce951e668c1b4f42747}{reset\_viewport}}()\ noexcept;}
+\DoxyCodeLine{00513\ }
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ static\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a5be3fd768a306e988951597d204e7f3f}{target\_supported}}(\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\ const\&\ r)\ noexcept;}
+\DoxyCodeLine{00520\ }
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a24efa4f07bd277169d6f7c891b9ee931}{set\_draw\_blend\_mode}}(BlendMode\ mode)\ noexcept;}
+\DoxyCodeLine{00527\ }
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_af2fb83980c14840b3d6b9426e7a89c61}{set\_draw\_color}}(\mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}<>\ color)\ noexcept;}
+\DoxyCodeLine{00534\ }
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_aa75d62aaed3c1312120cc61ca607bded}{set\_render\_target}}(\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ const\&\ t)\ noexcept;}
+\DoxyCodeLine{00542\ }
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a0c2403828addaa12e00af2264e347c92}{reset\_render\_target}}()\ noexcept;}
+\DoxyCodeLine{00548\ \ \ \ \ \};}
+\DoxyCodeLine{00549\ }
+\DoxyCodeLine{00556\ \ \ \ \ inline\ std::pair<\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}},\ \mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}>\ create\_window\_and\_renderer(\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}<\textcolor{keywordtype}{int}>\ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}},\ WindowFlags\ flags)\ noexcept;}
+\DoxyCodeLine{00557\ }
+\DoxyCodeLine{00558\ \ \ \ \ template<class\ Rep>}
+\DoxyCodeLine{00559\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}::\mbox{\hyperlink{class_turn_engine_1_1_renderer_ad26484188a7381cd99030811c10344db}{draw\_line}}(\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<Rep>\ const\&\ from,\ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<Rep>\ const\&\ to)\ noexcept\ \{}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<Rep,\ int>)}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_RenderDrawLine(renderer\_,\ from.x(),\ from.y(),\ to.x(),\ to.y())\ ==\ 0;}
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_RenderDrawLineF(renderer\_,\ from.x(),\ from.y(),\ to.x(),\ to.y())\ ==\ 0;}
+\DoxyCodeLine{00564\ \ \ \ \ \}}
+\DoxyCodeLine{00565\ }
+\DoxyCodeLine{00566\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Rep>}
+\DoxyCodeLine{00567\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a42803a9a81aedac26d24c3d411d4d48a}{Renderer::draw\_lines}}(std::span<\mbox{\hyperlink{class_turn_engine_1_1_point}{Point<Rep>}}\ \textcolor{keyword}{const}>\ \textcolor{keyword}{const}\ points)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00568\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<Rep,\ int>)}
+\DoxyCodeLine{00569\ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_RenderDrawLines(renderer\_,\ points.data()-\/>native\_handle(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(points.size()))\ ==\ 0;}
+\DoxyCodeLine{00570\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00571\ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_RenderDrawLinesF(renderer\_,\ points.data()-\/>native\_handle(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(points.size()))\ ==\ 0;}
+\DoxyCodeLine{00572\ \}}
+\DoxyCodeLine{00573\ }
+\DoxyCodeLine{00574\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Rep>}
+\DoxyCodeLine{00575\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a1e903efc46aea99c689c1e94dd6f05db}{Renderer::draw\_point}}(\mbox{\hyperlink{class_turn_engine_1_1_point}{Point<Rep>}}\ \textcolor{keyword}{const}\&\ p)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00576\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<Rep,\ int>)}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_RenderDrawPoint(renderer\_,\ p.x(),\ p.y())\ ==\ 0;}
+\DoxyCodeLine{00578\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_RenderDrawPointF(renderer\_,\ p.x(),\ p.y())\ ==\ 0;}
+\DoxyCodeLine{00580\ \}}
+\DoxyCodeLine{00581\ }
+\DoxyCodeLine{00582\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Rep>}
+\DoxyCodeLine{00583\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a330b1428695b72e24e3bf0ed278d9fd9}{Renderer::draw\_points}}(std::span<\mbox{\hyperlink{class_turn_engine_1_1_point}{Point<Rep>}}\ \textcolor{keyword}{const}>\ \textcolor{keyword}{const}\ points)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00584\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<Rep,\ int>)}
+\DoxyCodeLine{00585\ \textcolor{keywordflow}{return}\ SDL\_RenderDrawPoints(renderer\_,\ points.data()-\/>native\_handle(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(points.size()))\ ==\ 0;}
+\DoxyCodeLine{00586\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00587\ \textcolor{keywordflow}{return}\ SDL\_RenderDrawPointsF(renderer\_,\ points.data()-\/>native\_handle(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(points.size()))\ ==\ 0;}
+\DoxyCodeLine{00588\ \}}
+\DoxyCodeLine{00589\ }
+\DoxyCodeLine{00590\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Rep>}
+\DoxyCodeLine{00591\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a7430099ab31f83e42f31a047b22967e4}{Renderer::draw\_rect}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect<Rep>}}\ \textcolor{keyword}{const}\&\ r)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00592\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<Rep,\ int>)}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_RenderDrawRect(renderer\_,\ r.native\_handle())\ ==\ 0;}
+\DoxyCodeLine{00594\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_RenderDrawRectF(renderer\_,\ r.native\_handle())\ ==\ 0;}
+\DoxyCodeLine{00596\ \}}
+\DoxyCodeLine{00597\ }
+\DoxyCodeLine{00598\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Rep>}
+\DoxyCodeLine{00599\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a6dd0c2160d45cf4799b88d99106f060a}{Renderer::draw\_rects}}(std::span<\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect<Rep>}}\ \textcolor{keyword}{const}>\ \textcolor{keyword}{const}\ r)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00600\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<Rep,\ int>)}
+\DoxyCodeLine{00601\ \textcolor{keywordflow}{return}\ SDL\_RenderDrawRects(renderer\_,\ r.data().native\_handle(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(r.size()))\ ==\ 0;}
+\DoxyCodeLine{00602\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00603\ \textcolor{keywordflow}{return}\ SDL\_RenderDrawRectsF(renderer\_,\ r.data().native\_handle(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(r.size()))\ ==\ 0;}
+\DoxyCodeLine{00604\ \}}
+\DoxyCodeLine{00605\ }
+\DoxyCodeLine{00606\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Rep>}
+\DoxyCodeLine{00607\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a3acbe8b0d844c2125ab1eba5e52f21d4}{Renderer::fill\_rect}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect<Rep>}}\ \textcolor{keyword}{const}\&\ r)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00608\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<Rep,\ int>)}
+\DoxyCodeLine{00609\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_RenderFillRect(renderer\_,\ r.native\_handle())\ ==\ 0;}
+\DoxyCodeLine{00610\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00611\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_RenderFillRectF(renderer\_,\ r.native\_handle())\ ==\ 0;}
+\DoxyCodeLine{00612\ \}}
+\DoxyCodeLine{00613\ }
+\DoxyCodeLine{00614\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Rep>}
+\DoxyCodeLine{00615\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a562d5024d0a4deebcc64618c8ffe281b}{Renderer::fill\_rects}}(std::span<\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect<Rep>}}\ \textcolor{keyword}{const}>\ \textcolor{keyword}{const}\ r)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00616\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<Rep,\ int>)}
+\DoxyCodeLine{00617\ \textcolor{keywordflow}{return}\ SDL\_RenderFillRects(renderer\_,\ r.data().native\_handle(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(r.size()))\ ==\ 0;}
+\DoxyCodeLine{00618\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00619\ \textcolor{keywordflow}{return}\ SDL\_RenderFillRectsF(renderer\_,\ r.data().native\_handle(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(r.size()))\ ==\ 0;}
+\DoxyCodeLine{00620\ \}}
+\DoxyCodeLine{00621\ }
+\DoxyCodeLine{00622\ \}}
+
+\end{DoxyCode}

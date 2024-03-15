@@ -1,0 +1,1195 @@
+\doxysection{Turn\+Engine\+::Renderer Class Reference}
+\hypertarget{class_turn_engine_1_1_renderer}{}\label{class_turn_engine_1_1_renderer}\index{TurnEngine::Renderer@{TurnEngine::Renderer}}
+
+
+A wrapper around an SDL\+\_\+\+Renderer structure.  
+
+
+
+
+{\ttfamily \#include $<$Renderer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_renderer_ab430dda7fee300f89d1e1bfa83ce890d}{Renderer}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}r) noexcept
+\begin{DoxyCompactList}\small\item\em Explicit constructor for the \doxylink{class_turn_engine_1_1_s_d_l2}{SDL2} C API. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_renderer_a7cce31007bd10162ac272aefc25c26bb}\label{class_turn_engine_1_1_renderer_a7cce31007bd10162ac272aefc25c26bb} 
+{\bfseries Renderer} (\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_renderer_a5614e32447c01602cc1066556b77b39f}\label{class_turn_engine_1_1_renderer_a5614e32447c01602cc1066556b77b39f} 
+\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_renderer_a15d5a6742f0ddbea701097a9bf8f5ee1}\label{class_turn_engine_1_1_renderer_a15d5a6742f0ddbea701097a9bf8f5ee1} 
+\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em Move assignment deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_renderer_a3f98f7e70e2d0ef8b3f2d336594d8368}\label{class_turn_engine_1_1_renderer_a3f98f7e70e2d0ef8b3f2d336594d8368} 
+constexpr {\bfseries Renderer} (\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_renderer_ae215fd8367065d38cfba6b1904744f92}{Renderer}} (\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} \&win, Renderer\+Flags flags, int device\+\_\+index=-\/1) noexcept
+\begin{DoxyCompactList}\small\item\em Creates a 2D rendering context for a window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_renderer_a167bd59897c4f140a6382470a969cc9f}{Renderer}} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&s) noexcept
+\begin{DoxyCompactList}\small\item\em Creates a 2D software rendering context for a surface. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_renderer_a79e9c8b3b38eaf06b2a020123cc1cc35}\label{class_turn_engine_1_1_renderer_a79e9c8b3b38eaf06b2a020123cc1cc35} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Renderer} () noexcept
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_renderer_a8ceef66c0be51a78f393d91d3b888e36}{destroy}} () noexcept
+\begin{DoxyCompactList}\small\item\em Destroy the underlying renderer object. \end{DoxyCompactList}\item 
+constexpr SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1_renderer_aecbb37928fc9f7967b71fcdf3fc0d943}{native\+\_\+handle}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get a pointer to the underlying SDL representation. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_renderer_aa36347ce7abb390a195f2e4fa1e2eacc}{operator bool}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the renderer is in a valid state. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a0b270ad0da45733d27e158609739c2a7}{is\+\_\+ok}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the renderer is in a valid state. \end{DoxyCompactList}\item 
+Blend\+Mode \mbox{\hyperlink{class_turn_engine_1_1_renderer_ab1bddf626e57b293b25dfcfd7e25addd}{draw\+\_\+blend\+\_\+mode}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the blend mode used for drawing ops. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}} \mbox{\hyperlink{class_turn_engine_1_1_renderer_a9edc22242d4319fa202ecbfdf97d2ae1}{draw\+\_\+color}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the color used for the renderer\textquotesingle{}s drawing operations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_renderer_info}{Renderer\+Info}} \mbox{\hyperlink{class_turn_engine_1_1_renderer_a03d64c5ff64dcdd771a1892edcddafa5}{info}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get information about the renderer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}} \mbox{\hyperlink{class_turn_engine_1_1_renderer_a25d140243a1a3297ead1e37b8afe6055}{output\+\_\+size}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the output size in pixels of the renderer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}}$<$ SDL\+\_\+\+Texture const $>$ \mbox{\hyperlink{class_turn_engine_1_1_renderer_aa42888ede488c218ff2f81de50ae62bf}{get\+\_\+target}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the current renderer\textquotesingle{}s target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}}$<$ SDL\+\_\+\+Texture $>$ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a42105281c0b26d5d8e535004b0abfc70}{get\+\_\+target}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get the current renderer\textquotesingle{}s target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a4c46f6b24fd85d80db508c88145f9dfe}{clear}} () noexcept
+\begin{DoxyCompactList}\small\item\em Clear the rendering target with the drawing color. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a4e99d832bab1fa5aa10a1b3c5f8743af}{copy}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&render\+\_\+rect, \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&txr, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&txr\+\_\+rect) noexcept
+\begin{DoxyCompactList}\small\item\em Copies a portion of a texture to a portion of the rendering target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_ac186b5c75285f69dd4df20590aaf1897}{copy}} (\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&txr, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&txr\+\_\+rect) noexcept
+\begin{DoxyCompactList}\small\item\em Copies of portion of a teture to the entire rendering target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_ad3f42854d974ee8acdd70ab8658fe611}{copy}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&render\+\_\+rect, \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&txr) noexcept
+\begin{DoxyCompactList}\small\item\em Copies a texture to a portion of the rendering target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a19a8b67af393368514db444b166ebd44}{copy}} (\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&txr) noexcept
+\begin{DoxyCompactList}\small\item\em Copies a texture to the rendering target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae6444050b6f3e660300962436516e9ff}{copy\+\_\+ex}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&render\+\_\+rect, \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&txr, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&txr\+\_\+rect, double const angle, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ const \&center, Renderer\+Flip flip=Renderer\+Flip\+::\+NONE) noexcept
+\begin{DoxyCompactList}\small\item\em Copy a portion of a texture to a portion of the rendering target, rotating it around the given center and flipping it top-\/btm and/or left-\/right. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a2cce0cdc11739eb7f6fd385cd784e2b2}{copy\+\_\+ex}} (\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&txr, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&txr\+\_\+rect, double angle, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ const \&center, Renderer\+Flip flip=Renderer\+Flip\+::\+NONE) noexcept
+\begin{DoxyCompactList}\small\item\em Copy a portion of a texture to the rendering target, rotating it around the given center and flipping it top-\/btm and/or left-\/right. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a67341a7467e03f1e8668c806701c0f68}{copy\+\_\+ex}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&render\+\_\+rect, \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&txr, double angle, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ const \&center, Renderer\+Flip flip=Renderer\+Flip\+::\+NONE) noexcept
+\begin{DoxyCompactList}\small\item\em Copy a texture to a portion of the rendering target, rotating it around the given center and flipping it top-\/btm and/or left-\/right. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a95cf9e079e5a930fcc0a40bff285f4cf}{copy\+\_\+ex}} (\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&txr, double angle, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ const \&center, Renderer\+Flip flip=Renderer\+Flip\+::\+NONE) noexcept
+\begin{DoxyCompactList}\small\item\em Copy a texture to the rendering target, rotating it around the given center and flipping it top-\/btm and/or left-\/right. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_aa3f9303f1beda4796fcd9a76f557c3d0}{copy\+\_\+ex}} (\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&txr, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&txr\+\_\+rect, double angle=0.\+0, Renderer\+Flip flip=Renderer\+Flip\+::\+NONE) noexcept
+\begin{DoxyCompactList}\small\item\em Copy a portion of a texture to the rendering target, optionally rotating it around the renderer target\textquotesingle{}s center and flipping it top-\/btm and/or left-\/right. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_af3800502da6a49d0b6326ef049b763a2}{copy\+\_\+ex}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&render\+\_\+rect, \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&txr, double angle=0.\+0, Renderer\+Flip flip=Renderer\+Flip\+::\+NONE) noexcept
+\begin{DoxyCompactList}\small\item\em Copy a texture to a portion of the rendering target, optionally rotating it around render\+\_\+rect\textquotesingle{}s center and flipping it top-\/btm and/or left-\/right. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a7e2a9aff784be3600e516b49ba18a7d3}{copy\+\_\+ex}} (\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&txr, double angle=0.\+0, Renderer\+Flip flip=Renderer\+Flip\+::\+NONE) noexcept
+\begin{DoxyCompactList}\small\item\em Copy a texture to a rendering target, optionally rotating it around the rendering target\textquotesingle{}s center and flipping it top-\/btm and/or left-\/right. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Rep $>$ }\\bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_ad26484188a7381cd99030811c10344db}{draw\+\_\+line}} (\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ Rep $>$ const \&from, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ Rep $>$ const \&to) noexcept
+\begin{DoxyCompactList}\small\item\em Draw a line on the current rendering target. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Rep $>$ }\\bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a42803a9a81aedac26d24c3d411d4d48a}{draw\+\_\+lines}} (std\+::span$<$ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ Rep $>$ const $>$ points) noexcept
+\begin{DoxyCompactList}\small\item\em Draw a series of connected lines on the current rendering target. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Rep $>$ }\\bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a1e903efc46aea99c689c1e94dd6f05db}{draw\+\_\+point}} (\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ Rep $>$ const \&p) noexcept
+\begin{DoxyCompactList}\small\item\em Draw a point on the current rendering target. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Rep $>$ }\\bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a330b1428695b72e24e3bf0ed278d9fd9}{draw\+\_\+points}} (std\+::span$<$ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ Rep $>$ const $>$ points) noexcept
+\begin{DoxyCompactList}\small\item\em Draw points on the current rendering target. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Rep $>$ }\\bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a7430099ab31f83e42f31a047b22967e4}{draw\+\_\+rect}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ Rep $>$ const \&r) noexcept
+\begin{DoxyCompactList}\small\item\em Draw a rectangle on the current rendering target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a4e80970f64f655654159757c3d2ca21b}{draw\+\_\+outline}} () noexcept
+\begin{DoxyCompactList}\small\item\em Draw a rectangle outlining the current rendering target. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Rep $>$ }\\bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a6dd0c2160d45cf4799b88d99106f060a}{draw\+\_\+rects}} (std\+::span$<$ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ Rep $>$ const $>$ rs) noexcept
+\begin{DoxyCompactList}\small\item\em Draw rectangles on the current rendering target. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Rep $>$ }\\bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a3acbe8b0d844c2125ab1eba5e52f21d4}{fill\+\_\+rect}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ Rep $>$ const \&r) noexcept
+\begin{DoxyCompactList}\small\item\em Fill a rectangle on the current rendering target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a02cb369e08a1273965ac7875bc42a279}{fill\+\_\+target}} () noexcept
+\begin{DoxyCompactList}\small\item\em Fill the current rendering target with the current draw color. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Rep $>$ }\\bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a562d5024d0a4deebcc64618c8ffe281b}{fill\+\_\+rects}} (std\+::span$<$ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ Rep $>$ const $>$ rs) noexcept
+\begin{DoxyCompactList}\small\item\em Fill rectangles on the current rendering target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \mbox{\hyperlink{class_turn_engine_1_1_renderer_a26cbd958fb9d95cd35604038a7748312}{clip\+\_\+rect}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the clipping rectange for the current target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae4ebc495d3cf64744911340d265e567e}{integer\+\_\+scale}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get whether integer scales are forced for resolution-\/independent rendering. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}} \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae4767eac03d278d02ac805639191981d}{logical\+\_\+size}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the device independent resolution for rendering. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ float $>$ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ac6de3f78b26e7ae5e345451b8456f96b}{scale}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the drawing scale for the current target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \mbox{\hyperlink{class_turn_engine_1_1_renderer_ae588d8b317d79dc781a0b15b7001c0a1}{viewport}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the drawing area for the current target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a22c5662f1da812ad933b9b1caa8e60d4}{is\+\_\+clip\+\_\+enabled}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get whether clipping is enabled on the renderer. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_renderer_a430adbeaba6c7bd06738b6790260d953}\label{class_turn_engine_1_1_renderer_a430adbeaba6c7bd06738b6790260d953} 
+void {\bfseries present} () const noexcept
+\begin{DoxyCompactList}\small\item\em Update the screen with any rendering performed since the previous call. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a40a77146eeffe07cb3ccfc5f71e64592}{read\+\_\+pixels}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&r, Pixel\+Format\+Enum fmt, void \texorpdfstring{$\ast$}{*}pixels, int pitch) const noexcept
+\begin{DoxyCompactList}\small\item\em Copy an area of pixels from the rendering target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a8c54114dc4164b68447635ce0fba4565}{read\+\_\+pixels}} (Pixel\+Format\+Enum fmt, void \texorpdfstring{$\ast$}{*}pixels, int const pitch) const noexcept
+\begin{DoxyCompactList}\small\item\em Copy all pixels from the rendering target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_aace61960c74959b9e49ac969480b9282}{read\+\_\+pixels}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&r, void \texorpdfstring{$\ast$}{*}pixels, int pitch) const noexcept
+\begin{DoxyCompactList}\small\item\em Copy an area of pixels from the rendering target using the renderer\textquotesingle{}s pixel format. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a0fe63e1c5acc48a87e229e9fa9e8487c}{read\+\_\+pixels}} (void \texorpdfstring{$\ast$}{*}pixels, int pitch) const noexcept
+\begin{DoxyCompactList}\small\item\em Copy all pixels from the rendering target using the renderer\textquotesingle{}s pixel format. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a0ed0b0bd247127143962824e638bd02a}{set\+\_\+clip\+\_\+rect}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&clip) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the clip rectangle for rendering on the target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_abdefd598ea271e441c4727e833ece4ed}{disable\+\_\+clipping}} () noexcept
+\begin{DoxyCompactList}\small\item\em Disables clipping on the rendering target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a7bd3dc4d2d46c56bd28bb3361c24e8d4}{set\+\_\+integer\+\_\+scale}} (bool enable) noexcept
+\begin{DoxyCompactList}\small\item\em Sets whether to force integer scales from resolution-\/independent rendering. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_aa4fd956d8989fcca20daaf7b21886199}{set\+\_\+logical\+\_\+size}} (\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ const \&size) noexcept
+\begin{DoxyCompactList}\small\item\em Sets a device independent resolution for rendering. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a4aefa07fb4de1856cd6f93036ffba422}{set\+\_\+scale}} (\mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ float $>$ const \&\mbox{\hyperlink{class_turn_engine_1_1_renderer_ac6de3f78b26e7ae5e345451b8456f96b}{scale}}) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the drawing scale for rendering on the current target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_adb09950efe039b8c124dd5d7aed55145}{set\+\_\+viewport}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&r) noexcept
+\begin{DoxyCompactList}\small\item\em Set the renderer\textquotesingle{}s drawing area on the current target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a25a2d9d78fff8ce951e668c1b4f42747}{reset\+\_\+viewport}} () noexcept
+\begin{DoxyCompactList}\small\item\em Sets the viewport to the entier rendering target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a24efa4f07bd277169d6f7c891b9ee931}{set\+\_\+draw\+\_\+blend\+\_\+mode}} (Blend\+Mode mode) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the blend mode used for drawing opertaions. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_af2fb83980c14840b3d6b9426e7a89c61}{set\+\_\+draw\+\_\+color}} (\mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}$<$$>$ color) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the renderer\textquotesingle{}s draw color. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_aa75d62aaed3c1312120cc61ca607bded}{set\+\_\+render\+\_\+target}} (\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&t) noexcept
+\begin{DoxyCompactList}\small\item\em Sets a texture as the renderer\textquotesingle{}s target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a0c2403828addaa12e00af2264e347c92}{reset\+\_\+render\+\_\+target}} () noexcept
+\begin{DoxyCompactList}\small\item\em Resets the render target to the default render target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_turn_engine_1_1_renderer_a5be3fd768a306e988951597d204e7f3f}{target\+\_\+supported}} (\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} const \&r) noexcept
+\begin{DoxyCompactList}\small\item\em Determines wheather a window supports the use of render targets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A wrapper around an SDL\+\_\+\+Renderer structure. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1_renderer_ab430dda7fee300f89d1e1bfa83ce890d}\label{class_turn_engine_1_1_renderer_ab430dda7fee300f89d1e1bfa83ce890d} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Explicit constructor for the \doxylink{class_turn_engine_1_1_s_d_l2}{SDL2} C API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The SDL\+\_\+\+Renderer to take ownership of. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_renderer_ae215fd8367065d38cfba6b1904744f92}\label{class_turn_engine_1_1_renderer_ae215fd8367065d38cfba6b1904744f92} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} \&}]{win,  }\item[{Renderer\+Flags}]{flags,  }\item[{int}]{device\+\_\+index = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Creates a 2D rendering context for a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & The window where the rendering is displayed. \\
+\hline
+{\em flags} & The renderer flags options. \\
+\hline
+{\em device\+\_\+index} & Index of driver to initialize, or -\/1 to initialze first avilable device. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_renderer_a167bd59897c4f140a6382470a969cc9f}\label{class_turn_engine_1_1_renderer_a167bd59897c4f140a6382470a969cc9f} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+Creates a 2D software rendering context for a surface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The surface where the rendering is done. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1_renderer_a4c46f6b24fd85d80db508c88145f9dfe}\label{class_turn_engine_1_1_renderer_a4c46f6b24fd85d80db508c88145f9dfe} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!clear@{clear}}
+\index{clear@{clear}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Clear the rendering target with the drawing color. 
+
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a26cbd958fb9d95cd35604038a7748312}\label{class_turn_engine_1_1_renderer_a26cbd958fb9d95cd35604038a7748312} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!clip\_rect@{clip\_rect}}
+\index{clip\_rect@{clip\_rect}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{clip\_rect()}{clip\_rect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ Turn\+Engine\+::\+Renderer\+::clip\+\_\+rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the clipping rectange for the current target. 
+
+\begin{DoxyReturn}{Returns}
+The clipping area or an empty rectangle if clipping is disabled. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_ad3f42854d974ee8acdd70ab8658fe611}\label{class_turn_engine_1_1_renderer_ad3f42854d974ee8acdd70ab8658fe611} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!copy@{copy}}
+\index{copy@{copy}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{render\+\_\+rect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&}]{txr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copies a texture to a portion of the rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+\_\+rect} & The area of the renering target to copy to. \\
+\hline
+{\em txr} & The source texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The texture will be stretched to fill the render\+\_\+rect. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a4e99d832bab1fa5aa10a1b3c5f8743af}\label{class_turn_engine_1_1_renderer_a4e99d832bab1fa5aa10a1b3c5f8743af} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!copy@{copy}}
+\index{copy@{copy}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{render\+\_\+rect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&}]{txr,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{txr\+\_\+rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copies a portion of a texture to a portion of the rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+\_\+rect} & The area of the renering target to copy to. \\
+\hline
+{\em txr} & The source texture. \\
+\hline
+{\em txr\+\_\+rect} & The area of the texture to copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The texture will be stretched to fill the render\+\_\+rect. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a19a8b67af393368514db444b166ebd44}\label{class_turn_engine_1_1_renderer_a19a8b67af393368514db444b166ebd44} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!copy@{copy}}
+\index{copy@{copy}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&}]{txr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copies a texture to the rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txr} & The source texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The texture will be stretched to fill the render target. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_ac186b5c75285f69dd4df20590aaf1897}\label{class_turn_engine_1_1_renderer_ac186b5c75285f69dd4df20590aaf1897} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!copy@{copy}}
+\index{copy@{copy}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&}]{txr,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{txr\+\_\+rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copies of portion of a teture to the entire rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txr} & The source texture. \\
+\hline
+{\em txr\+\_\+rect} & The area of the texture to copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The texture will be stretched to fill the render target. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a67341a7467e03f1e8668c806701c0f68}\label{class_turn_engine_1_1_renderer_a67341a7467e03f1e8668c806701c0f68} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!copy\_ex@{copy\_ex}}
+\index{copy\_ex@{copy\_ex}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{copy\_ex()}{copy\_ex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::copy\+\_\+ex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{render\+\_\+rect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&}]{txr,  }\item[{double}]{angle,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ const \&}]{center,  }\item[{Renderer\+Flip}]{flip = {\ttfamily RendererFlip\+:\+:NONE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copy a texture to a portion of the rendering target, rotating it around the given center and flipping it top-\/btm and/or left-\/right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+\_\+rect} & The area of the renering target to copy to. \\
+\hline
+{\em txr} & The source texture. \\
+\hline
+{\em angle} & Angle in degrees of the rotation (applied clockwise). \\
+\hline
+{\em center} & The point indicating the point around which render\+\_\+rect will be rotated. \\
+\hline
+{\em flip} & The flip actions to be performed on the texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_af3800502da6a49d0b6326ef049b763a2}\label{class_turn_engine_1_1_renderer_af3800502da6a49d0b6326ef049b763a2} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!copy\_ex@{copy\_ex}}
+\index{copy\_ex@{copy\_ex}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{copy\_ex()}{copy\_ex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::copy\+\_\+ex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{render\+\_\+rect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&}]{txr,  }\item[{double}]{angle = {\ttfamily 0.0},  }\item[{Renderer\+Flip}]{flip = {\ttfamily RendererFlip\+:\+:NONE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copy a texture to a portion of the rendering target, optionally rotating it around render\+\_\+rect\textquotesingle{}s center and flipping it top-\/btm and/or left-\/right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+\_\+rect} & The area of the renering target to copy to. \\
+\hline
+{\em txr} & The source texture. \\
+\hline
+{\em angle} & Angle in degrees of the rotation (applied clockwise). \\
+\hline
+{\em flip} & The flip actions to be performed on the texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_ae6444050b6f3e660300962436516e9ff}\label{class_turn_engine_1_1_renderer_ae6444050b6f3e660300962436516e9ff} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!copy\_ex@{copy\_ex}}
+\index{copy\_ex@{copy\_ex}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{copy\_ex()}{copy\_ex()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::copy\+\_\+ex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{render\+\_\+rect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&}]{txr,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{txr\+\_\+rect,  }\item[{double const}]{angle,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ const \&}]{center,  }\item[{Renderer\+Flip}]{flip = {\ttfamily RendererFlip\+:\+:NONE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copy a portion of a texture to a portion of the rendering target, rotating it around the given center and flipping it top-\/btm and/or left-\/right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+\_\+rect} & The area of the renering target to copy to. \\
+\hline
+{\em txr} & The source texture. \\
+\hline
+{\em txr\+\_\+rect} & The area of the texture to copy. \\
+\hline
+{\em angle} & Angle in degrees of the rotation (applied clockwise). \\
+\hline
+{\em center} & The point indicating the point around which render\+\_\+rect will be rotated. \\
+\hline
+{\em flip} & The flip actions to be performed on the texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a95cf9e079e5a930fcc0a40bff285f4cf}\label{class_turn_engine_1_1_renderer_a95cf9e079e5a930fcc0a40bff285f4cf} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!copy\_ex@{copy\_ex}}
+\index{copy\_ex@{copy\_ex}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{copy\_ex()}{copy\_ex()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::copy\+\_\+ex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&}]{txr,  }\item[{double}]{angle,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ const \&}]{center,  }\item[{Renderer\+Flip}]{flip = {\ttfamily RendererFlip\+:\+:NONE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copy a texture to the rendering target, rotating it around the given center and flipping it top-\/btm and/or left-\/right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txr} & The source texture. \\
+\hline
+{\em angle} & Angle in degrees of the rotation (applied clockwise). \\
+\hline
+{\em center} & The point indicating the point around which render\+\_\+rect will be rotated. \\
+\hline
+{\em flip} & The flip actions to be performed on the texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a7e2a9aff784be3600e516b49ba18a7d3}\label{class_turn_engine_1_1_renderer_a7e2a9aff784be3600e516b49ba18a7d3} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!copy\_ex@{copy\_ex}}
+\index{copy\_ex@{copy\_ex}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{copy\_ex()}{copy\_ex()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::copy\+\_\+ex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&}]{txr,  }\item[{double}]{angle = {\ttfamily 0.0},  }\item[{Renderer\+Flip}]{flip = {\ttfamily RendererFlip\+:\+:NONE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copy a texture to a rendering target, optionally rotating it around the rendering target\textquotesingle{}s center and flipping it top-\/btm and/or left-\/right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txr} & The source texture. \\
+\hline
+{\em angle} & Angle in degrees of the rotation (applied clockwise). \\
+\hline
+{\em flip} & The flip actions to be performed on the texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a2cce0cdc11739eb7f6fd385cd784e2b2}\label{class_turn_engine_1_1_renderer_a2cce0cdc11739eb7f6fd385cd784e2b2} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!copy\_ex@{copy\_ex}}
+\index{copy\_ex@{copy\_ex}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{copy\_ex()}{copy\_ex()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::copy\+\_\+ex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&}]{txr,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{txr\+\_\+rect,  }\item[{double}]{angle,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ const \&}]{center,  }\item[{Renderer\+Flip}]{flip = {\ttfamily RendererFlip\+:\+:NONE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copy a portion of a texture to the rendering target, rotating it around the given center and flipping it top-\/btm and/or left-\/right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txr} & The source texture. \\
+\hline
+{\em txr\+\_\+rect} & The area of the texture to copy. \\
+\hline
+{\em angle} & Angle in degrees of the rotation (applied clockwise). \\
+\hline
+{\em center} & The point indicating the point around which render\+\_\+rect will be rotated. \\
+\hline
+{\em flip} & The flip actions to be performed on the texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_aa3f9303f1beda4796fcd9a76f557c3d0}\label{class_turn_engine_1_1_renderer_aa3f9303f1beda4796fcd9a76f557c3d0} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!copy\_ex@{copy\_ex}}
+\index{copy\_ex@{copy\_ex}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{copy\_ex()}{copy\_ex()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::copy\+\_\+ex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&}]{txr,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{txr\+\_\+rect,  }\item[{double}]{angle = {\ttfamily 0.0},  }\item[{Renderer\+Flip}]{flip = {\ttfamily RendererFlip\+:\+:NONE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copy a portion of a texture to the rendering target, optionally rotating it around the renderer target\textquotesingle{}s center and flipping it top-\/btm and/or left-\/right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txr} & The source texture. \\
+\hline
+{\em txr\+\_\+rect} & The area of the texture to copy. \\
+\hline
+{\em angle} & Angle in degrees of the rotation (applied clockwise). \\
+\hline
+{\em flip} & The flip actions to be performed on the texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a8ceef66c0be51a78f393d91d3b888e36}\label{class_turn_engine_1_1_renderer_a8ceef66c0be51a78f393d91d3b888e36} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!destroy@{destroy}}
+\index{destroy@{destroy}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Renderer\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destroy the underlying renderer object. 
+
+\begin{DoxyNote}{Note}
+Accessing the renderer after this functional call is UB. 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1_renderer_abdefd598ea271e441c4727e833ece4ed}\label{class_turn_engine_1_1_renderer_abdefd598ea271e441c4727e833ece4ed} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!disable\_clipping@{disable\_clipping}}
+\index{disable\_clipping@{disable\_clipping}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{disable\_clipping()}{disable\_clipping()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::disable\+\_\+clipping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Disables clipping on the rendering target. 
+
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_ab1bddf626e57b293b25dfcfd7e25addd}\label{class_turn_engine_1_1_renderer_ab1bddf626e57b293b25dfcfd7e25addd} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!draw\_blend\_mode@{draw\_blend\_mode}}
+\index{draw\_blend\_mode@{draw\_blend\_mode}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{draw\_blend\_mode()}{draw\_blend\_mode()}}
+{\footnotesize\ttfamily Blend\+Mode Turn\+Engine\+::\+Renderer\+::draw\+\_\+blend\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the blend mode used for drawing ops. 
+
+\begin{DoxyReturn}{Returns}
+The renderer\textquotesingle{}s blend mode. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a9edc22242d4319fa202ecbfdf97d2ae1}\label{class_turn_engine_1_1_renderer_a9edc22242d4319fa202ecbfdf97d2ae1} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!draw\_color@{draw\_color}}
+\index{draw\_color@{draw\_color}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{draw\_color()}{draw\_color()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}} Turn\+Engine\+::\+Renderer\+::draw\+\_\+color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the color used for the renderer\textquotesingle{}s drawing operations. 
+
+\begin{DoxyReturn}{Returns}
+The rgba representation of the draw color. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_ad26484188a7381cd99030811c10344db}\label{class_turn_engine_1_1_renderer_ad26484188a7381cd99030811c10344db} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!draw\_line@{draw\_line}}
+\index{draw\_line@{draw\_line}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{draw\_line()}{draw\_line()}}
+{\footnotesize\ttfamily template$<$class Rep $>$ \\
+bool Turn\+Engine\+::\+Renderer\+::draw\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ Rep $>$ const \&}]{from,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ Rep $>$ const \&}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Draw a line on the current rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The start point. \\
+\hline
+{\em to} & The end point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a42803a9a81aedac26d24c3d411d4d48a}\label{class_turn_engine_1_1_renderer_a42803a9a81aedac26d24c3d411d4d48a} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!draw\_lines@{draw\_lines}}
+\index{draw\_lines@{draw\_lines}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{draw\_lines()}{draw\_lines()}}
+{\footnotesize\ttfamily template$<$class Rep $>$ \\
+bool Turn\+Engine\+::\+Renderer\+::draw\+\_\+lines (\begin{DoxyParamCaption}\item[{std\+::span$<$ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ Rep $>$ const $>$}]{points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Draw a series of connected lines on the current rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & A span of points representing the points along the line. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a4e80970f64f655654159757c3d2ca21b}\label{class_turn_engine_1_1_renderer_a4e80970f64f655654159757c3d2ca21b} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!draw\_outline@{draw\_outline}}
+\index{draw\_outline@{draw\_outline}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{draw\_outline()}{draw\_outline()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::draw\+\_\+outline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Draw a rectangle outlining the current rendering target. 
+
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a1e903efc46aea99c689c1e94dd6f05db}\label{class_turn_engine_1_1_renderer_a1e903efc46aea99c689c1e94dd6f05db} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!draw\_point@{draw\_point}}
+\index{draw\_point@{draw\_point}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{draw\_point()}{draw\_point()}}
+{\footnotesize\ttfamily template$<$class Rep $>$ \\
+bool Turn\+Engine\+::\+Renderer\+::draw\+\_\+point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ Rep $>$ const \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Draw a point on the current rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The point to draw. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a330b1428695b72e24e3bf0ed278d9fd9}\label{class_turn_engine_1_1_renderer_a330b1428695b72e24e3bf0ed278d9fd9} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!draw\_points@{draw\_points}}
+\index{draw\_points@{draw\_points}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{draw\_points()}{draw\_points()}}
+{\footnotesize\ttfamily template$<$class Rep $>$ \\
+bool Turn\+Engine\+::\+Renderer\+::draw\+\_\+points (\begin{DoxyParamCaption}\item[{std\+::span$<$ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ Rep $>$ const $>$}]{points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Draw points on the current rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & A span of points to draw. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a7430099ab31f83e42f31a047b22967e4}\label{class_turn_engine_1_1_renderer_a7430099ab31f83e42f31a047b22967e4} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!draw\_rect@{draw\_rect}}
+\index{draw\_rect@{draw\_rect}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{draw\_rect()}{draw\_rect()}}
+{\footnotesize\ttfamily template$<$class Rep $>$ \\
+bool Turn\+Engine\+::\+Renderer\+::draw\+\_\+rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ Rep $>$ const \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Draw a rectangle on the current rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The rect to draw. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a6dd0c2160d45cf4799b88d99106f060a}\label{class_turn_engine_1_1_renderer_a6dd0c2160d45cf4799b88d99106f060a} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!draw\_rects@{draw\_rects}}
+\index{draw\_rects@{draw\_rects}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{draw\_rects()}{draw\_rects()}}
+{\footnotesize\ttfamily template$<$class Rep $>$ \\
+bool Turn\+Engine\+::\+Renderer\+::draw\+\_\+rects (\begin{DoxyParamCaption}\item[{std\+::span$<$ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ Rep $>$ const $>$}]{rs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Draw rectangles on the current rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rs} & A span of rectangles to draw. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a3acbe8b0d844c2125ab1eba5e52f21d4}\label{class_turn_engine_1_1_renderer_a3acbe8b0d844c2125ab1eba5e52f21d4} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!fill\_rect@{fill\_rect}}
+\index{fill\_rect@{fill\_rect}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{fill\_rect()}{fill\_rect()}}
+{\footnotesize\ttfamily template$<$class Rep $>$ \\
+bool Turn\+Engine\+::\+Renderer\+::fill\+\_\+rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ Rep $>$ const \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Fill a rectangle on the current rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The rectangle to color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a562d5024d0a4deebcc64618c8ffe281b}\label{class_turn_engine_1_1_renderer_a562d5024d0a4deebcc64618c8ffe281b} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!fill\_rects@{fill\_rects}}
+\index{fill\_rects@{fill\_rects}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{fill\_rects()}{fill\_rects()}}
+{\footnotesize\ttfamily template$<$class Rep $>$ \\
+bool Turn\+Engine\+::\+Renderer\+::fill\+\_\+rects (\begin{DoxyParamCaption}\item[{std\+::span$<$ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ Rep $>$ const $>$}]{rs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Fill rectangles on the current rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rs} & A span of rectangles to fill. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a02cb369e08a1273965ac7875bc42a279}\label{class_turn_engine_1_1_renderer_a02cb369e08a1273965ac7875bc42a279} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!fill\_target@{fill\_target}}
+\index{fill\_target@{fill\_target}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{fill\_target()}{fill\_target()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::fill\+\_\+target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Fill the current rendering target with the current draw color. 
+
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_aa42888ede488c218ff2f81de50ae62bf}\label{class_turn_engine_1_1_renderer_aa42888ede488c218ff2f81de50ae62bf} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!get\_target@{get\_target}}
+\index{get\_target@{get\_target}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{get\_target()}{get\_target()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}}$<$ SDL\+\_\+\+Texture const  $>$ Turn\+Engine\+::\+Renderer\+::get\+\_\+target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the current renderer\textquotesingle{}s target. 
+
+\begin{DoxyReturn}{Returns}
+A SDL\+\_\+\+Texture or an empty \doxylink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref} if the default target is used. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a42105281c0b26d5d8e535004b0abfc70}\label{class_turn_engine_1_1_renderer_a42105281c0b26d5d8e535004b0abfc70} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!get\_target@{get\_target}}
+\index{get\_target@{get\_target}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{get\_target()}{get\_target()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}}$<$ SDL\+\_\+\+Texture $>$ Turn\+Engine\+::\+Renderer\+::get\+\_\+target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the current renderer\textquotesingle{}s target. 
+
+\begin{DoxyReturn}{Returns}
+A SDL\+\_\+\+Texture or an empty \doxylink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref} if the default target is used. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a03d64c5ff64dcdd771a1892edcddafa5}\label{class_turn_engine_1_1_renderer_a03d64c5ff64dcdd771a1892edcddafa5} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!info@{info}}
+\index{info@{info}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_engine_1_1_renderer_info}{Renderer\+Info}} Turn\+Engine\+::\+Renderer\+::info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get information about the renderer. 
+
+\begin{DoxyReturn}{Returns}
+A renderer\+\_\+info struct filled with information about the renderer. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_ae4ebc495d3cf64744911340d265e567e}\label{class_turn_engine_1_1_renderer_ae4ebc495d3cf64744911340d265e567e} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!integer\_scale@{integer\_scale}}
+\index{integer\_scale@{integer\_scale}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{integer\_scale()}{integer\_scale()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::integer\+\_\+scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get whether integer scales are forced for resolution-\/independent rendering. 
+
+\begin{DoxyReturn}{Returns}
+True if integer scales are forced or false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a22c5662f1da812ad933b9b1caa8e60d4}\label{class_turn_engine_1_1_renderer_a22c5662f1da812ad933b9b1caa8e60d4} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!is\_clip\_enabled@{is\_clip\_enabled}}
+\index{is\_clip\_enabled@{is\_clip\_enabled}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{is\_clip\_enabled()}{is\_clip\_enabled()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::is\+\_\+clip\+\_\+enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get whether clipping is enabled on the renderer. 
+
+\begin{DoxyReturn}{Returns}
+True if clipping is enabled, false if disabled. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a0b270ad0da45733d27e158609739c2a7}\label{class_turn_engine_1_1_renderer_a0b270ad0da45733d27e158609739c2a7} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!is\_ok@{is\_ok}}
+\index{is\_ok@{is\_ok}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{is\_ok()}{is\_ok()}}
+{\footnotesize\ttfamily constexpr bool Turn\+Engine\+::\+Renderer\+::is\+\_\+ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the renderer is in a valid state. 
+
+\begin{DoxyReturn}{Returns}
+True if valid, false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_ae4767eac03d278d02ac805639191981d}\label{class_turn_engine_1_1_renderer_ae4767eac03d278d02ac805639191981d} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!logical\_size@{logical\_size}}
+\index{logical\_size@{logical\_size}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{logical\_size()}{logical\_size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}} Turn\+Engine\+::\+Renderer\+::logical\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the device independent resolution for rendering. 
+
+\begin{DoxyReturn}{Returns}
+The logical size of the renderer. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_aecbb37928fc9f7967b71fcdf3fc0d943}\label{class_turn_engine_1_1_renderer_aecbb37928fc9f7967b71fcdf3fc0d943} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!native\_handle@{native\_handle}}
+\index{native\_handle@{native\_handle}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{native\_handle()}{native\_handle()}}
+{\footnotesize\ttfamily constexpr SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} Turn\+Engine\+::\+Renderer\+::native\+\_\+handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get a pointer to the underlying SDL representation. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the underlying SDL\+\_\+\+Renderer. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_aa36347ce7abb390a195f2e4fa1e2eacc}\label{class_turn_engine_1_1_renderer_aa36347ce7abb390a195f2e4fa1e2eacc} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+Renderer\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the renderer is in a valid state. 
+
+\begin{DoxyReturn}{Returns}
+True if valid, false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a25d140243a1a3297ead1e37b8afe6055}\label{class_turn_engine_1_1_renderer_a25d140243a1a3297ead1e37b8afe6055} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!output\_size@{output\_size}}
+\index{output\_size@{output\_size}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{output\_size()}{output\_size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}} Turn\+Engine\+::\+Renderer\+::output\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the output size in pixels of the renderer. 
+
+\begin{DoxyReturn}{Returns}
+The output size. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a8c54114dc4164b68447635ce0fba4565}\label{class_turn_engine_1_1_renderer_a8c54114dc4164b68447635ce0fba4565} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!read\_pixels@{read\_pixels}}
+\index{read\_pixels@{read\_pixels}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{read\_pixels()}{read\_pixels()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::read\+\_\+pixels (\begin{DoxyParamCaption}\item[{Pixel\+Format\+Enum}]{fmt,  }\item[{void \texorpdfstring{$\ast$}{*}}]{pixels,  }\item[{int const}]{pitch }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copy all pixels from the rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & The format of the pixel data. \\
+\hline
+{\em pixels} & A pointer to the pixel data to copy into. \\
+\hline
+{\em pitch} & The pitch of the pixels. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+This is a slow operation and should not be used frequently. 
+\end{DoxyWarning}
+\Hypertarget{class_turn_engine_1_1_renderer_a40a77146eeffe07cb3ccfc5f71e64592}\label{class_turn_engine_1_1_renderer_a40a77146eeffe07cb3ccfc5f71e64592} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!read\_pixels@{read\_pixels}}
+\index{read\_pixels@{read\_pixels}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{read\_pixels()}{read\_pixels()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::read\+\_\+pixels (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{r,  }\item[{Pixel\+Format\+Enum}]{fmt,  }\item[{void \texorpdfstring{$\ast$}{*}}]{pixels,  }\item[{int}]{pitch }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copy an area of pixels from the rendering target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The area of pixels to read. \\
+\hline
+{\em fmt} & The format of the pixel data. \\
+\hline
+{\em pixels} & A pointer to the pixel data to copy into. \\
+\hline
+{\em pitch} & The pitch of the pixels. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+This is a slow operation and should not be used frequently. 
+\end{DoxyWarning}
+\Hypertarget{class_turn_engine_1_1_renderer_aace61960c74959b9e49ac969480b9282}\label{class_turn_engine_1_1_renderer_aace61960c74959b9e49ac969480b9282} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!read\_pixels@{read\_pixels}}
+\index{read\_pixels@{read\_pixels}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{read\_pixels()}{read\_pixels()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::read\+\_\+pixels (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{r,  }\item[{void \texorpdfstring{$\ast$}{*}}]{pixels,  }\item[{int}]{pitch }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copy an area of pixels from the rendering target using the renderer\textquotesingle{}s pixel format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+{\em pixels} & A pointer to the pixel data to copy into. \\
+\hline
+{\em pitch} & The pitch of the pixels. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+This is a slow operation and should not be used frequently. 
+\end{DoxyWarning}
+\Hypertarget{class_turn_engine_1_1_renderer_a0fe63e1c5acc48a87e229e9fa9e8487c}\label{class_turn_engine_1_1_renderer_a0fe63e1c5acc48a87e229e9fa9e8487c} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!read\_pixels@{read\_pixels}}
+\index{read\_pixels@{read\_pixels}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{read\_pixels()}{read\_pixels()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::read\+\_\+pixels (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pixels,  }\item[{int}]{pitch }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copy all pixels from the rendering target using the renderer\textquotesingle{}s pixel format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixels} & A pointer to the pixel data to copy into. \\
+\hline
+{\em pitch} & The pitch of the pixels. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+This is a slow operation and should not be used frequently. 
+\end{DoxyWarning}
+\Hypertarget{class_turn_engine_1_1_renderer_a0c2403828addaa12e00af2264e347c92}\label{class_turn_engine_1_1_renderer_a0c2403828addaa12e00af2264e347c92} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!reset\_render\_target@{reset\_render\_target}}
+\index{reset\_render\_target@{reset\_render\_target}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{reset\_render\_target()}{reset\_render\_target()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::reset\+\_\+render\+\_\+target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Resets the render target to the default render target. 
+
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a25a2d9d78fff8ce951e668c1b4f42747}\label{class_turn_engine_1_1_renderer_a25a2d9d78fff8ce951e668c1b4f42747} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!reset\_viewport@{reset\_viewport}}
+\index{reset\_viewport@{reset\_viewport}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{reset\_viewport()}{reset\_viewport()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::reset\+\_\+viewport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the viewport to the entier rendering target. 
+
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_ac6de3f78b26e7ae5e345451b8456f96b}\label{class_turn_engine_1_1_renderer_ac6de3f78b26e7ae5e345451b8456f96b} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!scale@{scale}}
+\index{scale@{scale}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ float $>$ Turn\+Engine\+::\+Renderer\+::scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the drawing scale for the current target. 
+
+\begin{DoxyReturn}{Returns}
+The horizonal(x) and verticle(y) scaling factors. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a0ed0b0bd247127143962824e638bd02a}\label{class_turn_engine_1_1_renderer_a0ed0b0bd247127143962824e638bd02a} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!set\_clip\_rect@{set\_clip\_rect}}
+\index{set\_clip\_rect@{set\_clip\_rect}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{set\_clip\_rect()}{set\_clip\_rect()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::set\+\_\+clip\+\_\+rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{clip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the clip rectangle for rendering on the target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip} & The clip rectangle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a24efa4f07bd277169d6f7c891b9ee931}\label{class_turn_engine_1_1_renderer_a24efa4f07bd277169d6f7c891b9ee931} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!set\_draw\_blend\_mode@{set\_draw\_blend\_mode}}
+\index{set\_draw\_blend\_mode@{set\_draw\_blend\_mode}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{set\_draw\_blend\_mode()}{set\_draw\_blend\_mode()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::set\+\_\+draw\+\_\+blend\+\_\+mode (\begin{DoxyParamCaption}\item[{Blend\+Mode}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the blend mode used for drawing opertaions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The mode to use for blending. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_af2fb83980c14840b3d6b9426e7a89c61}\label{class_turn_engine_1_1_renderer_af2fb83980c14840b3d6b9426e7a89c61} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!set\_draw\_color@{set\_draw\_color}}
+\index{set\_draw\_color@{set\_draw\_color}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{set\_draw\_color()}{set\_draw\_color()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::set\+\_\+draw\+\_\+color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}$<$$>$}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the renderer\textquotesingle{}s draw color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The new draw color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a7bd3dc4d2d46c56bd28bb3361c24e8d4}\label{class_turn_engine_1_1_renderer_a7bd3dc4d2d46c56bd28bb3361c24e8d4} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!set\_integer\_scale@{set\_integer\_scale}}
+\index{set\_integer\_scale@{set\_integer\_scale}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{set\_integer\_scale()}{set\_integer\_scale()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::set\+\_\+integer\+\_\+scale (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets whether to force integer scales from resolution-\/independent rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & A bool specifying if integer scaling should be enabled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_aa4fd956d8989fcca20daaf7b21886199}\label{class_turn_engine_1_1_renderer_aa4fd956d8989fcca20daaf7b21886199} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!set\_logical\_size@{set\_logical\_size}}
+\index{set\_logical\_size@{set\_logical\_size}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{set\_logical\_size()}{set\_logical\_size()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::set\+\_\+logical\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ const \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets a device independent resolution for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the logical resolution. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_aa75d62aaed3c1312120cc61ca607bded}\label{class_turn_engine_1_1_renderer_aa75d62aaed3c1312120cc61ca607bded} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!set\_render\_target@{set\_render\_target}}
+\index{set\_render\_target@{set\_render\_target}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{set\_render\_target()}{set\_render\_target()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::set\+\_\+render\+\_\+target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets a texture as the renderer\textquotesingle{}s target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The texture to target. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The texture must have been created with texture\+\_\+access\+::\+TARGET. 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1_renderer_a4aefa07fb4de1856cd6f93036ffba422}\label{class_turn_engine_1_1_renderer_a4aefa07fb4de1856cd6f93036ffba422} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!set\_scale@{set\_scale}}
+\index{set\_scale@{set\_scale}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{set\_scale()}{set\_scale()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::set\+\_\+scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ float $>$ const \&}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the drawing scale for rendering on the current target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The horizontal(x) and verticlal(y) scaling factors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_adb09950efe039b8c124dd5d7aed55145}\label{class_turn_engine_1_1_renderer_adb09950efe039b8c124dd5d7aed55145} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!set\_viewport@{set\_viewport}}
+\index{set\_viewport@{set\_viewport}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{set\_viewport()}{set\_viewport()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Renderer\+::set\+\_\+viewport (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set the renderer\textquotesingle{}s drawing area on the current target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The drawing area. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_a5be3fd768a306e988951597d204e7f3f}\label{class_turn_engine_1_1_renderer_a5be3fd768a306e988951597d204e7f3f} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!target\_supported@{target\_supported}}
+\index{target\_supported@{target\_supported}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{target\_supported()}{target\_supported()}}
+{\footnotesize\ttfamily static bool Turn\+Engine\+::\+Renderer\+::target\+\_\+supported (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} const \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Determines wheather a window supports the use of render targets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The renderer to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ture if supported, false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_ae588d8b317d79dc781a0b15b7001c0a1}\label{class_turn_engine_1_1_renderer_ae588d8b317d79dc781a0b15b7001c0a1} 
+\index{TurnEngine::Renderer@{TurnEngine::Renderer}!viewport@{viewport}}
+\index{viewport@{viewport}!TurnEngine::Renderer@{TurnEngine::Renderer}}
+\doxysubsubsection{\texorpdfstring{viewport()}{viewport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ Turn\+Engine\+::\+Renderer\+::viewport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the drawing area for the current target. 
+
+\begin{DoxyReturn}{Returns}
+The current drawing area. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Renderer.\+hpp\end{DoxyCompactItemize}

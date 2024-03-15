@@ -1,0 +1,50 @@
+\doxysection{Vector.\+hpp}
+\hypertarget{_vector_8hpp_source}{}\label{_vector_8hpp_source}\index{include/TurnEngine/geo2d/Vector.hpp@{include/TurnEngine/geo2d/Vector.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }geo2d}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{concept\ }\mbox{\hyperlink{conceptgeo2d_1_1_numeric}{Numeric}}\ =\ std::is\_arithmetic\_v<T>;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{template}\ <Numeric\ T>}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ T\ x,\ y;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classgeo2d_1_1_vector_a98a053177211bbaa5a0d6ecd793441b4}{Vector}}(T\ x,\ T\ y)\ :\ x(x),\ y(y)\{\};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classgeo2d_1_1_vector_a303527c9a24231afcb9d58b61eae0c33}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}\ \&another)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>x\ ==\ another.x\ \&\&\ this-\/>y\ ==\ another.y;\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classgeo2d_1_1_vector_a8feffefc6b460d0efee170dd5693b8f1}{operator!=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}\ \&another)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ !\mbox{\hyperlink{classgeo2d_1_1_vector_a303527c9a24231afcb9d58b61eae0c33}{operator==}}(another);\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}\ \mbox{\hyperlink{classgeo2d_1_1_vector_ab9608e4832d69564c5477925e3e10ddd}{operator*}}(T\ vi)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vi\ *\ this-\/>x,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vi\ *\ this-\/>y,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}\ \mbox{\hyperlink{classgeo2d_1_1_vector_ad9fa16c6833019b4b5951845406eeff6}{operator-\/}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classgeo2d_1_1_vector_ab9608e4832d69564c5477925e3e10ddd}{operator*}}(-\/1);\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}\ \mbox{\hyperlink{classgeo2d_1_1_vector_a838fd8faa925fb312649d4c7ca3f1f06}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}\ \&another)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>x\ +\ another.x,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>y\ +\ another.y,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}\ \mbox{\hyperlink{classgeo2d_1_1_vector_ad5dca99b77c1b090fec070b10065e986}{operator-\/}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}\ \&another)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classgeo2d_1_1_vector_a838fd8faa925fb312649d4c7ca3f1f06}{operator+}}(-\/another);\ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{template}\ <Numeric\ T>}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{using\ }Position\ =\ Vector<T>;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{using\ }VectorInt\ =\ Vector<int>;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{using\ }PositionInt\ =\ Position<int>;}
+\DoxyCodeLine{00067\ \}}
+
+\end{DoxyCode}

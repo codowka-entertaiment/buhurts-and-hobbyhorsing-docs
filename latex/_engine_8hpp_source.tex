@@ -1,0 +1,85 @@
+\doxysection{Engine.\+hpp}
+\hypertarget{_engine_8hpp_source}{}\label{_engine_8hpp_source}\index{include/TurnEngine/Engine.hpp@{include/TurnEngine/Engine.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}wrapper/Color.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}wrapper/Enums.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}wrapper/Event.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}wrapper/Init.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}wrapper/MessageBox.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}wrapper/Pixel.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}wrapper/Renderer.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}wrapper/Shapes.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}wrapper/Surface.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}wrapper/Texture.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}wrapper/Utils.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}wrapper/Window.hpp"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}wrapper/Cursor.hpp"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}wrapper/Audio.hpp"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}ext/Math.hpp"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}core/Object2D.hpp"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}core/Area2D.hpp"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}core/Scene.hpp"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}core/Event.hpp"{}}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}render/Drawer.hpp"{}}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}gui/BaseButton.hpp"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}gui/Sprite.hpp"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}gui/Label.hpp"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}geo2d/Shapes.hpp"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}geo2d/Vector.hpp"{}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{namespace\ }TurnEngine\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_engine}{Engine}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ *window;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{render::Drawer}}\ *drawer;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ fps;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentTicks;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ Uint32\ ticks;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ poll();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isQuited;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ height;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ width;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_engine}{\string~Engine}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_engine_afa665e532c40503a80edfb873428f686}{initSDL}}(SDLInitFlags\ sdl\_flags,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ audioFlags\ =\ MIX\_INIT\_WAVPACK\ |\ MIX\_INIT\_OPUS\ |\ MIX\_INIT\_OGG\ |\ MIX\_INIT\_MP3\ |\ MIX\_INIT\_MOD\ |}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MIX\_INIT\_MID\ |\ MIX\_INIT\_FLAC);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_engine_ae2bee8543eabedae200852ddaafbcbcf}{openAudio}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_engine_a0af5ab48fba9a3c4b2b898b024fdadd9}{createWindow}}(\textcolor{keyword}{const}\ std::string\ \&title,\ WindowFlags\ flags,\ \textcolor{keywordtype}{int}\ width\ =\ 800,\ \textcolor{keywordtype}{int}\ height\ =\ 600);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_engine_ae6a3cbb09d6905368c98bd024b273211}{createDrawer}}(RendererFlags\ renderer\_init\_flags);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_engine_afd3eea1613c2cf49b175c592295f761e}{onPollEvents}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_engine_abcc4f8a6f944b67950da4db695dbe011}{onUpdate}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_engine_a9cbe488a99cfc0473240a99f1b85cf47}{onDraw}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_engine_a286eff607b83573656bf193f51716a71}{start}}(\textcolor{keywordtype}{int}\ fps\ =\ 60);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ *\mbox{\hyperlink{class_turn_engine_1_1_engine_ac0fb33b7abd52bba108f06853b5fcfd3}{getWindow}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\ *\mbox{\hyperlink{class_turn_engine_1_1_engine_ae96e030ef273e7e21389a080226f13d2}{getRenderer}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{render::Drawer}}\ *\mbox{\hyperlink{class_turn_engine_1_1_engine_af82dc1ca98ed3922c379f64103e9bd06}{getDrawer}}();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_turn_engine_1_1_engine_ac8bcd39fbba80ec80b03ae3bafc285ab}{getHeight}}();}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_turn_engine_1_1_engine_a47aa666c500b3c02544522be8ca45e25}{getWidth}}();}
+\DoxyCodeLine{00118\ \ \ \ \ \};}
+\DoxyCodeLine{00119\ \}}
+
+\end{DoxyCode}

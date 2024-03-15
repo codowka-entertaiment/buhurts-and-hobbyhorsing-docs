@@ -1,0 +1,108 @@
+\doxysection{Turn\+Engine\+::IMG Class Reference}
+\hypertarget{class_turn_engine_1_1_i_m_g}{}\label{class_turn_engine_1_1_i_m_g}\index{TurnEngine::IMG@{TurnEngine::IMG}}
+
+
+Initialization context for SDL\+\_\+\+Image.  
+
+
+
+
+{\ttfamily \#include $<$Init.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1_i_m_g_aecc55336befe7a417fbcd1483c1b2737}\label{class_turn_engine_1_1_i_m_g_aecc55336befe7a417fbcd1483c1b2737} 
+{\bfseries IMG} (\mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}} const \&)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_i_m_g_a649d57d5dc956615d4b4d78fed6b06c6}\label{class_turn_engine_1_1_i_m_g_a649d57d5dc956615d4b4d78fed6b06c6} 
+\mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}} const \&)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_i_m_g_a31bc973c3e8b4ebc2c5e5f91c2237da6}\label{class_turn_engine_1_1_i_m_g_a31bc973c3e8b4ebc2c5e5f91c2237da6} 
+\mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}} \&\&)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_i_m_g_a5ca1d429f6911fba5556ee36fdb39f00}\label{class_turn_engine_1_1_i_m_g_a5ca1d429f6911fba5556ee36fdb39f00} 
+constexpr {\bfseries IMG} (\mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_i_m_g_a0b52d2f75ac32b56a2bb2ff01e7514da}{IMG}} (IMGInit\+Flags const \&flgs) noexcept
+\begin{DoxyCompactList}\small\item\em Initialize the internal SDL\+\_\+\+Image libraries. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_i_m_g_a1eb2b5799b7ac048b5071f6684acbe4a}\label{class_turn_engine_1_1_i_m_g_a1eb2b5799b7ac048b5071f6684acbe4a} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+IMG} () noexcept
+\begin{DoxyCompactList}\small\item\em Destructor that deinitializes SDL\+\_\+image libraries. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_i_m_g_a013c9a9f1f8a3650a9f2e41ba8536b12}{operator bool}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the SDL\+\_\+image libraries were initialized correctly. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{class_turn_engine_1_1_i_m_g_a8abdc995f54f8fb829c8d21a1ebce735}{is\+\_\+ok}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the SDL\+\_\+image libraries were initialized correctly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string\+\_\+view \mbox{\hyperlink{class_turn_engine_1_1_i_m_g_a3d8ef1bace329cee5f58b1c1bd1d3d69}{get\+\_\+error}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get the previously set error from within SDL\+\_\+\+Image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Initialization context for SDL\+\_\+\+Image. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1_i_m_g_a0b52d2f75ac32b56a2bb2ff01e7514da}\label{class_turn_engine_1_1_i_m_g_a0b52d2f75ac32b56a2bb2ff01e7514da} 
+\index{TurnEngine::IMG@{TurnEngine::IMG}!IMG@{IMG}}
+\index{IMG@{IMG}!TurnEngine::IMG@{TurnEngine::IMG}}
+\doxysubsubsection{\texorpdfstring{IMG()}{IMG()}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+IMG\+::\+IMG (\begin{DoxyParamCaption}\item[{IMGInit\+Flags const \&}]{flgs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Initialize the internal SDL\+\_\+\+Image libraries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flgs} & Initialization flags. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1_i_m_g_a3d8ef1bace329cee5f58b1c1bd1d3d69}\label{class_turn_engine_1_1_i_m_g_a3d8ef1bace329cee5f58b1c1bd1d3d69} 
+\index{TurnEngine::IMG@{TurnEngine::IMG}!get\_error@{get\_error}}
+\index{get\_error@{get\_error}!TurnEngine::IMG@{TurnEngine::IMG}}
+\doxysubsubsection{\texorpdfstring{get\_error()}{get\_error()}}
+{\footnotesize\ttfamily static std\+::string\+\_\+view Turn\+Engine\+::\+IMG\+::get\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get the previously set error from within SDL\+\_\+\+Image. 
+
+\begin{DoxyReturn}{Returns}
+A string denoting the error. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_i_m_g_a8abdc995f54f8fb829c8d21a1ebce735}\label{class_turn_engine_1_1_i_m_g_a8abdc995f54f8fb829c8d21a1ebce735} 
+\index{TurnEngine::IMG@{TurnEngine::IMG}!is\_ok@{is\_ok}}
+\index{is\_ok@{is\_ok}!TurnEngine::IMG@{TurnEngine::IMG}}
+\doxysubsubsection{\texorpdfstring{is\_ok()}{is\_ok()}}
+{\footnotesize\ttfamily constexpr bool Turn\+Engine\+::\+IMG\+::is\+\_\+ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the SDL\+\_\+image libraries were initialized correctly. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_i_m_g_a013c9a9f1f8a3650a9f2e41ba8536b12}\label{class_turn_engine_1_1_i_m_g_a013c9a9f1f8a3650a9f2e41ba8536b12} 
+\index{TurnEngine::IMG@{TurnEngine::IMG}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!TurnEngine::IMG@{TurnEngine::IMG}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+IMG\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the SDL\+\_\+image libraries were initialized correctly. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, false if not. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Init.\+hpp\end{DoxyCompactItemize}

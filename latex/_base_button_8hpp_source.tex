@@ -1,0 +1,45 @@
+\doxysection{Base\+Button.\+hpp}
+\hypertarget{_base_button_8hpp_source}{}\label{_base_button_8hpp_source}\index{include/TurnEngine/gui/BaseButton.hpp@{include/TurnEngine/gui/BaseButton.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/core/Object2D.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/core/Subject.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/geo2d/shapes/Shape.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/gui/Label.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }TurnEngine::gui\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1gui_1_1_base_button}{BaseButton}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{core::Object2D}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ *commonTexture;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ *onHover;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ std::function<void()>\ handler;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::string\ text;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_label}{Label}}*\ label;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ emptyFunc()\ \{\};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_base_button_a2f416c4802722d8d3efbfb6c556a8494}{BaseButton}}(\mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d::Shape<int>}}\ *\_shape,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_depthIndex,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point<int>}}\ \_position,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_width,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_height,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ *\_commonTexture,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ *\_onHoverTexture,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_angle,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RendererFlip\ \_flip,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba<>}}\ color,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \_text,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \_font,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_fontSize);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_base_button_a62a3593770a97eeeb573ddb2783175d2}{update}}(\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{core::Event}}*\ \_event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_base_button_a64375d7d01bd5c106fbc49d6922c14f2}{draw}}(\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{render::Drawer}}*\ drawer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_base_button_a1b3ee1ce90f2bbc786b990ac1c660707}{setHandler}}(std::function<\textcolor{keywordtype}{void}(\textcolor{keywordtype}{void})>\ \_func);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \};}
+\DoxyCodeLine{00065\ \}}
+
+\end{DoxyCode}

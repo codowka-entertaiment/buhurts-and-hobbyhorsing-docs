@@ -1,0 +1,211 @@
+\doxysection{Turn\+Engine\+::optional\+\_\+ref\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_turn_engine_1_1optional__ref}{}\label{class_turn_engine_1_1optional__ref}\index{TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}}
+
+
+An non-\/rebindable optional reference container.  
+
+
+
+
+{\ttfamily \#include $<$Utils.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1optional__ref_a2884e7413b9ea6114c06f410783d4a9f}\label{class_turn_engine_1_1optional__ref_a2884e7413b9ea6114c06f410783d4a9f} 
+constexpr {\bfseries optional\+\_\+ref} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor. Constructs an empty \doxylink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a9d7b350f2c79536e1b1aadc67cfcd205}{optional\+\_\+ref}} (\mbox{\hyperlink{struct_turn_engine_1_1nullopt__t}{nullopt\+\_\+t}}) noexcept
+\begin{DoxyCompactList}\small\item\em Construct an empty \doxylink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ \newline
+requires (!std\+::same\+\_\+as$<$\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}}, std\+::remove\+\_\+cvref\+\_\+t$<$U$>$$>$)}\\constexpr \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a347386c8e6eb431a1a4fa5ad9871ed2c}{optional\+\_\+ref}} (U \&\&u) noexcept
+\begin{DoxyCompactList}\small\item\em Construct a non-\/empty \doxylink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1optional__ref_a7d16b651f92402db2212114559589cbf}\label{class_turn_engine_1_1optional__ref_a7d16b651f92402db2212114559589cbf} 
+{\bfseries optional\+\_\+ref} (\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}} const \&) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy constructor defaulted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1optional__ref_aefe97613a1fd7f37fdeb5fe4f8aca2e1}\label{class_turn_engine_1_1optional__ref_aefe97613a1fd7f37fdeb5fe4f8aca2e1} 
+{\bfseries optional\+\_\+ref} (\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}} \&\&) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor defaulted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1optional__ref_a9b36208850baa45fc477c25578991dc1}\label{class_turn_engine_1_1optional__ref_a9b36208850baa45fc477c25578991dc1} 
+\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1optional__ref_a92be1ff8b3735fdf85e65dbf5276e5a8}\label{class_turn_engine_1_1optional__ref_a92be1ff8b3735fdf85e65dbf5276e5a8} 
+\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em Move assignment deleted. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a12d9c2059773ca7beede6e85910c1bee}{operator bool}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Bool conversion operator. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a32c4f4e4bb321b09fa7f25e100658a47}{has\+\_\+value}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Check if this has a value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\constexpr T \mbox{\hyperlink{class_turn_engine_1_1optional__ref_af78683192ce5ba4d8ba1aeef5a7123c7}{value\+\_\+or}} (U \&\&fallback) const noexcept
+\begin{DoxyCompactList}\small\item\em Return a copy of the refered to value or a fallback is no value is held. \end{DoxyCompactList}\item 
+constexpr T \& \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a9cb5aceffd88290013240995af13f08d}{operator\texorpdfstring{$\ast$}{*}}} () noexcept
+\begin{DoxyCompactList}\small\item\em Access the held value. \end{DoxyCompactList}\item 
+constexpr T const \& \mbox{\hyperlink{class_turn_engine_1_1optional__ref_aca5b847f423351814a2974527f575dec}{operator\texorpdfstring{$\ast$}{*}}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Access the held value. \end{DoxyCompactList}\item 
+constexpr T const \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a4a0d87d97383cde9760e12307c43cfc1}{operator-\/$>$}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Access the held value. \end{DoxyCompactList}\item 
+constexpr T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a53cf8e0ce0dcb316f49ecbe30eb776ec}{operator-\/$>$}} () noexcept
+\begin{DoxyCompactList}\small\item\em Access the held value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Turn\+Engine\+::optional\+\_\+ref$<$ T $>$}
+An non-\/rebindable optional reference container. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1optional__ref_a9d7b350f2c79536e1b1aadc67cfcd205}\label{class_turn_engine_1_1optional__ref_a9d7b350f2c79536e1b1aadc67cfcd205} 
+\index{TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}!optional\_ref@{optional\_ref}}
+\index{optional\_ref@{optional\_ref}!TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{optional\_ref()}{optional\_ref()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+constexpr \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{Turn\+Engine\+::optional\+\_\+ref}}$<$ T $>$\+::optional\+\_\+ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_turn_engine_1_1nullopt__t}{nullopt\+\_\+t}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Construct an empty \doxylink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+} & A \doxylink{struct_turn_engine_1_1nullopt__t}{nullopt\+\_\+t}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1optional__ref_a347386c8e6eb431a1a4fa5ad9871ed2c}\label{class_turn_engine_1_1optional__ref_a347386c8e6eb431a1a4fa5ad9871ed2c} 
+\index{TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}!optional\_ref@{optional\_ref}}
+\index{optional\_ref@{optional\_ref}!TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{optional\_ref()}{optional\_ref()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template$<$class U $>$ \newline
+requires (!std\+::same\+\_\+as$<$\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}}, std\+::remove\+\_\+cvref\+\_\+t$<$U$>$$>$)\\
+constexpr \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{Turn\+Engine\+::optional\+\_\+ref}}$<$ T $>$\+::optional\+\_\+ref (\begin{DoxyParamCaption}\item[{U \&\&}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Construct a non-\/empty \doxylink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The value which this \doxylink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref} refers to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The passed in value must be an lvalue reference. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1optional__ref_a32c4f4e4bb321b09fa7f25e100658a47}\label{class_turn_engine_1_1optional__ref_a32c4f4e4bb321b09fa7f25e100658a47} 
+\index{TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}!has\_value@{has\_value}}
+\index{has\_value@{has\_value}!TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{has\_value()}{has\_value()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+constexpr bool \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{Turn\+Engine\+::optional\+\_\+ref}}$<$ T $>$\+::has\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Check if this has a value. 
+
+\begin{DoxyReturn}{Returns}
+A bool denoting if this \doxylink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref} holds a value. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1optional__ref_a12d9c2059773ca7beede6e85910c1bee}\label{class_turn_engine_1_1optional__ref_a12d9c2059773ca7beede6e85910c1bee} 
+\index{TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+constexpr \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{Turn\+Engine\+::optional\+\_\+ref}}$<$ T $>$\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Bool conversion operator. 
+
+\begin{DoxyReturn}{Returns}
+A bool denoting if this \doxylink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref} holds a value. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1optional__ref_aca5b847f423351814a2974527f575dec}\label{class_turn_engine_1_1optional__ref_aca5b847f423351814a2974527f575dec} 
+\index{TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+constexpr T const  \& \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{Turn\+Engine\+::optional\+\_\+ref}}$<$ T $>$\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Access the held value. 
+
+\begin{DoxyReturn}{Returns}
+A const reference to the held value. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If \texorpdfstring{$\ast$}{*}this does not hold a value, calling this is UB. 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1optional__ref_a9cb5aceffd88290013240995af13f08d}\label{class_turn_engine_1_1optional__ref_a9cb5aceffd88290013240995af13f08d} 
+\index{TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+constexpr T \& \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{Turn\+Engine\+::optional\+\_\+ref}}$<$ T $>$\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Access the held value. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the held value. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If \texorpdfstring{$\ast$}{*}this does not hold a value, calling this is UB. 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1optional__ref_a4a0d87d97383cde9760e12307c43cfc1}\label{class_turn_engine_1_1optional__ref_a4a0d87d97383cde9760e12307c43cfc1} 
+\index{TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+constexpr T const  \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{Turn\+Engine\+::optional\+\_\+ref}}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Access the held value. 
+
+\begin{DoxyReturn}{Returns}
+A const pointer to the held value or nullptr is no value is held. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1optional__ref_a53cf8e0ce0dcb316f49ecbe30eb776ec}\label{class_turn_engine_1_1optional__ref_a53cf8e0ce0dcb316f49ecbe30eb776ec} 
+\index{TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+constexpr T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{Turn\+Engine\+::optional\+\_\+ref}}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Access the held value. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the held value or nullptr is no value is held. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1optional__ref_af78683192ce5ba4d8ba1aeef5a7123c7}\label{class_turn_engine_1_1optional__ref_af78683192ce5ba4d8ba1aeef5a7123c7} 
+\index{TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}!value\_or@{value\_or}}
+\index{value\_or@{value\_or}!TurnEngine::optional\_ref$<$ T $>$@{TurnEngine::optional\_ref$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value\_or()}{value\_or()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template$<$class U $>$ \\
+constexpr T \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{Turn\+Engine\+::optional\+\_\+ref}}$<$ T $>$\+::value\+\_\+or (\begin{DoxyParamCaption}\item[{U \&\&}]{fallback }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Return a copy of the refered to value or a fallback is no value is held. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fallback} & The value to use if \texorpdfstring{$\ast$}{*}this does not hold a value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Either the held value or the fallback. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Utils.\+hpp\end{DoxyCompactItemize}

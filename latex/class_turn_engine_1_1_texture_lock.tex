@@ -1,0 +1,70 @@
+\doxysection{Turn\+Engine\+::Texture\+Lock Class Reference}
+\hypertarget{class_turn_engine_1_1_texture_lock}{}\label{class_turn_engine_1_1_texture_lock}\index{TurnEngine::TextureLock@{TurnEngine::TextureLock}}
+
+
+A lock handle to a portion of a texture.  
+
+
+
+
+{\ttfamily \#include $<$Texture.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1_texture_lock_af4f102b6c9ea6e5379f976e68acd6fce}\label{class_turn_engine_1_1_texture_lock_af4f102b6c9ea6e5379f976e68acd6fce} 
+{\bfseries Texture\+Lock} (\mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{Texture\+Lock}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_texture_lock_aa485380258f8e95e0dcf324eb0e0f500}\label{class_turn_engine_1_1_texture_lock_aa485380258f8e95e0dcf324eb0e0f500} 
+\mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{Texture\+Lock}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{Texture\+Lock}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment deleted. \end{DoxyCompactList}\item 
+constexpr int \mbox{\hyperlink{class_turn_engine_1_1_texture_lock_a94612078598b42732fe38d71c38fc75f}{pitch}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the pitch of the underlying texture pixel data. \end{DoxyCompactList}\item 
+constexpr std\+::byte \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1_texture_lock_a475d39f514bd82bbb391e8601f7e7ee7}{pixels}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get access to the locked texture\textquotesingle{}s pixels. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_texture_lock_a6503ec18b2bc3ec41cf0df1aa5e816d8}\label{class_turn_engine_1_1_texture_lock_a6503ec18b2bc3ec41cf0df1aa5e816d8} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Texture\+Lock} () noexcept
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1_texture_lock_af7f909106d08e36cd50aa58e36f9bf47}\label{class_turn_engine_1_1_texture_lock_af7f909106d08e36cd50aa58e36f9bf47} 
+class {\bfseries Texture}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A lock handle to a portion of a texture. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1_texture_lock_a94612078598b42732fe38d71c38fc75f}\label{class_turn_engine_1_1_texture_lock_a94612078598b42732fe38d71c38fc75f} 
+\index{TurnEngine::TextureLock@{TurnEngine::TextureLock}!pitch@{pitch}}
+\index{pitch@{pitch}!TurnEngine::TextureLock@{TurnEngine::TextureLock}}
+\doxysubsubsection{\texorpdfstring{pitch()}{pitch()}}
+{\footnotesize\ttfamily constexpr int Turn\+Engine\+::\+Texture\+Lock\+::pitch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get the pitch of the underlying texture pixel data. 
+
+\begin{DoxyReturn}{Returns}
+The pitch value. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_lock_a475d39f514bd82bbb391e8601f7e7ee7}\label{class_turn_engine_1_1_texture_lock_a475d39f514bd82bbb391e8601f7e7ee7} 
+\index{TurnEngine::TextureLock@{TurnEngine::TextureLock}!pixels@{pixels}}
+\index{pixels@{pixels}!TurnEngine::TextureLock@{TurnEngine::TextureLock}}
+\doxysubsubsection{\texorpdfstring{pixels()}{pixels()}}
+{\footnotesize\ttfamily constexpr std\+::byte \texorpdfstring{$\ast$}{*} Turn\+Engine\+::\+Texture\+Lock\+::pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get access to the locked texture\textquotesingle{}s pixels. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the pixel data. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Texture.\+hpp\end{DoxyCompactItemize}

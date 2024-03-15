@@ -1,0 +1,25 @@
+\doxysection{Area2\+D.\+hpp}
+\hypertarget{_area2_d_8hpp_source}{}\label{_area2_d_8hpp_source}\index{include/TurnEngine/core/Area2D.hpp@{include/TurnEngine/core/Area2D.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/core/Object2D.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }TurnEngine::core\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1core_1_1_area2_d}{Area2D}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ std::vector<Object2D*>\ objects;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_area2_d}{Area2D}}():\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_a5495de021ae784de937ab8143fad1718}{Object2D}}(\textcolor{keyword}{nullptr},\ -\/1000000,\ \textcolor{keyword}{false},\ \{0,\ 0\},\ 0,\ 0,\ \textcolor{keyword}{nullptr},\ \{0,0,0,0\})\ \{\}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ contains(\mbox{\hyperlink{class_turn_engine_1_1_point}{Point<int>}}\ pos);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_area2_d_a52ce4be85954f51bcdf2b56093be1f83}{draw}}(\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{render::Drawer}}*\ drawer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addChild(\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}}*\ obj);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::vector<Object2D*>\ getChildren();}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}}*\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_area2_d_ae7c7898a43bc379e3feeaf9e794d7d18}{getChild}}(std::string\ \_name)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ removeChild(\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}}*\ obj);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_area2_d_ac2e83350f7605f1f7494c603af1d4cdc}{update}}(\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}}*\ \_event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ \};}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}

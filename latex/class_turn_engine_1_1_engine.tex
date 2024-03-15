@@ -1,0 +1,100 @@
+\doxysection{Turn\+Engine\+::Engine Class Reference}
+\hypertarget{class_turn_engine_1_1_engine}{}\label{class_turn_engine_1_1_engine}\index{TurnEngine::Engine@{TurnEngine::Engine}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_engine_afa665e532c40503a80edfb873428f686}{init\+SDL}} (SDLInit\+Flags sdl\+\_\+flags, int audio\+Flags=MIX\+\_\+\+INIT\+\_\+\+WAVPACK\texorpdfstring{$\vert$}{|}MIX\+\_\+\+INIT\+\_\+\+OPUS\texorpdfstring{$\vert$}{|}MIX\+\_\+\+INIT\+\_\+\+OGG\texorpdfstring{$\vert$}{|}MIX\+\_\+\+INIT\+\_\+\+MP3\texorpdfstring{$\vert$}{|}MIX\+\_\+\+INIT\+\_\+\+MOD\texorpdfstring{$\vert$}{|}MIX\+\_\+\+INIT\+\_\+\+MID\texorpdfstring{$\vert$}{|}MIX\+\_\+\+INIT\+\_\+\+FLAC)
+\begin{DoxyCompactList}\small\item\em init\+SDL method inits SDL library and all its extensions \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_engine_ae2bee8543eabedae200852ddaafbcbcf}{open\+Audio}} ()
+\begin{DoxyCompactList}\small\item\em That method opens audio device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_engine_a0af5ab48fba9a3c4b2b898b024fdadd9}{create\+Window}} (const std\+::string \&title, Window\+Flags flags, int width=800, int height=600)
+\begin{DoxyCompactList}\small\item\em That method creates main window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_engine_ae6a3cbb09d6905368c98bd024b273211}{create\+Drawer}} (Renderer\+Flags renderer\+\_\+init\+\_\+flags)
+\begin{DoxyCompactList}\small\item\em That method creates Drawer and \doxylink{class_turn_engine_1_1_renderer}{Renderer}. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_engine_afd3eea1613c2cf49b175c592295f761e}\label{class_turn_engine_1_1_engine_afd3eea1613c2cf49b175c592295f761e} 
+void {\bfseries on\+Poll\+Events} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_turn_engine_1_1_engine}{Engine} user method. Stands for polling and processing events such as mouse or keyboard events. Must be implemented by user. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_engine_abcc4f8a6f944b67950da4db695dbe011}\label{class_turn_engine_1_1_engine_abcc4f8a6f944b67950da4db695dbe011} 
+void {\bfseries on\+Update} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_turn_engine_1_1_engine}{Engine} user method. Stands for updating game objects. Must be implemented by user. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_engine_a9cbe488a99cfc0473240a99f1b85cf47}\label{class_turn_engine_1_1_engine_a9cbe488a99cfc0473240a99f1b85cf47} 
+void {\bfseries on\+Draw} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_turn_engine_1_1_engine}{Engine} user method. Stands for drawing game objects. Must be implemented by user. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_engine_a286eff607b83573656bf193f51716a71}\label{class_turn_engine_1_1_engine_a286eff607b83573656bf193f51716a71} 
+void {\bfseries start} (int fps=60)
+\begin{DoxyCompactList}\small\item\em That mehod starts game main loop. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_engine_ac0fb33b7abd52bba108f06853b5fcfd3}\label{class_turn_engine_1_1_engine_ac0fb33b7abd52bba108f06853b5fcfd3} 
+\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Window} ()
+\begin{DoxyCompactList}\small\item\em That func returns main window. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_engine_ae96e030ef273e7e21389a080226f13d2}\label{class_turn_engine_1_1_engine_ae96e030ef273e7e21389a080226f13d2} 
+\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Renderer} ()
+\begin{DoxyCompactList}\small\item\em That func returns hardware renderer. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_engine_af82dc1ca98ed3922c379f64103e9bd06}\label{class_turn_engine_1_1_engine_af82dc1ca98ed3922c379f64103e9bd06} 
+\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{render\+::\+Drawer}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Drawer} ()
+\begin{DoxyCompactList}\small\item\em That func returns engine drawer. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_engine_ac8bcd39fbba80ec80b03ae3bafc285ab}\label{class_turn_engine_1_1_engine_ac8bcd39fbba80ec80b03ae3bafc285ab} 
+int {\bfseries get\+Height} ()
+\begin{DoxyCompactList}\small\item\em That func returns main window height. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_engine_a47aa666c500b3c02544522be8ca45e25}\label{class_turn_engine_1_1_engine_a47aa666c500b3c02544522be8ca45e25} 
+int {\bfseries get\+Width} ()
+\begin{DoxyCompactList}\small\item\em That func returns main window width. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1_engine_ae6a3cbb09d6905368c98bd024b273211}\label{class_turn_engine_1_1_engine_ae6a3cbb09d6905368c98bd024b273211} 
+\index{TurnEngine::Engine@{TurnEngine::Engine}!createDrawer@{createDrawer}}
+\index{createDrawer@{createDrawer}!TurnEngine::Engine@{TurnEngine::Engine}}
+\doxysubsubsection{\texorpdfstring{createDrawer()}{createDrawer()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Engine\+::create\+Drawer (\begin{DoxyParamCaption}\item[{Renderer\+Flags}]{renderer\+\_\+init\+\_\+flags }\end{DoxyParamCaption})}
+
+
+
+That method creates Drawer and \doxylink{class_turn_engine_1_1_renderer}{Renderer}. 
+
+\begin{DoxyReturn}{Returns}
+Boolean {\ttfamily true} if created successfully, else {\ttfamily false} 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_engine_a0af5ab48fba9a3c4b2b898b024fdadd9}\label{class_turn_engine_1_1_engine_a0af5ab48fba9a3c4b2b898b024fdadd9} 
+\index{TurnEngine::Engine@{TurnEngine::Engine}!createWindow@{createWindow}}
+\index{createWindow@{createWindow}!TurnEngine::Engine@{TurnEngine::Engine}}
+\doxysubsubsection{\texorpdfstring{createWindow()}{createWindow()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Engine\+::create\+Window (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title,  }\item[{Window\+Flags}]{flags,  }\item[{int}]{width = {\ttfamily 800},  }\item[{int}]{height = {\ttfamily 600} }\end{DoxyParamCaption})}
+
+
+
+That method creates main window. 
+
+\begin{DoxyReturn}{Returns}
+Boolean {\ttfamily true} if created successfully, else {\ttfamily false} 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_engine_afa665e532c40503a80edfb873428f686}\label{class_turn_engine_1_1_engine_afa665e532c40503a80edfb873428f686} 
+\index{TurnEngine::Engine@{TurnEngine::Engine}!initSDL@{initSDL}}
+\index{initSDL@{initSDL}!TurnEngine::Engine@{TurnEngine::Engine}}
+\doxysubsubsection{\texorpdfstring{initSDL()}{initSDL()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Engine\+::init\+SDL (\begin{DoxyParamCaption}\item[{SDLInit\+Flags}]{sdl\+\_\+flags,  }\item[{int}]{audio\+Flags = {\ttfamily MIX\+\_\+INIT\+\_\+WAVPACK\texorpdfstring{$\vert$}{|}MIX\+\_\+INIT\+\_\+OPUS\texorpdfstring{$\vert$}{|}MIX\+\_\+INIT\+\_\+OGG\texorpdfstring{$\vert$}{|}MIX\+\_\+INIT\+\_\+MP3\texorpdfstring{$\vert$}{|}MIX\+\_\+INIT\+\_\+MOD\texorpdfstring{$\vert$}{|}MIX\+\_\+INIT\+\_\+MID\texorpdfstring{$\vert$}{|}MIX\+\_\+INIT\+\_\+FLAC} }\end{DoxyParamCaption})}
+
+
+
+init\+SDL method inits SDL library and all its extensions 
+
+\begin{DoxyReturn}{Returns}
+Returns {\ttfamily true} if initialized successfully, else {\ttfamily false} 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_engine_ae2bee8543eabedae200852ddaafbcbcf}\label{class_turn_engine_1_1_engine_ae2bee8543eabedae200852ddaafbcbcf} 
+\index{TurnEngine::Engine@{TurnEngine::Engine}!openAudio@{openAudio}}
+\index{openAudio@{openAudio}!TurnEngine::Engine@{TurnEngine::Engine}}
+\doxysubsubsection{\texorpdfstring{openAudio()}{openAudio()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Engine\+::open\+Audio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+That method opens audio device. 
+
+\begin{DoxyReturn}{Returns}
+Boolean {\ttfamily true} if opened successfully, else {\ttfamily false} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/Engine.\+hpp\end{DoxyCompactItemize}

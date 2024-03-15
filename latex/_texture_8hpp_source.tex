@@ -1,0 +1,126 @@
+\doxysection{Texture.\+hpp}
+\hypertarget{_texture_8hpp_source}{}\label{_texture_8hpp_source}\index{include/TurnEngine/wrapper/Texture.hpp@{include/TurnEngine/wrapper/Texture.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Enums.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Utils.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Shapes.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Surface.hpp"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }TurnEngine\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }Renderer;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }Texture;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{TextureLock}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ SDL\_Texture*\ \textcolor{keyword}{const}\ texture\_;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::byte*\ \textcolor{keyword}{const}\ pixels\_;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ pitch\_;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{TextureLock}}(SDL\_Texture*\ \textcolor{keyword}{const}\ t,\ std::byte*\ \textcolor{keyword}{const}\ pix,\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_lock_a94612078598b42732fe38d71c38fc75f}{pitch}})\ noexcept}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ texture\_(t),\ pixels\_(pix),\ pitch\_(\mbox{\hyperlink{class_turn_engine_1_1_texture_lock_a94612078598b42732fe38d71c38fc75f}{pitch}})\ \{\}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture_lock_af4f102b6c9ea6e5379f976e68acd6fce}{TextureLock}}(\mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{TextureLock}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{TextureLock}}\&\ \mbox{\hyperlink{class_turn_engine_1_1_texture_lock_aa485380258f8e95e0dcf324eb0e0f500}{operator=}}(\mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{TextureLock}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_lock_a94612078598b42732fe38d71c38fc75f}{pitch}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ pitch\_;\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::byte*\ \mbox{\hyperlink{class_turn_engine_1_1_texture_lock_a475d39f514bd82bbb391e8601f7e7ee7}{pixels}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ pixels\_;\ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture_lock_a6503ec18b2bc3ec41cf0df1aa5e816d8}{\string~TextureLock}}()\ noexcept\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ SDL\_UnlockTexture(texture\_);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ SDL\_Texture*\ texture\_;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a81c0720b2fbde8f71bd0675b56e5ba8a}{Texture}}(SDL\_Texture*\ t)\ noexcept}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ texture\_(t)\ \{\}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture_a1ef0da0dba75c441773f2e89d0e2a444}{Texture}}(\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\&\ r,\ PixelFormatEnum\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_afcdfe43f6e4bdc199fe467c69a35a1b6}{format}},\ TextureAccess\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a0607d99f166411548538a68a13f2f960}{access}},\ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh<int>}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}})\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture_a7c813c77bc4e039c2b5020aaf2412b0c}{Texture}}(\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\&\ r,\ \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}}\ \textcolor{keyword}{const}\&\ s)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture_a4b41c9c68d32baea81dfa91de6dec42f}{Texture}}(\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\&\ r,\ \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}\ file)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture_ace140cbb6b0f1798e623bfcdc52cbfb8}{Texture}}(\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\&\ \mbox{\hyperlink{class_turn_engine_1_1_texture_ae5fd51fd2062c0fc0ae3c3631120cc50}{operator=}}(\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\&\ \mbox{\hyperlink{class_turn_engine_1_1_texture_ac8fd842f11a9bb21e4cb581ca541bbd2}{operator=}}(\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_af49f09641f3c6f7d0ed21fa5bceb887e}{Texture}}(\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\&\&\ other)\ noexcept}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ texture\_(std::exchange(other.texture\_,\ \textcolor{keyword}{nullptr}))\ \{\}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture_ae15cfe896a1f0dbfcd583fa94120087e}{\string~Texture}}()\ noexcept;}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_ab8fc2f9168cbd2660b1ad272bfcff79c}{destroy}}()\ noexcept;}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ constexpr\ SDL\_Texture*\ \mbox{\hyperlink{class_turn_engine_1_1_texture_ae20381ff349c965db00cd98c76af23a2}{native\_handle}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ texture\_;\ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \textcolor{keyword}{operator}\ bool()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ texture\_\ !=\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_ad99155c62291fd43b438f0748de5b069}{is\_ok}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ texture\_\ !=\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{TextureLock}}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a644a2cf7c056f9d364120aa66122bee6}{lock}}()\ noexcept;}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{TextureLock}}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a644a2cf7c056f9d364120aa66122bee6}{lock}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ rect)\ noexcept;}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ std::uint8\_t\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a61fd99df3a4bf1f3b6b9801ccaa74673}{alpha\_mod}}()\ const\ noexcept;}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ TurnEngine::BlendMode\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a617ffb05ef5ac6f741359186b744bfe0}{blend\_mode}}()\ const\ noexcept;}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}<std::uint8\_t>\ \mbox{\hyperlink{class_turn_engine_1_1_texture_ac1543d2e907a6a2859e87a04ed3982b7}{color\_mod}}()\ const\ noexcept;}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ struct\ \mbox{\hyperlink{struct_turn_engine_1_1_texture_1_1texture__query}{texture\_query}}\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ PixelFormatEnum\ \mbox{\hyperlink{class_turn_engine_1_1_texture_afcdfe43f6e4bdc199fe467c69a35a1b6}{format}}\ =\ PixelFormatEnum::UNKNOWN;}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ TextureAccess\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a0607d99f166411548538a68a13f2f960}{access}}\{\};}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ width\ =\ 0,\ height\ =\ 0;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1_texture_1_1texture__query}{texture\_query}}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a66967f44b8930719c96e36cb3bbeaf7e}{query}}()\ const\ noexcept;}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}<\textcolor{keywordtype}{int}>\ \mbox{\hyperlink{class_turn_engine_1_1_texture_aa5074e0ffea5790aa93aa80caaea1e31}{size}}()\ const\ noexcept;}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ PixelFormatEnum\ \mbox{\hyperlink{class_turn_engine_1_1_texture_afcdfe43f6e4bdc199fe467c69a35a1b6}{format}}()\ const\ noexcept;}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ TextureAccess\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a0607d99f166411548538a68a13f2f960}{access}}()\ const\ noexcept;}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_af0dc048bc37f0f0c28eb95449e5c6db6}{set\_alpha\_mod}}(std::uint8\_t\ alpha)\ noexcept;}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_ad74d7619a803ed84217ecc89055ebeed}{set\_blend\_mode}}(TurnEngine::BlendMode\ mode)\ noexcept;}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_aabeb761be9916001190eda05375c17dc}{set\_color\_mod}}(\mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}<>\ const\&\ mod)\ noexcept;}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a8bcbfa4a2df64cdb02d204d6703de17c}{update}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ rect,\ std::span<std::\textcolor{keywordtype}{byte}\ const>\ pixels,\ \textcolor{keywordtype}{int}\ pitch)\ noexcept;}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a8bcbfa4a2df64cdb02d204d6703de17c}{update}}(std::span<std::\textcolor{keywordtype}{byte}\ const>\ pixels,\ \textcolor{keywordtype}{int}\ pitch)\ noexcept;}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a8720d067b279a2d84d8bdcce096ad647}{update\_yuv}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const\&\ rect,}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::span<std::\textcolor{keywordtype}{byte}\ const>\ yplane,\ \textcolor{keywordtype}{int}\ ypitch,}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::span<std::\textcolor{keywordtype}{byte}\ const>\ uplane,\ \textcolor{keywordtype}{int}\ upitch,}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::span<std::\textcolor{keywordtype}{byte}\ const>\ vplane,\ \textcolor{keywordtype}{int}\ vpitch)\ noexcept;}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_texture_a8720d067b279a2d84d8bdcce096ad647}{update\_yuv}}(std::span<std::\textcolor{keywordtype}{byte}\ const>\ yplane,\ \textcolor{keywordtype}{int}\ ypitch,}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::span<std::\textcolor{keywordtype}{byte}\ const>\ uplane,\ \textcolor{keywordtype}{int}\ upitch,}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::span<std::\textcolor{keywordtype}{byte}\ const>\ vplane,\ \textcolor{keywordtype}{int}\ vpitch)\ noexcept;}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ \ \ \ \ \};}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \}}
+
+\end{DoxyCode}

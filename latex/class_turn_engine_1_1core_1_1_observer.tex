@@ -1,0 +1,74 @@
+\doxysection{Turn\+Engine\+::core\+::Observer Class Reference}
+\hypertarget{class_turn_engine_1_1core_1_1_observer}{}\label{class_turn_engine_1_1core_1_1_observer}\index{TurnEngine::core::Observer@{TurnEngine::core::Observer}}
+
+
+That class implements \doxylink{class_turn_engine_1_1core_1_1_observer}{Observer} pattern. No params should be defined.  
+
+
+
+
+{\ttfamily \#include $<$Observer.\+hpp$>$}
+
+Inheritance diagram for Turn\+Engine\+::core\+::Observer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.111111cm]{class_turn_engine_1_1core_1_1_observer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer_a71e1a88d49928db7cc90d4e6843fb03a}{update}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*}\+\_\+event) override
+\begin{DoxyCompactList}\small\item\em That func is used by \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject}, don\textquotesingle{}t call it explicitly. Derived classes must override that method to use it with game logic. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1core_1_1_observer_a5a85c310a1f713b0ac964314dc6c211c}\label{class_turn_engine_1_1core_1_1_observer_a5a85c310a1f713b0ac964314dc6c211c} 
+void {\bfseries disconnect} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}} \texorpdfstring{$\ast$}{*}subject)
+\begin{DoxyCompactList}\small\item\em That func detaches \doxylink{class_turn_engine_1_1core_1_1_observer}{Observer} class from \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject}. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1core_1_1_observer_ac24b2bbb558811cd17c43c641a128cd9}\label{class_turn_engine_1_1core_1_1_observer_ac24b2bbb558811cd17c43c641a128cd9} 
+void {\bfseries connect} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}} \texorpdfstring{$\ast$}{*}subject)
+\begin{DoxyCompactList}\small\item\em That func attaches \doxylink{class_turn_engine_1_1core_1_1_observer}{Observer} class to \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject}. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1core_1_1_observer_a387b4edf90cfc9d5ffff4542fd84ca01}\label{class_turn_engine_1_1core_1_1_observer_a387b4edf90cfc9d5ffff4542fd84ca01} 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Event} ()
+\begin{DoxyCompactList}\small\item\em Getter for current event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{Turn\+Engine\+::core\+::\+IObserver}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+IObserver} ()
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1core_1_1_observer_a8fca9e3cb2a28c70ff26ac717c695ff7}\label{class_turn_engine_1_1core_1_1_observer_a8fca9e3cb2a28c70ff26ac717c695ff7} 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*} {\bfseries event}
+\item 
+\Hypertarget{class_turn_engine_1_1core_1_1_observer_a88ca2fe96589f2b6724b7c25b9dc309a}\label{class_turn_engine_1_1core_1_1_observer_a88ca2fe96589f2b6724b7c25b9dc309a} 
+std\+::vector$<$ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries subjects}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+That class implements \doxylink{class_turn_engine_1_1core_1_1_observer}{Observer} pattern. No params should be defined. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1core_1_1_observer_a71e1a88d49928db7cc90d4e6843fb03a}\label{class_turn_engine_1_1core_1_1_observer_a71e1a88d49928db7cc90d4e6843fb03a} 
+\index{TurnEngine::core::Observer@{TurnEngine::core::Observer}!update@{update}}
+\index{update@{update}!TurnEngine::core::Observer@{TurnEngine::core::Observer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::core\+::\+Observer\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*}}]{\+\_\+event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+That func is used by \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject}, don\textquotesingle{}t call it explicitly. Derived classes must override that method to use it with game logic. 
+
+
+
+Implements \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer_a6092390f2e8008ec77a58a6b66621d60}{Turn\+Engine\+::core\+::\+IObserver}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a23045c1a2644e9571e9b8af90dc32ede}{Turn\+Engine\+::core\+::\+Scene}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/core/Observer.\+hpp\end{DoxyCompactItemize}

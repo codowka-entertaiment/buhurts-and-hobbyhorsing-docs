@@ -1,0 +1,37 @@
+\doxysection{Object2\+D.\+hpp}
+\hypertarget{_object2_d_8hpp_source}{}\label{_object2_d_8hpp_source}\index{include/TurnEngine/core/Object2D.hpp@{include/TurnEngine/core/Object2D.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/core/Object.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/core/IObject2D.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/render/Drawer.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }TurnEngine::core\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_object2_d}{IObject2D}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object}{Object}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_a5495de021ae784de937ab8143fad1718}{Object2D}}(}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d::Shape<int>}}\ *shape,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ depthIndex,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isAnimated,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point<int>}}\ position,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ width,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ height,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ *texture,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect<int>}}\ rect,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ angle\ =\ 0,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RendererFlip\ flip\ =\ RendererFlip::NONE,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba<>}}\ color\ =\ Color::black}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_ac974b9fcd856163de544ca42acb32d84}{Object2D}}(\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}}\ *drawable);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_ab44afb3e8cedf71763ec61f3974479a1}{draw}}(\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{render::Drawer}}\ *drawer);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}}*\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_a380065e3fdece04957a56cef73f93caf}{getChild}}(std::string\ \_name);}
+\DoxyCodeLine{00053\ \ \ \ \ \};}
+\DoxyCodeLine{00054\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,76 @@
+\doxysection{Turn\+Engine\+::Message\+Box Class Reference}
+\hypertarget{class_turn_engine_1_1_message_box}{}\label{class_turn_engine_1_1_message_box}\index{TurnEngine::MessageBox@{TurnEngine::MessageBox}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a5016580be8ffe2b1bb9644b689249917}\label{class_turn_engine_1_1_message_box_a5016580be8ffe2b1bb9644b689249917} 
+constexpr {\bfseries Message\+Box} (Message\+Box\+Flags flgs, std\+::span$<$ SDL\+\_\+\+Message\+Box\+Button\+Data const $>$ buttons, \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} title, \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} message) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_ac0964afa656194025c570168cdfbf259}\label{class_turn_engine_1_1_message_box_ac0964afa656194025c570168cdfbf259} 
+constexpr {\bfseries Message\+Box} (Message\+Box\+Flags flgs, std\+::span$<$ SDL\+\_\+\+Message\+Box\+Button\+Data const $>$ buttons, \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} consttitle, \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} message, \mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} const \&win) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_aba23394e4a03d06ef4f3904c3ae683a1}\label{class_turn_engine_1_1_message_box_aba23394e4a03d06ef4f3904c3ae683a1} 
+constexpr {\bfseries Message\+Box} (Message\+Box\+Flags flgs, std\+::span$<$ SDL\+\_\+\+Message\+Box\+Button\+Data const $>$ buttons, \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} title, \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} message, std\+::span$<$ SDL\+\_\+\+Message\+Box\+Color\+Scheme const $>$ scheme) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a822bd5e6d315407f72db1ffc65ba014d}\label{class_turn_engine_1_1_message_box_a822bd5e6d315407f72db1ffc65ba014d} 
+{\footnotesize template$<$std\+::size\+\_\+t N$>$ }\\constexpr {\bfseries Message\+Box} (Message\+Box\+Flags flgs, std\+::span$<$ SDL\+\_\+\+Message\+Box\+Button\+Data const, N $>$ buttons, \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} title, \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} message, \mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} const \&win, std\+::span$<$ SDL\+\_\+\+Message\+Box\+Color\+Scheme const, N $>$ scheme) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_affe61b84612ef39d43ae05b2d12e0a9a}\label{class_turn_engine_1_1_message_box_affe61b84612ef39d43ae05b2d12e0a9a} 
+constexpr auto {\bfseries native\+\_\+handle} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_ab036d76e7d70aa8a0f48e2161954094c}\label{class_turn_engine_1_1_message_box_ab036d76e7d70aa8a0f48e2161954094c} 
+constexpr Message\+Box\+Flags {\bfseries flags} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_aa2f480766a88a4870707c1a05f8ecd74}\label{class_turn_engine_1_1_message_box_aa2f480766a88a4870707c1a05f8ecd74} 
+constexpr void {\bfseries set\+\_\+flats} (Message\+Box\+Flags const flag) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_af81891b398da611663e65a955665a072}\label{class_turn_engine_1_1_message_box_af81891b398da611663e65a955665a072} 
+constexpr void {\bfseries set\+\_\+window} (\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} \&win) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a6570dee878026cc784272165940f70d8}\label{class_turn_engine_1_1_message_box_a6570dee878026cc784272165940f70d8} 
+constexpr void {\bfseries remove\+\_\+window} () noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a24af87efae59e39af24d943599c72ead}\label{class_turn_engine_1_1_message_box_a24af87efae59e39af24d943599c72ead} 
+constexpr bool {\bfseries has\+\_\+window} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a52af892b577e0d6fd6cc9e2be9aec68b}\label{class_turn_engine_1_1_message_box_a52af892b577e0d6fd6cc9e2be9aec68b} 
+constexpr std\+::string\+\_\+view {\bfseries title} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a52c973b197c6083b4c3a389d9b8894da}\label{class_turn_engine_1_1_message_box_a52c973b197c6083b4c3a389d9b8894da} 
+constexpr void {\bfseries set\+\_\+title} (\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} const title) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_ac69496728a922d193ac3a5753d05dd52}\label{class_turn_engine_1_1_message_box_ac69496728a922d193ac3a5753d05dd52} 
+constexpr std\+::string\+\_\+view {\bfseries message} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a1e469b3813901eae60d059b63a98d18c}\label{class_turn_engine_1_1_message_box_a1e469b3813901eae60d059b63a98d18c} 
+constexpr void {\bfseries set\+\_\+message} (\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} const message) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a8cb8f58105be6df6968d81a3394bdadf}\label{class_turn_engine_1_1_message_box_a8cb8f58105be6df6968d81a3394bdadf} 
+constexpr int {\bfseries num\+\_\+buttons} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a5502d93c6a1e938f7a2b9027ebcd3261}\label{class_turn_engine_1_1_message_box_a5502d93c6a1e938f7a2b9027ebcd3261} 
+constexpr std\+::span$<$ SDL\+\_\+\+Message\+Box\+Button\+Data const $>$ {\bfseries buttons} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a75aae75d833db94ea8746bd5ce3d844b}\label{class_turn_engine_1_1_message_box_a75aae75d833db94ea8746bd5ce3d844b} 
+constexpr void {\bfseries set\+\_\+buttons} (std\+::span$<$ SDL\+\_\+\+Message\+Box\+Button\+Data const $>$ const buttons) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_aaad860fcd9756b1595527578f75fbb3b}\label{class_turn_engine_1_1_message_box_aaad860fcd9756b1595527578f75fbb3b} 
+constexpr std\+::span$<$ SDL\+\_\+\+Message\+Box\+Color\+Scheme const $>$ {\bfseries color\+\_\+scheme} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a9507262278358654a8c9f5251c60443d}\label{class_turn_engine_1_1_message_box_a9507262278358654a8c9f5251c60443d} 
+constexpr void {\bfseries set\+\_\+color\+\_\+scheme} (std\+::span$<$ SDL\+\_\+\+Message\+Box\+Color\+Scheme const $>$ const scheme) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a17bebe751900b096169d77cfa0e944af}\label{class_turn_engine_1_1_message_box_a17bebe751900b096169d77cfa0e944af} 
+constexpr void {\bfseries remove\+\_\+color\+\_\+scheme} () noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_aec3af2b6c64258a9814f3d8200f363b8}\label{class_turn_engine_1_1_message_box_aec3af2b6c64258a9814f3d8200f363b8} 
+constexpr bool {\bfseries has\+\_\+color\+\_\+scheme} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_message_box_a06257d56c0809c59a7185e4a1831c24c}\label{class_turn_engine_1_1_message_box_a06257d56c0809c59a7185e4a1831c24c} 
+std\+::optional$<$ int $>$ {\bfseries show} () const noexcept
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Message\+Box.\+hpp\end{DoxyCompactItemize}

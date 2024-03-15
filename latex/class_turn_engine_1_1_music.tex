@@ -1,0 +1,104 @@
+\doxysection{Turn\+Engine\+::Music Class Reference}
+\hypertarget{class_turn_engine_1_1_music}{}\label{class_turn_engine_1_1_music}\index{TurnEngine::Music@{TurnEngine::Music}}
+
+
+That class wraps Mix\+\_\+\+Music.  
+
+
+
+
+{\ttfamily \#include $<$Audio.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_music_aecc01dc2f7c3ddcd74f153f7b8cc6db6}{Music}} (std\+::string file\+Path)
+\begin{DoxyCompactList}\small\item\em the constructor \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_music_a7887f6e5642821f2f6836bc5159f72ce}\label{class_turn_engine_1_1_music_a7887f6e5642821f2f6836bc5159f72ce} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Music} ()
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_music_a0559fb43f78f4ce98fc3f60dead891d9}{play}} (int loops=-\/1)
+\begin{DoxyCompactList}\small\item\em That method starts playing music. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_music_a0933b99621802e6e28beb2a8776ebeba}\label{class_turn_engine_1_1_music_a0933b99621802e6e28beb2a8776ebeba} 
+void {\bfseries pause} ()
+\begin{DoxyCompactList}\small\item\em That method pauses music. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_music_aac438a85bbcf083c97ea0d0b25ae8179}\label{class_turn_engine_1_1_music_aac438a85bbcf083c97ea0d0b25ae8179} 
+void {\bfseries resume} ()
+\begin{DoxyCompactList}\small\item\em That method resumes music. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_music_a6d44b0a892612955d304aeae00bfb8bd}\label{class_turn_engine_1_1_music_a6d44b0a892612955d304aeae00bfb8bd} 
+void {\bfseries rewind} ()
+\begin{DoxyCompactList}\small\item\em That method rewinds music. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_music_af62d7f30fc8b50cea9ebaf23e0e3ca8e}{is\+Playing}} ()
+\begin{DoxyCompactList}\small\item\em That method checks if music is playing. \end{DoxyCompactList}\item 
+Mix\+\_\+\+Music \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1_music_a75734a3166a9cc3db2f267b9d8dc6c93}{native\+\_\+handle}} ()
+\begin{DoxyCompactList}\small\item\em That method returns SDL\+\_\+mixer Mix\+\_\+\+Music pointer on structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+That class wraps Mix\+\_\+\+Music. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1_music_aecc01dc2f7c3ddcd74f153f7b8cc6db6}\label{class_turn_engine_1_1_music_aecc01dc2f7c3ddcd74f153f7b8cc6db6} 
+\index{TurnEngine::Music@{TurnEngine::Music}!Music@{Music}}
+\index{Music@{Music}!TurnEngine::Music@{TurnEngine::Music}}
+\doxysubsubsection{\texorpdfstring{Music()}{Music()}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Music\+::\+Music (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+the constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & file\+Path \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1_music_af62d7f30fc8b50cea9ebaf23e0e3ca8e}\label{class_turn_engine_1_1_music_af62d7f30fc8b50cea9ebaf23e0e3ca8e} 
+\index{TurnEngine::Music@{TurnEngine::Music}!isPlaying@{isPlaying}}
+\index{isPlaying@{isPlaying}!TurnEngine::Music@{TurnEngine::Music}}
+\doxysubsubsection{\texorpdfstring{isPlaying()}{isPlaying()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Music\+::is\+Playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+That method checks if music is playing. 
+
+\begin{DoxyReturn}{Returns}
+Boolean {\ttfamily true} if music is playing, else {\ttfamily false} 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_music_a75734a3166a9cc3db2f267b9d8dc6c93}\label{class_turn_engine_1_1_music_a75734a3166a9cc3db2f267b9d8dc6c93} 
+\index{TurnEngine::Music@{TurnEngine::Music}!native\_handle@{native\_handle}}
+\index{native\_handle@{native\_handle}!TurnEngine::Music@{TurnEngine::Music}}
+\doxysubsubsection{\texorpdfstring{native\_handle()}{native\_handle()}}
+{\footnotesize\ttfamily Mix\+\_\+\+Music \texorpdfstring{$\ast$}{*} Turn\+Engine\+::\+Music\+::native\+\_\+handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+That method returns SDL\+\_\+mixer Mix\+\_\+\+Music pointer on structure. 
+
+\begin{DoxyReturn}{Returns}
+pointer on Mix\+\_\+\+Music structure 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_music_a0559fb43f78f4ce98fc3f60dead891d9}\label{class_turn_engine_1_1_music_a0559fb43f78f4ce98fc3f60dead891d9} 
+\index{TurnEngine::Music@{TurnEngine::Music}!play@{play}}
+\index{play@{play}!TurnEngine::Music@{TurnEngine::Music}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Music\+::play (\begin{DoxyParamCaption}\item[{int}]{loops = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+That method starts playing music. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & loops \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Audio.\+hpp\end{DoxyCompactItemize}

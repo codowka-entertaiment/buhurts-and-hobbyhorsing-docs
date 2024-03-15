@@ -1,0 +1,300 @@
+\doxysection{Turn\+Engine\+::core\+::Scene Class Reference}
+\hypertarget{class_turn_engine_1_1core_1_1_scene}{}\label{class_turn_engine_1_1core_1_1_scene}\index{TurnEngine::core::Scene@{TurnEngine::core::Scene}}
+
+
+Class represents scene. \doxylink{class_turn_engine_1_1core_1_1_scene}{Scene} stores 2D objects. And allows to manage that objects.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+hpp$>$}
+
+Inheritance diagram for Turn\+Engine\+::core\+::Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_turn_engine_1_1core_1_1_scene}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a7ad68dd7c3ace9d0d003e7d4ee2a2574}{Scene}} (\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ pos, int width, int height)
+\begin{DoxyCompactList}\small\item\em the constructor \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a27c830cf1a4650751a85a031b1bc2163}{contains}} (\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ pos)
+\begin{DoxyCompactList}\small\item\em method contains tells if point inside scene \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a953299ffa4e3b580153df141bf28443d}{draw}} (\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{render\+::\+Drawer}} \texorpdfstring{$\ast$}{*}drawer) override
+\begin{DoxyCompactList}\small\item\em method draws all child 2D objects inside scene \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_ab3569b2b512c3e2f16ff28a2b60cc387}{add\+Child}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em method adds child 2D objects to scene \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a581589bcd8d9224c080663946aabba23}{get\+Children}} ()
+\begin{DoxyCompactList}\small\item\em method returns all child 2D objects \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a2d52b305e05dcfdae034052d1a645e79}{get\+Child}} (std\+::string \+\_\+name) override
+\begin{DoxyCompactList}\small\item\em method returns child 2D object by its name \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a2450455a140176d989f4cebd6fb2fa58}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em method returns scene position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_acd7949a780d8e1bbbd0dc365f083c663}{remove\+Child}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em method removes child 2D object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a23045c1a2644e9571e9b8af90dc32ede}{update}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*}\+\_\+event) override
+\begin{DoxyCompactList}\small\item\em method retranslate event signal to child 2D objects \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Turn\+Engine\+::core\+::\+Object2D}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_a5495de021ae784de937ab8143fad1718}{Object2D}} (\mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d\+::\+Shape}}$<$ int $>$ \texorpdfstring{$\ast$}{*}shape, int depth\+Index, bool is\+Animated, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ position, int width, int height, \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} \texorpdfstring{$\ast$}{*}texture, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ rect, int angle=0, Renderer\+Flip flip=Renderer\+Flip\+::\+NONE, \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}$<$$>$ color=Color\+::black)
+\begin{DoxyCompactList}\small\item\em the constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_ac974b9fcd856163de544ca42acb32d84}{Object2D}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}} \texorpdfstring{$\ast$}{*}drawable)
+\begin{DoxyCompactList}\small\item\em the constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_object2_d}{Turn\+Engine\+::core\+::\+IObject2D}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries IObject2D} (\mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d\+::\+Shape}}$<$ int $>$ \texorpdfstring{$\ast$}{*}shape, int depth\+Index, bool is\+Animated, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ position, int width, int height, \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} \texorpdfstring{$\ast$}{*}texture, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ rect, int angle, Renderer\+Flip flip, \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}$<$$>$ color)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object}{Turn\+Engine\+::core\+::\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object_aedb3268cc3b4709faafc0bcea5cd6cde}{Object}} (std\+::string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em the constructor \end{DoxyCompactList}\item 
+{\bfseries Object} (const \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object}{Object}} \&obj)
+\item 
+{\bfseries Object} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object}{Object}} \texorpdfstring{$\ast$}{*}obj)
+\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object_a500708cc4b4503b732243cd9c19f11a2}{set\+Name}} (std\+::string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_turn_engine_1_1core_1_1_object}{Object} name setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer}{Turn\+Engine\+::core\+::\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries disconnect} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}} \texorpdfstring{$\ast$}{*}subject)
+\begin{DoxyCompactList}\small\item\em That func detaches \doxylink{class_turn_engine_1_1core_1_1_observer}{Observer} class from \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject}. \end{DoxyCompactList}\item 
+void {\bfseries connect} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}} \texorpdfstring{$\ast$}{*}subject)
+\begin{DoxyCompactList}\small\item\em That func attaches \doxylink{class_turn_engine_1_1core_1_1_observer}{Observer} class to \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Event} ()
+\begin{DoxyCompactList}\small\item\em Getter for current event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{Turn\+Engine\+::core\+::\+IObserver}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+IObserver} ()
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Turn\+Engine\+::core\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Subject} () override
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_abccdb683ed11fb4f08dfd42630f7ef34}{attach}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}observer) override
+\begin{DoxyCompactList}\small\item\em method attaches observer to self \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_ab00d4ec446be567d43e04eb835fe4a4c}{detach}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}observer) override
+\begin{DoxyCompactList}\small\item\em method detaches observer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_a7d8553affdc86bfbe2324bcdd3d28d75}{notify}} () override
+\begin{DoxyCompactList}\small\item\em method notifies all observers about event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_a236535078ce9f83bbae82e9dbaabb211}{signal}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*}\+\_\+event)
+\begin{DoxyCompactList}\small\item\em method notifies all observers about event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_subject}{Turn\+Engine\+::core\+::\+ISubject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+ISubject} ()
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_object2_d}{Turn\+Engine\+::core\+::\+IObject2D}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d\+::\+Shape}}$<$ int $>$ \texorpdfstring{$\ast$}{*} {\bfseries shape}
+\item 
+int {\bfseries depth\+Index}
+\item 
+bool {\bfseries is\+Animated}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ {\bfseries position}
+\item 
+int {\bfseries width}
+\item 
+int {\bfseries height}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} \texorpdfstring{$\ast$}{*} {\bfseries texture}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ {\bfseries rect}
+\item 
+int {\bfseries angle}
+\item 
+Renderer\+Flip {\bfseries flip}
+\item 
+\mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}} {\bfseries color}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object}{Turn\+Engine\+::core\+::\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\item 
+uint64\+\_\+t {\bfseries id}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer}{Turn\+Engine\+::core\+::\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*} {\bfseries event}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries subjects}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class represents scene. \doxylink{class_turn_engine_1_1core_1_1_scene}{Scene} stores 2D objects. And allows to manage that objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1core_1_1_scene_a7ad68dd7c3ace9d0d003e7d4ee2a2574}\label{class_turn_engine_1_1core_1_1_scene_a7ad68dd7c3ace9d0d003e7d4ee2a2574} 
+\index{TurnEngine::core::Scene@{TurnEngine::core::Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!TurnEngine::core::Scene@{TurnEngine::core::Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Turn\+Engine\+::core\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$}]{pos,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+the constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_turn_engine_1_1_point}{Point$<$int$>$}} & pos \\
+\hline
+{\em int} & width \\
+\hline
+{\em int} & height \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1core_1_1_scene_ab3569b2b512c3e2f16ff28a2b60cc387}\label{class_turn_engine_1_1core_1_1_scene_ab3569b2b512c3e2f16ff28a2b60cc387} 
+\index{TurnEngine::core::Scene@{TurnEngine::core::Scene}!addChild@{addChild}}
+\index{addChild@{addChild}!TurnEngine::core::Scene@{TurnEngine::core::Scene}}
+\doxysubsubsection{\texorpdfstring{addChild()}{addChild()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::core\+::\+Scene\+::add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}} \texorpdfstring{$\ast$}{*}}]{obj }\end{DoxyParamCaption})}
+
+
+
+method adds child 2D objects to scene 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Object2\+D\texorpdfstring{$\ast$}{*}} & obj \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1core_1_1_scene_a27c830cf1a4650751a85a031b1bc2163}\label{class_turn_engine_1_1core_1_1_scene_a27c830cf1a4650751a85a031b1bc2163} 
+\index{TurnEngine::core::Scene@{TurnEngine::core::Scene}!contains@{contains}}
+\index{contains@{contains}!TurnEngine::core::Scene@{TurnEngine::core::Scene}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::core\+::\+Scene\+::contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$}]{pos }\end{DoxyParamCaption})}
+
+
+
+method contains tells if point inside scene 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_turn_engine_1_1_point}{Point$<$int$>$}} & pos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if point inside scene, else {\ttfamily false} 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1core_1_1_scene_a953299ffa4e3b580153df141bf28443d}\label{class_turn_engine_1_1core_1_1_scene_a953299ffa4e3b580153df141bf28443d} 
+\index{TurnEngine::core::Scene@{TurnEngine::core::Scene}!draw@{draw}}
+\index{draw@{draw}!TurnEngine::core::Scene@{TurnEngine::core::Scene}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::core\+::\+Scene\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{render\+::\+Drawer}} \texorpdfstring{$\ast$}{*}}]{drawer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+method draws all child 2D objects inside scene 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Drawer\texorpdfstring{$\ast$}{*}} & drawer \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_ab44afb3e8cedf71763ec61f3974479a1}{Turn\+Engine\+::core\+::\+Object2D}}.
+
+\Hypertarget{class_turn_engine_1_1core_1_1_scene_a2d52b305e05dcfdae034052d1a645e79}\label{class_turn_engine_1_1core_1_1_scene_a2d52b305e05dcfdae034052d1a645e79} 
+\index{TurnEngine::core::Scene@{TurnEngine::core::Scene}!getChild@{getChild}}
+\index{getChild@{getChild}!TurnEngine::core::Scene@{TurnEngine::core::Scene}}
+\doxysubsubsection{\texorpdfstring{getChild()}{getChild()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}} \texorpdfstring{$\ast$}{*} Turn\+Engine\+::core\+::\+Scene\+::get\+Child (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+method returns child 2D object by its name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & \+\_\+name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Object2\+D\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_a380065e3fdece04957a56cef73f93caf}{Turn\+Engine\+::core\+::\+Object2D}}.
+
+\Hypertarget{class_turn_engine_1_1core_1_1_scene_a581589bcd8d9224c080663946aabba23}\label{class_turn_engine_1_1core_1_1_scene_a581589bcd8d9224c080663946aabba23} 
+\index{TurnEngine::core::Scene@{TurnEngine::core::Scene}!getChildren@{getChildren}}
+\index{getChildren@{getChildren}!TurnEngine::core::Scene@{TurnEngine::core::Scene}}
+\doxysubsubsection{\texorpdfstring{getChildren()}{getChildren()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}} \texorpdfstring{$\ast$}{*} $>$ Turn\+Engine\+::core\+::\+Scene\+::get\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+method returns all child 2D objects 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Object2\+D\texorpdfstring{$\ast$}{*}$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1core_1_1_scene_a2450455a140176d989f4cebd6fb2fa58}\label{class_turn_engine_1_1core_1_1_scene_a2450455a140176d989f4cebd6fb2fa58} 
+\index{TurnEngine::core::Scene@{TurnEngine::core::Scene}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!TurnEngine::core::Scene@{TurnEngine::core::Scene}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ Turn\+Engine\+::core\+::\+Scene\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+method returns scene position 
+
+\begin{DoxyReturn}{Returns}
+Object2\+D\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1core_1_1_scene_acd7949a780d8e1bbbd0dc365f083c663}\label{class_turn_engine_1_1core_1_1_scene_acd7949a780d8e1bbbd0dc365f083c663} 
+\index{TurnEngine::core::Scene@{TurnEngine::core::Scene}!removeChild@{removeChild}}
+\index{removeChild@{removeChild}!TurnEngine::core::Scene@{TurnEngine::core::Scene}}
+\doxysubsubsection{\texorpdfstring{removeChild()}{removeChild()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::core\+::\+Scene\+::remove\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}} \texorpdfstring{$\ast$}{*}}]{obj }\end{DoxyParamCaption})}
+
+
+
+method removes child 2D object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Object2\+D\texorpdfstring{$\ast$}{*}} & obj \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1core_1_1_scene_a23045c1a2644e9571e9b8af90dc32ede}\label{class_turn_engine_1_1core_1_1_scene_a23045c1a2644e9571e9b8af90dc32ede} 
+\index{TurnEngine::core::Scene@{TurnEngine::core::Scene}!update@{update}}
+\index{update@{update}!TurnEngine::core::Scene@{TurnEngine::core::Scene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::core\+::\+Scene\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*}}]{\+\_\+event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+method retranslate event signal to child 2D objects 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Event\texorpdfstring{$\ast$}{*}} & \+\_\+event \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer_a71e1a88d49928db7cc90d4e6843fb03a}{Turn\+Engine\+::core\+::\+Observer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/core/Scene.\+hpp\end{DoxyCompactItemize}

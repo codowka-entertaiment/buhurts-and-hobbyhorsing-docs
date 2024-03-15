@@ -1,0 +1,149 @@
+\doxysection{Turn\+Engine\+::null\+\_\+term\+\_\+string Class Reference}
+\hypertarget{class_turn_engine_1_1null__term__string}{}\label{class_turn_engine_1_1null__term__string}\index{TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}}
+
+
+A wrapper of a null-\/terminated string.  
+
+
+
+
+{\ttfamily \#include $<$Utils.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1null__term__string_ad8ae239d41c97cc26702916f33f6033a}\label{class_turn_engine_1_1null__term__string_ad8ae239d41c97cc26702916f33f6033a} 
+using {\bfseries value\+\_\+type} = char const
+\item 
+\Hypertarget{class_turn_engine_1_1null__term__string_a0111954e4e5f2b27ae3113586ceb09ca}\label{class_turn_engine_1_1null__term__string_a0111954e4e5f2b27ae3113586ceb09ca} 
+using {\bfseries reference} = char const\&
+\item 
+\Hypertarget{class_turn_engine_1_1null__term__string_a4913f0462e2dea6a27e4471f08e2ceee}\label{class_turn_engine_1_1null__term__string_a4913f0462e2dea6a27e4471f08e2ceee} 
+using {\bfseries iterator} = char const\texorpdfstring{$\ast$}{*}
+\item 
+\Hypertarget{class_turn_engine_1_1null__term__string_a4e1711aeeddea47bd7e41aad10ea09a3}\label{class_turn_engine_1_1null__term__string_a4e1711aeeddea47bd7e41aad10ea09a3} 
+using {\bfseries const\+\_\+iterator} = char const\texorpdfstring{$\ast$}{*}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1null__term__string_ad8c93ba1df896a6df362625201f7b824}\label{class_turn_engine_1_1null__term__string_ad8c93ba1df896a6df362625201f7b824} 
+constexpr {\bfseries null\+\_\+term\+\_\+string} (\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} const \&) noexcept=default
+\item 
+\Hypertarget{class_turn_engine_1_1null__term__string_aa7b132f7d65859b45ed083a318c051de}\label{class_turn_engine_1_1null__term__string_aa7b132f7d65859b45ed083a318c051de} 
+constexpr {\bfseries null\+\_\+term\+\_\+string} (\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} \&\&) noexcept=default
+\item 
+\Hypertarget{class_turn_engine_1_1null__term__string_ac0d518e637ab42a7e00ec82a060f8095}\label{class_turn_engine_1_1null__term__string_ac0d518e637ab42a7e00ec82a060f8095} 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} const \&) noexcept=default
+\item 
+\Hypertarget{class_turn_engine_1_1null__term__string_ade711a6b07ca8d79862ae7d00a379f32}\label{class_turn_engine_1_1null__term__string_ade711a6b07ca8d79862ae7d00a379f32} 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} \&\&) noexcept=default
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1null__term__string_ae0d5b4bd9b25f9d51ab1212580b1b032}{null\+\_\+term\+\_\+string}} (std\+::string const \&str) noexcept
+\begin{DoxyCompactList}\small\item\em Construct from a std\+::string. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1null__term__string_ae03845ab57d82b96167e037394d0ecfd}{null\+\_\+term\+\_\+string}} (char const \texorpdfstring{$\ast$}{*}const str) noexcept
+\begin{DoxyCompactList}\small\item\em Construct from a const char\texorpdfstring{$\ast$}{*}. \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{class_turn_engine_1_1null__term__string_a7f857a72ad49274891149f27b427e5c9}{begin}} () const noexcept
+\begin{DoxyCompactList}\small\item\em \doxylink{class_turn_engine_1_1null__term__string_a7f857a72ad49274891149f27b427e5c9}{begin()} iterator interface. \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{class_turn_engine_1_1null__term__string_adae64a18941f9c2c0c6b5cd18bd9147d}{end}} () const noexcept
+\begin{DoxyCompactList}\small\item\em \doxylink{class_turn_engine_1_1null__term__string_adae64a18941f9c2c0c6b5cd18bd9147d}{end()} iterator interface. \end{DoxyCompactList}\item 
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{class_turn_engine_1_1null__term__string_a49213ac20404906afd1a21567d405205}{size}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the size of the string. \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{class_turn_engine_1_1null__term__string_a21c5f5cc7cf08bd5823ae9752aa5cfc0}{data}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get access to the underlying const char\texorpdfstring{$\ast$}{*}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A wrapper of a null-\/terminated string. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1null__term__string_ae0d5b4bd9b25f9d51ab1212580b1b032}\label{class_turn_engine_1_1null__term__string_ae0d5b4bd9b25f9d51ab1212580b1b032} 
+\index{TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}!null\_term\_string@{null\_term\_string}}
+\index{null\_term\_string@{null\_term\_string}!TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}}
+\doxysubsubsection{\texorpdfstring{null\_term\_string()}{null\_term\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Turn\+Engine\+::null\+\_\+term\+\_\+string\+::null\+\_\+term\+\_\+string (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct from a std\+::string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & A std\+::string object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1null__term__string_ae03845ab57d82b96167e037394d0ecfd}\label{class_turn_engine_1_1null__term__string_ae03845ab57d82b96167e037394d0ecfd} 
+\index{TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}!null\_term\_string@{null\_term\_string}}
+\index{null\_term\_string@{null\_term\_string}!TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}}
+\doxysubsubsection{\texorpdfstring{null\_term\_string()}{null\_term\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::null\+\_\+term\+\_\+string\+::null\+\_\+term\+\_\+string (\begin{DoxyParamCaption}\item[{char const \texorpdfstring{$\ast$}{*}const}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Construct from a const char\texorpdfstring{$\ast$}{*}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & A null-\/terminate c-\/string. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1null__term__string_a7f857a72ad49274891149f27b427e5c9}\label{class_turn_engine_1_1null__term__string_a7f857a72ad49274891149f27b427e5c9} 
+\index{TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}!begin@{begin}}
+\index{begin@{begin}!TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily constexpr auto Turn\+Engine\+::null\+\_\+term\+\_\+string\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+\doxylink{class_turn_engine_1_1null__term__string_a7f857a72ad49274891149f27b427e5c9}{begin()} iterator interface. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the first character. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1null__term__string_a21c5f5cc7cf08bd5823ae9752aa5cfc0}\label{class_turn_engine_1_1null__term__string_a21c5f5cc7cf08bd5823ae9752aa5cfc0} 
+\index{TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}!data@{data}}
+\index{data@{data}!TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily constexpr auto Turn\+Engine\+::null\+\_\+term\+\_\+string\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get access to the underlying const char\texorpdfstring{$\ast$}{*}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the first character. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1null__term__string_adae64a18941f9c2c0c6b5cd18bd9147d}\label{class_turn_engine_1_1null__term__string_adae64a18941f9c2c0c6b5cd18bd9147d} 
+\index{TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}!end@{end}}
+\index{end@{end}!TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily constexpr auto Turn\+Engine\+::null\+\_\+term\+\_\+string\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+\doxylink{class_turn_engine_1_1null__term__string_adae64a18941f9c2c0c6b5cd18bd9147d}{end()} iterator interface. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the one past-\/the-\/last character. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1null__term__string_a49213ac20404906afd1a21567d405205}\label{class_turn_engine_1_1null__term__string_a49213ac20404906afd1a21567d405205} 
+\index{TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}!size@{size}}
+\index{size@{size}!TurnEngine::null\_term\_string@{TurnEngine::null\_term\_string}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t Turn\+Engine\+::null\+\_\+term\+\_\+string\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get the size of the string. 
+
+\begin{DoxyReturn}{Returns}
+The size of the string. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Utils.\+hpp\end{DoxyCompactItemize}

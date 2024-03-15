@@ -1,0 +1,130 @@
+\doxysection{Turn\+Engine\+::Renderer\+Info Class Reference}
+\hypertarget{class_turn_engine_1_1_renderer_info}{}\label{class_turn_engine_1_1_renderer_info}\index{TurnEngine::RendererInfo@{TurnEngine::RendererInfo}}
+
+
+A struct containing renderer info.  
+
+
+
+
+{\ttfamily \#include $<$Renderer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr SDL\+\_\+\+Renderer\+Info const \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_afb010116960ee76d6b5618080f01189d}{native\+\_\+handle}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get a pointer to the underlying SDL representation. \end{DoxyCompactList}\item 
+constexpr SDL\+\_\+\+Renderer\+Info \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_a2616e584ceb9a7782ae46b433d840df5}{native\+\_\+handle}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get a pointer to the underlying SDL representation. \end{DoxyCompactList}\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_a7d02bd58bc4bd48f5c3455fc30829647}{name}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the name of the renderer. \end{DoxyCompactList}\item 
+constexpr Renderer\+Flags \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_af63915abe143271c5296f1bdf3f95e13}{flags}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get a mask of the renderer\textquotesingle{}s flags. \end{DoxyCompactList}\item 
+std\+::span$<$ Pixel\+Format\+Enum const $>$ \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_ade70b05ec6919b83bad670f18c48896b}{texture\+\_\+formats}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the renderer\textquotesingle{}s available texture formats. \end{DoxyCompactList}\item 
+constexpr int \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_a498a5a37de1ff848ee12b3feb37309ed}{max\+\_\+texture\+\_\+width}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the renderer\textquotesingle{}s maximum texture width. \end{DoxyCompactList}\item 
+constexpr int \mbox{\hyperlink{class_turn_engine_1_1_renderer_info_a100d0f1d1e79e9bce8fa9a65351c8de3}{max\+\_\+texture\+\_\+height}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the renderer\textquotesingle{}s maximum texture height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A struct containing renderer info. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1_renderer_info_af63915abe143271c5296f1bdf3f95e13}\label{class_turn_engine_1_1_renderer_info_af63915abe143271c5296f1bdf3f95e13} 
+\index{TurnEngine::RendererInfo@{TurnEngine::RendererInfo}!flags@{flags}}
+\index{flags@{flags}!TurnEngine::RendererInfo@{TurnEngine::RendererInfo}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily constexpr Renderer\+Flags Turn\+Engine\+::\+Renderer\+Info\+::flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get a mask of the renderer\textquotesingle{}s flags. 
+
+\begin{DoxyReturn}{Returns}
+The renerer flags enum. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_info_a100d0f1d1e79e9bce8fa9a65351c8de3}\label{class_turn_engine_1_1_renderer_info_a100d0f1d1e79e9bce8fa9a65351c8de3} 
+\index{TurnEngine::RendererInfo@{TurnEngine::RendererInfo}!max\_texture\_height@{max\_texture\_height}}
+\index{max\_texture\_height@{max\_texture\_height}!TurnEngine::RendererInfo@{TurnEngine::RendererInfo}}
+\doxysubsubsection{\texorpdfstring{max\_texture\_height()}{max\_texture\_height()}}
+{\footnotesize\ttfamily constexpr int Turn\+Engine\+::\+Renderer\+Info\+::max\+\_\+texture\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get the renderer\textquotesingle{}s maximum texture height. 
+
+\begin{DoxyReturn}{Returns}
+The maximum texture height. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_info_a498a5a37de1ff848ee12b3feb37309ed}\label{class_turn_engine_1_1_renderer_info_a498a5a37de1ff848ee12b3feb37309ed} 
+\index{TurnEngine::RendererInfo@{TurnEngine::RendererInfo}!max\_texture\_width@{max\_texture\_width}}
+\index{max\_texture\_width@{max\_texture\_width}!TurnEngine::RendererInfo@{TurnEngine::RendererInfo}}
+\doxysubsubsection{\texorpdfstring{max\_texture\_width()}{max\_texture\_width()}}
+{\footnotesize\ttfamily constexpr int Turn\+Engine\+::\+Renderer\+Info\+::max\+\_\+texture\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get the renderer\textquotesingle{}s maximum texture width. 
+
+\begin{DoxyReturn}{Returns}
+The maximum texture width. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_info_a7d02bd58bc4bd48f5c3455fc30829647}\label{class_turn_engine_1_1_renderer_info_a7d02bd58bc4bd48f5c3455fc30829647} 
+\index{TurnEngine::RendererInfo@{TurnEngine::RendererInfo}!name@{name}}
+\index{name@{name}!TurnEngine::RendererInfo@{TurnEngine::RendererInfo}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view Turn\+Engine\+::\+Renderer\+Info\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get the name of the renderer. 
+
+\begin{DoxyReturn}{Returns}
+The name of the renderer. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_info_afb010116960ee76d6b5618080f01189d}\label{class_turn_engine_1_1_renderer_info_afb010116960ee76d6b5618080f01189d} 
+\index{TurnEngine::RendererInfo@{TurnEngine::RendererInfo}!native\_handle@{native\_handle}}
+\index{native\_handle@{native\_handle}!TurnEngine::RendererInfo@{TurnEngine::RendererInfo}}
+\doxysubsubsection{\texorpdfstring{native\_handle()}{native\_handle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily constexpr SDL\+\_\+\+Renderer\+Info const  \texorpdfstring{$\ast$}{*} Turn\+Engine\+::\+Renderer\+Info\+::native\+\_\+handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get a pointer to the underlying SDL representation. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a SDL\+\_\+\+Renderer\+Info. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_info_a2616e584ceb9a7782ae46b433d840df5}\label{class_turn_engine_1_1_renderer_info_a2616e584ceb9a7782ae46b433d840df5} 
+\index{TurnEngine::RendererInfo@{TurnEngine::RendererInfo}!native\_handle@{native\_handle}}
+\index{native\_handle@{native\_handle}!TurnEngine::RendererInfo@{TurnEngine::RendererInfo}}
+\doxysubsubsection{\texorpdfstring{native\_handle()}{native\_handle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily constexpr SDL\+\_\+\+Renderer\+Info \texorpdfstring{$\ast$}{*} Turn\+Engine\+::\+Renderer\+Info\+::native\+\_\+handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get a pointer to the underlying SDL representation. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a SDL\+\_\+\+Renderer\+Info. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_renderer_info_ade70b05ec6919b83bad670f18c48896b}\label{class_turn_engine_1_1_renderer_info_ade70b05ec6919b83bad670f18c48896b} 
+\index{TurnEngine::RendererInfo@{TurnEngine::RendererInfo}!texture\_formats@{texture\_formats}}
+\index{texture\_formats@{texture\_formats}!TurnEngine::RendererInfo@{TurnEngine::RendererInfo}}
+\doxysubsubsection{\texorpdfstring{texture\_formats()}{texture\_formats()}}
+{\footnotesize\ttfamily std\+::span$<$ Pixel\+Format\+Enum const  $>$ Turn\+Engine\+::\+Renderer\+Info\+::texture\+\_\+formats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the renderer\textquotesingle{}s available texture formats. 
+
+\begin{DoxyReturn}{Returns}
+A span of pixel\+\_\+format\+\_\+enum\textquotesingle{}s. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Renderer.\+hpp\end{DoxyCompactItemize}

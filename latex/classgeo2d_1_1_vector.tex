@@ -1,0 +1,152 @@
+\doxysection{geo2d\+::Vector\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classgeo2d_1_1_vector}{}\label{classgeo2d_1_1_vector}\index{geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}}
+
+
+Class represents \doxylink{classgeo2d_1_1_vector}{Vector} (or Point) and implements operations on it.  
+
+
+
+
+{\ttfamily \#include $<$Vector.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{classgeo2d_1_1_vector_a98a053177211bbaa5a0d6ecd793441b4}{Vector}} (T x, T y)
+\begin{DoxyCompactList}\small\item\em the constructor \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{classgeo2d_1_1_vector_a303527c9a24231afcb9d58b61eae0c33}{operator==}} (const \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}} \&another) const
+\begin{DoxyCompactList}\small\item\em operator == \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{classgeo2d_1_1_vector_a8feffefc6b460d0efee170dd5693b8f1}{operator!=}} (const \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}} \&another) const
+\begin{DoxyCompactList}\small\item\em operator != \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}} \mbox{\hyperlink{classgeo2d_1_1_vector_ab9608e4832d69564c5477925e3e10ddd}{operator\texorpdfstring{$\ast$}{*}}} (T vi) const
+\begin{DoxyCompactList}\small\item\em operator \texorpdfstring{$\ast$}{*} \end{DoxyCompactList}\item 
+\Hypertarget{classgeo2d_1_1_vector_ad9fa16c6833019b4b5951845406eeff6}\label{classgeo2d_1_1_vector_ad9fa16c6833019b4b5951845406eeff6} 
+constexpr \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}} {\bfseries operator-\/} () const
+\begin{DoxyCompactList}\small\item\em operator -\/ \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}} \mbox{\hyperlink{classgeo2d_1_1_vector_a838fd8faa925fb312649d4c7ca3f1f06}{operator+}} (const \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}} \&another) const
+\begin{DoxyCompactList}\small\item\em operator + \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}} \mbox{\hyperlink{classgeo2d_1_1_vector_ad5dca99b77c1b090fec070b10065e986}{operator-\/}} (const \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}} \&another) const
+\begin{DoxyCompactList}\small\item\em operator -\/ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classgeo2d_1_1_vector_a95cb0ab3c78813e76f91b7aa9dcb9097}\label{classgeo2d_1_1_vector_a95cb0ab3c78813e76f91b7aa9dcb9097} 
+T {\bfseries x}
+\item 
+\Hypertarget{classgeo2d_1_1_vector_a62adfc8765e33cc98d9c70d32a7f34d5}\label{classgeo2d_1_1_vector_a62adfc8765e33cc98d9c70d32a7f34d5} 
+T {\bfseries y}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$Numeric T$>$\newline
+class geo2d\+::\+Vector$<$ T $>$}
+Class represents \doxylink{classgeo2d_1_1_vector}{Vector} (or Point) and implements operations on it. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgeo2d_1_1_vector_a98a053177211bbaa5a0d6ecd793441b4}\label{classgeo2d_1_1_vector_a98a053177211bbaa5a0d6ecd793441b4} 
+\index{geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr \mbox{\hyperlink{classgeo2d_1_1_vector}{geo2d\+::\+Vector}}$<$ T $>$\+::\+Vector (\begin{DoxyParamCaption}\item[{T}]{x,  }\item[{T}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+the constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{conceptgeo2d_1_1_numeric}{Numeric}} & x \\
+\hline
+{\em \doxylink{conceptgeo2d_1_1_numeric}{Numeric}} & y \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgeo2d_1_1_vector_a8feffefc6b460d0efee170dd5693b8f1}\label{classgeo2d_1_1_vector_a8feffefc6b460d0efee170dd5693b8f1} 
+\index{geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr bool \mbox{\hyperlink{classgeo2d_1_1_vector}{geo2d\+::\+Vector}}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}$<$ T $>$ \&}]{another }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+operator != 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & \doxylink{classgeo2d_1_1_vector}{Vector} \&another \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeo2d_1_1_vector_ab9608e4832d69564c5477925e3e10ddd}\label{classgeo2d_1_1_vector_ab9608e4832d69564c5477925e3e10ddd} 
+\index{geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}} \mbox{\hyperlink{classgeo2d_1_1_vector}{geo2d\+::\+Vector}}$<$ T $>$\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{T}]{vi }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+operator \texorpdfstring{$\ast$}{*} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & vi \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeo2d_1_1_vector_a838fd8faa925fb312649d4c7ca3f1f06}\label{classgeo2d_1_1_vector_a838fd8faa925fb312649d4c7ca3f1f06} 
+\index{geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}} \mbox{\hyperlink{classgeo2d_1_1_vector}{geo2d\+::\+Vector}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}$<$ T $>$ \&}]{another }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+operator + 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & \doxylink{classgeo2d_1_1_vector}{Vector} \&another \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeo2d_1_1_vector_ad5dca99b77c1b090fec070b10065e986}\label{classgeo2d_1_1_vector_ad5dca99b77c1b090fec070b10065e986} 
+\index{geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}} \mbox{\hyperlink{classgeo2d_1_1_vector}{geo2d\+::\+Vector}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}$<$ T $>$ \&}]{another }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+operator -\/ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & \doxylink{classgeo2d_1_1_vector}{Vector} \&another \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeo2d_1_1_vector_a303527c9a24231afcb9d58b61eae0c33}\label{classgeo2d_1_1_vector_a303527c9a24231afcb9d58b61eae0c33} 
+\index{geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!geo2d::Vector$<$ T $>$@{geo2d::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr bool \mbox{\hyperlink{classgeo2d_1_1_vector}{geo2d\+::\+Vector}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeo2d_1_1_vector}{Vector}}$<$ T $>$ \&}]{another }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+operator == 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & \doxylink{classgeo2d_1_1_vector}{Vector} \&another \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/geo2d/Vector.\+hpp\end{DoxyCompactItemize}

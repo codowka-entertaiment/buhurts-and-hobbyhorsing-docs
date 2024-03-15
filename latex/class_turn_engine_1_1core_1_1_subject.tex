@@ -1,0 +1,114 @@
+\doxysection{Turn\+Engine\+::core\+::Subject Class Reference}
+\hypertarget{class_turn_engine_1_1core_1_1_subject}{}\label{class_turn_engine_1_1core_1_1_subject}\index{TurnEngine::core::Subject@{TurnEngine::core::Subject}}
+
+
+Class represents \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject} from \doxylink{class_turn_engine_1_1core_1_1_observer}{Observer} pattern. It is sending events to its observers.  
+
+
+
+
+{\ttfamily \#include $<$Subject.\+hpp$>$}
+
+Inheritance diagram for Turn\+Engine\+::core\+::Subject\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.163842cm]{class_turn_engine_1_1core_1_1_subject}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1core_1_1_subject_aac66a97aed679eec8ca63ee39e5b2f8c}\label{class_turn_engine_1_1core_1_1_subject_aac66a97aed679eec8ca63ee39e5b2f8c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Subject} () override
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_abccdb683ed11fb4f08dfd42630f7ef34}{attach}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}observer) override
+\begin{DoxyCompactList}\small\item\em method attaches observer to self \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_ab00d4ec446be567d43e04eb835fe4a4c}{detach}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}observer) override
+\begin{DoxyCompactList}\small\item\em method detaches observer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_a7d8553affdc86bfbe2324bcdd3d28d75}{notify}} () override
+\begin{DoxyCompactList}\small\item\em method notifies all observers about event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_a236535078ce9f83bbae82e9dbaabb211}{signal}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*}\+\_\+event)
+\begin{DoxyCompactList}\small\item\em method notifies all observers about event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_subject}{Turn\+Engine\+::core\+::\+ISubject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+ISubject} ()
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class represents \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject} from \doxylink{class_turn_engine_1_1core_1_1_observer}{Observer} pattern. It is sending events to its observers. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1core_1_1_subject_abccdb683ed11fb4f08dfd42630f7ef34}\label{class_turn_engine_1_1core_1_1_subject_abccdb683ed11fb4f08dfd42630f7ef34} 
+\index{TurnEngine::core::Subject@{TurnEngine::core::Subject}!attach@{attach}}
+\index{attach@{attach}!TurnEngine::core::Subject@{TurnEngine::core::Subject}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::core\+::\+Subject\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+method attaches observer to self 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} & \texorpdfstring{$\ast$}{*}observer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_subject_a2aa477d67fdcc1fd9335cafda0610f70}{Turn\+Engine\+::core\+::\+ISubject}}.
+
+\Hypertarget{class_turn_engine_1_1core_1_1_subject_ab00d4ec446be567d43e04eb835fe4a4c}\label{class_turn_engine_1_1core_1_1_subject_ab00d4ec446be567d43e04eb835fe4a4c} 
+\index{TurnEngine::core::Subject@{TurnEngine::core::Subject}!detach@{detach}}
+\index{detach@{detach}!TurnEngine::core::Subject@{TurnEngine::core::Subject}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::core\+::\+Subject\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+method detaches observer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} & \texorpdfstring{$\ast$}{*}observer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_subject_ac0f71757b2fe16c57e6cdea086a88246}{Turn\+Engine\+::core\+::\+ISubject}}.
+
+\Hypertarget{class_turn_engine_1_1core_1_1_subject_a7d8553affdc86bfbe2324bcdd3d28d75}\label{class_turn_engine_1_1core_1_1_subject_a7d8553affdc86bfbe2324bcdd3d28d75} 
+\index{TurnEngine::core::Subject@{TurnEngine::core::Subject}!notify@{notify}}
+\index{notify@{notify}!TurnEngine::core::Subject@{TurnEngine::core::Subject}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::core\+::\+Subject\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+method notifies all observers about event 
+
+
+
+Implements \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_subject_a614d08586d3782a402b268cdb1fd492c}{Turn\+Engine\+::core\+::\+ISubject}}.
+
+\Hypertarget{class_turn_engine_1_1core_1_1_subject_a236535078ce9f83bbae82e9dbaabb211}\label{class_turn_engine_1_1core_1_1_subject_a236535078ce9f83bbae82e9dbaabb211} 
+\index{TurnEngine::core::Subject@{TurnEngine::core::Subject}!signal@{signal}}
+\index{signal@{signal}!TurnEngine::core::Subject@{TurnEngine::core::Subject}}
+\doxysubsubsection{\texorpdfstring{signal()}{signal()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::core\+::\+Subject\+::signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*}}]{\+\_\+event }\end{DoxyParamCaption})}
+
+
+
+method notifies all observers about event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Event\texorpdfstring{$\ast$}{*}} & \+\_\+event \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/core/Subject.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\doxysection{Turn\+Engine\+::core\+::ISubject Class Reference}
+\hypertarget{class_turn_engine_1_1core_1_1_i_subject}{}\label{class_turn_engine_1_1core_1_1_i_subject}\index{TurnEngine::core::ISubject@{TurnEngine::core::ISubject}}
+
+
+Interface for \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject} class.  
+
+
+
+
+{\ttfamily \#include $<$ISubject.\+hpp$>$}
+
+Inheritance diagram for Turn\+Engine\+::core\+::ISubject\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.163842cm]{class_turn_engine_1_1core_1_1_i_subject}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1core_1_1_i_subject_a0c9f121258e90380089bda1023e1c126}\label{class_turn_engine_1_1core_1_1_i_subject_a0c9f121258e90380089bda1023e1c126} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+ISubject} ()
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_subject_a2aa477d67fdcc1fd9335cafda0610f70}{attach}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}observer)=0
+\begin{DoxyCompactList}\small\item\em Attaches observer to send it events. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_subject_ac0f71757b2fe16c57e6cdea086a88246}{detach}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}observer)=0
+\begin{DoxyCompactList}\small\item\em Detaches observer. It won\textquotesingle{}t be able to receive events from subject. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_subject_a614d08586d3782a402b268cdb1fd492c}{notify}} ()=0
+\begin{DoxyCompactList}\small\item\em Send event to each observer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject} class. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1core_1_1_i_subject_a2aa477d67fdcc1fd9335cafda0610f70}\label{class_turn_engine_1_1core_1_1_i_subject_a2aa477d67fdcc1fd9335cafda0610f70} 
+\index{TurnEngine::core::ISubject@{TurnEngine::core::ISubject}!attach@{attach}}
+\index{attach@{attach}!TurnEngine::core::ISubject@{TurnEngine::core::ISubject}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily virtual void Turn\+Engine\+::core\+::\+ISubject\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Attaches observer to send it events. 
+
+
+
+Implemented in \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_abccdb683ed11fb4f08dfd42630f7ef34}{Turn\+Engine\+::core\+::\+Subject}}.
+
+\Hypertarget{class_turn_engine_1_1core_1_1_i_subject_ac0f71757b2fe16c57e6cdea086a88246}\label{class_turn_engine_1_1core_1_1_i_subject_ac0f71757b2fe16c57e6cdea086a88246} 
+\index{TurnEngine::core::ISubject@{TurnEngine::core::ISubject}!detach@{detach}}
+\index{detach@{detach}!TurnEngine::core::ISubject@{TurnEngine::core::ISubject}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily virtual void Turn\+Engine\+::core\+::\+ISubject\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Detaches observer. It won\textquotesingle{}t be able to receive events from subject. 
+
+
+
+Implemented in \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_ab00d4ec446be567d43e04eb835fe4a4c}{Turn\+Engine\+::core\+::\+Subject}}.
+
+\Hypertarget{class_turn_engine_1_1core_1_1_i_subject_a614d08586d3782a402b268cdb1fd492c}\label{class_turn_engine_1_1core_1_1_i_subject_a614d08586d3782a402b268cdb1fd492c} 
+\index{TurnEngine::core::ISubject@{TurnEngine::core::ISubject}!notify@{notify}}
+\index{notify@{notify}!TurnEngine::core::ISubject@{TurnEngine::core::ISubject}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily virtual void Turn\+Engine\+::core\+::\+ISubject\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send event to each observer. 
+
+
+
+Implemented in \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_a7d8553affdc86bfbe2324bcdd3d28d75}{Turn\+Engine\+::core\+::\+Subject}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/core/ISubject.\+hpp\end{DoxyCompactItemize}

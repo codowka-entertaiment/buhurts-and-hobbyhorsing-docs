@@ -1,0 +1,192 @@
+\doxysection{Utils.\+hpp}
+\hypertarget{_utils_8hpp_source}{}\label{_utils_8hpp_source}\index{include/TurnEngine/wrapper/Utils.hpp@{include/TurnEngine/wrapper/Utils.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <concepts>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ SDL2\_ASSERT(b)\ assert(b)}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }TurnEngine\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T\ =\ \textcolor{keywordtype}{int}>}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ T\ x\{\};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ T\ y\{\};}
+\DoxyCodeLine{00023\ \ \ \ \ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T\ =\ \textcolor{keywordtype}{int}>}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ T\ width\{\};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ T\ height\{\};}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T\ =\ \textcolor{keywordtype}{int}>}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_turn_engine_1_1tlbr}{tlbr}}\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ T\ top\{\};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ T\ left\{\};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ T\ bottom\{\};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ T\ right\{\};}
+\DoxyCodeLine{00045\ \ \ \ \ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T\ =\ std::u\textcolor{keywordtype}{int}8\_t>}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ T\ r\{\};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ T\ g\{\};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ T\ b\{\};}
+\DoxyCodeLine{00056\ \ \ \ \ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T\ =\ std::u\textcolor{keywordtype}{int}8\_t>}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ T\ r\{\};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ T\ g\{\};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ T\ b\{\};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ T\ a\{\};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ U\ =\ T>}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{requires}\ std::same\_as<U,\ std::uint8\_t>}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{operator}\ SDL\_Color()\ const\ noexcept\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_Color\{r,\ g,\ b,\ a\};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Fn>}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1function__ref}{function\_ref}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class\ }R,\ \textcolor{keyword}{class\ }Fn,\ \textcolor{keyword}{class}...\ Args>}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{concept\ }\mbox{\hyperlink{concept_turn_engine_1_1invocable__r}{invocable\_r}}\ =\ std::is\_invocable\_r\_v<R,\ Fn,\ Args...>;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ R,\ \textcolor{keyword}{typename}\ ...Args>}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1function__ref}{function\_ref}}<R(Args...)>\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ R\ (*callback)(std::intptr\_t\ callable,\ Args...\ args)\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ std::intptr\_t\ callable\{\};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Callable>}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ R\ callback\_fn(std::intptr\_t\ callable,\ Args...\ args)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (*\textcolor{keyword}{reinterpret\_cast<}Callable*\textcolor{keyword}{>}(callable))(std::forward<Args>(args)...);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_a8e1f651f39ddfd0edcd00e575c693459}{function\_ref}}()\ noexcept\ =\ default;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ template<typename\ Callable>}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ requires\ (!std::same\_as<\mbox{\hyperlink{class_turn_engine_1_1function__ref}{function\_ref}},\ std::remove\_cvref\_t<Callable>>\ \&\&\ \mbox{\hyperlink{concept_turn_engine_1_1invocable__r}{invocable\_r}}<R,\ Callable,\ Args...>)}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ constexpr\ \mbox{\hyperlink{class_turn_engine_1_1function__ref}{function\_ref}}(Callable\&\&\ callable)\ noexcept}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ callback(callback\_fn<std::remove\_reference\_t<Callable>>)}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ callable(reinterpret\_cast<std::intptr\_t>(std::addressof(callable)))}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ R\ \mbox{\hyperlink{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_a24846eae72ce3570aff3165d31f49f0f}{operator()}}(Args...\ args)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ callback(callable,\ std::forward<Args>(args)...);}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \textcolor{keyword}{operator}\ bool()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ callback;\ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_turn_engine_1_1nullopt__t}{nullopt\_t}}\ \{\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{struct_turn_engine_1_1nullopt__t}{nullopt\_t}}()\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};\ \};}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{struct_turn_engine_1_1nullopt__t}{nullopt\_t}}\ nullopt\{\};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\_ref}}\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ T*\ ptr\_\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a2884e7413b9ea6114c06f410783d4a9f}{optional\_ref}}()\ noexcept\ =\ default;}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ constexpr\ \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\_ref}}(\mbox{\hyperlink{struct_turn_engine_1_1nullopt__t}{nullopt\_t}})\ noexcept\ \{\}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ U>}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keyword}{requires}\ (!std::same\_as<optional\_ref,\ std::remove\_cvref\_t<U>>)}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a347386c8e6eb431a1a4fa5ad9871ed2c}{optional\_ref}}(U\&\&\ u)\ noexcept}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ ptr\_(std::addressof(u))}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(std::is\_lvalue\_reference\_v<U>,\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a7d16b651f92402db2212114559589cbf}{optional\_ref}}(\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\_ref}}\ \textcolor{keyword}{const}\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1optional__ref_aefe97613a1fd7f37fdeb5fe4f8aca2e1}{optional\_ref}}(\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\_ref}}\&\&)\ noexcept\ =\ default;}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\_ref}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\_ref}}\ const\&)\ =\ delete;}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\_ref}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\_ref}}\&\&)\ =\ delete;}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ constexpr\ explicit\ operator\ \textcolor{keywordtype}{bool}()\ const\ noexcept\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ptr\_\ !=\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a32c4f4e4bb321b09fa7f25e100658a47}{has\_value}}()\ const\ noexcept\ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{bool}\textcolor{keyword}{>}(*this);}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ U>}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ T\ \mbox{\hyperlink{class_turn_engine_1_1optional__ref_af78683192ce5ba4d8ba1aeef5a7123c7}{value\_or}}(U\&\&\ fallback)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a32c4f4e4bb321b09fa7f25e100658a47}{has\_value}}()\ ?\ **this\ :\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(std::forward<U>(fallback));}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ T\&\ \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a9cb5aceffd88290013240995af13f08d}{operator*}}()\ noexcept\ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *ptr\_;}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ T\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{class_turn_engine_1_1optional__ref_aca5b847f423351814a2974527f575dec}{operator*}}()\ const\ noexcept\ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *ptr\_;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ T\ \textcolor{keyword}{const}*\ \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a4a0d87d97383cde9760e12307c43cfc1}{operator-\/>}}()\ const\ noexcept\ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ptr\_;}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ T*\ \mbox{\hyperlink{class_turn_engine_1_1optional__ref_a53cf8e0ce0dcb316f49ecbe30eb776ec}{operator-\/>}}()\ noexcept\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ptr\_;}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00256\ \ \ \ \ \};}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}\ \{}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ str\_\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ std::size\_t\ size\_\ =\ 0;}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }value\_type\ =\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }reference\ =\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }iterator\ =\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*;}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }const\_iterator\ =\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*;}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}()\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}(\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}\ \textcolor{keyword}{const}\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}(\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}\&\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}\ \textcolor{keyword}{const}\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}\&\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1null__term__string_ae0d5b4bd9b25f9d51ab1212580b1b032}{null\_term\_string}}(std::string\ \textcolor{keyword}{const}\&\ str)\ noexcept}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ str\_(str.data()),\ size\_(str.size())\ \{\}}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1null__term__string_ae03845ab57d82b96167e037394d0ecfd}{null\_term\_string}}(\textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \textcolor{keyword}{const}\ str)\ noexcept}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ str\_(str),\ size\_(std::char\_traits<char>::length(str))\ \{\}}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_turn_engine_1_1null__term__string_a7f857a72ad49274891149f27b427e5c9}{begin}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ str\_;\ \}}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_turn_engine_1_1null__term__string_adae64a18941f9c2c0c6b5cd18bd9147d}{end}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ str\_\ +\ size\_;\ \}}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::size\_t\ \mbox{\hyperlink{class_turn_engine_1_1null__term__string_a49213ac20404906afd1a21567d405205}{size}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ size\_;\ \}}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_turn_engine_1_1null__term__string_a21c5f5cc7cf08bd5823ae9752aa5cfc0}{data}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ str\_;\ \}}
+\DoxyCodeLine{00315\ \ \ \ \ \};}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}...>}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_turn_engine_1_1always__false}{always\_false}}\ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ value\ =\ std::false\_type::value;}
+\DoxyCodeLine{00320\ \ \ \ \ \};}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,862 @@
+\doxysection{Turn\+Engine\+::Window Class Reference}
+\hypertarget{class_turn_engine_1_1_window}{}\label{class_turn_engine_1_1_window}\index{TurnEngine::Window@{TurnEngine::Window}}
+
+
+A wrapper around an SDL\+\_\+\+Window structure.  
+
+
+
+
+{\ttfamily \#include $<$Window.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_window_a4675ebb648da1f93ceb6daaa705bcaf9}{Window}} (SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}window) noexcept
+\begin{DoxyCompactList}\small\item\em Explicit constructor for the \doxylink{class_turn_engine_1_1_s_d_l2}{SDL2} C API. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_window_a78fef660f26702b43d6471cc4959e4a7}\label{class_turn_engine_1_1_window_a78fef660f26702b43d6471cc4959e4a7} 
+{\bfseries Window} (\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_window_a4d1834397a86fb6c3bc6a4e74a1d36ac}\label{class_turn_engine_1_1_window_a4d1834397a86fb6c3bc6a4e74a1d36ac} 
+\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_window_adbcfdbe8cd94a2963b5097544f89536d}\label{class_turn_engine_1_1_window_adbcfdbe8cd94a2963b5097544f89536d} 
+\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em Move assignment deleted. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_window_a4f1c9ad9cf06976955117768773585d7}{Window}} (\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_window_af4d4f4848d585558aaec5a225c77d3f4}{Window}} (\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} \mbox{\hyperlink{class_turn_engine_1_1_window_a8eafad34add7d9a1b74751d308767055}{title}}, \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ int $>$ \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}, \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}, Window\+Flags flgs) noexcept
+\begin{DoxyCompactList}\small\item\em Construct a window. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_window_a7c074de204aebb12256dddbb96f385a0}\label{class_turn_engine_1_1_window_a7c074de204aebb12256dddbb96f385a0} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Window} () noexcept
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_window_a6ea433b145a70dd2c5c34b7dc3c47ab5}{destroy}} () noexcept
+\begin{DoxyCompactList}\small\item\em Destroy the underlying window object. \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{class_turn_engine_1_1_window_a45e1a5db5cb481d0d0a80f6f8eae852b}{native\+\_\+handle}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get a pointer to the underlying SDL representation. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_window_aac48bca964a48ffa41d0db7d34967acb}{operator bool}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the window is in a valid state. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{class_turn_engine_1_1_window_a0d9ddc59da01b7c394406e9324176d26}{is\+\_\+ok}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the window is in a valid state. \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{struct_turn_engine_1_1tlbr}{tlbr}}$<$ int $>$ $>$ \mbox{\hyperlink{class_turn_engine_1_1_window_a646167037e145435274297fe6a43d1f9}{borders\+\_\+size}} () noexcept
+\begin{DoxyCompactList}\small\item\em Gets the size of the window\textquotesingle{}s borders. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_turn_engine_1_1_window_a2cd5544717a676f562b49ad42a44c7f3}{brightness}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the brightness (gamma multiplier) of the window. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_turn_engine_1_1_window_ad6b4db1a3399983ee93621637544a10a}{display\+\_\+index}} () const noexcept
+\begin{DoxyCompactList}\small\item\em The display index of the window. \end{DoxyCompactList}\item 
+std\+::optional$<$ SDL\+\_\+\+Display\+Mode $>$ \mbox{\hyperlink{class_turn_engine_1_1_window_a5ad2e11764c038eeaf91eef5486c8e2f}{display\+\_\+mode}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the display mode to use when a window is visible at fullscreen. \end{DoxyCompactList}\item 
+Window\+Flags \mbox{\hyperlink{class_turn_engine_1_1_window_a9a5c230861d74cc2ae72010adb489001}{flags}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the window flags used to create this window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}$<$ std\+::array$<$ std\+::uint16\+\_\+t, 256 $>$ $>$ \mbox{\hyperlink{class_turn_engine_1_1_window_a805df1889de933ba1e782237e1e3b75b}{gamma\+\_\+ramp}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the gamma ramp for the display that owns this window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_aa8a074874234abb402233cd17f9dbeac}{is\+\_\+grabbed}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Check if this window is grabbed. \end{DoxyCompactList}\item 
+std\+::uint32\+\_\+t \mbox{\hyperlink{class_turn_engine_1_1_window_a12e190e5a31477a29544c65aaaffbd6d}{id}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get this window\textquotesingle{}s id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ \mbox{\hyperlink{class_turn_engine_1_1_window_a583361186efafcf275245dc65f8a9701}{maximum\+\_\+size}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the maximum size of the window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ \mbox{\hyperlink{class_turn_engine_1_1_window_a7f19fee6c82ddcd916e7d1a8bc8d5dc1}{minimum\+\_\+size}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the minimum size of the window. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_turn_engine_1_1_window_abc5a83a040d45d255ae86e31987725f5}{opacity}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the opacticy of the window. \end{DoxyCompactList}\item 
+Pixel\+Format\+Enum \mbox{\hyperlink{class_turn_engine_1_1_window_af018e51ccc08f90c73271d0b0af1f921}{pixel\+\_\+format}} () const noexcept
+\begin{DoxyCompactList}\small\item\em The the pixel format of the window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ int $>$ \mbox{\hyperlink{class_turn_engine_1_1_window_a44564b43d06cfebbf435d2b8a702e91a}{position}} () const noexcept
+\begin{DoxyCompactList}\small\item\em The the current position of the window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ \mbox{\hyperlink{class_turn_engine_1_1_window_a962f43055daeeec130a35f1a9dc5a2b8}{size}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the current size of the window. \end{DoxyCompactList}\item 
+std\+::string\+\_\+view \mbox{\hyperlink{class_turn_engine_1_1_window_a8eafad34add7d9a1b74751d308767055}{title}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the current title of the window. \end{DoxyCompactList}\item 
+std\+::optional$<$ SDL\+\_\+\+Sys\+WMinfo $>$ \mbox{\hyperlink{class_turn_engine_1_1_window_a35255fb24831bcdadb3c8971df4c659a}{wm\+\_\+info}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get driver specific information about the window. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_window_a1fab5a14c2719f2a9be1568ace822690}\label{class_turn_engine_1_1_window_a1fab5a14c2719f2a9be1568ace822690} 
+void {\bfseries hide} () noexcept
+\begin{DoxyCompactList}\small\item\em Hide the window. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_window_ae325defc6f80d1e14a42ca7a4b2a6eeb}\label{class_turn_engine_1_1_window_ae325defc6f80d1e14a42ca7a4b2a6eeb} 
+void {\bfseries maximize} () noexcept
+\begin{DoxyCompactList}\small\item\em Maximize the size of the window. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_window_a8d80dab846378cac2ecb089ae516e979}\label{class_turn_engine_1_1_window_a8d80dab846378cac2ecb089ae516e979} 
+void {\bfseries minimize} () noexcept
+\begin{DoxyCompactList}\small\item\em Minimize the size of the window. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_window_aed1e537d4e4d333c46964681e8645cf3}\label{class_turn_engine_1_1_window_aed1e537d4e4d333c46964681e8645cf3} 
+void {\bfseries raise} () noexcept
+\begin{DoxyCompactList}\small\item\em Raise this window above other windows and set the input focus. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_window_a3545362f5dac513f8a967e1c26d592c9}\label{class_turn_engine_1_1_window_a3545362f5dac513f8a967e1c26d592c9} 
+void {\bfseries restore} () noexcept
+\begin{DoxyCompactList}\small\item\em Restores the size and position of a minimized/maximized window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_window_aa3a40e3e9cbfeff06b0264981c2512eb}{set\+\_\+bordered}} (bool const bordered) noexcept
+\begin{DoxyCompactList}\small\item\em Change the border state of a window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_a4470f38ba00d6ba6adf43328e34d29b4}{set\+\_\+brightness}} (float const \mbox{\hyperlink{class_turn_engine_1_1_window_a2cd5544717a676f562b49ad42a44c7f3}{brightness}}) noexcept
+\begin{DoxyCompactList}\small\item\em Change the brightness of a window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_ae02bf18f059a440363bcdd74f2c4d326}{set\+\_\+display\+\_\+mode}} (SDL\+\_\+\+Display\+Mode const \&dm) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the display mode to use when the window is at fullscreen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_a775d2faf2ef5432c752d1d51f714c623}{set\+\_\+display\+\_\+mode}} () noexcept
+\begin{DoxyCompactList}\small\item\em Set the window\textquotesingle{}s display mode to use the current dimensions and the desktop refresh rate. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_a12a68f1409e23f2f7b5f2be05a0e1573}{set\+\_\+fullscreen}} (Fullscreen\+Flags const \mbox{\hyperlink{class_turn_engine_1_1_window_a9a5c230861d74cc2ae72010adb489001}{flags}}) noexcept
+\begin{DoxyCompactList}\small\item\em Set the window\textquotesingle{}s fullscreen property. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_a14e267062a01ad5108e5c8a2fa15a21e}{set\+\_\+gamma\+\_\+ramp}} (std\+::span$<$ std\+::uint16\+\_\+t const, 256 $>$ const r, std\+::span$<$ std\+::uint16\+\_\+t const, 256 $>$ const g, std\+::span$<$ std\+::uint16\+\_\+t const, 256 $>$ const b) noexcept
+\begin{DoxyCompactList}\small\item\em Set the gamma ramp for the display that owns this window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_window_a99eaf6808c04b21b8fbbe0a9d9be909b}{set\+\_\+grabbed}} (bool grabbed=true) noexcept
+\begin{DoxyCompactList}\small\item\em Change the grabbed state of the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_a9ae1b17d8e7287ea816a8182a09f2e9e}{set\+\_\+hit\+\_\+test}} (\mbox{\hyperlink{class_turn_engine_1_1function__ref}{function\+\_\+ref}}$<$ SDL\+\_\+\+Hit\+Test\+Result(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} \&, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$)$>$ const fn) noexcept
+\begin{DoxyCompactList}\small\item\em Provides a callback that decides if a window region has special properties. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_a012aa38ab55b7b87a6366ff4c0514f77}{set\+\_\+hit\+\_\+test}} (\mbox{\hyperlink{class_turn_engine_1_1function__ref}{function\+\_\+ref}}$<$ SDL\+\_\+\+Hit\+Test\+Result(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} const \&, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$)$>$ const fn) noexcept
+\begin{DoxyCompactList}\small\item\em Provides a callback that decides if a window region has special properties. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_window_a496d9b195b1a441045fa86419a064448}{set\+\_\+icon}} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} const \&s) noexcept
+\begin{DoxyCompactList}\small\item\em Set the icon for a window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_a8bc94df1d8e73b40618031012c99bc14}{set\+\_\+input\+\_\+focus}} () noexcept
+\begin{DoxyCompactList}\small\item\em Explicitly set input focus to this window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_window_aec141e83d86f63353f08a081b3e55296}{set\+\_\+maximum\+\_\+size}} (\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}) noexcept
+\begin{DoxyCompactList}\small\item\em Set the maximum size of the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_window_a1f9ed6ee8ab878f6dc6b5f9bb1c51d15}{set\+\_\+minimum\+\_\+size}} (\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ const \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}) noexcept
+\begin{DoxyCompactList}\small\item\em Set the minimum size of the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_a1545806c49733ffbe8135768e39f7c45}{set\+\_\+modal\+\_\+for}} (\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} const \&parent) noexcept
+\begin{DoxyCompactList}\small\item\em Set this window as a modal for another window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_a7767cef95c080f80fdfc9dbf3b182466}{set\+\_\+opacity}} (float const \mbox{\hyperlink{class_turn_engine_1_1_window_abc5a83a040d45d255ae86e31987725f5}{opacity}}) noexcept
+\begin{DoxyCompactList}\small\item\em Set the opacity of the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_window_ac94431d6a8dc4a07881d5dfc552fbdd1}{set\+\_\+position}} (\mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ int $>$ const \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}) noexcept
+\begin{DoxyCompactList}\small\item\em Set the position of the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_window_afcf13af906564bcade3216aa74ea9d2a}{set\+\_\+resizable}} (bool const resizable) noexcept
+\begin{DoxyCompactList}\small\item\em Set if the window is resizable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_window_a27c5f2df0ecafe41c7f9513263695176}{set\+\_\+size}} (\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ const \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}) noexcept
+\begin{DoxyCompactList}\small\item\em Set the current size of the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_window_adbc00ce9d1d0a279fa5db10e995bbccd}{set\+\_\+title}} (\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} const \mbox{\hyperlink{class_turn_engine_1_1_window_a8eafad34add7d9a1b74751d308767055}{title}}) noexcept
+\begin{DoxyCompactList}\small\item\em Set the title of the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_a8d9f170a37e3811308b74be460d9ca73}{show\+\_\+simple\+\_\+message\+\_\+box}} (Message\+Box\+Flags const \mbox{\hyperlink{class_turn_engine_1_1_window_a9a5c230861d74cc2ae72010adb489001}{flags}}, \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} const \mbox{\hyperlink{class_turn_engine_1_1_window_a8eafad34add7d9a1b74751d308767055}{title}}, \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} const message) noexcept
+\begin{DoxyCompactList}\small\item\em Displays a simple modal message box. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_window_afa47198eb40935922e81bb77ee4c8672}\label{class_turn_engine_1_1_window_afa47198eb40935922e81bb77ee4c8672} 
+void {\bfseries show} () noexcept
+\begin{DoxyCompactList}\small\item\em Shows the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_a90268ee6222e4788e412551f49674a64}{update\+\_\+surface}} () noexcept
+\begin{DoxyCompactList}\small\item\em Copies the dinow surface to the screen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_window_af0de8595b50d5b5f8c9cc634f14a52e1}{update\+\_\+surface\+\_\+rects}} (std\+::span$<$ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const $>$ const rects) noexcept
+\begin{DoxyCompactList}\small\item\em Copy areas of the window surface to the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} \mbox{\hyperlink{class_turn_engine_1_1_window_ada67112f67ad93c3fce242d594f3aa1e}{copy}} (\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} const \&other) noexcept
+\begin{DoxyCompactList}\small\item\em Construct a window from another. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1_window_a330d0cf0a8f191e51188990192845691}\label{class_turn_engine_1_1_window_a330d0cf0a8f191e51188990192845691} 
+static constexpr \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ int $>$ {\bfseries pos\+\_\+centered} \{SDL\+\_\+\+WINDOWPOS\+\_\+\+CENTERED, SDL\+\_\+\+WINDOWPOS\+\_\+\+CENTERED\}
+\begin{DoxyCompactList}\small\item\em An xy position denoting a centered window. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_window_a32a56cefad8f148270be7547579f1121}\label{class_turn_engine_1_1_window_a32a56cefad8f148270be7547579f1121} 
+static constexpr \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ int $>$ {\bfseries pos\+\_\+undefined} \{SDL\+\_\+\+WINDOWPOS\+\_\+\+UNDEFINED, SDL\+\_\+\+WINDOWPOS\+\_\+\+UNDEFINED\}
+\begin{DoxyCompactList}\small\item\em An xy position denoting an undefined window position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A wrapper around an SDL\+\_\+\+Window structure. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1_window_a4675ebb648da1f93ceb6daaa705bcaf9}\label{class_turn_engine_1_1_window_a4675ebb648da1f93ceb6daaa705bcaf9} 
+\index{TurnEngine::Window@{TurnEngine::Window}!Window@{Window}}
+\index{Window@{Window}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Explicit constructor for the \doxylink{class_turn_engine_1_1_s_d_l2}{SDL2} C API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The SDL\+\_\+\+Window to take ownership of. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_window_a4f1c9ad9cf06976955117768773585d7}\label{class_turn_engine_1_1_window_a4f1c9ad9cf06976955117768773585d7} 
+\index{TurnEngine::Window@{TurnEngine::Window}!Window@{Window}}
+\index{Window@{Window}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The window object to move in this window. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_window_af4d4f4848d585558aaec5a225c77d3f4}\label{class_turn_engine_1_1_window_af4d4f4848d585558aaec5a225c77d3f4} 
+\index{TurnEngine::Window@{TurnEngine::Window}!Window@{Window}}
+\index{Window@{Window}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}}}]{title,  }\item[{\mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ int $>$}]{xy,  }\item[{\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$}]{wh,  }\item[{Window\+Flags}]{flgs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Construct a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The title of the window. \\
+\hline
+{\em xy} & The position of the window. \\
+\hline
+{\em wh} & The width/height of the window. \\
+\hline
+{\em flgs} & The window flag specifications. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1_window_a646167037e145435274297fe6a43d1f9}\label{class_turn_engine_1_1_window_a646167037e145435274297fe6a43d1f9} 
+\index{TurnEngine::Window@{TurnEngine::Window}!borders\_size@{borders\_size}}
+\index{borders\_size@{borders\_size}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{borders\_size()}{borders\_size()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{struct_turn_engine_1_1tlbr}{tlbr}}$<$ int $>$ $>$ Turn\+Engine\+::\+Window\+::borders\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the size of the window\textquotesingle{}s borders. 
+
+\begin{DoxyReturn}{Returns}
+An optional borders size if this is supported on the platform. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a2cd5544717a676f562b49ad42a44c7f3}\label{class_turn_engine_1_1_window_a2cd5544717a676f562b49ad42a44c7f3} 
+\index{TurnEngine::Window@{TurnEngine::Window}!brightness@{brightness}}
+\index{brightness@{brightness}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{brightness()}{brightness()}}
+{\footnotesize\ttfamily float Turn\+Engine\+::\+Window\+::brightness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the brightness (gamma multiplier) of the window. 
+
+\begin{DoxyReturn}{Returns}
+The current brightness of the window. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_ada67112f67ad93c3fce242d594f3aa1e}\label{class_turn_engine_1_1_window_ada67112f67ad93c3fce242d594f3aa1e} 
+\index{TurnEngine::Window@{TurnEngine::Window}!copy@{copy}}
+\index{copy@{copy}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} Turn\+Engine\+::\+Window\+::copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} const \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Construct a window from another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The window object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An optional window if successfully created. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This copy operation has an explicit name to avoid unnecessary copying due to a copy constructor call. 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1_window_a6ea433b145a70dd2c5c34b7dc3c47ab5}\label{class_turn_engine_1_1_window_a6ea433b145a70dd2c5c34b7dc3c47ab5} 
+\index{TurnEngine::Window@{TurnEngine::Window}!destroy@{destroy}}
+\index{destroy@{destroy}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Window\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destroy the underlying window object. 
+
+\begin{DoxyNote}{Note}
+Accessing the window after this functional call is UB. 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1_window_ad6b4db1a3399983ee93621637544a10a}\label{class_turn_engine_1_1_window_ad6b4db1a3399983ee93621637544a10a} 
+\index{TurnEngine::Window@{TurnEngine::Window}!display\_index@{display\_index}}
+\index{display\_index@{display\_index}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{display\_index()}{display\_index()}}
+{\footnotesize\ttfamily int Turn\+Engine\+::\+Window\+::display\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+The display index of the window. 
+
+\begin{DoxyReturn}{Returns}
+The index or -\/1 on error. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a5ad2e11764c038eeaf91eef5486c8e2f}\label{class_turn_engine_1_1_window_a5ad2e11764c038eeaf91eef5486c8e2f} 
+\index{TurnEngine::Window@{TurnEngine::Window}!display\_mode@{display\_mode}}
+\index{display\_mode@{display\_mode}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{display\_mode()}{display\_mode()}}
+{\footnotesize\ttfamily std\+::optional$<$ SDL\+\_\+\+Display\+Mode $>$ Turn\+Engine\+::\+Window\+::display\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the display mode to use when a window is visible at fullscreen. 
+
+\begin{DoxyReturn}{Returns}
+An optional SDL\+\_\+\+Display\+Mode if the call succeeded. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a9a5c230861d74cc2ae72010adb489001}\label{class_turn_engine_1_1_window_a9a5c230861d74cc2ae72010adb489001} 
+\index{TurnEngine::Window@{TurnEngine::Window}!flags@{flags}}
+\index{flags@{flags}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily Window\+Flags Turn\+Engine\+::\+Window\+::flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the window flags used to create this window. 
+
+\begin{DoxyReturn}{Returns}
+The window flags enum. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a805df1889de933ba1e782237e1e3b75b}\label{class_turn_engine_1_1_window_a805df1889de933ba1e782237e1e3b75b} 
+\index{TurnEngine::Window@{TurnEngine::Window}!gamma\_ramp@{gamma\_ramp}}
+\index{gamma\_ramp@{gamma\_ramp}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{gamma\_ramp()}{gamma\_ramp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}$<$ std\+::array$<$ std\+::uint16\+\_\+t, 256 $>$ $>$ Turn\+Engine\+::\+Window\+::gamma\+\_\+ramp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the gamma ramp for the display that owns this window. 
+
+\begin{DoxyReturn}{Returns}
+rgb$<$$>$ struct containing the translation tables for thier respective channels. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a12e190e5a31477a29544c65aaaffbd6d}\label{class_turn_engine_1_1_window_a12e190e5a31477a29544c65aaaffbd6d} 
+\index{TurnEngine::Window@{TurnEngine::Window}!id@{id}}
+\index{id@{id}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t Turn\+Engine\+::\+Window\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get this window\textquotesingle{}s id. 
+
+\begin{DoxyReturn}{Returns}
+The window\textquotesingle{}s id. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_aa8a074874234abb402233cd17f9dbeac}\label{class_turn_engine_1_1_window_aa8a074874234abb402233cd17f9dbeac} 
+\index{TurnEngine::Window@{TurnEngine::Window}!is\_grabbed@{is\_grabbed}}
+\index{is\_grabbed@{is\_grabbed}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{is\_grabbed()}{is\_grabbed()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::is\+\_\+grabbed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Check if this window is grabbed. 
+
+\begin{DoxyReturn}{Returns}
+A bool denoting if this window is grabbed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a0d9ddc59da01b7c394406e9324176d26}\label{class_turn_engine_1_1_window_a0d9ddc59da01b7c394406e9324176d26} 
+\index{TurnEngine::Window@{TurnEngine::Window}!is\_ok@{is\_ok}}
+\index{is\_ok@{is\_ok}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{is\_ok()}{is\_ok()}}
+{\footnotesize\ttfamily constexpr bool Turn\+Engine\+::\+Window\+::is\+\_\+ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the window is in a valid state. 
+
+\begin{DoxyReturn}{Returns}
+True if valid, false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a583361186efafcf275245dc65f8a9701}\label{class_turn_engine_1_1_window_a583361186efafcf275245dc65f8a9701} 
+\index{TurnEngine::Window@{TurnEngine::Window}!maximum\_size@{maximum\_size}}
+\index{maximum\_size@{maximum\_size}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{maximum\_size()}{maximum\_size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ Turn\+Engine\+::\+Window\+::maximum\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the maximum size of the window. 
+
+\begin{DoxyReturn}{Returns}
+The maximum size of the window. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a7f19fee6c82ddcd916e7d1a8bc8d5dc1}\label{class_turn_engine_1_1_window_a7f19fee6c82ddcd916e7d1a8bc8d5dc1} 
+\index{TurnEngine::Window@{TurnEngine::Window}!minimum\_size@{minimum\_size}}
+\index{minimum\_size@{minimum\_size}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{minimum\_size()}{minimum\_size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ Turn\+Engine\+::\+Window\+::minimum\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the minimum size of the window. 
+
+\begin{DoxyReturn}{Returns}
+The minimum size of the window. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a45e1a5db5cb481d0d0a80f6f8eae852b}\label{class_turn_engine_1_1_window_a45e1a5db5cb481d0d0a80f6f8eae852b} 
+\index{TurnEngine::Window@{TurnEngine::Window}!native\_handle@{native\_handle}}
+\index{native\_handle@{native\_handle}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{native\_handle()}{native\_handle()}}
+{\footnotesize\ttfamily constexpr auto Turn\+Engine\+::\+Window\+::native\+\_\+handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get a pointer to the underlying SDL representation. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the underlying SDL\+\_\+\+Window. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_abc5a83a040d45d255ae86e31987725f5}\label{class_turn_engine_1_1_window_abc5a83a040d45d255ae86e31987725f5} 
+\index{TurnEngine::Window@{TurnEngine::Window}!opacity@{opacity}}
+\index{opacity@{opacity}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{opacity()}{opacity()}}
+{\footnotesize\ttfamily float Turn\+Engine\+::\+Window\+::opacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the opacticy of the window. 
+
+\begin{DoxyReturn}{Returns}
+The opacity of the window. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_aac48bca964a48ffa41d0db7d34967acb}\label{class_turn_engine_1_1_window_aac48bca964a48ffa41d0db7d34967acb} 
+\index{TurnEngine::Window@{TurnEngine::Window}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+Window\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the window is in a valid state. 
+
+\begin{DoxyReturn}{Returns}
+True if valid, false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_af018e51ccc08f90c73271d0b0af1f921}\label{class_turn_engine_1_1_window_af018e51ccc08f90c73271d0b0af1f921} 
+\index{TurnEngine::Window@{TurnEngine::Window}!pixel\_format@{pixel\_format}}
+\index{pixel\_format@{pixel\_format}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{pixel\_format()}{pixel\_format()}}
+{\footnotesize\ttfamily Pixel\+Format\+Enum Turn\+Engine\+::\+Window\+::pixel\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+The the pixel format of the window. 
+
+\begin{DoxyReturn}{Returns}
+the pixel format of the window. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a44564b43d06cfebbf435d2b8a702e91a}\label{class_turn_engine_1_1_window_a44564b43d06cfebbf435d2b8a702e91a} 
+\index{TurnEngine::Window@{TurnEngine::Window}!position@{position}}
+\index{position@{position}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ int $>$ Turn\+Engine\+::\+Window\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+The the current position of the window. 
+
+\begin{DoxyReturn}{Returns}
+The x/y cords of the window. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_aa3a40e3e9cbfeff06b0264981c2512eb}\label{class_turn_engine_1_1_window_aa3a40e3e9cbfeff06b0264981c2512eb} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_bordered@{set\_bordered}}
+\index{set\_bordered@{set\_bordered}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_bordered()}{set\_bordered()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Window\+::set\+\_\+bordered (\begin{DoxyParamCaption}\item[{bool const}]{bordered }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Change the border state of a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em borderer} & A bool denoting if the window should be bordered. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_window_a4470f38ba00d6ba6adf43328e34d29b4}\label{class_turn_engine_1_1_window_a4470f38ba00d6ba6adf43328e34d29b4} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_brightness@{set\_brightness}}
+\index{set\_brightness@{set\_brightness}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_brightness()}{set\_brightness()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::set\+\_\+brightness (\begin{DoxyParamCaption}\item[{float const}]{brightness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Change the brightness of a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em brightness} & The new brightness values for the window. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_window_a775d2faf2ef5432c752d1d51f714c623}\label{class_turn_engine_1_1_window_a775d2faf2ef5432c752d1d51f714c623} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_display\_mode@{set\_display\_mode}}
+\index{set\_display\_mode@{set\_display\_mode}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_display\_mode()}{set\_display\_mode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::set\+\_\+display\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set the window\textquotesingle{}s display mode to use the current dimensions and the desktop refresh rate. 
+
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_ae02bf18f059a440363bcdd74f2c4d326}\label{class_turn_engine_1_1_window_ae02bf18f059a440363bcdd74f2c4d326} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_display\_mode@{set\_display\_mode}}
+\index{set\_display\_mode@{set\_display\_mode}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_display\_mode()}{set\_display\_mode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::set\+\_\+display\+\_\+mode (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Display\+Mode const \&}]{dm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the display mode to use when the window is at fullscreen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dm} & The SDL\+\_\+\+Display\+Mode strut denoting the window\textquotesingle{}s new display mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a12a68f1409e23f2f7b5f2be05a0e1573}\label{class_turn_engine_1_1_window_a12a68f1409e23f2f7b5f2be05a0e1573} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_fullscreen@{set\_fullscreen}}
+\index{set\_fullscreen@{set\_fullscreen}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_fullscreen()}{set\_fullscreen()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::set\+\_\+fullscreen (\begin{DoxyParamCaption}\item[{Fullscreen\+Flags const}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set the window\textquotesingle{}s fullscreen property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & The fullscreen enum type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a14e267062a01ad5108e5c8a2fa15a21e}\label{class_turn_engine_1_1_window_a14e267062a01ad5108e5c8a2fa15a21e} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_gamma\_ramp@{set\_gamma\_ramp}}
+\index{set\_gamma\_ramp@{set\_gamma\_ramp}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_gamma\_ramp()}{set\_gamma\_ramp()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::set\+\_\+gamma\+\_\+ramp (\begin{DoxyParamCaption}\item[{std\+::span$<$ std\+::uint16\+\_\+t const, 256 $>$ const}]{r,  }\item[{std\+::span$<$ std\+::uint16\+\_\+t const, 256 $>$ const}]{g,  }\item[{std\+::span$<$ std\+::uint16\+\_\+t const, 256 $>$ const}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set the gamma ramp for the display that owns this window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The translation table for the red channel. \\
+\hline
+{\em g} & The translation table for the green channel. \\
+\hline
+{\em b} & The translation table for the blue channel. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a99eaf6808c04b21b8fbbe0a9d9be909b}\label{class_turn_engine_1_1_window_a99eaf6808c04b21b8fbbe0a9d9be909b} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_grabbed@{set\_grabbed}}
+\index{set\_grabbed@{set\_grabbed}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_grabbed()}{set\_grabbed()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Window\+::set\+\_\+grabbed (\begin{DoxyParamCaption}\item[{bool}]{grabbed = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Change the grabbed state of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grabbed} & The bool denoting if the window should be grabbed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_window_a9ae1b17d8e7287ea816a8182a09f2e9e}\label{class_turn_engine_1_1_window_a9ae1b17d8e7287ea816a8182a09f2e9e} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_hit\_test@{set\_hit\_test}}
+\index{set\_hit\_test@{set\_hit\_test}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_hit\_test()}{set\_hit\_test()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::set\+\_\+hit\+\_\+test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1function__ref}{function\+\_\+ref}}$<$ SDL\+\_\+\+Hit\+Test\+Result(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} \&, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$)$>$ const}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Provides a callback that decides if a window region has special properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & A callable triggered when doing a hit-\/test. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Function must have the signature {\ttfamily SDL\+\_\+\+Hit\+Test\+Result(window\&, point\texorpdfstring{$<$}{<}int\texorpdfstring{$>$}{>})} 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1_window_a012aa38ab55b7b87a6366ff4c0514f77}\label{class_turn_engine_1_1_window_a012aa38ab55b7b87a6366ff4c0514f77} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_hit\_test@{set\_hit\_test}}
+\index{set\_hit\_test@{set\_hit\_test}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_hit\_test()}{set\_hit\_test()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::set\+\_\+hit\+\_\+test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1function__ref}{function\+\_\+ref}}$<$ SDL\+\_\+\+Hit\+Test\+Result(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} const \&, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$)$>$ const}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Provides a callback that decides if a window region has special properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & A callable triggered when doing a hit-\/test. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Function must have the signature {\ttfamily SDL\+\_\+\+Hit\+Test\+Result(window const\&, point\texorpdfstring{$<$}{<}int\texorpdfstring{$>$}{>})} 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1_window_a496d9b195b1a441045fa86419a064448}\label{class_turn_engine_1_1_window_a496d9b195b1a441045fa86419a064448} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_icon@{set\_icon}}
+\index{set\_icon@{set\_icon}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_icon()}{set\_icon()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Window\+::set\+\_\+icon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} const \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set the icon for a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & A surface to use as the icon. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_window_a8bc94df1d8e73b40618031012c99bc14}\label{class_turn_engine_1_1_window_a8bc94df1d8e73b40618031012c99bc14} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_input\_focus@{set\_input\_focus}}
+\index{set\_input\_focus@{set\_input\_focus}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_input\_focus()}{set\_input\_focus()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::set\+\_\+input\+\_\+focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Explicitly set input focus to this window. 
+
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_aec141e83d86f63353f08a081b3e55296}\label{class_turn_engine_1_1_window_aec141e83d86f63353f08a081b3e55296} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_maximum\_size@{set\_maximum\_size}}
+\index{set\_maximum\_size@{set\_maximum\_size}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_maximum\_size()}{set\_maximum\_size()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Window\+::set\+\_\+maximum\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$}]{wh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set the maximum size of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wh} & The maximum size. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_window_a1f9ed6ee8ab878f6dc6b5f9bb1c51d15}\label{class_turn_engine_1_1_window_a1f9ed6ee8ab878f6dc6b5f9bb1c51d15} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_minimum\_size@{set\_minimum\_size}}
+\index{set\_minimum\_size@{set\_minimum\_size}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_minimum\_size()}{set\_minimum\_size()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Window\+::set\+\_\+minimum\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ const}]{wh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set the minimum size of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wh} & The minimum size. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_window_a1545806c49733ffbe8135768e39f7c45}\label{class_turn_engine_1_1_window_a1545806c49733ffbe8135768e39f7c45} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_modal\_for@{set\_modal\_for}}
+\index{set\_modal\_for@{set\_modal\_for}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_modal\_for()}{set\_modal\_for()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::set\+\_\+modal\+\_\+for (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} const \&}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set this window as a modal for another window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent window for this window. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a7767cef95c080f80fdfc9dbf3b182466}\label{class_turn_engine_1_1_window_a7767cef95c080f80fdfc9dbf3b182466} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_opacity@{set\_opacity}}
+\index{set\_opacity@{set\_opacity}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_opacity()}{set\_opacity()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::set\+\_\+opacity (\begin{DoxyParamCaption}\item[{float const}]{opacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set the opacity of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opacity} & The new opacity value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The provided opacity is clamped between (0.\+f, 1.\+f) 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1_window_ac94431d6a8dc4a07881d5dfc552fbdd1}\label{class_turn_engine_1_1_window_ac94431d6a8dc4a07881d5dfc552fbdd1} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Window\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ int $>$ const}]{xy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set the position of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xy} & The new position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_window_afcf13af906564bcade3216aa74ea9d2a}\label{class_turn_engine_1_1_window_afcf13af906564bcade3216aa74ea9d2a} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_resizable@{set\_resizable}}
+\index{set\_resizable@{set\_resizable}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_resizable()}{set\_resizable()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Window\+::set\+\_\+resizable (\begin{DoxyParamCaption}\item[{bool const}]{resizable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set if the window is resizable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resizable} & A bool denoting if the window is resizable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_window_a27c5f2df0ecafe41c7f9513263695176}\label{class_turn_engine_1_1_window_a27c5f2df0ecafe41c7f9513263695176} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_size@{set\_size}}
+\index{set\_size@{set\_size}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_size()}{set\_size()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Window\+::set\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ const}]{wh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set the current size of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wh} & The new size. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_window_adbc00ce9d1d0a279fa5db10e995bbccd}\label{class_turn_engine_1_1_window_adbc00ce9d1d0a279fa5db10e995bbccd} 
+\index{TurnEngine::Window@{TurnEngine::Window}!set\_title@{set\_title}}
+\index{set\_title@{set\_title}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{set\_title()}{set\_title()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Window\+::set\+\_\+title (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} const}]{title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set the title of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The window\textquotesingle{}s new title. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_window_a8d9f170a37e3811308b74be460d9ca73}\label{class_turn_engine_1_1_window_a8d9f170a37e3811308b74be460d9ca73} 
+\index{TurnEngine::Window@{TurnEngine::Window}!show\_simple\_message\_box@{show\_simple\_message\_box}}
+\index{show\_simple\_message\_box@{show\_simple\_message\_box}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{show\_simple\_message\_box()}{show\_simple\_message\_box()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::show\+\_\+simple\+\_\+message\+\_\+box (\begin{DoxyParamCaption}\item[{Message\+Box\+Flags const}]{flags,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} const}]{title,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} const}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Displays a simple modal message box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & The mesage box enum flags. \\
+\hline
+{\em title} & Message box\textquotesingle{}s title. \\
+\hline
+{\em message} & Message box\textquotesingle{}s message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a962f43055daeeec130a35f1a9dc5a2b8}\label{class_turn_engine_1_1_window_a962f43055daeeec130a35f1a9dc5a2b8} 
+\index{TurnEngine::Window@{TurnEngine::Window}!size@{size}}
+\index{size@{size}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ Turn\+Engine\+::\+Window\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the current size of the window. 
+
+\begin{DoxyReturn}{Returns}
+The width and height of the window. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a8eafad34add7d9a1b74751d308767055}\label{class_turn_engine_1_1_window_a8eafad34add7d9a1b74751d308767055} 
+\index{TurnEngine::Window@{TurnEngine::Window}!title@{title}}
+\index{title@{title}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily std\+::string\+\_\+view Turn\+Engine\+::\+Window\+::title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the current title of the window. 
+
+\begin{DoxyReturn}{Returns}
+The title of the window. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a90268ee6222e4788e412551f49674a64}\label{class_turn_engine_1_1_window_a90268ee6222e4788e412551f49674a64} 
+\index{TurnEngine::Window@{TurnEngine::Window}!update\_surface@{update\_surface}}
+\index{update\_surface@{update\_surface}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{update\_surface()}{update\_surface()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::update\+\_\+surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copies the dinow surface to the screen. 
+
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_af0de8595b50d5b5f8c9cc634f14a52e1}\label{class_turn_engine_1_1_window_af0de8595b50d5b5f8c9cc634f14a52e1} 
+\index{TurnEngine::Window@{TurnEngine::Window}!update\_surface\_rects@{update\_surface\_rects}}
+\index{update\_surface\_rects@{update\_surface\_rects}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{update\_surface\_rects()}{update\_surface\_rects()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Window\+::update\+\_\+surface\+\_\+rects (\begin{DoxyParamCaption}\item[{std\+::span$<$ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const $>$ const}]{rects }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Copy areas of the window surface to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rects} & The areas of the surface to copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_window_a35255fb24831bcdadb3c8971df4c659a}\label{class_turn_engine_1_1_window_a35255fb24831bcdadb3c8971df4c659a} 
+\index{TurnEngine::Window@{TurnEngine::Window}!wm\_info@{wm\_info}}
+\index{wm\_info@{wm\_info}!TurnEngine::Window@{TurnEngine::Window}}
+\doxysubsubsection{\texorpdfstring{wm\_info()}{wm\_info()}}
+{\footnotesize\ttfamily std\+::optional$<$ SDL\+\_\+\+Sys\+WMinfo $>$ Turn\+Engine\+::\+Window\+::wm\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get driver specific information about the window. 
+
+\begin{DoxyReturn}{Returns}
+A SLD\+\_\+\+Sys\+WMinfo struct or an empty optional if this operation is not supported. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Window.\+hpp\end{DoxyCompactItemize}

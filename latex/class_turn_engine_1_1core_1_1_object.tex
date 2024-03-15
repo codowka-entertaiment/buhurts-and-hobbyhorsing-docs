@@ -1,0 +1,125 @@
+\doxysection{Turn\+Engine\+::core\+::Object Class Reference}
+\hypertarget{class_turn_engine_1_1core_1_1_object}{}\label{class_turn_engine_1_1core_1_1_object}\index{TurnEngine::core::Object@{TurnEngine::core::Object}}
+
+
+Base class \doxylink{class_turn_engine_1_1core_1_1_object}{Object}. It must be base class for all game objects.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+hpp$>$}
+
+Inheritance diagram for Turn\+Engine\+::core\+::Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.111111cm]{class_turn_engine_1_1core_1_1_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object_aedb3268cc3b4709faafc0bcea5cd6cde}{Object}} (std\+::string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em the constructor \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1core_1_1_object_a112e70b0078d343cbb681b2054d1c7cf}\label{class_turn_engine_1_1core_1_1_object_a112e70b0078d343cbb681b2054d1c7cf} 
+{\bfseries Object} (const \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object}{Object}} \&obj)
+\item 
+\Hypertarget{class_turn_engine_1_1core_1_1_object_ab7082baadea006c0a16d22737c373b59}\label{class_turn_engine_1_1core_1_1_object_ab7082baadea006c0a16d22737c373b59} 
+{\bfseries Object} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object}{Object}} \texorpdfstring{$\ast$}{*}obj)
+\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object_a500708cc4b4503b732243cd9c19f11a2}{set\+Name}} (std\+::string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_turn_engine_1_1core_1_1_object}{Object} name setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer}{Turn\+Engine\+::core\+::\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer_a71e1a88d49928db7cc90d4e6843fb03a}{update}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*}\+\_\+event) override
+\begin{DoxyCompactList}\small\item\em That func is used by \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject}, don\textquotesingle{}t call it explicitly. Derived classes must override that method to use it with game logic. \end{DoxyCompactList}\item 
+void {\bfseries disconnect} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}} \texorpdfstring{$\ast$}{*}subject)
+\begin{DoxyCompactList}\small\item\em That func detaches \doxylink{class_turn_engine_1_1core_1_1_observer}{Observer} class from \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject}. \end{DoxyCompactList}\item 
+void {\bfseries connect} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}} \texorpdfstring{$\ast$}{*}subject)
+\begin{DoxyCompactList}\small\item\em That func attaches \doxylink{class_turn_engine_1_1core_1_1_observer}{Observer} class to \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Event} ()
+\begin{DoxyCompactList}\small\item\em Getter for current event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{Turn\+Engine\+::core\+::\+IObserver}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+IObserver} ()
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Turn\+Engine\+::core\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Subject} () override
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_abccdb683ed11fb4f08dfd42630f7ef34}{attach}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}observer) override
+\begin{DoxyCompactList}\small\item\em method attaches observer to self \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_ab00d4ec446be567d43e04eb835fe4a4c}{detach}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}observer) override
+\begin{DoxyCompactList}\small\item\em method detaches observer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_a7d8553affdc86bfbe2324bcdd3d28d75}{notify}} () override
+\begin{DoxyCompactList}\small\item\em method notifies all observers about event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_a236535078ce9f83bbae82e9dbaabb211}{signal}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*}\+\_\+event)
+\begin{DoxyCompactList}\small\item\em method notifies all observers about event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_subject}{Turn\+Engine\+::core\+::\+ISubject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+ISubject} ()
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1core_1_1_object_a1f7dc14b8451790a085d373e99fe858d}\label{class_turn_engine_1_1core_1_1_object_a1f7dc14b8451790a085d373e99fe858d} 
+std\+::string {\bfseries name}
+\item 
+\Hypertarget{class_turn_engine_1_1core_1_1_object_a05245f83ee59be47585f4bd0deab86c5}\label{class_turn_engine_1_1core_1_1_object_a05245f83ee59be47585f4bd0deab86c5} 
+uint64\+\_\+t {\bfseries id}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer}{Turn\+Engine\+::core\+::\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*} {\bfseries event}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries subjects}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class \doxylink{class_turn_engine_1_1core_1_1_object}{Object}. It must be base class for all game objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1core_1_1_object_aedb3268cc3b4709faafc0bcea5cd6cde}\label{class_turn_engine_1_1core_1_1_object_aedb3268cc3b4709faafc0bcea5cd6cde} 
+\index{TurnEngine::core::Object@{TurnEngine::core::Object}!Object@{Object}}
+\index{Object@{Object}!TurnEngine::core::Object@{TurnEngine::core::Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily Turn\+Engine\+::core\+::\+Object\+::\+Object (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+the constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & \+\_\+name \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1core_1_1_object_a500708cc4b4503b732243cd9c19f11a2}\label{class_turn_engine_1_1core_1_1_object_a500708cc4b4503b732243cd9c19f11a2} 
+\index{TurnEngine::core::Object@{TurnEngine::core::Object}!setName@{setName}}
+\index{setName@{setName}!TurnEngine::core::Object@{TurnEngine::core::Object}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::core\+::\+Object\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_turn_engine_1_1core_1_1_object}{Object} name setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & \+\_\+name \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/core/Object.\+hpp\end{DoxyCompactItemize}

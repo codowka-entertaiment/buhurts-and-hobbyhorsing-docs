@@ -1,0 +1,100 @@
+\doxysection{Turn\+Engine\+::function\+\_\+ref\texorpdfstring{$<$}{<} R(Args...)\texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4}{}\label{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4}\index{TurnEngine::function\_ref$<$ R(Args...)$>$@{TurnEngine::function\_ref$<$ R(Args...)$>$}}
+
+
+A non-\/owning callble wrapper.  
+
+
+
+
+{\ttfamily \#include $<$Utils.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_a8e1f651f39ddfd0edcd00e575c693459}\label{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_a8e1f651f39ddfd0edcd00e575c693459} 
+constexpr {\bfseries function\+\_\+ref} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Callable $>$ \newline
+requires (!std\+::same\+\_\+as$<$\mbox{\hyperlink{class_turn_engine_1_1function__ref}{function\+\_\+ref}}, std\+::remove\+\_\+cvref\+\_\+t$<$Callable$>$$>$ \&\& invocable\+\_\+r$<$R, Callable, Args...$>$)}\\constexpr \mbox{\hyperlink{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_ac8758ce31b3dbc4df3ffdc38e6fca350}{function\+\_\+ref}} (Callable \&\&callable) noexcept
+\begin{DoxyCompactList}\small\item\em Constructor taking a callable object. \end{DoxyCompactList}\item 
+constexpr R \mbox{\hyperlink{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_a24846eae72ce3570aff3165d31f49f0f}{operator()}} (Args... args) const
+\begin{DoxyCompactList}\small\item\em Invoke the function object. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_a66d970dc14d6033e32efa01bb718ede6}{operator bool}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Bool conversion operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename R, typename ... Args$>$\newline
+class Turn\+Engine\+::function\+\_\+ref$<$ R(\+Args...)$>$}
+A non-\/owning callble wrapper. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em R} & The return type. \\
+\hline
+{\em Args} & The argument types. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_ac8758ce31b3dbc4df3ffdc38e6fca350}\label{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_ac8758ce31b3dbc4df3ffdc38e6fca350} 
+\index{TurnEngine::function\_ref$<$ R(Args...)$>$@{TurnEngine::function\_ref$<$ R(Args...)$>$}!function\_ref@{function\_ref}}
+\index{function\_ref@{function\_ref}!TurnEngine::function\_ref$<$ R(Args...)$>$@{TurnEngine::function\_ref$<$ R(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{function\_ref()}{function\_ref()}}
+{\footnotesize\ttfamily template$<$typename R , typename ... Args$>$ \\
+template$<$typename Callable $>$ \newline
+requires (!std\+::same\+\_\+as$<$\mbox{\hyperlink{class_turn_engine_1_1function__ref}{function\+\_\+ref}}, std\+::remove\+\_\+cvref\+\_\+t$<$Callable$>$$>$ \&\& invocable\+\_\+r$<$R, Callable, Args...$>$)\\
+constexpr \mbox{\hyperlink{class_turn_engine_1_1function__ref}{Turn\+Engine\+::function\+\_\+ref}}$<$ R(Args...)$>$\+::function\+\_\+ref (\begin{DoxyParamCaption}\item[{Callable \&\&}]{callable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Constructor taking a callable object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callable} & A callable object to store. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_a66d970dc14d6033e32efa01bb718ede6}\label{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_a66d970dc14d6033e32efa01bb718ede6} 
+\index{TurnEngine::function\_ref$<$ R(Args...)$>$@{TurnEngine::function\_ref$<$ R(Args...)$>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!TurnEngine::function\_ref$<$ R(Args...)$>$@{TurnEngine::function\_ref$<$ R(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$typename R , typename ... Args$>$ \\
+constexpr \mbox{\hyperlink{class_turn_engine_1_1function__ref}{Turn\+Engine\+::function\+\_\+ref}}$<$ R(Args...)$>$\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Bool conversion operator. 
+
+\begin{DoxyReturn}{Returns}
+A bool indicating if this referes to a valid function object. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_a24846eae72ce3570aff3165d31f49f0f}\label{class_turn_engine_1_1function__ref_3_01_r_07_args_8_8_8_08_4_a24846eae72ce3570aff3165d31f49f0f} 
+\index{TurnEngine::function\_ref$<$ R(Args...)$>$@{TurnEngine::function\_ref$<$ R(Args...)$>$}!operator()@{operator()}}
+\index{operator()@{operator()}!TurnEngine::function\_ref$<$ R(Args...)$>$@{TurnEngine::function\_ref$<$ R(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename R , typename ... Args$>$ \\
+constexpr R \mbox{\hyperlink{class_turn_engine_1_1function__ref}{Turn\+Engine\+::function\+\_\+ref}}$<$ R(Args...)$>$\+::operator() (\begin{DoxyParamCaption}\item[{Args...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Invoke the function object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to forward to the held callable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the held callable. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Utils.\+hpp\end{DoxyCompactItemize}

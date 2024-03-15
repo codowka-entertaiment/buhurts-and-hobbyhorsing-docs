@@ -1,0 +1,193 @@
+\doxysection{Pixel.\+hpp}
+\hypertarget{_pixel_8hpp_source}{}\label{_pixel_8hpp_source}\index{include/TurnEngine/wrapper/Pixel.hpp@{include/TurnEngine/wrapper/Pixel.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}SDL2/SDL.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <concepts>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <span>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Enums.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Utils.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }TurnEngine\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{bool}\ Const>}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ SDL\_Palette*\ palette\_;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ P>}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{requires}\ std::same\_as<SDL\_Palette,\ std::remove\_cvref\_t<P>>}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView}}(P\&\&\ palette)\ noexcept}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ palette\_(std::addressof(palette))\ \{\}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView}}(\mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView}}\ \textcolor{keyword}{const}\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView}}(\mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView}}\&\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView}}\ \textcolor{keyword}{const}\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView}}\&\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ SDL\_Palette*\ native\_handle()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ palette\_;\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{bool}\ B\ =\ Const>}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{requires}(B\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::span<SDL\_Color>\ colors()\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::span\{palette\_-\/>colors,\ \textcolor{keyword}{static\_cast<}std::size\_t\textcolor{keyword}{>}(palette\_-\/>ncolors)\};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::span<SDL\_Color\ const>\ colors()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::span\{palette\_-\/>colors,\ \textcolor{keyword}{static\_cast<}std::size\_t\textcolor{keyword}{>}(palette\_-\/>ncolors)\};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView}}(SDL\_Palette\&)\ -\/>\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView<false>}};}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView}}(SDL\_Palette\ \textcolor{keyword}{const}\&)\ -\/>\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView<true>}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{palette\_view}}\ =\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView<false>}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{const\_palette\_view}}\ =\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{BasicPaletteView<true>}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ SDL\_PixelFormat*\ fmt\_;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}(PixelFormatEnum\ \textcolor{keyword}{const}\ fmt)\ noexcept}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ fmt\_\{SDL\_AllocFormat(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(fmt))\}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}(SDL\_PixelFormat*\ fmt)\ noexcept}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ fmt\_\{fmt\}\ \{\}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{\string~PixelFormat}}()\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fmt\_)}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SDL\_FreeFormat(fmt\_);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}(\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\&\&\ other)\ noexcept}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ fmt\_(std::exchange(other.fmt\_,\ \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}(\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ SDL\_PixelFormat*\ native\_handle()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_;\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ PixelFormatEnum\ format()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}PixelFormatEnum\textcolor{keyword}{>}(fmt\_-\/>format);\ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ has\_palette()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>palette\ !=\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{palette\_view}}\ palette()\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ SDL2\_ASSERT(has\_palette());}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{palette\_view}}\{*(fmt\_-\/>palette)\};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{const\_palette\_view}}\ palette()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ SDL2\_ASSERT(has\_palette());}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{const\_palette\_view}}\{*(fmt\_-\/>palette)\};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint8\_t\ bits\_per\_pixel()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>BitsPerPixel;\ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint8\_t\ bytes\_per\_pixel()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>BytesPerPixel;\ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint32\_t\ rmask()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>Rmask;\ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint32\_t\ gmask()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>Gmask;\ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint32\_t\ bmask()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>Bmask;\ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint32\_t\ amask()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>Amask;\ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{bool}\ Const>}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ SDL\_PixelFormat*\ fmt\_;}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ PF>}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keyword}{requires}\ std::same\_as<SDL\_PixelFormat,\ std::remove\_cvref\_t<PF>>}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}(PF*\ fmt)\ noexcept}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ fmt\_\{fmt\}\ \{\}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ PF>}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{requires}\ std::same\_as<PixelFormat,\ std::remove\_cvref\_t<PF>>}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}(PF\&\&\ fmt)\ noexcept}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ fmt\_(fmt.native\_handle())\ \{\}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}(std::nullptr\_t)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}(\mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}(\mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ SDL\_PixelFormat*\ native\_handle()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_;\ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ PixelFormatEnum\ format()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}PixelFormatEnum\textcolor{keyword}{>}(fmt\_-\/>format);\ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ has\_palette()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ fmt\_-\/>palette\ !=\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{bool}\ B\ =\ Const>}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keyword}{requires}\ (B\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{palette\_view}}\ palette()\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ SDL2\_ASSERT(has\_palette());}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{palette\_view}}\{*(fmt\_-\/>palette)\};}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{const\_palette\_view}}\ palette()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ SDL2\_ASSERT(has\_palette());}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{const\_palette\_view}}\{*(fmt\_-\/>palette)\};}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint8\_t\ bits\_per\_pixel()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>BitsPerPixel;\ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint8\_t\ bytes\_per\_pixel()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>BytesPerPixel;\ \}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint32\_t\ rmask()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>Rmask;\ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint32\_t\ gmask()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>Gmask;\ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint32\_t\ bmask()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>Bmask;\ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint32\_t\ amask()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ fmt\_-\/>Amask;\ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}(SDL\_PixelFormat*)\ -\/>\ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView<false>}};}
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}(SDL\_PixelFormat\ \textcolor{keyword}{const}*)\ -\/>\ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView<true>}};}
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}(\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\&)\ -\/>\ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView<false>}};}
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView}}(\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\ \textcolor{keyword}{const}\&)\ -\/>\ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView<true>}};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{pixel\_format\_view}}\ =\ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView<false>}};}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{const\_pixel\_format\_view}}\ =\ \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{BasicPixelFormatView<true>}};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{PixelValue}}\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ std::uint32\_t\ col\_;}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{PixelValue}}(std::uint32\_t\ \textcolor{keyword}{const}\ col)\ noexcept\ :\ col\_(col)\ \{\}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{operator}\ std::uint32\_t()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ col\_;\ \}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ std::uint32\_t\ value()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ col\_;\ \}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{PixelValue}}(\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\ \textcolor{keyword}{const}\&\ fmt,\ \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb<std::uint8\_t>}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}})\ noexcept}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ col\_(SDL\_MapRGB(fmt.native\_handle(),\ \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}.r,\ \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}.g,\ \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}.b))\ \{\}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{PixelValue}}(\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\ \textcolor{keyword}{const}\&\ fmt,\ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba<std::uint8\_t>}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}})\ noexcept}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ col\_(SDL\_MapRGBA(fmt.native\_handle(),\ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}.r,\ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}.g,\ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}.b,\ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}.a))\ \{\}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{PixelValue}}(\mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{PixelValue}}\ \textcolor{keyword}{const}\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{PixelValue}}(\mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{PixelValue}}\&\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{PixelValue}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{PixelValue}}\ \textcolor{keyword}{const}\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{PixelValue}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{PixelValue}}\&\&)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb<std::uint8\_t>}}\ as\_rgb(\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\ \textcolor{keyword}{const}\&\ fmt)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb<std::uint8\_t>}}\ \_rgb\{\};}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ SDL\_GetRGB(col\_,\ fmt.native\_handle(),\ \&\_rgb.r,\ \&\_rgb.g,\ \&\_rgb.b);}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_rgb;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba<std::uint8\_t>}}\ as\_rgba(\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{PixelFormat}}\ \textcolor{keyword}{const}\&\ fmt)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba<std::uint8\_t>}}\ \_rgba\{\};}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ SDL\_GetRGBA(col\_,\ fmt.native\_handle(),\ \&\_rgba.r,\ \&\_rgba.g,\ \&\_rgba.b,\ \&\_rgba.a);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_rgba;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \}}
+
+\end{DoxyCode}

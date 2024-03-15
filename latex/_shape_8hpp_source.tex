@@ -1,0 +1,22 @@
+\doxysection{Shape.\+hpp}
+\hypertarget{_shape_8hpp_source}{}\label{_shape_8hpp_source}\index{include/TurnEngine/geo2d/shapes/Shape.hpp@{include/TurnEngine/geo2d/shapes/Shape.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../Vector.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cinttypes>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <expected>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }geo2d\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{template}<Numeric\ T>}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structgeo2d_1_1_shape}{Shape}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structgeo2d_1_1_shape_a50073e892ab853b74289c7fb1f98b38a}{contains}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \&position)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ =\ 0;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structgeo2d_1_1_shape_aebfea61a29b605bf3a583e615474e8d6}{setPosition}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \&position)\ =\ 0;}
+\DoxyCodeLine{00023\ \ \ \ \ \};}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}

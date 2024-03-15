@@ -1,0 +1,150 @@
+\doxysection{Window.\+hpp}
+\hypertarget{_window_8hpp_source}{}\label{_window_8hpp_source}\index{include/TurnEngine/wrapper/Window.hpp@{include/TurnEngine/wrapper/Window.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}SDL2/SDL.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}SDL2/SDL\_syswm.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Enums.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Shapes.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Surface.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Utils.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <span>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }TurnEngine\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ SDL\_Window\ *window\_;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a4675ebb648da1f93ceb6daaa705bcaf9}{Window}}(SDL\_Window\ *window)\ noexcept}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ window\_(window)\ \{\}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_window_a78fef660f26702b43d6471cc4959e4a7}{Window}}(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ \textcolor{keyword}{const}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ \&\mbox{\hyperlink{class_turn_engine_1_1_window_a4d1834397a86fb6c3bc6a4e74a1d36ac}{operator=}}(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ \textcolor{keyword}{const}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ \&\mbox{\hyperlink{class_turn_engine_1_1_window_adbcfdbe8cd94a2963b5097544f89536d}{operator=}}(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a4f1c9ad9cf06976955117768773585d7}{Window}}(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ \&\&other)\ noexcept}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ window\_(std::exchange(other.window\_,\ \textcolor{keyword}{nullptr}))\ \{\}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_window_af4d4f4848d585558aaec5a225c77d3f4}{Window}}(\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a8eafad34add7d9a1b74751d308767055}{title}},\ \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy<int>}}\ \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}},\ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh<int>}}\ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}},\ WindowFlags\ flgs)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_window_a7c074de204aebb12256dddbb96f385a0}{\string~Window}}()\ noexcept;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a6ea433b145a70dd2c5c34b7dc3c47ab5}{destroy}}()\ noexcept;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ constexpr\ auto\ \mbox{\hyperlink{class_turn_engine_1_1_window_a45e1a5db5cb481d0d0a80f6f8eae852b}{native\_handle}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ window\_;\ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \textcolor{keyword}{operator}\ bool()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ window\_\ !=\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a0d9ddc59da01b7c394406e9324176d26}{is\_ok}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ window\_\ !=\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy<int>}}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a330d0cf0a8f191e51188990192845691}{pos\_centered}}\{SDL\_WINDOWPOS\_CENTERED,\ SDL\_WINDOWPOS\_CENTERED\};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy<int>}}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a32a56cefad8f148270be7547579f1121}{pos\_undefined}}\{SDL\_WINDOWPOS\_UNDEFINED,\ SDL\_WINDOWPOS\_UNDEFINED\};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ \mbox{\hyperlink{class_turn_engine_1_1_window_ada67112f67ad93c3fce242d594f3aa1e}{copy}}(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ \textcolor{keyword}{const}\ \&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ std::optional<tlbr<int>>\ \mbox{\hyperlink{class_turn_engine_1_1_window_a646167037e145435274297fe6a43d1f9}{borders\_size}}()\ noexcept;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a2cd5544717a676f562b49ad42a44c7f3}{brightness}}()\ const\ noexcept;}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_turn_engine_1_1_window_ad6b4db1a3399983ee93621637544a10a}{display\_index}}()\ const\ noexcept;}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ std::optional<SDL\_DisplayMode>\ \mbox{\hyperlink{class_turn_engine_1_1_window_a5ad2e11764c038eeaf91eef5486c8e2f}{display\_mode}}()\ const\ noexcept;}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ WindowFlags\ \mbox{\hyperlink{class_turn_engine_1_1_window_a9a5c230861d74cc2ae72010adb489001}{flags}}()\ const\ noexcept;}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}<std::array<std::uint16\_t,\ 256>>\ \mbox{\hyperlink{class_turn_engine_1_1_window_a805df1889de933ba1e782237e1e3b75b}{gamma\_ramp}}()\ const\ noexcept;}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_aa8a074874234abb402233cd17f9dbeac}{is\_grabbed}}()\ const\ noexcept;}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ std::uint32\_t\ \textcolor{keywordtype}{id}()\ const\ noexcept;}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}<\textcolor{keywordtype}{int}>\ \mbox{\hyperlink{class_turn_engine_1_1_window_a583361186efafcf275245dc65f8a9701}{maximum\_size}}()\ const\ noexcept;}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}<\textcolor{keywordtype}{int}>\ \mbox{\hyperlink{class_turn_engine_1_1_window_a7f19fee6c82ddcd916e7d1a8bc8d5dc1}{minimum\_size}}()\ const\ noexcept;}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_turn_engine_1_1_window_abc5a83a040d45d255ae86e31987725f5}{opacity}}()\ const\ noexcept;}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ PixelFormatEnum\ \mbox{\hyperlink{class_turn_engine_1_1_window_af018e51ccc08f90c73271d0b0af1f921}{pixel\_format}}()\ const\ noexcept;}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}<\textcolor{keywordtype}{int}>\ \mbox{\hyperlink{class_turn_engine_1_1_window_a44564b43d06cfebbf435d2b8a702e91a}{position}}()\ const\ noexcept;}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}<\textcolor{keywordtype}{int}>\ \mbox{\hyperlink{class_turn_engine_1_1_window_a962f43055daeeec130a35f1a9dc5a2b8}{size}}()\ const\ noexcept;}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ std::string\_view\ \mbox{\hyperlink{class_turn_engine_1_1_window_a8eafad34add7d9a1b74751d308767055}{title}}()\ const\ noexcept;}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ std::optional<SDL\_SysWMinfo>\ \mbox{\hyperlink{class_turn_engine_1_1_window_a35255fb24831bcdadb3c8971df4c659a}{wm\_info}}()\ const\ noexcept;}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a1fab5a14c2719f2a9be1568ace822690}{hide}}()\ noexcept;}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_ae325defc6f80d1e14a42ca7a4b2a6eeb}{maximize}}()\ noexcept;}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a8d80dab846378cac2ecb089ae516e979}{minimize}}()\ noexcept;}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_aed1e537d4e4d333c46964681e8645cf3}{raise}}()\ noexcept;}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a3545362f5dac513f8a967e1c26d592c9}{restore}}()\ noexcept;}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_aa3a40e3e9cbfeff06b0264981c2512eb}{set\_bordered}}(\textcolor{keywordtype}{bool}\ const\ bordered)\ noexcept;}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a4470f38ba00d6ba6adf43328e34d29b4}{set\_brightness}}(\textcolor{keywordtype}{float}\ const\ \mbox{\hyperlink{class_turn_engine_1_1_window_a2cd5544717a676f562b49ad42a44c7f3}{brightness}})\ noexcept;}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a775d2faf2ef5432c752d1d51f714c623}{set\_display\_mode}}(SDL\_DisplayMode\ const\ \&dm)\ noexcept;}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a775d2faf2ef5432c752d1d51f714c623}{set\_display\_mode}}()\ noexcept;}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a12a68f1409e23f2f7b5f2be05a0e1573}{set\_fullscreen}}(FullscreenFlags\ const\ \mbox{\hyperlink{class_turn_engine_1_1_window_a9a5c230861d74cc2ae72010adb489001}{flags}})\ noexcept;}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a14e267062a01ad5108e5c8a2fa15a21e}{set\_gamma\_ramp}}(std::span<std::uint16\_t\ const,\ 256>\ const\ r,}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::span<std::uint16\_t\ const,\ 256>\ const\ g,}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::span<std::uint16\_t\ const,\ 256>\ const\ b)\ noexcept;}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a99eaf6808c04b21b8fbbe0a9d9be909b}{set\_grabbed}}(\textcolor{keywordtype}{bool}\ grabbed\ =\ true)\ noexcept;}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a9ae1b17d8e7287ea816a8182a09f2e9e}{set\_hit\_test}}(\mbox{\hyperlink{class_turn_engine_1_1function__ref}{function\_ref}}<SDL\_HitTestResult(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ \&,\ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<\textcolor{keywordtype}{int}>)>\ const\ fn)\ noexcept;}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a9ae1b17d8e7287ea816a8182a09f2e9e}{set\_hit\_test}}(\mbox{\hyperlink{class_turn_engine_1_1function__ref}{function\_ref}}<SDL\_HitTestResult(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ const\ \&,\ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}<\textcolor{keywordtype}{int}>)>\ const\ fn)\ noexcept;}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a496d9b195b1a441045fa86419a064448}{set\_icon}}(\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}}\ const\ \&s)\ noexcept;}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a8bc94df1d8e73b40618031012c99bc14}{set\_input\_focus}}()\ noexcept;}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_aec141e83d86f63353f08a081b3e55296}{set\_maximum\_size}}(\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}<\textcolor{keywordtype}{int}>\ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}})\ noexcept;}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a1f9ed6ee8ab878f6dc6b5f9bb1c51d15}{set\_minimum\_size}}(\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}<\textcolor{keywordtype}{int}>\ const\ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}})\ noexcept;}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a1545806c49733ffbe8135768e39f7c45}{set\_modal\_for}}(\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}}\ const\ \&parent)\ noexcept;}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a7767cef95c080f80fdfc9dbf3b182466}{set\_opacity}}(\textcolor{keywordtype}{float}\ const\ \mbox{\hyperlink{class_turn_engine_1_1_window_abc5a83a040d45d255ae86e31987725f5}{opacity}})\ noexcept;}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_ac94431d6a8dc4a07881d5dfc552fbdd1}{set\_position}}(\mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}<\textcolor{keywordtype}{int}>\ const\ \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}})\ noexcept;}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_afcf13af906564bcade3216aa74ea9d2a}{set\_resizable}}(\textcolor{keywordtype}{bool}\ const\ resizable)\ noexcept;}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a27c5f2df0ecafe41c7f9513263695176}{set\_size}}(\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}<\textcolor{keywordtype}{int}>\ const\ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}})\ noexcept;}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_adbc00ce9d1d0a279fa5db10e995bbccd}{set\_title}}(\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}\ const\ \mbox{\hyperlink{class_turn_engine_1_1_window_a8eafad34add7d9a1b74751d308767055}{title}})\ noexcept;}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a8d9f170a37e3811308b74be460d9ca73}{show\_simple\_message\_box}}(MessageBoxFlags\ const\ \mbox{\hyperlink{class_turn_engine_1_1_window_a9a5c230861d74cc2ae72010adb489001}{flags}},\ \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}\ const\ \mbox{\hyperlink{class_turn_engine_1_1_window_a8eafad34add7d9a1b74751d308767055}{title}},}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\_term\_string}}\ const\ message)\ noexcept;}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_window_afa47198eb40935922e81bb77ee4c8672}{show}}()\ noexcept;}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_a90268ee6222e4788e412551f49674a64}{update\_surface}}()\ noexcept;}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_window_af0de8595b50d5b5f8c9cc634f14a52e1}{update\_surface\_rects}}(std::span<\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}<\textcolor{keywordtype}{int}>\ const>\ const\ rects)\ noexcept;}
+\DoxyCodeLine{00386\ \ \ \ \ \};}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \}}
+
+\end{DoxyCode}

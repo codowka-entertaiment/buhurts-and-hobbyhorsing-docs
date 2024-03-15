@@ -1,0 +1,114 @@
+\doxysection{Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::iterator Class Reference}
+\hypertarget{class_turn_engine_1_1event__queue__t_1_1iterator}{}\label{class_turn_engine_1_1event__queue__t_1_1iterator}\index{TurnEngine::event\_queue\_t::iterator@{TurnEngine::event\_queue\_t::iterator}}
+
+
+An iterator over the \doxylink{class_turn_engine_1_1_s_d_l2}{SDL2} event queue.  
+
+
+
+
+{\ttfamily \#include $<$Event.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1event__queue__t_1_1iterator_a94ac8947c4e2a972530f3570ff5996a7}\label{class_turn_engine_1_1event__queue__t_1_1iterator_a94ac8947c4e2a972530f3570ff5996a7} 
+using {\bfseries value\+\_\+type} = SDL\+\_\+\+Event
+\item 
+\Hypertarget{class_turn_engine_1_1event__queue__t_1_1iterator_a4a93835f5bd57b706c65844109cc5d9b}\label{class_turn_engine_1_1event__queue__t_1_1iterator_a4a93835f5bd57b706c65844109cc5d9b} 
+using {\bfseries reference} = SDL\+\_\+\+Event\&
+\item 
+\Hypertarget{class_turn_engine_1_1event__queue__t_1_1iterator_a4acdae79af9c8610739326cddcafc0fe}\label{class_turn_engine_1_1event__queue__t_1_1iterator_a4acdae79af9c8610739326cddcafc0fe} 
+using {\bfseries pointer} = SDL\+\_\+\+Event\texorpdfstring{$\ast$}{*}
+\item 
+\Hypertarget{class_turn_engine_1_1event__queue__t_1_1iterator_aca2a8a284d85681d18d17b212a7f84b5}\label{class_turn_engine_1_1event__queue__t_1_1iterator_aca2a8a284d85681d18d17b212a7f84b5} 
+using {\bfseries difference\+\_\+type} = std\+::ptrdiff\+\_\+t
+\item 
+\Hypertarget{class_turn_engine_1_1event__queue__t_1_1iterator_a725f23adbc68c09144156b8228212733}\label{class_turn_engine_1_1event__queue__t_1_1iterator_a725f23adbc68c09144156b8228212733} 
+using {\bfseries iterator\+\_\+category} = std\+::input\+\_\+iterator\+\_\+tag
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr SDL\+\_\+\+Event \& \mbox{\hyperlink{class_turn_engine_1_1event__queue__t_1_1iterator_ae8746342f1f5b4bb498eaec9134c87a3}{operator\texorpdfstring{$\ast$}{*}}} () noexcept
+\begin{DoxyCompactList}\small\item\em Access the current event. \end{DoxyCompactList}\item 
+constexpr SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1event__queue__t_1_1iterator_ae9f5e10c249f550db2bf0109ec617896}{operator-\/$>$}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get a pointer to the current event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1event__queue__t_1_1iterator}{iterator}} \& \mbox{\hyperlink{class_turn_engine_1_1event__queue__t_1_1iterator_aa07676079d54c44cacf74abe8df7da7f}{operator++}} () noexcept
+\begin{DoxyCompactList}\small\item\em Gets the next event from the event queue. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{class_turn_engine_1_1event__queue__t_1_1iterator_a36329a9caffd51126c9257bbff6b3ff4}{operator!=}} (\mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_1_1sentinel}{sentinel}}) const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the event queue it empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1event__queue__t_1_1iterator_ab99f899385fdb837e91f45765f4eed0e}\label{class_turn_engine_1_1event__queue__t_1_1iterator_ab99f899385fdb837e91f45765f4eed0e} 
+class {\bfseries event\+\_\+queue\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An iterator over the \doxylink{class_turn_engine_1_1_s_d_l2}{SDL2} event queue. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1event__queue__t_1_1iterator_a36329a9caffd51126c9257bbff6b3ff4}\label{class_turn_engine_1_1event__queue__t_1_1iterator_a36329a9caffd51126c9257bbff6b3ff4} 
+\index{TurnEngine::event\_queue\_t::iterator@{TurnEngine::event\_queue\_t::iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!TurnEngine::event\_queue\_t::iterator@{TurnEngine::event\_queue\_t::iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily constexpr bool Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::iterator\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_1_1sentinel}{sentinel}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the event queue it empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sentinel} & A placeholder value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if more events can be polled, false if no more events in the queue. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1event__queue__t_1_1iterator_ae8746342f1f5b4bb498eaec9134c87a3}\label{class_turn_engine_1_1event__queue__t_1_1iterator_ae8746342f1f5b4bb498eaec9134c87a3} 
+\index{TurnEngine::event\_queue\_t::iterator@{TurnEngine::event\_queue\_t::iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!TurnEngine::event\_queue\_t::iterator@{TurnEngine::event\_queue\_t::iterator}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily constexpr SDL\+\_\+\+Event \& Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::iterator\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Access the current event. 
+
+\begin{DoxyReturn}{Returns}
+The current SDL\+\_\+\+Event. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1event__queue__t_1_1iterator_aa07676079d54c44cacf74abe8df7da7f}\label{class_turn_engine_1_1event__queue__t_1_1iterator_aa07676079d54c44cacf74abe8df7da7f} 
+\index{TurnEngine::event\_queue\_t::iterator@{TurnEngine::event\_queue\_t::iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!TurnEngine::event\_queue\_t::iterator@{TurnEngine::event\_queue\_t::iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_engine_1_1event__queue__t_1_1iterator}{iterator}} \& Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the next event from the event queue. 
+
+\begin{DoxyReturn}{Returns}
+A reference to this iterator. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1event__queue__t_1_1iterator_ae9f5e10c249f550db2bf0109ec617896}\label{class_turn_engine_1_1event__queue__t_1_1iterator_ae9f5e10c249f550db2bf0109ec617896} 
+\index{TurnEngine::event\_queue\_t::iterator@{TurnEngine::event\_queue\_t::iterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!TurnEngine::event\_queue\_t::iterator@{TurnEngine::event\_queue\_t::iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily constexpr SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*} Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::iterator\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get a pointer to the current event. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the current SDL\+\_\+\+Event. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Event.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+\doxysection{Rectangle.\+hpp}
+\hypertarget{_rectangle_8hpp_source}{}\label{_rectangle_8hpp_source}\index{include/TurnEngine/geo2d/shapes/Rectangle.hpp@{include/TurnEngine/geo2d/shapes/Rectangle.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Shape.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }geo2d}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{enum\ class}\ RectangleShapeError\ :\ std::uint8\_t\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ WrongVertices,}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ WrongDimensions,}
+\DoxyCodeLine{00010\ \ \ \ \ \};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{template}\ <Numeric\ T>}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structgeo2d_1_1_shape}{Shape}}<T>\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ m\_vertex;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ T\ m\_width,\ m\_height;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}(\mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}},\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ dims)\ :\ m\_vertex(\mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}}),\ m\_width(dims.x),\ m\_height(dims.y)\ \{\}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}(\mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}},\ T\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}{width}},\ T\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}{height}})\ :\ m\_vertex(\mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}}),\ m\_width(\mbox{\hyperlink{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}{width}}),\ m\_height(\mbox{\hyperlink{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}{height}})\ \{\}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{static}\ std::expected<Rectangle<T>,\ RectangleShapeError>\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a6fea8e33e12fd4d876d1bf03d0a57a1f}{init}}(\mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ vertex1,\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ vertex2)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (vertex2.x\ <=\ vertex1.x\ ||\ vertex2.y\ <=\ vertex1.y)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::unexpected(RectangleShapeError::WrongVertices);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}(vertex1,\ vertex2\ -\/\ vertex1);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{static}\ std::expected<Rectangle<T>,\ RectangleShapeError>\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a1ab53208a3908ec8d5880ff69b87b900}{init}}(\mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}},\ T\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}{width}},\ T\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}{height}})\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}{width}}\ <=\ 0\ ||\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}{height}}\ <=\ 0)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::unexpected(RectangleShapeError::WrongDimensions);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}(\mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}},\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}{width}},\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}{height}});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle<T>}}*\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_acb454f7ba6c90ac508935a4bddff7a1f}{init\_uncheck}}(\mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ vertex1,\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ vertex2)\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}(vertex1,\ vertex2\ -\/\ vertex1);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle<T>}}*\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a965d5f5cc5dbf76e62358ca69f2c6c1a}{init\_uncheck}}(\mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}},\ T\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}{width}},\ T\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}{height}})\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}(\mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}},\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}{width}},\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}{height}});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \&\mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_vertex;\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ T\ \&\mbox{\hyperlink{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}{width}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_width;\ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ T\ \&\mbox{\hyperlink{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}{height}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_height;\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_ac8625c6219e4562850c6e9ce7ec52942}{contains}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \&position)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \textcolor{keyword}{override}\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ pos\ =\ position\ -\/\ m\_vertex;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (pos.x\ >\ 0\ \&\&\ pos.x\ <\ m\_width)\ \&\&\ (pos.y\ >\ 0\ \&\&\ pos.y\ <\ m\_height);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a876555caba29dff060cd67396a65bc93}{setPosition}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \&position)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ m\_vertex\ =\ position;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{using\ }RectangleInt\ =\ Rectangle<int>;}
+\DoxyCodeLine{00101\ \}}
+
+\end{DoxyCode}

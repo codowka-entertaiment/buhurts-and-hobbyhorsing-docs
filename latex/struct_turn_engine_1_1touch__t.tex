@@ -1,0 +1,189 @@
+\doxysection{Turn\+Engine\+::touch\+\_\+t Struct Reference}
+\hypertarget{struct_turn_engine_1_1touch__t}{}\label{struct_turn_engine_1_1touch__t}\index{TurnEngine::touch\_t@{TurnEngine::touch\_t}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{struct_turn_engine_1_1touch__t_a98a75b701e9b5e66ca308d8870c11ecc}{num\+\_\+devices}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get the number of registered touch devices. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{struct_turn_engine_1_1touch__t_a022b088059cfed27bd739b708ed07cf6}{num\+\_\+fingers}} (SDL\+\_\+\+Touch\+ID id) noexcept
+\begin{DoxyCompactList}\small\item\em Get the number of active fingers for a given touch device. \end{DoxyCompactList}\item 
+static SDL\+\_\+\+Touch\+ID \mbox{\hyperlink{struct_turn_engine_1_1touch__t_a88d8402481b339008618c5c16cf47c79}{get\+\_\+device}} (int index) noexcept
+\begin{DoxyCompactList}\small\item\em Get the touch ID with the given index. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}}$<$ SDL\+\_\+\+Finger $>$ \mbox{\hyperlink{struct_turn_engine_1_1touch__t_a2acd1c670a4466c6d4b5faa6a9833f2d}{get\+\_\+finger}} (SDL\+\_\+\+Touch\+ID id, int index) noexcept
+\begin{DoxyCompactList}\small\item\em Get the finger object for a specified touch device ID and finger index. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_turn_engine_1_1touch__t_a08dea3c72f255c0a101a26fcda11d627}{record\+\_\+gesture}} (SDL\+\_\+\+Touch\+ID id) noexcept
+\begin{DoxyCompactList}\small\item\em Begins recording a gesture on the specified touch device. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_turn_engine_1_1touch__t_a73a4751e0d6ef560761791baadafcf38}{record\+\_\+all\+\_\+gestures}} () noexcept
+\begin{DoxyCompactList}\small\item\em Begins recording a gesture on all touch devices. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{struct_turn_engine_1_1touch__t_aa71c88ee1c1116d04013c0352d723ea1}{load\+\_\+dollar\+\_\+templates}} (SDL\+\_\+\+Touch\+ID id, SDL\+\_\+\+RWops \&src) noexcept
+\begin{DoxyCompactList}\small\item\em Load dollar gesture templates from a file. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{struct_turn_engine_1_1touch__t_a54fb3dc2610b1721f2ba20ced30df8ce}{save\+\_\+all\+\_\+dollar\+\_\+templates}} (SDL\+\_\+\+RWops \&dst) noexcept
+\begin{DoxyCompactList}\small\item\em Saves all currently loaded dollar gesture templates. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_turn_engine_1_1touch__t_a57de2d616dcdf0787e04741eb93ab037}{save\+\_\+dollar\+\_\+template}} (SDL\+\_\+\+Gesture\+ID id, SDL\+\_\+\+RWops \&dst) noexcept
+\begin{DoxyCompactList}\small\item\em Save a currently loaded Dollar Gesture template. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_turn_engine_1_1touch__t_a88d8402481b339008618c5c16cf47c79}\label{struct_turn_engine_1_1touch__t_a88d8402481b339008618c5c16cf47c79} 
+\index{TurnEngine::touch\_t@{TurnEngine::touch\_t}!get\_device@{get\_device}}
+\index{get\_device@{get\_device}!TurnEngine::touch\_t@{TurnEngine::touch\_t}}
+\doxysubsubsection{\texorpdfstring{get\_device()}{get\_device()}}
+{\footnotesize\ttfamily static SDL\+\_\+\+Touch\+ID Turn\+Engine\+::touch\+\_\+t\+::get\+\_\+device (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get the touch ID with the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The touch device index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The touch ID with the given index on success or 0 if the index is invalid. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1touch__t_a2acd1c670a4466c6d4b5faa6a9833f2d}\label{struct_turn_engine_1_1touch__t_a2acd1c670a4466c6d4b5faa6a9833f2d} 
+\index{TurnEngine::touch\_t@{TurnEngine::touch\_t}!get\_finger@{get\_finger}}
+\index{get\_finger@{get\_finger}!TurnEngine::touch\_t@{TurnEngine::touch\_t}}
+\doxysubsubsection{\texorpdfstring{get\_finger()}{get\_finger()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref}}$<$ SDL\+\_\+\+Finger $>$ Turn\+Engine\+::touch\+\_\+t\+::get\+\_\+finger (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Touch\+ID}]{id,  }\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get the finger object for a specified touch device ID and finger index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the requested touch device. \\
+\hline
+{\em index} & The index of the requested finger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The SDL\+\_\+\+Finger object or an empty \doxylink{class_turn_engine_1_1optional__ref}{optional\+\_\+ref} in no object at the given ID and index could be found. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1touch__t_aa71c88ee1c1116d04013c0352d723ea1}\label{struct_turn_engine_1_1touch__t_aa71c88ee1c1116d04013c0352d723ea1} 
+\index{TurnEngine::touch\_t@{TurnEngine::touch\_t}!load\_dollar\_templates@{load\_dollar\_templates}}
+\index{load\_dollar\_templates@{load\_dollar\_templates}!TurnEngine::touch\_t@{TurnEngine::touch\_t}}
+\doxysubsubsection{\texorpdfstring{load\_dollar\_templates()}{load\_dollar\_templates()}}
+{\footnotesize\ttfamily static int Turn\+Engine\+::touch\+\_\+t\+::load\+\_\+dollar\+\_\+templates (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Touch\+ID}]{id,  }\item[{SDL\+\_\+\+RWops \&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Load dollar gesture templates from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & A touch id. \\
+\hline
+{\em src} & An SDL\+\_\+\+RWops to load from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of loaded templates on success an number \texorpdfstring{$<$}{<}= 0 on failure. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1touch__t_a98a75b701e9b5e66ca308d8870c11ecc}\label{struct_turn_engine_1_1touch__t_a98a75b701e9b5e66ca308d8870c11ecc} 
+\index{TurnEngine::touch\_t@{TurnEngine::touch\_t}!num\_devices@{num\_devices}}
+\index{num\_devices@{num\_devices}!TurnEngine::touch\_t@{TurnEngine::touch\_t}}
+\doxysubsubsection{\texorpdfstring{num\_devices()}{num\_devices()}}
+{\footnotesize\ttfamily static int Turn\+Engine\+::touch\+\_\+t\+::num\+\_\+devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get the number of registered touch devices. 
+
+\begin{DoxyReturn}{Returns}
+The number of registered touch devices. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1touch__t_a022b088059cfed27bd739b708ed07cf6}\label{struct_turn_engine_1_1touch__t_a022b088059cfed27bd739b708ed07cf6} 
+\index{TurnEngine::touch\_t@{TurnEngine::touch\_t}!num\_fingers@{num\_fingers}}
+\index{num\_fingers@{num\_fingers}!TurnEngine::touch\_t@{TurnEngine::touch\_t}}
+\doxysubsubsection{\texorpdfstring{num\_fingers()}{num\_fingers()}}
+{\footnotesize\ttfamily static int Turn\+Engine\+::touch\+\_\+t\+::num\+\_\+fingers (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Touch\+ID}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get the number of active fingers for a given touch device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of a touch device. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of active fingers for the touch device on success or 0 on failure. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1touch__t_a73a4751e0d6ef560761791baadafcf38}\label{struct_turn_engine_1_1touch__t_a73a4751e0d6ef560761791baadafcf38} 
+\index{TurnEngine::touch\_t@{TurnEngine::touch\_t}!record\_all\_gestures@{record\_all\_gestures}}
+\index{record\_all\_gestures@{record\_all\_gestures}!TurnEngine::touch\_t@{TurnEngine::touch\_t}}
+\doxysubsubsection{\texorpdfstring{record\_all\_gestures()}{record\_all\_gestures()}}
+{\footnotesize\ttfamily static bool Turn\+Engine\+::touch\+\_\+t\+::record\+\_\+all\+\_\+gestures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Begins recording a gesture on all touch devices. 
+
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1touch__t_a08dea3c72f255c0a101a26fcda11d627}\label{struct_turn_engine_1_1touch__t_a08dea3c72f255c0a101a26fcda11d627} 
+\index{TurnEngine::touch\_t@{TurnEngine::touch\_t}!record\_gesture@{record\_gesture}}
+\index{record\_gesture@{record\_gesture}!TurnEngine::touch\_t@{TurnEngine::touch\_t}}
+\doxysubsubsection{\texorpdfstring{record\_gesture()}{record\_gesture()}}
+{\footnotesize\ttfamily static bool Turn\+Engine\+::touch\+\_\+t\+::record\+\_\+gesture (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Touch\+ID}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Begins recording a gesture on the specified touch device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The touch device id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1touch__t_a54fb3dc2610b1721f2ba20ced30df8ce}\label{struct_turn_engine_1_1touch__t_a54fb3dc2610b1721f2ba20ced30df8ce} 
+\index{TurnEngine::touch\_t@{TurnEngine::touch\_t}!save\_all\_dollar\_templates@{save\_all\_dollar\_templates}}
+\index{save\_all\_dollar\_templates@{save\_all\_dollar\_templates}!TurnEngine::touch\_t@{TurnEngine::touch\_t}}
+\doxysubsubsection{\texorpdfstring{save\_all\_dollar\_templates()}{save\_all\_dollar\_templates()}}
+{\footnotesize\ttfamily static int Turn\+Engine\+::touch\+\_\+t\+::save\+\_\+all\+\_\+dollar\+\_\+templates (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+RWops \&}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Saves all currently loaded dollar gesture templates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & An SDL\+\_\+\+RWops to save to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of saved templates or 0 on failure. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1touch__t_a57de2d616dcdf0787e04741eb93ab037}\label{struct_turn_engine_1_1touch__t_a57de2d616dcdf0787e04741eb93ab037} 
+\index{TurnEngine::touch\_t@{TurnEngine::touch\_t}!save\_dollar\_template@{save\_dollar\_template}}
+\index{save\_dollar\_template@{save\_dollar\_template}!TurnEngine::touch\_t@{TurnEngine::touch\_t}}
+\doxysubsubsection{\texorpdfstring{save\_dollar\_template()}{save\_dollar\_template()}}
+{\footnotesize\ttfamily static bool Turn\+Engine\+::touch\+\_\+t\+::save\+\_\+dollar\+\_\+template (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Gesture\+ID}]{id,  }\item[{SDL\+\_\+\+RWops \&}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Save a currently loaded Dollar Gesture template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & A gesture id. \\
+\hline
+{\em dst} & An SDL\+\_\+\+RWops to save to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, false if failed. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Event.\+hpp\end{DoxyCompactItemize}

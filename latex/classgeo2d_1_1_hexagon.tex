@@ -1,0 +1,161 @@
+\doxysection{geo2d\+::Hexagon\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classgeo2d_1_1_hexagon}{}\label{classgeo2d_1_1_hexagon}\index{geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}}
+
+
+Class represents hexagon shape.  
+
+
+
+
+{\ttfamily \#include $<$Hexagon.\+hpp$>$}
+
+Inheritance diagram for geo2d\+::Hexagon\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgeo2d_1_1_hexagon}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \& \mbox{\hyperlink{classgeo2d_1_1_hexagon_ace677829d23edd5a438acd65cbc0945b}{center}} () const
+\begin{DoxyCompactList}\small\item\em getter for center \end{DoxyCompactList}\item 
+constexpr const T \& \mbox{\hyperlink{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01}{side}} () const
+\begin{DoxyCompactList}\small\item\em getter for side \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{classgeo2d_1_1_hexagon_ac5a4c6bc28aaf6c93a87e23445b34c82}{contains}} (const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \&position) const noexcept override
+\begin{DoxyCompactList}\small\item\em that method checks if hexagon shape contains point \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgeo2d_1_1_hexagon_aafca83892f4b4e9321c18f9ca60a932b}{set\+Position}} (const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \&position) override
+\begin{DoxyCompactList}\small\item\em setter for position \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr std\+::expected$<$ \mbox{\hyperlink{classgeo2d_1_1_hexagon}{Hexagon}}$<$ T $>$, Hexagon\+Shape\+Error $>$ \mbox{\hyperlink{classgeo2d_1_1_hexagon_a345c77df4bfffee263c2921ea85e621c}{init}} (\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \mbox{\hyperlink{classgeo2d_1_1_hexagon_ace677829d23edd5a438acd65cbc0945b}{center}}, T \mbox{\hyperlink{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01}{side}})
+\begin{DoxyCompactList}\small\item\em that static method inits hexagon shape with checks \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{classgeo2d_1_1_hexagon}{Hexagon}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgeo2d_1_1_hexagon_a6e5b0f5f6cdc683a08a8349bf8422e3f}{init\+\_\+uncheck}} (\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \mbox{\hyperlink{classgeo2d_1_1_hexagon_ace677829d23edd5a438acd65cbc0945b}{center}}, T \mbox{\hyperlink{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01}{side}})
+\begin{DoxyCompactList}\small\item\em that static method inits hexagon shape without checks \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$Numeric T$>$\newline
+class geo2d\+::\+Hexagon$<$ T $>$}
+Class represents hexagon shape. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgeo2d_1_1_hexagon_ace677829d23edd5a438acd65cbc0945b}\label{classgeo2d_1_1_hexagon_ace677829d23edd5a438acd65cbc0945b} 
+\index{geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}!center@{center}}
+\index{center@{center}!geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{center()}{center()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \& \mbox{\hyperlink{classgeo2d_1_1_hexagon}{geo2d\+::\+Hexagon}}$<$ T $>$\+::center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+getter for center 
+
+\begin{DoxyReturn}{Returns}
+Position$<$\+T$>$\& 
+\end{DoxyReturn}
+\Hypertarget{classgeo2d_1_1_hexagon_ac5a4c6bc28aaf6c93a87e23445b34c82}\label{classgeo2d_1_1_hexagon_ac5a4c6bc28aaf6c93a87e23445b34c82} 
+\index{geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}!contains@{contains}}
+\index{contains@{contains}!geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr bool \mbox{\hyperlink{classgeo2d_1_1_hexagon}{geo2d\+::\+Hexagon}}$<$ T $>$\+::contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+that method checks if hexagon shape contains point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & Position$<$\+T$>$ position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if rectangle shape contains point, else {\ttfamily false} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{structgeo2d_1_1_shape_a50073e892ab853b74289c7fb1f98b38a}{geo2d\+::\+Shape$<$ T $>$}}.
+
+\Hypertarget{classgeo2d_1_1_hexagon_a345c77df4bfffee263c2921ea85e621c}\label{classgeo2d_1_1_hexagon_a345c77df4bfffee263c2921ea85e621c} 
+\index{geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}!init@{init}}
+\index{init@{init}!geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+static constexpr std\+::expected$<$ \mbox{\hyperlink{classgeo2d_1_1_hexagon}{Hexagon}}$<$ T $>$, Hexagon\+Shape\+Error $>$ \mbox{\hyperlink{classgeo2d_1_1_hexagon}{geo2d\+::\+Hexagon}}$<$ T $>$\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$}]{center,  }\item[{T}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+that static method inits hexagon shape with checks 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Position$<$\+T$>$} & center \\
+\hline
+{\em T} & side \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::expected\texorpdfstring{$<$}{<}Rectangle$<$\+T$>$, Rectangle\+Shape\+Error\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{classgeo2d_1_1_hexagon_a6e5b0f5f6cdc683a08a8349bf8422e3f}\label{classgeo2d_1_1_hexagon_a6e5b0f5f6cdc683a08a8349bf8422e3f} 
+\index{geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}!init\_uncheck@{init\_uncheck}}
+\index{init\_uncheck@{init\_uncheck}!geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{init\_uncheck()}{init\_uncheck()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+static constexpr \mbox{\hyperlink{classgeo2d_1_1_hexagon}{Hexagon}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgeo2d_1_1_hexagon}{geo2d\+::\+Hexagon}}$<$ T $>$\+::init\+\_\+uncheck (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$}]{center,  }\item[{T}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+that static method inits hexagon shape without checks 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Position$<$\+T$>$} & center \\
+\hline
+{\em T} & side \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hexagon$<$\+T$>$\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{classgeo2d_1_1_hexagon_aafca83892f4b4e9321c18f9ca60a932b}\label{classgeo2d_1_1_hexagon_aafca83892f4b4e9321c18f9ca60a932b} 
+\index{geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+void \mbox{\hyperlink{classgeo2d_1_1_hexagon}{geo2d\+::\+Hexagon}}$<$ T $>$\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+setter for position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & Position$<$\+T$>$ position \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{structgeo2d_1_1_shape_aebfea61a29b605bf3a583e615474e8d6}{geo2d\+::\+Shape$<$ T $>$}}.
+
+\Hypertarget{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01}\label{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01} 
+\index{geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}!side@{side}}
+\index{side@{side}!geo2d::Hexagon$<$ T $>$@{geo2d::Hexagon$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{side()}{side()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr const T \& \mbox{\hyperlink{classgeo2d_1_1_hexagon}{geo2d\+::\+Hexagon}}$<$ T $>$\+::side (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+getter for side 
+
+\begin{DoxyReturn}{Returns}
+T\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/geo2d/shapes/Hexagon.\+hpp\end{DoxyCompactItemize}

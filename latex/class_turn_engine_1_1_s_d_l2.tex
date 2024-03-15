@@ -1,0 +1,108 @@
+\doxysection{Turn\+Engine\+::SDL2 Class Reference}
+\hypertarget{class_turn_engine_1_1_s_d_l2}{}\label{class_turn_engine_1_1_s_d_l2}\index{TurnEngine::SDL2@{TurnEngine::SDL2}}
+
+
+Initialization context for SDL.  
+
+
+
+
+{\ttfamily \#include $<$Init.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1_s_d_l2_ab3d9057f330523dec72146b65f667f04}\label{class_turn_engine_1_1_s_d_l2_ab3d9057f330523dec72146b65f667f04} 
+{\bfseries SDL2} (\mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}} const \&)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_s_d_l2_a687d148ddee272e5b7103f49ee82a6ba}\label{class_turn_engine_1_1_s_d_l2_a687d148ddee272e5b7103f49ee82a6ba} 
+\mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}} const \&)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_s_d_l2_a5f66cd6cb74ee99b933834a87c6529ed}\label{class_turn_engine_1_1_s_d_l2_a5f66cd6cb74ee99b933834a87c6529ed} 
+\mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}} \&\&)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_s_d_l2_a05c9149c769a8bed28eca23873c7a785}\label{class_turn_engine_1_1_s_d_l2_a05c9149c769a8bed28eca23873c7a785} 
+constexpr {\bfseries SDL2} (\mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}} \&\&other) noexcept=default
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_s_d_l2_a55c2615053cf89d7748473a678e0c17a}{SDL2}} (SDLInit\+Flags const \&flgs) noexcept
+\begin{DoxyCompactList}\small\item\em Initialize the internal SDL libraries. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_s_d_l2_a8d7ffc6df3810eac785e8b9a0aafd5de}\label{class_turn_engine_1_1_s_d_l2_a8d7ffc6df3810eac785e8b9a0aafd5de} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+SDL2} () noexcept
+\begin{DoxyCompactList}\small\item\em Destructor that deinitializes SDL libraries. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_s_d_l2_a0879a023f87601c4cbe779e6e4b20fa5}{operator bool}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the SDL libraries were initialized correctly. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{class_turn_engine_1_1_s_d_l2_a57432f43047d386e9ed3f30287dd6e31}{is\+\_\+ok}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the SDL libraries were initialized correctly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string\+\_\+view \mbox{\hyperlink{class_turn_engine_1_1_s_d_l2_a61b75ec1a6f9c444cb00cf4fbc85f272}{get\+\_\+error}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get the previously set error fro, within SDL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Initialization context for SDL. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1_s_d_l2_a55c2615053cf89d7748473a678e0c17a}\label{class_turn_engine_1_1_s_d_l2_a55c2615053cf89d7748473a678e0c17a} 
+\index{TurnEngine::SDL2@{TurnEngine::SDL2}!SDL2@{SDL2}}
+\index{SDL2@{SDL2}!TurnEngine::SDL2@{TurnEngine::SDL2}}
+\doxysubsubsection{\texorpdfstring{SDL2()}{SDL2()}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+SDL2\+::\+SDL2 (\begin{DoxyParamCaption}\item[{SDLInit\+Flags const \&}]{flgs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Initialize the internal SDL libraries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flgs} & Initialization flags. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1_s_d_l2_a61b75ec1a6f9c444cb00cf4fbc85f272}\label{class_turn_engine_1_1_s_d_l2_a61b75ec1a6f9c444cb00cf4fbc85f272} 
+\index{TurnEngine::SDL2@{TurnEngine::SDL2}!get\_error@{get\_error}}
+\index{get\_error@{get\_error}!TurnEngine::SDL2@{TurnEngine::SDL2}}
+\doxysubsubsection{\texorpdfstring{get\_error()}{get\_error()}}
+{\footnotesize\ttfamily static std\+::string\+\_\+view Turn\+Engine\+::\+SDL2\+::get\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get the previously set error fro, within SDL. 
+
+\begin{DoxyReturn}{Returns}
+A string denoting the error. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_s_d_l2_a57432f43047d386e9ed3f30287dd6e31}\label{class_turn_engine_1_1_s_d_l2_a57432f43047d386e9ed3f30287dd6e31} 
+\index{TurnEngine::SDL2@{TurnEngine::SDL2}!is\_ok@{is\_ok}}
+\index{is\_ok@{is\_ok}!TurnEngine::SDL2@{TurnEngine::SDL2}}
+\doxysubsubsection{\texorpdfstring{is\_ok()}{is\_ok()}}
+{\footnotesize\ttfamily constexpr bool Turn\+Engine\+::\+SDL2\+::is\+\_\+ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the SDL libraries were initialized correctly. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_s_d_l2_a0879a023f87601c4cbe779e6e4b20fa5}\label{class_turn_engine_1_1_s_d_l2_a0879a023f87601c4cbe779e6e4b20fa5} 
+\index{TurnEngine::SDL2@{TurnEngine::SDL2}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!TurnEngine::SDL2@{TurnEngine::SDL2}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+SDL2\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the SDL libraries were initialized correctly. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, false if not. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Init.\+hpp\end{DoxyCompactItemize}

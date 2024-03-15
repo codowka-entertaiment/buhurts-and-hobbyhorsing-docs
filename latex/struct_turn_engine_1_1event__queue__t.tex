@@ -1,0 +1,490 @@
+\doxysection{Turn\+Engine\+::event\+\_\+queue\+\_\+t Struct Reference}
+\hypertarget{struct_turn_engine_1_1event__queue__t}{}\label{struct_turn_engine_1_1event__queue__t}\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_turn_engine_1_1event__queue__t_1_1iterator}{iterator}}
+\begin{DoxyCompactList}\small\item\em An iterator over the \doxylink{class_turn_engine_1_1_s_d_l2}{SDL2} event queue. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_1_1sentinel}{sentinel}}
+\begin{DoxyCompactList}\small\item\em A placeholder sentinel struct for iterating the event queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a78d825f5be3b68d26d61050e3eda4673}\label{struct_turn_engine_1_1event__queue__t_a78d825f5be3b68d26d61050e3eda4673} 
+enum class {\bfseries push\+\_\+result} \+: int \{ {\bfseries SUCCESS} = 1
+, {\bfseries FILTERED} = 0
+, {\bfseries FAILED} = -\/1
+ \}
+\item 
+\Hypertarget{struct_turn_engine_1_1event__queue__t_ad4b4305d5eee273ff31eaca2b8ad0217}\label{struct_turn_engine_1_1event__queue__t_ad4b4305d5eee273ff31eaca2b8ad0217} 
+enum class {\bfseries event\+\_\+state} \+: bool \{ {\bfseries ENABLED} = SDL\+\_\+\+ENABLE
+, {\bfseries DISABLED} = SDL\+\_\+\+DISABLE
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a128af3d3942a3f4deccd5ff13731e8ce}{has}} (SDL\+\_\+\+Event\+Type type) noexcept
+\begin{DoxyCompactList}\small\item\em Checks to see if an event type exists in the event queue. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a018997f9970d67b48d3e24e48fedc682}{has}} (SDL\+\_\+\+Event\+Type min, SDL\+\_\+\+Event\+Type max) noexcept
+\begin{DoxyCompactList}\small\item\em Checks if an event exists in the event queue between a min and max. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_ade736abdfcb6dc22938129b2e18846d2}{pump}} () noexcept
+\begin{DoxyCompactList}\small\item\em Pumps the event loop, gathering events from input devices. \end{DoxyCompactList}\item 
+static std\+::optional$<$ SDL\+\_\+\+Event $>$ \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_ae1a13565a9e54a1e00ce9439f3dcd840}{poll}} () noexcept
+\begin{DoxyCompactList}\small\item\em Poll for currently pending events. \end{DoxyCompactList}\item 
+static push\+\_\+result \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a0bfaee48af6307a3730dfbf78288af3e}{push}} (SDL\+\_\+\+Event \&e) noexcept
+\begin{DoxyCompactList}\small\item\em Add an event to the event queue. \end{DoxyCompactList}\item 
+static push\+\_\+result \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a02a107a93028c8e14ed084fc39e16e55}{push}} (SDL\+\_\+\+Event \&\&e) noexcept
+\begin{DoxyCompactList}\small\item\em Add an event to the event queue. \end{DoxyCompactList}\item 
+static std\+::optional$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_af259ef6a895757e38ce3a50a11c46347}{add}} (std\+::span$<$ SDL\+\_\+\+Event $>$ events) noexcept
+\begin{DoxyCompactList}\small\item\em Add events to the event queue. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class It , class Sent $>$ \newline
+requires sdl\+\_\+event\+\_\+output\+\_\+pair$<$It, Sent$>$}\\static It \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_ae975589215813f70dc6492c71133c752}{peek}} (It first, Sent last, SDL\+\_\+\+Event\+Type min=SDL\+\_\+\+FIRSTEVENT, SDL\+\_\+\+Event\+Type max=SDL\+\_\+\+LASTEVENT) noexcept
+\begin{DoxyCompactList}\small\item\em Peek at events in the event queue. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class It , class Sent $>$ \newline
+requires sdl\+\_\+event\+\_\+output\+\_\+pair$<$It, Sent$>$}\\static It \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a0f026d80419fe7aaa68c4873d5ee0b49}{remove}} (It first, Sent last, SDL\+\_\+\+Event\+Type min=SDL\+\_\+\+FIRSTEVENT, SDL\+\_\+\+Event\+Type max=SDL\+\_\+\+LASTEVENT) noexcept
+\begin{DoxyCompactList}\small\item\em Remove events from the event queue. \end{DoxyCompactList}\item 
+static std\+::optional$<$ SDL\+\_\+\+Event $>$ \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a6d717487166a6f8cac5ea7d189ba0c5e}{wait}} () noexcept
+\begin{DoxyCompactList}\small\item\em Wait indefinitely for the next available event. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Rep , class Period $>$ }\\static std\+::optional$<$ SDL\+\_\+\+Event $>$ \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a0addfb9a7bda468ce00415ab83d280ae}{wait\+\_\+for}} (std\+::chrono\+::duration$<$ Rep, Period $>$ const \&dur) noexcept
+\begin{DoxyCompactList}\small\item\em Wait a duration for the next available event. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Clock , class Dur $>$ }\\static std\+::optional$<$ SDL\+\_\+\+Event $>$ \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a7a64590ef731bf0a2787778d7734611e}{wait\+\_\+until}} (std\+::chrono\+::time\+\_\+point$<$ Clock, Dur $>$ const \&tp) noexcept
+\begin{DoxyCompactList}\small\item\em Wait until a point in time for the next available event. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_turn_engine_1_1event__queue__t_1_1iterator}{iterator}} \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_ab2ebcc78ffc49e057a68fa0d83e8bb69}{begin}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get an iterator to the first element in the SDL event queue. \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_1_1sentinel}{sentinel}} \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_ad8c690828fb4d0cbee565dba7b127f93}{end}} () noexcept
+\begin{DoxyCompactList}\small\item\em Gets a sentinel value for a != comparison to an iterator;. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_aa3248bb9225afe60cccdae86b5f6ecc8}{flush}} (SDL\+\_\+\+Event\+Type type) noexcept
+\begin{DoxyCompactList}\small\item\em Clears an event type from the event queue. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a456f1b2c5a6a3fe11df66770b83260d0}{flush}} (SDL\+\_\+\+Event\+Type min, SDL\+\_\+\+Event\+Type max) noexcept
+\begin{DoxyCompactList}\small\item\em Clears events between a range from the event queue. \end{DoxyCompactList}\item 
+static event\+\_\+state \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_aa280ec972dda3a190297e93e1af7515f}{get\+\_\+event\+\_\+state}} (SDL\+\_\+\+Event\+Type type) noexcept
+\begin{DoxyCompactList}\small\item\em Get the event state of the event type. \end{DoxyCompactList}\item 
+static event\+\_\+state \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a6cf37c8f7899d90bebca0cf00e79fb23}{set\+\_\+event\+\_\+state}} (SDL\+\_\+\+Event\+Type type, event\+\_\+state state) noexcept
+\begin{DoxyCompactList}\small\item\em Get the event state of the event type. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a2877936f0bab36bf4462fd56e749cada}{quit\+\_\+requested}} () noexcept
+\begin{DoxyCompactList}\small\item\em Checks if an SDL\+\_\+\+QUIT event is queued. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class F $>$ \newline
+requires invocable\+\_\+r$<$void, F, SDL\+\_\+\+Event\&$>$}\\static void \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_acc6a83512fff74e434bebd92c918bee7}{add\+\_\+event\+\_\+watch}} (F \&callback) noexcept
+\begin{DoxyCompactList}\small\item\em Add a callback to be triggered when an event is added to the event queue. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class F $>$ \newline
+requires invocable\+\_\+r$<$void, F, SDL\+\_\+\+Event\&$>$}\\static void \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a396330e68a7e080691c9e8dc5872e13e}{del\+\_\+event\+\_\+watch}} (F \&callback) noexcept
+\begin{DoxyCompactList}\small\item\em Remove an event watch callback initally added with {\ttfamily add\+\_\+event\+\_\+watch}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class F $>$ \newline
+requires invocable\+\_\+r$<$bool, F, SDL\+\_\+\+Event\&$>$}\\static void \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_adb4cdd44d1116f12d3cb35a45c26530c}{set\+\_\+event\+\_\+filter}} (F \&callback) noexcept
+\begin{DoxyCompactList}\small\item\em Set a filter to process all events before they change internal state and are posted to the event queue. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class F $>$ \newline
+requires invocable\+\_\+r$<$bool, F, SDL\+\_\+\+Event\&$>$}\\static void \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_a1eea1d5d3e59c0f54d2c3262e27169c9}{filter\+\_\+events}} (F \&\&fn) noexcept
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_af259ef6a895757e38ce3a50a11c46347}\label{struct_turn_engine_1_1event__queue__t_af259ef6a895757e38ce3a50a11c46347} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!add@{add}}
+\index{add@{add}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily static std\+::optional$<$ std\+::size\+\_\+t $>$ Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::add (\begin{DoxyParamCaption}\item[{std\+::span$<$ SDL\+\_\+\+Event $>$}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Add events to the event queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em events} & The events too add to the event queue. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of event added to the queue, or an empty optional if an error occured. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_acc6a83512fff74e434bebd92c918bee7}\label{struct_turn_engine_1_1event__queue__t_acc6a83512fff74e434bebd92c918bee7} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!add\_event\_watch@{add\_event\_watch}}
+\index{add\_event\_watch@{add\_event\_watch}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{add\_event\_watch()}{add\_event\_watch()}}
+{\footnotesize\ttfamily template$<$class F $>$ \newline
+requires invocable\+\_\+r$<$void, F, SDL\+\_\+\+Event\&$>$\\
+void Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::add\+\_\+event\+\_\+watch (\begin{DoxyParamCaption}\item[{F \&}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Add a callback to be triggered when an event is added to the event queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+The lifetime of the callback must be maintined until {\ttfamily del\+\_\+event\+\_\+watch} is invoked on the callback. 
+\end{DoxyWarning}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_ab2ebcc78ffc49e057a68fa0d83e8bb69}\label{struct_turn_engine_1_1event__queue__t_ab2ebcc78ffc49e057a68fa0d83e8bb69} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!begin@{begin}}
+\index{begin@{begin}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_turn_engine_1_1event__queue__t_1_1iterator}{iterator}} Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get an iterator to the first element in the SDL event queue. 
+
+\begin{DoxyReturn}{Returns}
+An iterator to the first element in the SDL event queue. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a396330e68a7e080691c9e8dc5872e13e}\label{struct_turn_engine_1_1event__queue__t_a396330e68a7e080691c9e8dc5872e13e} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!del\_event\_watch@{del\_event\_watch}}
+\index{del\_event\_watch@{del\_event\_watch}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{del\_event\_watch()}{del\_event\_watch()}}
+{\footnotesize\ttfamily template$<$class F $>$ \newline
+requires invocable\+\_\+r$<$void, F, SDL\+\_\+\+Event\&$>$\\
+void Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::del\+\_\+event\+\_\+watch (\begin{DoxyParamCaption}\item[{F \&}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Remove an event watch callback initally added with {\ttfamily add\+\_\+event\+\_\+watch}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback to be deleted. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_ad8c690828fb4d0cbee565dba7b127f93}\label{struct_turn_engine_1_1event__queue__t_ad8c690828fb4d0cbee565dba7b127f93} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!end@{end}}
+\index{end@{end}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily static constexpr \mbox{\hyperlink{struct_turn_engine_1_1event__queue__t_1_1sentinel}{sentinel}} Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Gets a sentinel value for a != comparison to an iterator;. 
+
+\begin{DoxyReturn}{Returns}
+A sentinel object. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a1eea1d5d3e59c0f54d2c3262e27169c9}\label{struct_turn_engine_1_1event__queue__t_a1eea1d5d3e59c0f54d2c3262e27169c9} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!filter\_events@{filter\_events}}
+\index{filter\_events@{filter\_events}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{filter\_events()}{filter\_events()}}
+{\footnotesize\ttfamily template$<$class F $>$ \newline
+requires invocable\+\_\+r$<$bool, F, SDL\+\_\+\+Event\&$>$\\
+void Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::filter\+\_\+events (\begin{DoxyParamCaption}\item[{F \&\&}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} 
+
+Runs the filter function on the current event queue. 
+\begin{DoxyParams}{Parameters}
+{\em fn} & A filter function returning false if the SDL\+\_\+\+Event should be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a456f1b2c5a6a3fe11df66770b83260d0}\label{struct_turn_engine_1_1event__queue__t_a456f1b2c5a6a3fe11df66770b83260d0} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!flush@{flush}}
+\index{flush@{flush}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::flush (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event\+Type}]{min,  }\item[{SDL\+\_\+\+Event\+Type}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Clears events between a range from the event queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The minimum event type to be cleared. \\
+\hline
+{\em max} & The maximum event type to be cleared. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_aa3248bb9225afe60cccdae86b5f6ecc8}\label{struct_turn_engine_1_1event__queue__t_aa3248bb9225afe60cccdae86b5f6ecc8} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!flush@{flush}}
+\index{flush@{flush}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::flush (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event\+Type}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Clears an event type from the event queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of event to flush. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_aa280ec972dda3a190297e93e1af7515f}\label{struct_turn_engine_1_1event__queue__t_aa280ec972dda3a190297e93e1af7515f} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!get\_event\_state@{get\_event\_state}}
+\index{get\_event\_state@{get\_event\_state}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{get\_event\_state()}{get\_event\_state()}}
+{\footnotesize\ttfamily static event\+\_\+state Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::get\+\_\+event\+\_\+state (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event\+Type}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get the event state of the event type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The event type to query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The event type\textquotesingle{}s state. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a018997f9970d67b48d3e24e48fedc682}\label{struct_turn_engine_1_1event__queue__t_a018997f9970d67b48d3e24e48fedc682} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!has@{has}}
+\index{has@{has}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{has()}{has()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static bool Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::has (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event\+Type}]{min,  }\item[{SDL\+\_\+\+Event\+Type}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if an event exists in the event queue between a min and max. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The minimum event type. \\
+\hline
+{\em max} & The maximum event type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if an event exists between min/max, false if not. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a128af3d3942a3f4deccd5ff13731e8ce}\label{struct_turn_engine_1_1event__queue__t_a128af3d3942a3f4deccd5ff13731e8ce} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!has@{has}}
+\index{has@{has}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{has()}{has()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static bool Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::has (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event\+Type}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Checks to see if an event type exists in the event queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The event type to check for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the event queue contains the type, false if not. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_ae975589215813f70dc6492c71133c752}\label{struct_turn_engine_1_1event__queue__t_ae975589215813f70dc6492c71133c752} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!peek@{peek}}
+\index{peek@{peek}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily template$<$class It , class Sent $>$ \newline
+requires sdl\+\_\+event\+\_\+output\+\_\+pair$<$It, Sent$>$\\
+It Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::peek (\begin{DoxyParamCaption}\item[{It}]{first,  }\item[{Sent}]{last,  }\item[{SDL\+\_\+\+Event\+Type}]{min = {\ttfamily SDL\+\_\+FIRSTEVENT},  }\item[{SDL\+\_\+\+Event\+Type}]{max = {\ttfamily SDL\+\_\+LASTEVENT} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Peek at events in the event queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & An iterator to the beginning of the output range to copy the events. \\
+\hline
+{\em last} & An iterator to the end of the output range. \\
+\hline
+{\em min} & The minimum event type to consider. \\
+\hline
+{\em max} & The maximum event type to consider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An iterator to one-\/past the last event added, or {\ttfamily first} if no events exist/an error occured. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_ae1a13565a9e54a1e00ce9439f3dcd840}\label{struct_turn_engine_1_1event__queue__t_ae1a13565a9e54a1e00ce9439f3dcd840} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!poll@{poll}}
+\index{poll@{poll}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily static std\+::optional$<$ SDL\+\_\+\+Event $>$ Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::poll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Poll for currently pending events. 
+
+\begin{DoxyReturn}{Returns}
+An SDL\+\_\+\+Event if one exists, an empty optional if no events exit in the queue. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_ade736abdfcb6dc22938129b2e18846d2}\label{struct_turn_engine_1_1event__queue__t_ade736abdfcb6dc22938129b2e18846d2} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!pump@{pump}}
+\index{pump@{pump}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{pump()}{pump()}}
+{\footnotesize\ttfamily static void Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::pump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Pumps the event loop, gathering events from input devices. 
+
+\begin{DoxyNote}{Note}
+This should only be run in the thread that sets the video mode. 
+\end{DoxyNote}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a02a107a93028c8e14ed084fc39e16e55}\label{struct_turn_engine_1_1event__queue__t_a02a107a93028c8e14ed084fc39e16e55} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!push@{push}}
+\index{push@{push}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static push\+\_\+result Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::push (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \&\&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Add an event to the event queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The event to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A push\+\_\+result specifying the result of attempting to push the event. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a0bfaee48af6307a3730dfbf78288af3e}\label{struct_turn_engine_1_1event__queue__t_a0bfaee48af6307a3730dfbf78288af3e} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!push@{push}}
+\index{push@{push}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static push\+\_\+result Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::push (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Add an event to the event queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The event to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A push\+\_\+result specifying the result of attempting to push the event. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a2877936f0bab36bf4462fd56e749cada}\label{struct_turn_engine_1_1event__queue__t_a2877936f0bab36bf4462fd56e749cada} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!quit\_requested@{quit\_requested}}
+\index{quit\_requested@{quit\_requested}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{quit\_requested()}{quit\_requested()}}
+{\footnotesize\ttfamily static bool Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::quit\+\_\+requested (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if an SDL\+\_\+\+QUIT event is queued. 
+
+\begin{DoxyReturn}{Returns}
+True if queued, false if not. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a0f026d80419fe7aaa68c4873d5ee0b49}\label{struct_turn_engine_1_1event__queue__t_a0f026d80419fe7aaa68c4873d5ee0b49} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!remove@{remove}}
+\index{remove@{remove}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$class It , class Sent $>$ \newline
+requires sdl\+\_\+event\+\_\+output\+\_\+pair$<$It, Sent$>$\\
+It Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::remove (\begin{DoxyParamCaption}\item[{It}]{first,  }\item[{Sent}]{last,  }\item[{SDL\+\_\+\+Event\+Type}]{min = {\ttfamily SDL\+\_\+FIRSTEVENT},  }\item[{SDL\+\_\+\+Event\+Type}]{max = {\ttfamily SDL\+\_\+LASTEVENT} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Remove events from the event queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & An iterator to the beginning of the output range to move the events to. \\
+\hline
+{\em last} & An iterator to the end of the output range. \\
+\hline
+{\em min} & The minimum event type to consider. \\
+\hline
+{\em max} & The maximum event type to consider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An iterator to one-\/past the last event removed, or {\ttfamily first} if no events exist/an error occured. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_adb4cdd44d1116f12d3cb35a45c26530c}\label{struct_turn_engine_1_1event__queue__t_adb4cdd44d1116f12d3cb35a45c26530c} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!set\_event\_filter@{set\_event\_filter}}
+\index{set\_event\_filter@{set\_event\_filter}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{set\_event\_filter()}{set\_event\_filter()}}
+{\footnotesize\ttfamily template$<$class F $>$ \newline
+requires invocable\+\_\+r$<$bool, F, SDL\+\_\+\+Event\&$>$\\
+void Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::set\+\_\+event\+\_\+filter (\begin{DoxyParamCaption}\item[{F \&}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Set a filter to process all events before they change internal state and are posted to the event queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The filter function which returns true if the event should be added, false if the event should be ignored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+The lifetime of the callback must be maintained until the event filter is changed. 
+\end{DoxyWarning}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a6cf37c8f7899d90bebca0cf00e79fb23}\label{struct_turn_engine_1_1event__queue__t_a6cf37c8f7899d90bebca0cf00e79fb23} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!set\_event\_state@{set\_event\_state}}
+\index{set\_event\_state@{set\_event\_state}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{set\_event\_state()}{set\_event\_state()}}
+{\footnotesize\ttfamily static event\+\_\+state Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::set\+\_\+event\+\_\+state (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event\+Type}]{type,  }\item[{event\+\_\+state}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get the event state of the event type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The event type to query. \\
+\hline
+{\em state} & The event type\textquotesingle{}s new state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The event\textquotesingle{}s previous state. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a6d717487166a6f8cac5ea7d189ba0c5e}\label{struct_turn_engine_1_1event__queue__t_a6d717487166a6f8cac5ea7d189ba0c5e} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!wait@{wait}}
+\index{wait@{wait}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily static std\+::optional$<$ SDL\+\_\+\+Event $>$ Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Wait indefinitely for the next available event. 
+
+\begin{DoxyReturn}{Returns}
+An event, or an empty optional if an error occured. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a0addfb9a7bda468ce00415ab83d280ae}\label{struct_turn_engine_1_1event__queue__t_a0addfb9a7bda468ce00415ab83d280ae} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!wait\_for@{wait\_for}}
+\index{wait\_for@{wait\_for}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{wait\_for()}{wait\_for()}}
+{\footnotesize\ttfamily template$<$class Rep , class Period $>$ \\
+std\+::optional$<$ SDL\+\_\+\+Event $>$ Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::wait\+\_\+for (\begin{DoxyParamCaption}\item[{std\+::chrono\+::duration$<$ Rep, Period $>$ const \&}]{dur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Wait a duration for the next available event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dur} & The duration to wait for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An event, or an empty optional if the function timedout/an error occured. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1event__queue__t_a7a64590ef731bf0a2787778d7734611e}\label{struct_turn_engine_1_1event__queue__t_a7a64590ef731bf0a2787778d7734611e} 
+\index{TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}!wait\_until@{wait\_until}}
+\index{wait\_until@{wait\_until}!TurnEngine::event\_queue\_t@{TurnEngine::event\_queue\_t}}
+\doxysubsubsection{\texorpdfstring{wait\_until()}{wait\_until()}}
+{\footnotesize\ttfamily template$<$class Clock , class Dur $>$ \\
+std\+::optional$<$ SDL\+\_\+\+Event $>$ Turn\+Engine\+::event\+\_\+queue\+\_\+t\+::wait\+\_\+until (\begin{DoxyParamCaption}\item[{std\+::chrono\+::time\+\_\+point$<$ Clock, Dur $>$ const \&}]{tp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Wait until a point in time for the next available event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tp} & The time point to wait until. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An event, or an empty optional if the function timedout/an error occured. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Event.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+\doxysection{Hexagon.\+hpp}
+\hypertarget{_hexagon_8hpp_source}{}\label{_hexagon_8hpp_source}\index{include/TurnEngine/geo2d/shapes/Hexagon.hpp@{include/TurnEngine/geo2d/shapes/Hexagon.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../../ext/Math.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Shape.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }geo2d}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{enum\ class}\ HexagonShapeError\ :\ std::uint8\_t\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ WrongSide,}
+\DoxyCodeLine{00010\ \ \ \ \ \};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{template}\ <Numeric\ T>}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classgeo2d_1_1_hexagon}{Hexagon}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structgeo2d_1_1_shape}{Shape}}<T>\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ m\_center;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ T\ m\_side;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classgeo2d_1_1_hexagon}{Hexagon}}(\mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \mbox{\hyperlink{classgeo2d_1_1_hexagon_ace677829d23edd5a438acd65cbc0945b}{center}},\ T\ \mbox{\hyperlink{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01}{side}})\ :\ m\_center(\mbox{\hyperlink{classgeo2d_1_1_hexagon_ace677829d23edd5a438acd65cbc0945b}{center}}),\ m\_side(\mbox{\hyperlink{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01}{side}})\ \{\}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{static}\ std::expected<Hexagon<T>,\ HexagonShapeError>\ \mbox{\hyperlink{classgeo2d_1_1_hexagon_a345c77df4bfffee263c2921ea85e621c}{init}}(\mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \mbox{\hyperlink{classgeo2d_1_1_hexagon_ace677829d23edd5a438acd65cbc0945b}{center}},\ T\ \mbox{\hyperlink{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01}{side}})\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01}{side}}\ <=\ 0)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::unexpected(HexagonShapeError::WrongSide);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classgeo2d_1_1_hexagon}{Hexagon}}(\mbox{\hyperlink{classgeo2d_1_1_hexagon_ace677829d23edd5a438acd65cbc0945b}{center}},\ \mbox{\hyperlink{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01}{side}});}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classgeo2d_1_1_hexagon}{Hexagon<T>}}*\ \mbox{\hyperlink{classgeo2d_1_1_hexagon_a6e5b0f5f6cdc683a08a8349bf8422e3f}{init\_uncheck}}(\mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \mbox{\hyperlink{classgeo2d_1_1_hexagon_ace677829d23edd5a438acd65cbc0945b}{center}},\ T\ \mbox{\hyperlink{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01}{side}})\ \{\ \ \textcolor{comment}{//\ take\ away,\ clang-\/format}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgeo2d_1_1_hexagon}{Hexagon}}(\mbox{\hyperlink{classgeo2d_1_1_hexagon_ace677829d23edd5a438acd65cbc0945b}{center}},\ \mbox{\hyperlink{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01}{side}});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \&\mbox{\hyperlink{classgeo2d_1_1_hexagon_ace677829d23edd5a438acd65cbc0945b}{center}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_center;\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ T\ \&\mbox{\hyperlink{classgeo2d_1_1_hexagon_a24a900d770acc349abe698c042cf9b01}{side}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_side;\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classgeo2d_1_1_hexagon_ac5a4c6bc28aaf6c93a87e23445b34c82}{contains}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\ \&position)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \textcolor{keyword}{override}\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ check\ point\ under/upper\ sides}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ pos\ =\ position\ -\/\ m\_center;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ const1\ =\ ext::math::sqrt(3);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ const2\ =\ const1\ /\ 2.0;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (pos.y\ <=\ +const2\ *\ m\_side)\ \&\&\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ F1}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (pos.y\ <=\ -\/const1\ *\ (pos.x\ -\/\ m\_side))\ \&\&\ \ \textcolor{comment}{//\ F2}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (pos.y\ >=\ +const1\ *\ (pos.x\ -\/\ m\_side))\ \&\&\ \ \textcolor{comment}{//\ F3}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (pos.y\ >=\ -\/const2\ *\ m\_side)\ \&\&\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ F4}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (pos.y\ >=\ -\/const1\ *\ (pos.x\ +\ m\_side))\ \&\&\ \ \textcolor{comment}{//\ F5}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (pos.y\ <=\ +const1\ *\ (pos.x\ +\ m\_side));\ \ \ \ \textcolor{comment}{//\ F6}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgeo2d_1_1_hexagon_aafca83892f4b4e9321c18f9ca60a932b}{setPosition}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classgeo2d_1_1_vector}{Position<T>}}\&\ position)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ m\_center\ =\ position;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{using\ }HexagonInt\ =\ Hexagon<int>;}
+\DoxyCodeLine{00080\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,515 @@
+\doxysection{Turn\+Engine\+::Texture Class Reference}
+\hypertarget{class_turn_engine_1_1_texture}{}\label{class_turn_engine_1_1_texture}\index{TurnEngine::Texture@{TurnEngine::Texture}}
+
+
+A wrapper around an SDL\+\_\+\+Texture structure.  
+
+
+
+
+{\ttfamily \#include $<$Texture.\+hpp$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_turn_engine_1_1_texture_1_1texture__query}{texture\+\_\+query}}
+\begin{DoxyCompactList}\small\item\em A struct containing texture information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_texture_a81c0720b2fbde8f71bd0675b56e5ba8a}{Texture}} (SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}t) noexcept
+\begin{DoxyCompactList}\small\item\em Constructor for interfacing with SDL\textquotesingle{}s C API. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_texture_a1ef0da0dba75c441773f2e89d0e2a444}{Texture}} (\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \&r, Pixel\+Format\+Enum const \mbox{\hyperlink{class_turn_engine_1_1_texture_afcdfe43f6e4bdc199fe467c69a35a1b6}{format}}, Texture\+Access const \mbox{\hyperlink{class_turn_engine_1_1_texture_a0607d99f166411548538a68a13f2f960}{access}}, \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ const \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}) noexcept
+\begin{DoxyCompactList}\small\item\em Creates a texture for a renderer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_texture_a7c813c77bc4e039c2b5020aaf2412b0c}{Texture}} (\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \&r, \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} const \&s) noexcept
+\begin{DoxyCompactList}\small\item\em Creates a texture from an existing surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_texture_a4b41c9c68d32baea81dfa91de6dec42f}{Texture}} (\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \&r, \mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} file) noexcept
+\begin{DoxyCompactList}\small\item\em Create a texture from a file using SDL\+\_\+\+Image API. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_texture_ace140cbb6b0f1798e623bfcdc52cbfb8}\label{class_turn_engine_1_1_texture_ace140cbb6b0f1798e623bfcdc52cbfb8} 
+{\bfseries Texture} (\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_texture_ae5fd51fd2062c0fc0ae3c3631120cc50}\label{class_turn_engine_1_1_texture_ae5fd51fd2062c0fc0ae3c3631120cc50} 
+\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_texture_ac8fd842f11a9bb21e4cb581ca541bbd2}\label{class_turn_engine_1_1_texture_ac8fd842f11a9bb21e4cb581ca541bbd2} 
+\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em Move assignment deleted. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_texture_af49f09641f3c6f7d0ed21fa5bceb887e}{Texture}} (\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_texture_ae15cfe896a1f0dbfcd583fa94120087e}\label{class_turn_engine_1_1_texture_ae15cfe896a1f0dbfcd583fa94120087e} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Texture} () noexcept
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1_texture_ab8fc2f9168cbd2660b1ad272bfcff79c}{destroy}} () noexcept
+\begin{DoxyCompactList}\small\item\em Destroy the underlying texture object. \end{DoxyCompactList}\item 
+constexpr SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1_texture_ae20381ff349c965db00cd98c76af23a2}{native\+\_\+handle}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get a pointer to the underlying SDL representation. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_texture_acbf471bdcdd9f56102a5c8176aca12e0}{operator bool}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the texture is in a valid state. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{class_turn_engine_1_1_texture_ad99155c62291fd43b438f0748de5b069}{is\+\_\+ok}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the texture is in a valid state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{Texture\+Lock}} \mbox{\hyperlink{class_turn_engine_1_1_texture_a644a2cf7c056f9d364120aa66122bee6}{lock}} () noexcept
+\begin{DoxyCompactList}\small\item\em Locks the entire texture for write-\/only pixel access. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{Texture\+Lock}} \mbox{\hyperlink{class_turn_engine_1_1_texture_ac1563c42492303b2b70e9aeab08f8820}{lock}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&rect) noexcept
+\begin{DoxyCompactList}\small\item\em Locks a portion of the texture for write-\/only pixel access. \end{DoxyCompactList}\item 
+std\+::uint8\+\_\+t \mbox{\hyperlink{class_turn_engine_1_1_texture_a61fd99df3a4bf1f3b6b9801ccaa74673}{alpha\+\_\+mod}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the additional alpha value used in blit operations. \end{DoxyCompactList}\item 
+Turn\+Engine\+::\+Blend\+Mode \mbox{\hyperlink{class_turn_engine_1_1_texture_a617ffb05ef5ac6f741359186b744bfe0}{blend\+\_\+mode}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the blend mode used for texture copy operations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{class_turn_engine_1_1_texture_ac1543d2e907a6a2859e87a04ed3982b7}{color\+\_\+mod}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the additional color value multiplied into the render copy operations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_turn_engine_1_1_texture_1_1texture__query}{texture\+\_\+query}} \mbox{\hyperlink{class_turn_engine_1_1_texture_a66967f44b8930719c96e36cb3bbeaf7e}{query}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Queries the attributes of the texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ \mbox{\hyperlink{class_turn_engine_1_1_texture_aa5074e0ffea5790aa93aa80caaea1e31}{size}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the size of the current texture. \end{DoxyCompactList}\item 
+Pixel\+Format\+Enum \mbox{\hyperlink{class_turn_engine_1_1_texture_afcdfe43f6e4bdc199fe467c69a35a1b6}{format}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the pixel format of the texture. \end{DoxyCompactList}\item 
+Texture\+Access \mbox{\hyperlink{class_turn_engine_1_1_texture_a0607d99f166411548538a68a13f2f960}{access}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the texture access of the texture. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_texture_af0dc048bc37f0f0c28eb95449e5c6db6}{set\+\_\+alpha\+\_\+mod}} (std\+::uint8\+\_\+t alpha) noexcept
+\begin{DoxyCompactList}\small\item\em Sets an additional alpha value multiplied into render copy operations. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_texture_ad74d7619a803ed84217ecc89055ebeed}{set\+\_\+blend\+\_\+mode}} (Turn\+Engine\+::\+Blend\+Mode mode) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the blend mode for the texture. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_texture_aabeb761be9916001190eda05375c17dc}{set\+\_\+color\+\_\+mod}} (\mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}$<$$>$ const \&mod) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the additional color value multiplied into render copy operatinos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_texture_a8bcbfa4a2df64cdb02d204d6703de17c}{update}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&rect, std\+::span$<$ std\+::byte const $>$ pixels, int pitch) noexcept
+\begin{DoxyCompactList}\small\item\em Updates a portion of the texture with new pixel data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_texture_a99e1c789d8ad41b7a188cf07125982a5}{update}} (std\+::span$<$ std\+::byte const $>$ pixels, int pitch) noexcept
+\begin{DoxyCompactList}\small\item\em Updates the entire texture with new pixel data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_texture_a8720d067b279a2d84d8bdcce096ad647}{update\+\_\+yuv}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&rect, std\+::span$<$ std\+::byte const $>$ yplane, int ypitch, std\+::span$<$ std\+::byte const $>$ uplane, int upitch, std\+::span$<$ std\+::byte const $>$ vplane, int vpitch) noexcept
+\begin{DoxyCompactList}\small\item\em Updates a rectangle within a planar TY12 or IYUV texture with new pixel data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_texture_afa955e7b6ffaf42174e461c5d1128ad2}{update\+\_\+yuv}} (std\+::span$<$ std\+::byte const $>$ yplane, int ypitch, std\+::span$<$ std\+::byte const $>$ uplane, int upitch, std\+::span$<$ std\+::byte const $>$ vplane, int vpitch) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A wrapper around an SDL\+\_\+\+Texture structure. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1_texture_a81c0720b2fbde8f71bd0675b56e5ba8a}\label{class_turn_engine_1_1_texture_a81c0720b2fbde8f71bd0675b56e5ba8a} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Constructor for interfacing with SDL\textquotesingle{}s C API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & An SDL\+\_\+\+Texture struct to take ownership of. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_texture_a1ef0da0dba75c441773f2e89d0e2a444}\label{class_turn_engine_1_1_texture_a1ef0da0dba75c441773f2e89d0e2a444} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \&}]{r,  }\item[{Pixel\+Format\+Enum const}]{format,  }\item[{Texture\+Access const}]{access,  }\item[{\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ const}]{wh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Creates a texture for a renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The rendering context. \\
+\hline
+{\em format} & The pixel format. \\
+\hline
+{\em access} & The texture access. \\
+\hline
+{\em wh} & The size of the texture in pixels. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_texture_a7c813c77bc4e039c2b5020aaf2412b0c}\label{class_turn_engine_1_1_texture_a7c813c77bc4e039c2b5020aaf2412b0c} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \&}]{r,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} const \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Creates a texture from an existing surface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The rendering context. \\
+\hline
+{\em s} & The surface containing pixel data used to fill the texture. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_texture_a4b41c9c68d32baea81dfa91de6dec42f}\label{class_turn_engine_1_1_texture_a4b41c9c68d32baea81dfa91de6dec42f} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \&}]{r,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}}}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Create a texture from a file using SDL\+\_\+\+Image API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The rendering context. \\
+\hline
+{\em file} & The path to the file to load the texture from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The \doxylink{class_turn_engine_1_1_i_m_g}{IMG} library must have been initialized for this to work 
+
+This creates a temporary surface to use to create the texture. 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1_texture_af49f09641f3c6f7d0ed21fa5bceb887e}\label{class_turn_engine_1_1_texture_af49f09641f3c6f7d0ed21fa5bceb887e} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The texture object to move into this texture. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1_texture_a0607d99f166411548538a68a13f2f960}\label{class_turn_engine_1_1_texture_a0607d99f166411548538a68a13f2f960} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!access@{access}}
+\index{access@{access}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{access()}{access()}}
+{\footnotesize\ttfamily Texture\+Access Turn\+Engine\+::\+Texture\+::access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the texture access of the texture. 
+
+\begin{DoxyReturn}{Returns}
+The texture\textquotesingle{}s access type. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_a61fd99df3a4bf1f3b6b9801ccaa74673}\label{class_turn_engine_1_1_texture_a61fd99df3a4bf1f3b6b9801ccaa74673} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!alpha\_mod@{alpha\_mod}}
+\index{alpha\_mod@{alpha\_mod}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{alpha\_mod()}{alpha\_mod()}}
+{\footnotesize\ttfamily std\+::uint8\+\_\+t Turn\+Engine\+::\+Texture\+::alpha\+\_\+mod (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the additional alpha value used in blit operations. 
+
+\begin{DoxyReturn}{Returns}
+The current alpha value. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_a617ffb05ef5ac6f741359186b744bfe0}\label{class_turn_engine_1_1_texture_a617ffb05ef5ac6f741359186b744bfe0} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!blend\_mode@{blend\_mode}}
+\index{blend\_mode@{blend\_mode}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{blend\_mode()}{blend\_mode()}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Blend\+Mode Turn\+Engine\+::\+Texture\+::blend\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the blend mode used for texture copy operations. 
+
+\begin{DoxyReturn}{Returns}
+The current blend mode. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_ac1543d2e907a6a2859e87a04ed3982b7}\label{class_turn_engine_1_1_texture_ac1543d2e907a6a2859e87a04ed3982b7} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!color\_mod@{color\_mod}}
+\index{color\_mod@{color\_mod}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{color\_mod()}{color\_mod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}$<$ std\+::uint8\+\_\+t $>$ Turn\+Engine\+::\+Texture\+::color\+\_\+mod (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the additional color value multiplied into the render copy operations. 
+
+\begin{DoxyReturn}{Returns}
+The current color mod. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_ab8fc2f9168cbd2660b1ad272bfcff79c}\label{class_turn_engine_1_1_texture_ab8fc2f9168cbd2660b1ad272bfcff79c} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!destroy@{destroy}}
+\index{destroy@{destroy}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::\+Texture\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destroy the underlying texture object. 
+
+\begin{DoxyNote}{Note}
+Accessing the texture after this functional call is UB. 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1_texture_afcdfe43f6e4bdc199fe467c69a35a1b6}\label{class_turn_engine_1_1_texture_afcdfe43f6e4bdc199fe467c69a35a1b6} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!format@{format}}
+\index{format@{format}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily Pixel\+Format\+Enum Turn\+Engine\+::\+Texture\+::format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the pixel format of the texture. 
+
+\begin{DoxyReturn}{Returns}
+The texture\textquotesingle{}s pixel format. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_ad99155c62291fd43b438f0748de5b069}\label{class_turn_engine_1_1_texture_ad99155c62291fd43b438f0748de5b069} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!is\_ok@{is\_ok}}
+\index{is\_ok@{is\_ok}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{is\_ok()}{is\_ok()}}
+{\footnotesize\ttfamily constexpr bool Turn\+Engine\+::\+Texture\+::is\+\_\+ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the texture is in a valid state. 
+
+\begin{DoxyReturn}{Returns}
+True if valid, false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_a644a2cf7c056f9d364120aa66122bee6}\label{class_turn_engine_1_1_texture_a644a2cf7c056f9d364120aa66122bee6} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!lock@{lock}}
+\index{lock@{lock}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{Texture\+Lock}} Turn\+Engine\+::\+Texture\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Locks the entire texture for write-\/only pixel access. 
+
+\begin{DoxyReturn}{Returns}
+A lock handle to the texture. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\doxylink{class_turn_engine_1_1_texture}{Texture} must have been created with texture\+\_\+access\+::\+STREAMING. 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1_texture_ac1563c42492303b2b70e9aeab08f8820}\label{class_turn_engine_1_1_texture_ac1563c42492303b2b70e9aeab08f8820} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!lock@{lock}}
+\index{lock@{lock}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_engine_1_1_texture_lock}{Texture\+Lock}} Turn\+Engine\+::\+Texture\+::lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Locks a portion of the texture for write-\/only pixel access. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & The area to lock for access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lock handle to the portion of the texture. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\doxylink{class_turn_engine_1_1_texture}{Texture} must have been created with texture\+\_\+access\+::\+STREAMING. 
+\end{DoxyNote}
+\Hypertarget{class_turn_engine_1_1_texture_ae20381ff349c965db00cd98c76af23a2}\label{class_turn_engine_1_1_texture_ae20381ff349c965db00cd98c76af23a2} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!native\_handle@{native\_handle}}
+\index{native\_handle@{native\_handle}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{native\_handle()}{native\_handle()}}
+{\footnotesize\ttfamily constexpr SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} Turn\+Engine\+::\+Texture\+::native\+\_\+handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get a pointer to the underlying SDL representation. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the underlying SDL\+\_\+\+Texture. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_acbf471bdcdd9f56102a5c8176aca12e0}\label{class_turn_engine_1_1_texture_acbf471bdcdd9f56102a5c8176aca12e0} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+Texture\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the texture is in a valid state. 
+
+\begin{DoxyReturn}{Returns}
+True if valid, false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_a66967f44b8930719c96e36cb3bbeaf7e}\label{class_turn_engine_1_1_texture_a66967f44b8930719c96e36cb3bbeaf7e} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!query@{query}}
+\index{query@{query}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1_texture_1_1texture__query}{texture\+\_\+query}} Turn\+Engine\+::\+Texture\+::query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Queries the attributes of the texture. 
+
+\begin{DoxyReturn}{Returns}
+A query struct filled with information about the texture. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_af0dc048bc37f0f0c28eb95449e5c6db6}\label{class_turn_engine_1_1_texture_af0dc048bc37f0f0c28eb95449e5c6db6} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!set\_alpha\_mod@{set\_alpha\_mod}}
+\index{set\_alpha\_mod@{set\_alpha\_mod}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{set\_alpha\_mod()}{set\_alpha\_mod()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Texture\+::set\+\_\+alpha\+\_\+mod (\begin{DoxyParamCaption}\item[{std\+::uint8\+\_\+t}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets an additional alpha value multiplied into render copy operations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alpha} & The alpha value to multiply into copy ops. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_ad74d7619a803ed84217ecc89055ebeed}\label{class_turn_engine_1_1_texture_ad74d7619a803ed84217ecc89055ebeed} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!set\_blend\_mode@{set\_blend\_mode}}
+\index{set\_blend\_mode@{set\_blend\_mode}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{set\_blend\_mode()}{set\_blend\_mode()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Texture\+::set\+\_\+blend\+\_\+mode (\begin{DoxyParamCaption}\item[{Turn\+Engine\+::\+Blend\+Mode}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the blend mode for the texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The mode to sure for texture blending. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_aabeb761be9916001190eda05375c17dc}\label{class_turn_engine_1_1_texture_aabeb761be9916001190eda05375c17dc} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!set\_color\_mod@{set\_color\_mod}}
+\index{set\_color\_mod@{set\_color\_mod}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{set\_color\_mod()}{set\_color\_mod()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Texture\+::set\+\_\+color\+\_\+mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}$<$$>$ const \&}]{mod }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the additional color value multiplied into render copy operatinos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mod} & The color mod value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_aa5074e0ffea5790aa93aa80caaea1e31}\label{class_turn_engine_1_1_texture_aa5074e0ffea5790aa93aa80caaea1e31} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!size@{size}}
+\index{size@{size}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ Turn\+Engine\+::\+Texture\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the size of the current texture. 
+
+\begin{DoxyReturn}{Returns}
+The texture\textquotesingle{}s size. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_a8bcbfa4a2df64cdb02d204d6703de17c}\label{class_turn_engine_1_1_texture_a8bcbfa4a2df64cdb02d204d6703de17c} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!update@{update}}
+\index{update@{update}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Texture\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{rect,  }\item[{std\+::span$<$ std\+::byte const $>$}]{pixels,  }\item[{int}]{pitch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Updates a portion of the texture with new pixel data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & The area to update. \\
+\hline
+{\em pixels} & The raw pixel data in the format of the texture. \\
+\hline
+{\em pitch} & The number of bytes in a row of pixel data, including padding between lines. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_a99e1c789d8ad41b7a188cf07125982a5}\label{class_turn_engine_1_1_texture_a99e1c789d8ad41b7a188cf07125982a5} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!update@{update}}
+\index{update@{update}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Texture\+::update (\begin{DoxyParamCaption}\item[{std\+::span$<$ std\+::byte const $>$}]{pixels,  }\item[{int}]{pitch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Updates the entire texture with new pixel data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixels} & The raw pixel data in the format of the texture. \\
+\hline
+{\em pitch} & The number of bytes in a row of pixel data, including padding between lines. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_a8720d067b279a2d84d8bdcce096ad647}\label{class_turn_engine_1_1_texture_a8720d067b279a2d84d8bdcce096ad647} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!update\_yuv@{update\_yuv}}
+\index{update\_yuv@{update\_yuv}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{update\_yuv()}{update\_yuv()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Texture\+::update\+\_\+yuv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{rect,  }\item[{std\+::span$<$ std\+::byte const $>$}]{yplane,  }\item[{int}]{ypitch,  }\item[{std\+::span$<$ std\+::byte const $>$}]{uplane,  }\item[{int}]{upitch,  }\item[{std\+::span$<$ std\+::byte const $>$}]{vplane,  }\item[{int}]{vpitch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Updates a rectangle within a planar TY12 or IYUV texture with new pixel data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & The area to update. \\
+\hline
+{\em yplane} & Span of raw pixel data for the Y plane. \\
+\hline
+{\em ypitch} & Number of bytes between rows of pixel data for the Y plane. \\
+\hline
+{\em uplane} & Span of raw pixel data for the U plane. \\
+\hline
+{\em upitch} & Number of bytes between rows of pixel data for the U plane. \\
+\hline
+{\em vplane} & Span of raw pixel data for the V plane. \\
+\hline
+{\em vpitch} & Number of bytes between rows of pixel data for the V plane. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_texture_afa955e7b6ffaf42174e461c5d1128ad2}\label{class_turn_engine_1_1_texture_afa955e7b6ffaf42174e461c5d1128ad2} 
+\index{TurnEngine::Texture@{TurnEngine::Texture}!update\_yuv@{update\_yuv}}
+\index{update\_yuv@{update\_yuv}!TurnEngine::Texture@{TurnEngine::Texture}}
+\doxysubsubsection{\texorpdfstring{update\_yuv()}{update\_yuv()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Texture\+::update\+\_\+yuv (\begin{DoxyParamCaption}\item[{std\+::span$<$ std\+::byte const $>$}]{yplane,  }\item[{int}]{ypitch,  }\item[{std\+::span$<$ std\+::byte const $>$}]{uplane,  }\item[{int}]{upitch,  }\item[{std\+::span$<$ std\+::byte const $>$}]{vplane,  }\item[{int}]{vpitch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em yplane} & Span of raw pixel data for the Y plane. \\
+\hline
+{\em ypitch} & Number of bytes between rows of pixel data for the Y plane. \\
+\hline
+{\em uplane} & Span of raw pixel data for the U plane. \\
+\hline
+{\em upitch} & Number of bytes between rows of pixel data for the U plane. \\
+\hline
+{\em vplane} & Span of raw pixel data for the V plane. \\
+\hline
+{\em vpitch} & Number of bytes between rows of pixel data for the V plane. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Texture.\+hpp\end{DoxyCompactItemize}

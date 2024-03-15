@@ -1,0 +1,67 @@
+\doxysection{Turn\+Engine\+::Basic\+Pixel\+Format\+View\texorpdfstring{$<$}{<} Const \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_turn_engine_1_1_basic_pixel_format_view}{}\label{class_turn_engine_1_1_basic_pixel_format_view}\index{TurnEngine::BasicPixelFormatView$<$ Const $>$@{TurnEngine::BasicPixelFormatView$<$ Const $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_af2901d420865ca82c407c0758b9903b5}\label{class_turn_engine_1_1_basic_pixel_format_view_af2901d420865ca82c407c0758b9903b5} 
+{\footnotesize template$<$class PF $>$ \newline
+requires std\+::same\+\_\+as$<$SDL\+\_\+\+Pixel\+Format, std\+::remove\+\_\+cvref\+\_\+t$<$PF$>$$>$}\\constexpr {\bfseries Basic\+Pixel\+Format\+View} (PF \texorpdfstring{$\ast$}{*}fmt) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_a9f8bf1f7cddd41127e7054b90ed75429}\label{class_turn_engine_1_1_basic_pixel_format_view_a9f8bf1f7cddd41127e7054b90ed75429} 
+{\footnotesize template$<$class PF $>$ \newline
+requires std\+::same\+\_\+as$<$\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{Pixel\+Format}}, std\+::remove\+\_\+cvref\+\_\+t$<$PF$>$$>$}\\constexpr {\bfseries Basic\+Pixel\+Format\+View} (PF \&\&fmt) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_abb8c0b7fd9c269f8752738e18dd3047b}\label{class_turn_engine_1_1_basic_pixel_format_view_abb8c0b7fd9c269f8752738e18dd3047b} 
+{\bfseries Basic\+Pixel\+Format\+View} (std\+::nullptr\+\_\+t)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_a9e58956ea4d3992f647423136e3d08bf}\label{class_turn_engine_1_1_basic_pixel_format_view_a9e58956ea4d3992f647423136e3d08bf} 
+constexpr {\bfseries Basic\+Pixel\+Format\+View} (\mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{Basic\+Pixel\+Format\+View}} const \&)=default
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_a9266ce496e294398c2b8beaeb7563608}\label{class_turn_engine_1_1_basic_pixel_format_view_a9266ce496e294398c2b8beaeb7563608} 
+constexpr {\bfseries Basic\+Pixel\+Format\+View} (\mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{Basic\+Pixel\+Format\+View}} \&\&)=default
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_a7ad2c81288586a8ffb997a8693daa72f}\label{class_turn_engine_1_1_basic_pixel_format_view_a7ad2c81288586a8ffb997a8693daa72f} 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{Basic\+Pixel\+Format\+View}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{Basic\+Pixel\+Format\+View}} const \&)=default
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_a25e154ff49cde434bbbfd4426baa94a4}\label{class_turn_engine_1_1_basic_pixel_format_view_a25e154ff49cde434bbbfd4426baa94a4} 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{Basic\+Pixel\+Format\+View}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{Basic\+Pixel\+Format\+View}} \&\&)=default
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_ae9efc936aaa81abb61ee6a8e9c392584}\label{class_turn_engine_1_1_basic_pixel_format_view_ae9efc936aaa81abb61ee6a8e9c392584} 
+constexpr SDL\+\_\+\+Pixel\+Format \texorpdfstring{$\ast$}{*} {\bfseries native\+\_\+handle} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_a0d464eda26dba9619739fec26a317cc2}\label{class_turn_engine_1_1_basic_pixel_format_view_a0d464eda26dba9619739fec26a317cc2} 
+constexpr Pixel\+Format\+Enum {\bfseries format} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_a81e28e45d02bf0d56ca4db73c5752061}\label{class_turn_engine_1_1_basic_pixel_format_view_a81e28e45d02bf0d56ca4db73c5752061} 
+constexpr bool {\bfseries has\+\_\+palette} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_a1303fd0c2736554e9089eb9315a9c591}\label{class_turn_engine_1_1_basic_pixel_format_view_a1303fd0c2736554e9089eb9315a9c591} 
+{\footnotesize template$<$bool B = Const$>$ \newline
+requires (B == false)}\\constexpr \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{palette\+\_\+view}} {\bfseries palette} () noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_ae6a33ba757a4180a484450172716bb24}\label{class_turn_engine_1_1_basic_pixel_format_view_ae6a33ba757a4180a484450172716bb24} 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{const\+\_\+palette\+\_\+view}} {\bfseries palette} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_ac4adecf0dd32e5c849c271c1b51def58}\label{class_turn_engine_1_1_basic_pixel_format_view_ac4adecf0dd32e5c849c271c1b51def58} 
+constexpr std\+::uint8\+\_\+t {\bfseries bits\+\_\+per\+\_\+pixel} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_a30a6c3913e7e1c6ccdf472189c39bca1}\label{class_turn_engine_1_1_basic_pixel_format_view_a30a6c3913e7e1c6ccdf472189c39bca1} 
+constexpr std\+::uint8\+\_\+t {\bfseries bytes\+\_\+per\+\_\+pixel} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_adb6ca2ebbbeff859ffbd96579e50f788}\label{class_turn_engine_1_1_basic_pixel_format_view_adb6ca2ebbbeff859ffbd96579e50f788} 
+constexpr std\+::uint32\+\_\+t {\bfseries rmask} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_aa1238f391b18f783944c8a47722fe6c8}\label{class_turn_engine_1_1_basic_pixel_format_view_aa1238f391b18f783944c8a47722fe6c8} 
+constexpr std\+::uint32\+\_\+t {\bfseries gmask} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_a4042ea2da1497f9ec1a7363f6dc82ee7}\label{class_turn_engine_1_1_basic_pixel_format_view_a4042ea2da1497f9ec1a7363f6dc82ee7} 
+constexpr std\+::uint32\+\_\+t {\bfseries bmask} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_basic_pixel_format_view_a84f7a1186d21ebac59e1230b30d336a4}\label{class_turn_engine_1_1_basic_pixel_format_view_a84f7a1186d21ebac59e1230b30d336a4} 
+constexpr std\+::uint32\+\_\+t {\bfseries amask} () const noexcept
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Pixel.\+hpp\end{DoxyCompactItemize}

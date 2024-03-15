@@ -1,0 +1,83 @@
+\doxysection{Turn\+Engine\+::render\+::Drawer Class Reference}
+\hypertarget{class_turn_engine_1_1render_1_1_drawer}{}\label{class_turn_engine_1_1render_1_1_drawer}\index{TurnEngine::render::Drawer@{TurnEngine::render::Drawer}}
+
+
+Class represents engine drawer.  
+
+
+
+
+{\ttfamily \#include $<$Drawer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer_a1b1b0a5ea14d6897052764354d7a345a}{Drawer}} (\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \texorpdfstring{$\ast$}{*}\+\_\+renderer)
+\begin{DoxyCompactList}\small\item\em the constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer_a75dec00aba1f7cd30bc926e84cab9d0e}{draw}} (const \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_object2_d}{core\+::\+IObject2D}} \&drawable)
+\begin{DoxyCompactList}\small\item\em method which puts Object2D into priority\+\_\+queue \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1render_1_1_drawer_a9e8ca25ef66f9e1c0b17185bdc78c911}\label{class_turn_engine_1_1render_1_1_drawer_a9e8ca25ef66f9e1c0b17185bdc78c911} 
+void {\bfseries render\+All} ()
+\begin{DoxyCompactList}\small\item\em method which pops out and draw all 2D objects from priority\+\_\+queue \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1render_1_1_drawer_adef306ac379429358f4db4f75989b3c3}\label{class_turn_engine_1_1render_1_1_drawer_adef306ac379429358f4db4f75989b3c3} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em method destroys drawer and hardware renderer \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer_a9ec59acf607b567dc546fa77e119f4da}{get\+Renderer}} ()
+\begin{DoxyCompactList}\small\item\em getter for renderer \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class represents engine drawer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1render_1_1_drawer_a1b1b0a5ea14d6897052764354d7a345a}\label{class_turn_engine_1_1render_1_1_drawer_a1b1b0a5ea14d6897052764354d7a345a} 
+\index{TurnEngine::render::Drawer@{TurnEngine::render::Drawer}!Drawer@{Drawer}}
+\index{Drawer@{Drawer}!TurnEngine::render::Drawer@{TurnEngine::render::Drawer}}
+\doxysubsubsection{\texorpdfstring{Drawer()}{Drawer()}}
+{\footnotesize\ttfamily Turn\+Engine\+::render\+::\+Drawer\+::\+Drawer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \texorpdfstring{$\ast$}{*}}]{\+\_\+renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+the constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Renderer\texorpdfstring{$\ast$}{*}} & \+\_\+renderer \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1render_1_1_drawer_a75dec00aba1f7cd30bc926e84cab9d0e}\label{class_turn_engine_1_1render_1_1_drawer_a75dec00aba1f7cd30bc926e84cab9d0e} 
+\index{TurnEngine::render::Drawer@{TurnEngine::render::Drawer}!draw@{draw}}
+\index{draw@{draw}!TurnEngine::render::Drawer@{TurnEngine::render::Drawer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::render\+::\+Drawer\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_object2_d}{core\+::\+IObject2D}} \&}]{drawable }\end{DoxyParamCaption})}
+
+
+
+method which puts Object2D into priority\+\_\+queue 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & IObject2D \&drawable \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1render_1_1_drawer_a9ec59acf607b567dc546fa77e119f4da}\label{class_turn_engine_1_1render_1_1_drawer_a9ec59acf607b567dc546fa77e119f4da} 
+\index{TurnEngine::render::Drawer@{TurnEngine::render::Drawer}!getRenderer@{getRenderer}}
+\index{getRenderer@{getRenderer}!TurnEngine::render::Drawer@{TurnEngine::render::Drawer}}
+\doxysubsubsection{\texorpdfstring{getRenderer()}{getRenderer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}} \texorpdfstring{$\ast$}{*} Turn\+Engine\+::render\+::\+Drawer\+::get\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for renderer 
+
+\begin{DoxyReturn}{Returns}
+Renderer\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/render/Drawer.\+hpp\end{DoxyCompactItemize}

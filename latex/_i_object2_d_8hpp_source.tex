@@ -1,0 +1,54 @@
+\doxysection{IObject2\+D.\+hpp}
+\hypertarget{_i_object2_d_8hpp_source}{}\label{_i_object2_d_8hpp_source}\index{include/TurnEngine/core/IObject2D.hpp@{include/TurnEngine/core/IObject2D.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/wrapper/Shapes.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/wrapper/Texture.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/wrapper/Utils.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/wrapper/Color.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/geo2d/Shapes.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }TurnEngine::core\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_object2_d}{IObject2D}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d::Shape<int>}}*\ shape;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ depthIndex;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isAnimated;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point<int>}}\ position;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ width;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ height;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ *texture;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect<int>}}\ rect;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ angle;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ RendererFlip\ flip;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba<>}}\ color;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_object2_d}{IObject2D}}(}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d::Shape<int>}}*\ shape,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ depthIndex,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isAnimated,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point<int>}}\ position,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ width,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ height,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ *texture,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect<int>}}\ rect,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ angle,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RendererFlip\ flip,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba<>}}\ color}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ )\ :\ shape(shape),}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ depthIndex(depthIndex),}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ isAnimated(isAnimated),}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ position(position),}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ width(width),}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ height(height),}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ texture(texture),}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ rect(rect),}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ angle(angle),}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ flip(flip),}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ color(color)\ \{\}}
+\DoxyCodeLine{00049\ \ \ \ \ \};}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}

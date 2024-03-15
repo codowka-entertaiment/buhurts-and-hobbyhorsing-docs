@@ -1,0 +1,61 @@
+\doxysection{Turn\+Engine\+::Pixel\+Format Class Reference}
+\hypertarget{class_turn_engine_1_1_pixel_format}{}\label{class_turn_engine_1_1_pixel_format}\index{TurnEngine::PixelFormat@{TurnEngine::PixelFormat}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_a9b2aad3af8e655674f61ba26ebb2bdac}\label{class_turn_engine_1_1_pixel_format_a9b2aad3af8e655674f61ba26ebb2bdac} 
+{\bfseries Pixel\+Format} (Pixel\+Format\+Enum const fmt) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_aa64e6cb37c36ed6a07c0d2b6ea3b634f}\label{class_turn_engine_1_1_pixel_format_aa64e6cb37c36ed6a07c0d2b6ea3b634f} 
+constexpr {\bfseries Pixel\+Format} (SDL\+\_\+\+Pixel\+Format \texorpdfstring{$\ast$}{*}fmt) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_a32b2fb4318e823d077cec44008f44962}\label{class_turn_engine_1_1_pixel_format_a32b2fb4318e823d077cec44008f44962} 
+constexpr {\bfseries Pixel\+Format} (\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{Pixel\+Format}} \&\&other) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_a2f5da63421924122b30600d1dbcaeba6}\label{class_turn_engine_1_1_pixel_format_a2f5da63421924122b30600d1dbcaeba6} 
+{\bfseries Pixel\+Format} (\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{Pixel\+Format}} const \&)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_a9c32e524ed25ec8d795c017afb6ae5b2}\label{class_turn_engine_1_1_pixel_format_a9c32e524ed25ec8d795c017afb6ae5b2} 
+\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{Pixel\+Format}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{Pixel\+Format}} const \&)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_ad44d7bc15168e973412c6c0df244c937}\label{class_turn_engine_1_1_pixel_format_ad44d7bc15168e973412c6c0df244c937} 
+\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{Pixel\+Format}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{Pixel\+Format}} \&\&)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_af4b5f84d972a634b259a9ceca9c0f972}\label{class_turn_engine_1_1_pixel_format_af4b5f84d972a634b259a9ceca9c0f972} 
+constexpr SDL\+\_\+\+Pixel\+Format \texorpdfstring{$\ast$}{*} {\bfseries native\+\_\+handle} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_a4b08803c7ce53c3a79e4ecddf13fc9e9}\label{class_turn_engine_1_1_pixel_format_a4b08803c7ce53c3a79e4ecddf13fc9e9} 
+constexpr Pixel\+Format\+Enum {\bfseries format} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_a260fb2806334dc016567def6a16d8bd3}\label{class_turn_engine_1_1_pixel_format_a260fb2806334dc016567def6a16d8bd3} 
+constexpr bool {\bfseries has\+\_\+palette} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_a545eefd2cbce7ca351e945c13f3be814}\label{class_turn_engine_1_1_pixel_format_a545eefd2cbce7ca351e945c13f3be814} 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{palette\+\_\+view}} {\bfseries palette} () noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_a666e5cbd79230158e9e43ac969138002}\label{class_turn_engine_1_1_pixel_format_a666e5cbd79230158e9e43ac969138002} 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{const\+\_\+palette\+\_\+view}} {\bfseries palette} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_ab59ecf05aa43eb621f4affe8253c8888}\label{class_turn_engine_1_1_pixel_format_ab59ecf05aa43eb621f4affe8253c8888} 
+constexpr std\+::uint8\+\_\+t {\bfseries bits\+\_\+per\+\_\+pixel} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_acfda9f98ea94762565f90f38bc5413d4}\label{class_turn_engine_1_1_pixel_format_acfda9f98ea94762565f90f38bc5413d4} 
+constexpr std\+::uint8\+\_\+t {\bfseries bytes\+\_\+per\+\_\+pixel} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_a28027b2be1ab33950ae8a3bd5f6bd741}\label{class_turn_engine_1_1_pixel_format_a28027b2be1ab33950ae8a3bd5f6bd741} 
+constexpr std\+::uint32\+\_\+t {\bfseries rmask} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_a7fa03679d4debe3922c60a7a0a4c121b}\label{class_turn_engine_1_1_pixel_format_a7fa03679d4debe3922c60a7a0a4c121b} 
+constexpr std\+::uint32\+\_\+t {\bfseries gmask} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_abaef1a0d54f1d7415ac462de59b8205e}\label{class_turn_engine_1_1_pixel_format_abaef1a0d54f1d7415ac462de59b8205e} 
+constexpr std\+::uint32\+\_\+t {\bfseries bmask} () const noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_pixel_format_a6c1df67aa6917b23c49ea1897eb22d89}\label{class_turn_engine_1_1_pixel_format_a6c1df67aa6917b23c49ea1897eb22d89} 
+constexpr std\+::uint32\+\_\+t {\bfseries amask} () const noexcept
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Pixel.\+hpp\end{DoxyCompactItemize}

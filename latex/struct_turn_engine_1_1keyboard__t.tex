@@ -1,0 +1,95 @@
+\doxysection{Turn\+Engine\+::keyboard\+\_\+t Struct Reference}
+\hypertarget{struct_turn_engine_1_1keyboard__t}{}\label{struct_turn_engine_1_1keyboard__t}\index{TurnEngine::keyboard\_t@{TurnEngine::keyboard\_t}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::span$<$ std\+::uint8\+\_\+t const, NUM\+\_\+\+SCANCODES $>$ \mbox{\hyperlink{struct_turn_engine_1_1keyboard__t_a0d70ac1474065fb1206fd8840f69f3f6}{state}} () noexcept
+\begin{DoxyCompactList}\small\item\em Gets a snapshot of the current state of the keyboard. \end{DoxyCompactList}\item 
+static SDL\+\_\+\+Keymod \mbox{\hyperlink{struct_turn_engine_1_1keyboard__t_ab03a23cb805cf3140e92991deae5c98d}{mod\+\_\+state}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get the current key modifier state for the keyboard. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{struct_turn_engine_1_1keyboard__t_a02cae0023d29513788b106792d3ea6b8}{set\+\_\+mod\+\_\+state}} (SDL\+\_\+\+Keymod mod) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the current key modifier state for the keyboard. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_turn_engine_1_1keyboard__t_a54a0a3a66e518af6dfb836b004853a2d}{has\+\_\+screen\+\_\+support}} () noexcept
+\begin{DoxyCompactList}\small\item\em Checks whether the platform has some screen keyboard support. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_turn_engine_1_1keyboard__t_a84d46d518a6f95548ea86d75607f0682}{is\+\_\+screen\+\_\+shown}} (\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} const \&win) noexcept
+\begin{DoxyCompactList}\small\item\em Checks whether the screen keyboard is show for a given window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_turn_engine_1_1keyboard__t_a54a0a3a66e518af6dfb836b004853a2d}\label{struct_turn_engine_1_1keyboard__t_a54a0a3a66e518af6dfb836b004853a2d} 
+\index{TurnEngine::keyboard\_t@{TurnEngine::keyboard\_t}!has\_screen\_support@{has\_screen\_support}}
+\index{has\_screen\_support@{has\_screen\_support}!TurnEngine::keyboard\_t@{TurnEngine::keyboard\_t}}
+\doxysubsubsection{\texorpdfstring{has\_screen\_support()}{has\_screen\_support()}}
+{\footnotesize\ttfamily static bool Turn\+Engine\+::keyboard\+\_\+t\+::has\+\_\+screen\+\_\+support (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Checks whether the platform has some screen keyboard support. 
+
+\begin{DoxyReturn}{Returns}
+True if supported, false if not. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1keyboard__t_a84d46d518a6f95548ea86d75607f0682}\label{struct_turn_engine_1_1keyboard__t_a84d46d518a6f95548ea86d75607f0682} 
+\index{TurnEngine::keyboard\_t@{TurnEngine::keyboard\_t}!is\_screen\_shown@{is\_screen\_shown}}
+\index{is\_screen\_shown@{is\_screen\_shown}!TurnEngine::keyboard\_t@{TurnEngine::keyboard\_t}}
+\doxysubsubsection{\texorpdfstring{is\_screen\_shown()}{is\_screen\_shown()}}
+{\footnotesize\ttfamily static bool Turn\+Engine\+::keyboard\+\_\+t\+::is\+\_\+screen\+\_\+shown (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_window}{Window}} const \&}]{win }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Checks whether the screen keyboard is show for a given window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & The window for which screen keyboard to query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if show, false if not. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1keyboard__t_ab03a23cb805cf3140e92991deae5c98d}\label{struct_turn_engine_1_1keyboard__t_ab03a23cb805cf3140e92991deae5c98d} 
+\index{TurnEngine::keyboard\_t@{TurnEngine::keyboard\_t}!mod\_state@{mod\_state}}
+\index{mod\_state@{mod\_state}!TurnEngine::keyboard\_t@{TurnEngine::keyboard\_t}}
+\doxysubsubsection{\texorpdfstring{mod\_state()}{mod\_state()}}
+{\footnotesize\ttfamily static SDL\+\_\+\+Keymod Turn\+Engine\+::keyboard\+\_\+t\+::mod\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get the current key modifier state for the keyboard. 
+
+\begin{DoxyReturn}{Returns}
+An OR\textquotesingle{}d combination of the modifier keys for the keyboard. 
+\end{DoxyReturn}
+\Hypertarget{struct_turn_engine_1_1keyboard__t_a02cae0023d29513788b106792d3ea6b8}\label{struct_turn_engine_1_1keyboard__t_a02cae0023d29513788b106792d3ea6b8} 
+\index{TurnEngine::keyboard\_t@{TurnEngine::keyboard\_t}!set\_mod\_state@{set\_mod\_state}}
+\index{set\_mod\_state@{set\_mod\_state}!TurnEngine::keyboard\_t@{TurnEngine::keyboard\_t}}
+\doxysubsubsection{\texorpdfstring{set\_mod\_state()}{set\_mod\_state()}}
+{\footnotesize\ttfamily static void Turn\+Engine\+::keyboard\+\_\+t\+::set\+\_\+mod\+\_\+state (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Keymod}]{mod }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Sets the current key modifier state for the keyboard. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mod} & The desired SDL\+\_\+\+Keymod for the keyboard. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_turn_engine_1_1keyboard__t_a0d70ac1474065fb1206fd8840f69f3f6}\label{struct_turn_engine_1_1keyboard__t_a0d70ac1474065fb1206fd8840f69f3f6} 
+\index{TurnEngine::keyboard\_t@{TurnEngine::keyboard\_t}!state@{state}}
+\index{state@{state}!TurnEngine::keyboard\_t@{TurnEngine::keyboard\_t}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily static std\+::span$<$ std\+::uint8\+\_\+t const, NUM\+\_\+\+SCANCODES $>$ Turn\+Engine\+::keyboard\+\_\+t\+::state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Gets a snapshot of the current state of the keyboard. 
+
+\begin{DoxyReturn}{Returns}
+A span of key states, 1 representing pressed, 0 not. Indexes into the array are obtained via SDL\+\_\+\+Scancodes. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Event.\+hpp\end{DoxyCompactItemize}

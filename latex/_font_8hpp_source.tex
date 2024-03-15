@@ -1,0 +1,31 @@
+\doxysection{Font.\+hpp}
+\hypertarget{_font_8hpp_source}{}\label{_font_8hpp_source}\index{include/TurnEngine/wrapper/Font.hpp@{include/TurnEngine/wrapper/Font.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL\_ttf.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/wrapper/Surface.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }TurnEngine\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_font}{Font}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ TTF\_Font\ *font;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ fontSize;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_font}{Font}}(\textcolor{keyword}{const}\ std::string\ \&font,\ \textcolor{keywordtype}{int}\ \_fontSize);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1_font_a5cc9c05fcb70fc11707409ea99b39c82}{setFontSize}}(\textcolor{keywordtype}{int}\ \_fontSize);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_font}{\string~Font}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}}\ *renderSolid(\mbox{\hyperlink{class_turn_engine_1_1_font}{Font}}\ *font,\ \textcolor{keyword}{const}\ std::string\ \&text,\ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba<>}}\ color);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}}\ *renderBlended(\mbox{\hyperlink{class_turn_engine_1_1_font}{Font}}\ *font,\ \textcolor{keyword}{const}\ std::string\ \&text,\ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba<>}}\ color);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}}\ *renderShaded(\mbox{\hyperlink{class_turn_engine_1_1_font}{Font}}\ *font,\ \textcolor{keyword}{const}\ std::string\ \&text,\ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba<>}}\ foreground,\ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba<>}}\ background);}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,34 @@
+\doxysection{Drawer.\+hpp}
+\hypertarget{_drawer_8hpp_source}{}\label{_drawer_8hpp_source}\index{include/TurnEngine/render/Drawer.hpp@{include/TurnEngine/render/Drawer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/core/Observer.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/core/IObject2D.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/wrapper/Color.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/wrapper/Renderer.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/render/DrawComparator.hpp"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }TurnEngine::render\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{Drawer}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\ *renderer;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::priority\_queue<core::IObject2D,\ std::vector<core::IObject2D>,\ \mbox{\hyperlink{class_turn_engine_1_1render_1_1_draw_comparator}{DrawComparator}}>\ drawQueue;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer_a1b1b0a5ea14d6897052764354d7a345a}{Drawer}}(\mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\ *\_renderer);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer_a75dec00aba1f7cd30bc926e84cab9d0e}{draw}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_object2_d}{core::IObject2D}}\ \&drawable);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer_a9e8ca25ef66f9e1c0b17185bdc78c911}{renderAll}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer_adef306ac379429358f4db4f75989b3c3}{destroy}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_renderer}{Renderer}}\ *\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer_a9ec59acf607b567dc546fa77e119f4da}{getRenderer}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}

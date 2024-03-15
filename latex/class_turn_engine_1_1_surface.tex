@@ -1,0 +1,943 @@
+\doxysection{Turn\+Engine\+::Surface Class Reference}
+\hypertarget{class_turn_engine_1_1_surface}{}\label{class_turn_engine_1_1_surface}\index{TurnEngine::Surface@{TurnEngine::Surface}}
+
+
+That class wraps SDL\+\_\+\+Surface SDL structure.  
+
+
+
+
+{\ttfamily \#include $<$Surface.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_surface_a9a648898bede2f2c675d9fb1a849b26a}{Surface}} (SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*}s) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_surface_a843d7174501c93285feb861cd45bbadd}\label{class_turn_engine_1_1_surface_a843d7174501c93285feb861cd45bbadd} 
+{\bfseries Surface} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_surface_a1f194b24b440cdfd4d463a6db52e22d6}\label{class_turn_engine_1_1_surface_a1f194b24b440cdfd4d463a6db52e22d6} 
+\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_surface_a10c2ea5028d0c781909c58d160b0406c}\label{class_turn_engine_1_1_surface_a10c2ea5028d0c781909c58d160b0406c} 
+\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em Move assignment deleted. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_surface_a643ec32f49be08d3601801d276dd6163}{Surface}} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1_surface_a63eed528297d45b756a7400c88ee40ec}{Surface}} (\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}, int depth, \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}$<$ std\+::uint32\+\_\+t $>$ masks) noexcept
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_surface_aff0cc9109b73d117c4b81edb59b775eb}{Surface}} (void \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_turn_engine_1_1_surface_acbb9e7b91948bfbd23601972fd401e16}{pixels}}, int \mbox{\hyperlink{class_turn_engine_1_1_surface_a4aa53b4f56ffe3262a5f8d8166c6aa2c}{pitch}}, \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}, int depth, \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}$<$ std\+::uint32\+\_\+t $>$ masks) noexcept
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_surface_ab0bb6978e04afddda6356f20040570ff}{Surface}} (Pixel\+Format\+Enum fmt, int depth, \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}) noexcept
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_surface_a64c50cdf5f4c89934ad17084adc918d4}{Surface}} (void \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_turn_engine_1_1_surface_acbb9e7b91948bfbd23601972fd401e16}{pixels}}, int \mbox{\hyperlink{class_turn_engine_1_1_surface_a4aa53b4f56ffe3262a5f8d8166c6aa2c}{pitch}}, Pixel\+Format\+Enum fmt, int depth, \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$ \mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}) noexcept
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_surface_a799efcb36fd49d20c855b72c29d92dc9}{Surface}} (\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} file) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_surface_a45dc87257ba20230edc8c76452bc6786}\label{class_turn_engine_1_1_surface_a45dc87257ba20230edc8c76452bc6786} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Surface} () noexcept
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{class_turn_engine_1_1_surface_adbc8b23804f0bf4e674acde476ccf2d9}{native\+\_\+handle}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get a pointer to the underlying SDL representation. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_surface_a5a8b895f128a061c0f50b439441b1a58}{operator bool}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the surface is in a valid state. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a2f7d66b8893ea18c28bed0655220b934}{is\+\_\+ok}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the surface is in a valid state. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{const\+\_\+pixel\+\_\+format\+\_\+view}} \mbox{\hyperlink{class_turn_engine_1_1_surface_aee03a0cb74377601d977a27a0a3477d4}{pixel\+\_\+format}} () const noexcept
+\item 
+constexpr int \mbox{\hyperlink{class_turn_engine_1_1_surface_aebcd70e6f1b3c7be745e11462dbb22e0}{width}} () const noexcept
+\item 
+constexpr int \mbox{\hyperlink{class_turn_engine_1_1_surface_a79a58ca440707d1f06f4bc3846610f99}{height}} () const noexcept
+\item 
+constexpr int \mbox{\hyperlink{class_turn_engine_1_1_surface_a4aa53b4f56ffe3262a5f8d8166c6aa2c}{pitch}} () const noexcept
+\item 
+constexpr void const \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1_surface_acbb9e7b91948bfbd23601972fd401e16}{pixels}} () const noexcept
+\item 
+constexpr void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1_surface_a6441b93417f82d1cae26855e554015a0}{pixels}} () noexcept
+\item 
+constexpr int \mbox{\hyperlink{class_turn_engine_1_1_surface_a7a609d775350e6242ee6bd57124f21c6}{num\+\_\+pixels}} () const noexcept
+\item 
+constexpr void const \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1_surface_ac5f8a54dbbc6426d96c45cf47d47885e}{userdata}} () const noexcept
+\item 
+constexpr void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1_surface_af969211177f4ffe6aaded3fda33c060c}{userdata}} () noexcept
+\item 
+constexpr void \mbox{\hyperlink{class_turn_engine_1_1_surface_a2ae43c4ca1aef599cadc7291d4616d6d}{set\+\_\+userdata}} (void \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_turn_engine_1_1_surface_ac5f8a54dbbc6426d96c45cf47d47885e}{userdata}}) noexcept
+\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \mbox{\hyperlink{class_turn_engine_1_1_surface_a2c7fb380f09835388173ce8722c3e822}{clip\+\_\+rect}} () const noexcept
+\item 
+constexpr int \mbox{\hyperlink{class_turn_engine_1_1_surface_aa0c7bbbdddfae30abe8abfa7b2ab6f77}{refcount}} () const noexcept
+\item 
+constexpr int \mbox{\hyperlink{class_turn_engine_1_1_surface_a26d2f20e9f15338fdfcf3de15dfbffc8}{refcount\+\_\+add}} (int amt=1) noexcept
+\item 
+constexpr int \mbox{\hyperlink{class_turn_engine_1_1_surface_a409d6eb2d938cc34159c11b9fb8a4c2c}{refcount\+\_\+sub}} (int amt=1) noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_surface_adf70d6a1e7368d6c66f0174b9cd9a9b1}\label{class_turn_engine_1_1_surface_adf70d6a1e7368d6c66f0174b9cd9a9b1} 
+void {\bfseries lock} () noexcept
+\item 
+\Hypertarget{class_turn_engine_1_1_surface_a439b5e1c96fdfd83629c3ecd306321c0}\label{class_turn_engine_1_1_surface_a439b5e1c96fdfd83629c3ecd306321c0} 
+void {\bfseries unlock} () noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a75d1bb11d94d80196e8bedc51be11448}{must\+\_\+lock}} () const noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_ae4566fe0166dbb553ebdec0d4f61c867}{blit}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&srcrect, \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&dstrect) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a814c6640f68033229c9f9b7121b7dd62}{blit}} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&dstrect) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_ae5d9e0d888a19d6a8aead2045a420693}{blit}} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a51dde98c52967d4981cac1b52e2ff3dc}{blit}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&srcrect, \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_acd689631763286f83e592fc4832ae118}{blit\+\_\+scaled}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&srcrect, \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&dstrect) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a3d4483f9b058e5d9b69534223b474d4d}{blit\+\_\+scaled}} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&dstrect) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_aecb5a340d69181a81c1655650bbae9ca}{blit\+\_\+scaled}} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a77efbdf22666f4b7d17f1894efb72481}{blit\+\_\+scaled}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&srcrect, \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_ad5c359996e4f6ab4071466c4d47c5bc6}{lower\+\_\+blit}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&srcrect, \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&dstrect) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a00c25de5ce7a45c4de46feb337d9155a}{lower\+\_\+blit}} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&dstrect) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a20111c8929b438b00ca428c491b757af}{lower\+\_\+blit}} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_aae0ebf2e657fb815e97048793197e690}{lower\+\_\+blit}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&srcrect, \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_ad7ec81291adbe7f8fe76a06ceb9e1011}{lower\+\_\+blit\+\_\+scaled}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&srcrect, \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&dstrect) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_abe5600511a43ee2f2faf93ac124678f0}{lower\+\_\+blit\+\_\+scaled}} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&dstrect) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_ad3fc228c71363a2750e25acb7cdae4ad}{lower\+\_\+blit\+\_\+scaled}} (\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_ae3a26ec8e35e572b3e324c7a6e8eec4a}{lower\+\_\+blit\+\_\+scaled}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&srcrect, \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&dst) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a2438b3fe5a4a0000bf5ad91b630366ac}{fill\+\_\+rect}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&rect, \mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{Pixel\+Value}} color) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a23315edd49281b8d944e66d988bf387a}{fill}} (\mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{Pixel\+Value}} color) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_ae6a1c8136ca653f2f27cdbce466f76a5}{fill\+\_\+rects}} (std\+::span$<$ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const $>$ rects, \mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{Pixel\+Value}} color) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a56ec39da4931c08fb7737c0a46e6e385}{convert}} (\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{Turn\+Engine\+::\+Pixel\+Format}} const \&fmt) noexcept
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \mbox{\hyperlink{class_turn_engine_1_1_surface_af5819a36fdc84ccc49a64d8270b04501}{convert\+\_\+to\+\_\+new}} (\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{Turn\+Engine\+::\+Pixel\+Format}} const \&fmt) const noexcept
+\item 
+std\+::optional$<$ \mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{Pixel\+Value}} $>$ \mbox{\hyperlink{class_turn_engine_1_1_surface_aa63f9e373540a95826ce6e2ad52aecaa}{color\+\_\+key}} () const noexcept
+\item 
+std\+::uint8\+\_\+t \mbox{\hyperlink{class_turn_engine_1_1_surface_ac6ff66ea3b50aa3d1440b4e9db1b2e70}{alpha\+\_\+mod}} () const noexcept
+\item 
+Turn\+Engine\+::\+Blend\+Mode \mbox{\hyperlink{class_turn_engine_1_1_surface_aad1716e3dcb564a4fbc493aad1151807}{blend\+\_\+mode}} () const noexcept
+\item 
+\mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{class_turn_engine_1_1_surface_a0f89e8f5874116e328d86a332960ce9d}{color\+\_\+mod}} () const noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_ac9397cb989667ca25c25bf0da2b6f55d}{set\+\_\+clip\+\_\+rect}} (\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&rect) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_ace8ad0a49d08546c30a287a6bfc5430c}{disable\+\_\+clipping}} () noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a348f52bd0ea83567b231ca2f5ba79b53}{set\+\_\+color\+\_\+key}} (bool enable, \mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{Pixel\+Value}} color) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_add066cd58095d371fb33451cabc37097}{set\+\_\+alpha\+\_\+mod}} (std\+::uint8\+\_\+t const alpha) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_ac9f2f0533ad191c8a3763aeaa9ba3be6}{set\+\_\+blend\+\_\+mode}} (Turn\+Engine\+::\+Blend\+Mode mode) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_aca7bf4bbd0be4814105dfd5e5dae1a13}{set\+\_\+color\+\_\+mode}} (\mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_addf70fbdc5ff54f30350897590c6db53}{set\+\_\+palette}} (\mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{palette\+\_\+view}} p) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a0ac4ad06da53d0405a68ee304c21c575}{set\+\_\+rle}} (bool enable) noexcept
+\item 
+bool \mbox{\hyperlink{class_turn_engine_1_1_surface_a7d88ead57f245389a45a374f2b382e73}{save\+\_\+bmp\+\_\+to\+\_\+file}} (\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}} file) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1_surface_a3f7563023d9efe61b36e64338823b078}\label{class_turn_engine_1_1_surface_a3f7563023d9efe61b36e64338823b078} 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries surface\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+That class wraps SDL\+\_\+\+Surface SDL structure. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1_surface_a9a648898bede2f2c675d9fb1a849b26a}\label{class_turn_engine_1_1_surface_a9a648898bede2f2c675d9fb1a849b26a} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+Surface\+::\+Surface (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_surface_a643ec32f49be08d3601801d276dd6163}\label{class_turn_engine_1_1_surface_a643ec32f49be08d3601801d276dd6163} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+Surface\+::\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The surface object to move into this surface. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_surface_a63eed528297d45b756a7400c88ee40ec}\label{class_turn_engine_1_1_surface_a63eed528297d45b756a7400c88ee40ec} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Surface\+::\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$}]{wh,  }\item[{int}]{depth,  }\item[{\mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}$<$ std\+::uint32\+\_\+t $>$}]{masks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em wh} & \\
+\hline
+{\em depth} & \\
+\hline
+{\em masks} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_surface_aff0cc9109b73d117c4b81edb59b775eb}\label{class_turn_engine_1_1_surface_aff0cc9109b73d117c4b81edb59b775eb} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Surface\+::\+Surface (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pixels,  }\item[{int}]{pitch,  }\item[{\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$}]{wh,  }\item[{int}]{depth,  }\item[{\mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}$<$ std\+::uint32\+\_\+t $>$}]{masks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixels} & \\
+\hline
+{\em pitch} & \\
+\hline
+{\em wh} & \\
+\hline
+{\em depth} & \\
+\hline
+{\em masks} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_surface_ab0bb6978e04afddda6356f20040570ff}\label{class_turn_engine_1_1_surface_ab0bb6978e04afddda6356f20040570ff} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Surface\+::\+Surface (\begin{DoxyParamCaption}\item[{Pixel\+Format\+Enum}]{fmt,  }\item[{int}]{depth,  }\item[{\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$}]{wh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & \\
+\hline
+{\em depth} & \\
+\hline
+{\em wh} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_surface_a64c50cdf5f4c89934ad17084adc918d4}\label{class_turn_engine_1_1_surface_a64c50cdf5f4c89934ad17084adc918d4} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Surface\+::\+Surface (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pixels,  }\item[{int}]{pitch,  }\item[{Pixel\+Format\+Enum}]{fmt,  }\item[{int}]{depth,  }\item[{\mbox{\hyperlink{struct_turn_engine_1_1wh}{wh}}$<$ int $>$}]{wh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixels} & \\
+\hline
+{\em pitch} & \\
+\hline
+{\em fmt} & \\
+\hline
+{\em depth} & \\
+\hline
+{\em wh} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_surface_a799efcb36fd49d20c855b72c29d92dc9}\label{class_turn_engine_1_1_surface_a799efcb36fd49d20c855b72c29d92dc9} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Surface\+::\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}}}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1_surface_ac6ff66ea3b50aa3d1440b4e9db1b2e70}\label{class_turn_engine_1_1_surface_ac6ff66ea3b50aa3d1440b4e9db1b2e70} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!alpha\_mod@{alpha\_mod}}
+\index{alpha\_mod@{alpha\_mod}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{alpha\_mod()}{alpha\_mod()}}
+{\footnotesize\ttfamily std\+::uint8\+\_\+t Turn\+Engine\+::\+Surface\+::alpha\+\_\+mod (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_aad1716e3dcb564a4fbc493aad1151807}\label{class_turn_engine_1_1_surface_aad1716e3dcb564a4fbc493aad1151807} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!blend\_mode@{blend\_mode}}
+\index{blend\_mode@{blend\_mode}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{blend\_mode()}{blend\_mode()}}
+{\footnotesize\ttfamily Turn\+Engine\+::\+Blend\+Mode Turn\+Engine\+::\+Surface\+::blend\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a51dde98c52967d4981cac1b52e2ff3dc}\label{class_turn_engine_1_1_surface_a51dde98c52967d4981cac1b52e2ff3dc} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!blit@{blit}}
+\index{blit@{blit}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{blit()}{blit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::blit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{srcrect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em srcrect} & \\
+\hline
+{\em dst} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_ae4566fe0166dbb553ebdec0d4f61c867}\label{class_turn_engine_1_1_surface_ae4566fe0166dbb553ebdec0d4f61c867} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!blit@{blit}}
+\index{blit@{blit}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{blit()}{blit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::blit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{srcrect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&}]{dstrect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em srcrect} & \\
+\hline
+{\em dst} & \\
+\hline
+{\em dstrect} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_ae5d9e0d888a19d6a8aead2045a420693}\label{class_turn_engine_1_1_surface_ae5d9e0d888a19d6a8aead2045a420693} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!blit@{blit}}
+\index{blit@{blit}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{blit()}{blit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::blit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a814c6640f68033229c9f9b7121b7dd62}\label{class_turn_engine_1_1_surface_a814c6640f68033229c9f9b7121b7dd62} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!blit@{blit}}
+\index{blit@{blit}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{blit()}{blit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::blit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&}]{dstrect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & \\
+\hline
+{\em dstrect} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a77efbdf22666f4b7d17f1894efb72481}\label{class_turn_engine_1_1_surface_a77efbdf22666f4b7d17f1894efb72481} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!blit\_scaled@{blit\_scaled}}
+\index{blit\_scaled@{blit\_scaled}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{blit\_scaled()}{blit\_scaled()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::blit\+\_\+scaled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{srcrect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em srcrect} & \\
+\hline
+{\em dst} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_acd689631763286f83e592fc4832ae118}\label{class_turn_engine_1_1_surface_acd689631763286f83e592fc4832ae118} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!blit\_scaled@{blit\_scaled}}
+\index{blit\_scaled@{blit\_scaled}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{blit\_scaled()}{blit\_scaled()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::blit\+\_\+scaled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{srcrect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&}]{dstrect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em srcrect} & \\
+\hline
+{\em dst} & \\
+\hline
+{\em dstrect} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_aecb5a340d69181a81c1655650bbae9ca}\label{class_turn_engine_1_1_surface_aecb5a340d69181a81c1655650bbae9ca} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!blit\_scaled@{blit\_scaled}}
+\index{blit\_scaled@{blit\_scaled}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{blit\_scaled()}{blit\_scaled()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::blit\+\_\+scaled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a3d4483f9b058e5d9b69534223b474d4d}\label{class_turn_engine_1_1_surface_a3d4483f9b058e5d9b69534223b474d4d} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!blit\_scaled@{blit\_scaled}}
+\index{blit\_scaled@{blit\_scaled}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{blit\_scaled()}{blit\_scaled()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::blit\+\_\+scaled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&}]{dstrect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & \\
+\hline
+{\em dstrect} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a2c7fb380f09835388173ce8722c3e822}\label{class_turn_engine_1_1_surface_a2c7fb380f09835388173ce8722c3e822} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!clip\_rect@{clip\_rect}}
+\index{clip\_rect@{clip\_rect}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{clip\_rect()}{clip\_rect()}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ Turn\+Engine\+::\+Surface\+::clip\+\_\+rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_aa63f9e373540a95826ce6e2ad52aecaa}\label{class_turn_engine_1_1_surface_aa63f9e373540a95826ce6e2ad52aecaa} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!color\_key@{color\_key}}
+\index{color\_key@{color\_key}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{color\_key()}{color\_key()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{Pixel\+Value}} $>$ Turn\+Engine\+::\+Surface\+::color\+\_\+key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a0f89e8f5874116e328d86a332960ce9d}\label{class_turn_engine_1_1_surface_a0f89e8f5874116e328d86a332960ce9d} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!color\_mod@{color\_mod}}
+\index{color\_mod@{color\_mod}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{color\_mod()}{color\_mod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}$<$ std\+::uint8\+\_\+t $>$ Turn\+Engine\+::\+Surface\+::color\+\_\+mod (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a56ec39da4931c08fb7737c0a46e6e385}\label{class_turn_engine_1_1_surface_a56ec39da4931c08fb7737c0a46e6e385} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!convert@{convert}}
+\index{convert@{convert}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{Turn\+Engine\+::\+Pixel\+Format}} const \&}]{fmt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_af5819a36fdc84ccc49a64d8270b04501}\label{class_turn_engine_1_1_surface_af5819a36fdc84ccc49a64d8270b04501} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!convert\_to\_new@{convert\_to\_new}}
+\index{convert\_to\_new@{convert\_to\_new}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{convert\_to\_new()}{convert\_to\_new()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} Turn\+Engine\+::\+Surface\+::convert\+\_\+to\+\_\+new (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_pixel_format}{Turn\+Engine\+::\+Pixel\+Format}} const \&}]{fmt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_ace8ad0a49d08546c30a287a6bfc5430c}\label{class_turn_engine_1_1_surface_ace8ad0a49d08546c30a287a6bfc5430c} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!disable\_clipping@{disable\_clipping}}
+\index{disable\_clipping@{disable\_clipping}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{disable\_clipping()}{disable\_clipping()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::disable\+\_\+clipping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a23315edd49281b8d944e66d988bf387a}\label{class_turn_engine_1_1_surface_a23315edd49281b8d944e66d988bf387a} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!fill@{fill}}
+\index{fill@{fill}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{Pixel\+Value}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a2438b3fe5a4a0000bf5ad91b630366ac}\label{class_turn_engine_1_1_surface_a2438b3fe5a4a0000bf5ad91b630366ac} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!fill\_rect@{fill\_rect}}
+\index{fill\_rect@{fill\_rect}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{fill\_rect()}{fill\_rect()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::fill\+\_\+rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{rect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{Pixel\+Value}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & \\
+\hline
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_ae6a1c8136ca653f2f27cdbce466f76a5}\label{class_turn_engine_1_1_surface_ae6a1c8136ca653f2f27cdbce466f76a5} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!fill\_rects@{fill\_rects}}
+\index{fill\_rects@{fill\_rects}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{fill\_rects()}{fill\_rects()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::fill\+\_\+rects (\begin{DoxyParamCaption}\item[{std\+::span$<$ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const $>$}]{rects,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{Pixel\+Value}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rects} & \\
+\hline
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a79a58ca440707d1f06f4bc3846610f99}\label{class_turn_engine_1_1_surface_a79a58ca440707d1f06f4bc3846610f99} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!height@{height}}
+\index{height@{height}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily constexpr int Turn\+Engine\+::\+Surface\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a2f7d66b8893ea18c28bed0655220b934}\label{class_turn_engine_1_1_surface_a2f7d66b8893ea18c28bed0655220b934} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!is\_ok@{is\_ok}}
+\index{is\_ok@{is\_ok}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{is\_ok()}{is\_ok()}}
+{\footnotesize\ttfamily constexpr bool Turn\+Engine\+::\+Surface\+::is\+\_\+ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the surface is in a valid state. 
+
+\begin{DoxyReturn}{Returns}
+True if valid, false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_aae0ebf2e657fb815e97048793197e690}\label{class_turn_engine_1_1_surface_aae0ebf2e657fb815e97048793197e690} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!lower\_blit@{lower\_blit}}
+\index{lower\_blit@{lower\_blit}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{lower\_blit()}{lower\_blit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::lower\+\_\+blit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{srcrect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em srcrect} & \\
+\hline
+{\em dst} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_ad5c359996e4f6ab4071466c4d47c5bc6}\label{class_turn_engine_1_1_surface_ad5c359996e4f6ab4071466c4d47c5bc6} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!lower\_blit@{lower\_blit}}
+\index{lower\_blit@{lower\_blit}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{lower\_blit()}{lower\_blit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::lower\+\_\+blit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{srcrect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&}]{dstrect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em srcrect} & \\
+\hline
+{\em dst} & \\
+\hline
+{\em dstrect} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a20111c8929b438b00ca428c491b757af}\label{class_turn_engine_1_1_surface_a20111c8929b438b00ca428c491b757af} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!lower\_blit@{lower\_blit}}
+\index{lower\_blit@{lower\_blit}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{lower\_blit()}{lower\_blit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::lower\+\_\+blit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a00c25de5ce7a45c4de46feb337d9155a}\label{class_turn_engine_1_1_surface_a00c25de5ce7a45c4de46feb337d9155a} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!lower\_blit@{lower\_blit}}
+\index{lower\_blit@{lower\_blit}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{lower\_blit()}{lower\_blit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::lower\+\_\+blit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&}]{dstrect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & \\
+\hline
+{\em dstrect} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_ae3a26ec8e35e572b3e324c7a6e8eec4a}\label{class_turn_engine_1_1_surface_ae3a26ec8e35e572b3e324c7a6e8eec4a} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!lower\_blit\_scaled@{lower\_blit\_scaled}}
+\index{lower\_blit\_scaled@{lower\_blit\_scaled}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{lower\_blit\_scaled()}{lower\_blit\_scaled()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::lower\+\_\+blit\+\_\+scaled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{srcrect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em srcrect} & \\
+\hline
+{\em dst} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_ad7ec81291adbe7f8fe76a06ceb9e1011}\label{class_turn_engine_1_1_surface_ad7ec81291adbe7f8fe76a06ceb9e1011} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!lower\_blit\_scaled@{lower\_blit\_scaled}}
+\index{lower\_blit\_scaled@{lower\_blit\_scaled}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{lower\_blit\_scaled()}{lower\_blit\_scaled()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::lower\+\_\+blit\+\_\+scaled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{srcrect,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&}]{dstrect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em srcrect} & \\
+\hline
+{\em dst} & \\
+\hline
+{\em dstrect} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_ad3fc228c71363a2750e25acb7cdae4ad}\label{class_turn_engine_1_1_surface_ad3fc228c71363a2750e25acb7cdae4ad} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!lower\_blit\_scaled@{lower\_blit\_scaled}}
+\index{lower\_blit\_scaled@{lower\_blit\_scaled}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{lower\_blit\_scaled()}{lower\_blit\_scaled()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::lower\+\_\+blit\+\_\+scaled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_abe5600511a43ee2f2faf93ac124678f0}\label{class_turn_engine_1_1_surface_abe5600511a43ee2f2faf93ac124678f0} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!lower\_blit\_scaled@{lower\_blit\_scaled}}
+\index{lower\_blit\_scaled@{lower\_blit\_scaled}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{lower\_blit\_scaled()}{lower\_blit\_scaled()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::lower\+\_\+blit\+\_\+scaled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_surface}{Surface}} \&}]{dst,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ \&}]{dstrect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & \\
+\hline
+{\em dstrect} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a75d1bb11d94d80196e8bedc51be11448}\label{class_turn_engine_1_1_surface_a75d1bb11d94d80196e8bedc51be11448} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!must\_lock@{must\_lock}}
+\index{must\_lock@{must\_lock}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{must\_lock()}{must\_lock()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::must\+\_\+lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_adbc8b23804f0bf4e674acde476ccf2d9}\label{class_turn_engine_1_1_surface_adbc8b23804f0bf4e674acde476ccf2d9} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!native\_handle@{native\_handle}}
+\index{native\_handle@{native\_handle}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{native\_handle()}{native\_handle()}}
+{\footnotesize\ttfamily constexpr auto Turn\+Engine\+::\+Surface\+::native\+\_\+handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Get a pointer to the underlying SDL representation. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the underlying SDL\+\_\+\+Surface. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a7a609d775350e6242ee6bd57124f21c6}\label{class_turn_engine_1_1_surface_a7a609d775350e6242ee6bd57124f21c6} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!num\_pixels@{num\_pixels}}
+\index{num\_pixels@{num\_pixels}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{num\_pixels()}{num\_pixels()}}
+{\footnotesize\ttfamily constexpr int Turn\+Engine\+::\+Surface\+::num\+\_\+pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a5a8b895f128a061c0f50b439441b1a58}\label{class_turn_engine_1_1_surface_a5a8b895f128a061c0f50b439441b1a58} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+Surface\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the surface is in a valid state. 
+
+\begin{DoxyReturn}{Returns}
+True if valid, false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a4aa53b4f56ffe3262a5f8d8166c6aa2c}\label{class_turn_engine_1_1_surface_a4aa53b4f56ffe3262a5f8d8166c6aa2c} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!pitch@{pitch}}
+\index{pitch@{pitch}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{pitch()}{pitch()}}
+{\footnotesize\ttfamily constexpr int Turn\+Engine\+::\+Surface\+::pitch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_aee03a0cb74377601d977a27a0a3477d4}\label{class_turn_engine_1_1_surface_aee03a0cb74377601d977a27a0a3477d4} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!pixel\_format@{pixel\_format}}
+\index{pixel\_format@{pixel\_format}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{pixel\_format()}{pixel\_format()}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{class_turn_engine_1_1_basic_pixel_format_view}{const\+\_\+pixel\+\_\+format\+\_\+view}} Turn\+Engine\+::\+Surface\+::pixel\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_acbb9e7b91948bfbd23601972fd401e16}\label{class_turn_engine_1_1_surface_acbb9e7b91948bfbd23601972fd401e16} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!pixels@{pixels}}
+\index{pixels@{pixels}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{pixels()}{pixels()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily constexpr void const  \texorpdfstring{$\ast$}{*} Turn\+Engine\+::\+Surface\+::pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a6441b93417f82d1cae26855e554015a0}\label{class_turn_engine_1_1_surface_a6441b93417f82d1cae26855e554015a0} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!pixels@{pixels}}
+\index{pixels@{pixels}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{pixels()}{pixels()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily constexpr void \texorpdfstring{$\ast$}{*} Turn\+Engine\+::\+Surface\+::pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_aa0c7bbbdddfae30abe8abfa7b2ab6f77}\label{class_turn_engine_1_1_surface_aa0c7bbbdddfae30abe8abfa7b2ab6f77} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!refcount@{refcount}}
+\index{refcount@{refcount}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{refcount()}{refcount()}}
+{\footnotesize\ttfamily constexpr int Turn\+Engine\+::\+Surface\+::refcount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a26d2f20e9f15338fdfcf3de15dfbffc8}\label{class_turn_engine_1_1_surface_a26d2f20e9f15338fdfcf3de15dfbffc8} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!refcount\_add@{refcount\_add}}
+\index{refcount\_add@{refcount\_add}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{refcount\_add()}{refcount\_add()}}
+{\footnotesize\ttfamily constexpr int Turn\+Engine\+::\+Surface\+::refcount\+\_\+add (\begin{DoxyParamCaption}\item[{int}]{amt = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em amt} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a409d6eb2d938cc34159c11b9fb8a4c2c}\label{class_turn_engine_1_1_surface_a409d6eb2d938cc34159c11b9fb8a4c2c} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!refcount\_sub@{refcount\_sub}}
+\index{refcount\_sub@{refcount\_sub}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{refcount\_sub()}{refcount\_sub()}}
+{\footnotesize\ttfamily constexpr int Turn\+Engine\+::\+Surface\+::refcount\+\_\+sub (\begin{DoxyParamCaption}\item[{int}]{amt = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em amt} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a7d88ead57f245389a45a374f2b382e73}\label{class_turn_engine_1_1_surface_a7d88ead57f245389a45a374f2b382e73} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!save\_bmp\_to\_file@{save\_bmp\_to\_file}}
+\index{save\_bmp\_to\_file@{save\_bmp\_to\_file}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{save\_bmp\_to\_file()}{save\_bmp\_to\_file()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::save\+\_\+bmp\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1null__term__string}{null\+\_\+term\+\_\+string}}}]{file }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_add066cd58095d371fb33451cabc37097}\label{class_turn_engine_1_1_surface_add066cd58095d371fb33451cabc37097} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!set\_alpha\_mod@{set\_alpha\_mod}}
+\index{set\_alpha\_mod@{set\_alpha\_mod}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{set\_alpha\_mod()}{set\_alpha\_mod()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::set\+\_\+alpha\+\_\+mod (\begin{DoxyParamCaption}\item[{std\+::uint8\+\_\+t const}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em alpha} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_ac9f2f0533ad191c8a3763aeaa9ba3be6}\label{class_turn_engine_1_1_surface_ac9f2f0533ad191c8a3763aeaa9ba3be6} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!set\_blend\_mode@{set\_blend\_mode}}
+\index{set\_blend\_mode@{set\_blend\_mode}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{set\_blend\_mode()}{set\_blend\_mode()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::set\+\_\+blend\+\_\+mode (\begin{DoxyParamCaption}\item[{Turn\+Engine\+::\+Blend\+Mode}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_ac9397cb989667ca25c25bf0da2b6f55d}\label{class_turn_engine_1_1_surface_ac9397cb989667ca25c25bf0da2b6f55d} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!set\_clip\_rect@{set\_clip\_rect}}
+\index{set\_clip\_rect@{set\_clip\_rect}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{set\_clip\_rect()}{set\_clip\_rect()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::set\+\_\+clip\+\_\+rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ const \&}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a348f52bd0ea83567b231ca2f5ba79b53}\label{class_turn_engine_1_1_surface_a348f52bd0ea83567b231ca2f5ba79b53} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!set\_color\_key@{set\_color\_key}}
+\index{set\_color\_key@{set\_color\_key}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{set\_color\_key()}{set\_color\_key()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::set\+\_\+color\+\_\+key (\begin{DoxyParamCaption}\item[{bool}]{enable,  }\item[{\mbox{\hyperlink{class_turn_engine_1_1_pixel_value}{Pixel\+Value}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_aca7bf4bbd0be4814105dfd5e5dae1a13}\label{class_turn_engine_1_1_surface_aca7bf4bbd0be4814105dfd5e5dae1a13} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!set\_color\_mode@{set\_color\_mode}}
+\index{set\_color\_mode@{set\_color\_mode}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{set\_color\_mode()}{set\_color\_mode()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::set\+\_\+color\+\_\+mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_turn_engine_1_1rgb}{rgb}}$<$ std\+::uint8\+\_\+t $>$}]{rgb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rgb} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_addf70fbdc5ff54f30350897590c6db53}\label{class_turn_engine_1_1_surface_addf70fbdc5ff54f30350897590c6db53} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!set\_palette@{set\_palette}}
+\index{set\_palette@{set\_palette}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{set\_palette()}{set\_palette()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::set\+\_\+palette (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_basic_palette_view}{palette\+\_\+view}}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a0ac4ad06da53d0405a68ee304c21c575}\label{class_turn_engine_1_1_surface_a0ac4ad06da53d0405a68ee304c21c575} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!set\_rle@{set\_rle}}
+\index{set\_rle@{set\_rle}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{set\_rle()}{set\_rle()}}
+{\footnotesize\ttfamily bool Turn\+Engine\+::\+Surface\+::set\+\_\+rle (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if succeeded, false if failed. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_a2ae43c4ca1aef599cadc7291d4616d6d}\label{class_turn_engine_1_1_surface_a2ae43c4ca1aef599cadc7291d4616d6d} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!set\_userdata@{set\_userdata}}
+\index{set\_userdata@{set\_userdata}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{set\_userdata()}{set\_userdata()}}
+{\footnotesize\ttfamily constexpr void Turn\+Engine\+::\+Surface\+::set\+\_\+userdata (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{userdata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em userdata} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turn_engine_1_1_surface_ac5f8a54dbbc6426d96c45cf47d47885e}\label{class_turn_engine_1_1_surface_ac5f8a54dbbc6426d96c45cf47d47885e} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!userdata@{userdata}}
+\index{userdata@{userdata}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{userdata()}{userdata()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily constexpr void const  \texorpdfstring{$\ast$}{*} Turn\+Engine\+::\+Surface\+::userdata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_af969211177f4ffe6aaded3fda33c060c}\label{class_turn_engine_1_1_surface_af969211177f4ffe6aaded3fda33c060c} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!userdata@{userdata}}
+\index{userdata@{userdata}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{userdata()}{userdata()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily constexpr void \texorpdfstring{$\ast$}{*} Turn\+Engine\+::\+Surface\+::userdata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_surface_aebcd70e6f1b3c7be745e11462dbb22e0}\label{class_turn_engine_1_1_surface_aebcd70e6f1b3c7be745e11462dbb22e0} 
+\index{TurnEngine::Surface@{TurnEngine::Surface}!width@{width}}
+\index{width@{width}!TurnEngine::Surface@{TurnEngine::Surface}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily constexpr int Turn\+Engine\+::\+Surface\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Surface.\+hpp\end{DoxyCompactItemize}

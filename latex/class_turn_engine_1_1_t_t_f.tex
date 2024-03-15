@@ -1,0 +1,91 @@
+\doxysection{Turn\+Engine\+::TTF Class Reference}
+\hypertarget{class_turn_engine_1_1_t_t_f}{}\label{class_turn_engine_1_1_t_t_f}\index{TurnEngine::TTF@{TurnEngine::TTF}}
+
+
+Initialization context for SDL\+\_\+ttf.  
+
+
+
+
+{\ttfamily \#include $<$Init.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1_t_t_f_af5628e03d6f8c367e33b558ca56910bf}\label{class_turn_engine_1_1_t_t_f_af5628e03d6f8c367e33b558ca56910bf} 
+{\bfseries TTF} (\mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}} const \&)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_t_t_f_a174378e65eadb66ce8a6ef58d87a9201}\label{class_turn_engine_1_1_t_t_f_a174378e65eadb66ce8a6ef58d87a9201} 
+\mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}} const \&)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_t_t_f_adacc529d490184ebbbf597dea95e9aa8}\label{class_turn_engine_1_1_t_t_f_adacc529d490184ebbbf597dea95e9aa8} 
+\mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}} \& {\bfseries operator=} (\mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}} \&\&)=delete
+\item 
+\Hypertarget{class_turn_engine_1_1_t_t_f_a23d4969ddbda830b154c3774a31b7ba1}\label{class_turn_engine_1_1_t_t_f_a23d4969ddbda830b154c3774a31b7ba1} 
+constexpr {\bfseries TTF} (\mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}} \&\&other) noexcept=default
+\item 
+\Hypertarget{class_turn_engine_1_1_t_t_f_a706f76e495a5330f7429a31e63aeeb83}\label{class_turn_engine_1_1_t_t_f_a706f76e495a5330f7429a31e63aeeb83} 
+{\bfseries TTF} () noexcept
+\begin{DoxyCompactList}\small\item\em Initialize the internal SDL\+\_\+ttf libraries. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_t_t_f_aa9bed0014b55bc74e5186f1af230999a}\label{class_turn_engine_1_1_t_t_f_aa9bed0014b55bc74e5186f1af230999a} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+TTF} () noexcept
+\begin{DoxyCompactList}\small\item\em Destructor that deinitializes SDL\+\_\+image libraries. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{class_turn_engine_1_1_t_t_f_a3d528e122a6636d423e058d64a58b573}{operator bool}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the SDL\+\_\+ttf libraries were initialized correctly. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{class_turn_engine_1_1_t_t_f_a4dcdf746080b9531ef2b85c34a5db805}{is\+\_\+ok}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the SDL\+\_\+ttf libraries were initialized correctly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string\+\_\+view \mbox{\hyperlink{class_turn_engine_1_1_t_t_f_a368fd2169dfbfb1cdbd7f65710e14e64}{get\+\_\+error}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get the previously set error from within SDL\+\_\+ttf. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Initialization context for SDL\+\_\+ttf. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1_t_t_f_a368fd2169dfbfb1cdbd7f65710e14e64}\label{class_turn_engine_1_1_t_t_f_a368fd2169dfbfb1cdbd7f65710e14e64} 
+\index{TurnEngine::TTF@{TurnEngine::TTF}!get\_error@{get\_error}}
+\index{get\_error@{get\_error}!TurnEngine::TTF@{TurnEngine::TTF}}
+\doxysubsubsection{\texorpdfstring{get\_error()}{get\_error()}}
+{\footnotesize\ttfamily static std\+::string\+\_\+view Turn\+Engine\+::\+TTF\+::get\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get the previously set error from within SDL\+\_\+ttf. 
+
+\begin{DoxyReturn}{Returns}
+A string denoting the error. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_t_t_f_a4dcdf746080b9531ef2b85c34a5db805}\label{class_turn_engine_1_1_t_t_f_a4dcdf746080b9531ef2b85c34a5db805} 
+\index{TurnEngine::TTF@{TurnEngine::TTF}!is\_ok@{is\_ok}}
+\index{is\_ok@{is\_ok}!TurnEngine::TTF@{TurnEngine::TTF}}
+\doxysubsubsection{\texorpdfstring{is\_ok()}{is\_ok()}}
+{\footnotesize\ttfamily constexpr bool Turn\+Engine\+::\+TTF\+::is\+\_\+ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the SDL\+\_\+ttf libraries were initialized correctly. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, false if not. 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_t_t_f_a3d528e122a6636d423e058d64a58b573}\label{class_turn_engine_1_1_t_t_f_a3d528e122a6636d423e058d64a58b573} 
+\index{TurnEngine::TTF@{TurnEngine::TTF}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!TurnEngine::TTF@{TurnEngine::TTF}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily constexpr Turn\+Engine\+::\+TTF\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the SDL\+\_\+ttf libraries were initialized correctly. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, false if not. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Init.\+hpp\end{DoxyCompactItemize}

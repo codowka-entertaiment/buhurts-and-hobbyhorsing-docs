@@ -1,0 +1,33 @@
+\doxysection{Observer.\+hpp}
+\hypertarget{_observer_8hpp_source}{}\label{_observer_8hpp_source}\index{include/TurnEngine/core/Observer.hpp@{include/TurnEngine/core/Observer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/core/Subject.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/core/IObserver.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }TurnEngine::core\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer}{Observer}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer}{Observer}}();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer}{\string~Observer}}()\ \{\}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer_a71e1a88d49928db7cc90d4e6843fb03a}{update}}(\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}}*\ \_event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer_a5a85c310a1f713b0ac964314dc6c211c}{disconnect}}(\mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}}*\ subject);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer_ac24b2bbb558811cd17c43c641a128cd9}{connect}}(\mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}}*\ subject);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}}*\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer_a387b4edf90cfc9d5ffff4542fd84ca01}{getEvent}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}}*\ event;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ std::vector<Subject*>\ subjects;}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,51 @@
+\doxysection{Sprite.\+hpp}
+\hypertarget{_sprite_8hpp_source}{}\label{_sprite_8hpp_source}\index{include/TurnEngine/gui/Sprite.hpp@{include/TurnEngine/gui/Sprite.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/core/Object2D.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/geo2d/shapes/Shape.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }TurnEngine::gui\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1gui_1_1_sprite}{Sprite}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{core::Object2D}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isPlaying\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentFrame\ =\ 0;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ maxFrames;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ animationRow;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ animationTime;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ Uint32\ currentTick;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect<int>}}\ frameStep;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_sprite_abfd4850e7715ccc82bb1cd5d2b5e48f4}{Sprite}}(\mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d::Shape<int>}}\ *\_shape,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_depthIndex,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_isAnimated,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point<int>}}\ \_position,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_width,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_height,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_angle,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RendererFlip\ \_flip,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba<>}}\ \_color);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_sprite_acf78fb6b9c043472fd34fe9fd8f7b0b7}{Sprite}}(\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{core::Object2D}}\ *drawable);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_sprite_a2dfbe50c5e8fadec05defe232704190d}{startAnimation}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_sprite_ac43b681a8a8f7a0ecab95e93dd7ec330}{stopAnimation}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_sprite_a8b45fd69e3675a3b35f72d05954ca133}{setTexture}}(\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}}\ *\_texture);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_sprite_a70cd446aff5db25f159b9a94ae8112cd}{setAnimationRow}}(\textcolor{keywordtype}{int}\ \_row);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_sprite_ac596757adb8e8f2f0a2fc6b8fa11a330}{setAnimationFrameStep}}(\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect<int>}}\ \_frameStep,\ \textcolor{keywordtype}{int}\ \_maxFrames);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_sprite_ac209facd406223acb6f2c0e8fd2a9b7b}{setShape}}(\mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d::Shape<int>}}\ *\_shape);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_sprite_a466b19e6bdadc82496294ff67413cf94}{setAnimationTime}}(\textcolor{keywordtype}{int}\ \_milliseconds);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_sprite_a5dbf7f43045b13fec7b773f564c85e2d}{draw}}(\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{render::Drawer}}\ *\_drawer);}
+\DoxyCodeLine{00083\ \ \ \ \ \};}
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}

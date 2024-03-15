@@ -1,0 +1,248 @@
+\doxysection{geo2d\+::Rectangle\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classgeo2d_1_1_rectangle}{}\label{classgeo2d_1_1_rectangle}\index{geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}}
+
+
+Class representing rectangle shape.  
+
+
+
+
+{\ttfamily \#include $<$Rectangle.\+hpp$>$}
+
+Inheritance diagram for geo2d\+::Rectangle\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgeo2d_1_1_rectangle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \& \mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}} () const
+\begin{DoxyCompactList}\small\item\em getter for vertex \end{DoxyCompactList}\item 
+constexpr const T \& \mbox{\hyperlink{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}{width}} () const
+\begin{DoxyCompactList}\small\item\em getter for width \end{DoxyCompactList}\item 
+constexpr const T \& \mbox{\hyperlink{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}{height}} () const
+\begin{DoxyCompactList}\small\item\em getter for height \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{classgeo2d_1_1_rectangle_ac8625c6219e4562850c6e9ce7ec52942}{contains}} (const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \&position) const noexcept override
+\begin{DoxyCompactList}\small\item\em that method checks if rectangle shape contains point \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgeo2d_1_1_rectangle_a876555caba29dff060cd67396a65bc93}{set\+Position}} (const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \&position) override
+\begin{DoxyCompactList}\small\item\em setter for position \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr std\+::expected$<$ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}$<$ T $>$, Rectangle\+Shape\+Error $>$ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a6fea8e33e12fd4d876d1bf03d0a57a1f}{init}} (\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ vertex1, \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ vertex2)
+\begin{DoxyCompactList}\small\item\em that static method inits rectangle shape with checks \end{DoxyCompactList}\item 
+static constexpr std\+::expected$<$ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}$<$ T $>$, Rectangle\+Shape\+Error $>$ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a1ab53208a3908ec8d5880ff69b87b900}{init}} (\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}}, T \mbox{\hyperlink{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}{width}}, T \mbox{\hyperlink{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}{height}})
+\begin{DoxyCompactList}\small\item\em that static method inits rectangle shape with checks \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgeo2d_1_1_rectangle_acb454f7ba6c90ac508935a4bddff7a1f}{init\+\_\+uncheck}} (\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ vertex1, \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ vertex2)
+\begin{DoxyCompactList}\small\item\em that static method inits rectangle shape without checks \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgeo2d_1_1_rectangle_a965d5f5cc5dbf76e62358ca69f2c6c1a}{init\+\_\+uncheck}} (\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}}, T \mbox{\hyperlink{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}{width}}, T \mbox{\hyperlink{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}{height}})
+\begin{DoxyCompactList}\small\item\em that static method inits rectangle shape without checks \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classgeo2d_1_1_rectangle_a26e75ec21a91c1a7c0297d1c274cb362}\label{classgeo2d_1_1_rectangle_a26e75ec21a91c1a7c0297d1c274cb362} 
+constexpr {\bfseries Rectangle} (\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}}, \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ dims)
+\item 
+\Hypertarget{classgeo2d_1_1_rectangle_a2c78a6004eae0d0716dc78c89ab53b75}\label{classgeo2d_1_1_rectangle_a2c78a6004eae0d0716dc78c89ab53b75} 
+constexpr {\bfseries Rectangle} (\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \mbox{\hyperlink{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}{vertex}}, T \mbox{\hyperlink{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}{width}}, T \mbox{\hyperlink{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}{height}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classgeo2d_1_1_rectangle_a174eb8c2b7bf15cfb0e8e5702e9bfc99}\label{classgeo2d_1_1_rectangle_a174eb8c2b7bf15cfb0e8e5702e9bfc99} 
+\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ {\bfseries m\+\_\+vertex}
+\item 
+\Hypertarget{classgeo2d_1_1_rectangle_a132f96b2ed1040cf82ad1b7931740ace}\label{classgeo2d_1_1_rectangle_a132f96b2ed1040cf82ad1b7931740ace} 
+T {\bfseries m\+\_\+width}
+\item 
+\Hypertarget{classgeo2d_1_1_rectangle_a4f4fcddc56d1cfc30450169a6d211cbe}\label{classgeo2d_1_1_rectangle_a4f4fcddc56d1cfc30450169a6d211cbe} 
+T {\bfseries m\+\_\+height}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$Numeric T$>$\newline
+class geo2d\+::\+Rectangle$<$ T $>$}
+Class representing rectangle shape. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgeo2d_1_1_rectangle_ac8625c6219e4562850c6e9ce7ec52942}\label{classgeo2d_1_1_rectangle_ac8625c6219e4562850c6e9ce7ec52942} 
+\index{geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}!contains@{contains}}
+\index{contains@{contains}!geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr bool \mbox{\hyperlink{classgeo2d_1_1_rectangle}{geo2d\+::\+Rectangle}}$<$ T $>$\+::contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+that method checks if rectangle shape contains point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & Position$<$\+T$>$ position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if rectangle shape contains point, else {\ttfamily false} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{structgeo2d_1_1_shape_a50073e892ab853b74289c7fb1f98b38a}{geo2d\+::\+Shape$<$ T $>$}}.
+
+\Hypertarget{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d}\label{classgeo2d_1_1_rectangle_ab14a801398cc271d1305c2db0c4c495d} 
+\index{geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}!height@{height}}
+\index{height@{height}!geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr const T \& \mbox{\hyperlink{classgeo2d_1_1_rectangle}{geo2d\+::\+Rectangle}}$<$ T $>$\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+getter for height 
+
+\begin{DoxyReturn}{Returns}
+Position$<$\+T$>$\& 
+\end{DoxyReturn}
+\Hypertarget{classgeo2d_1_1_rectangle_a1ab53208a3908ec8d5880ff69b87b900}\label{classgeo2d_1_1_rectangle_a1ab53208a3908ec8d5880ff69b87b900} 
+\index{geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}!init@{init}}
+\index{init@{init}!geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+static constexpr std\+::expected$<$ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}$<$ T $>$, Rectangle\+Shape\+Error $>$ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{geo2d\+::\+Rectangle}}$<$ T $>$\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$}]{vertex,  }\item[{T}]{width,  }\item[{T}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+that static method inits rectangle shape with checks 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Position$<$\+T$>$} & vertex \\
+\hline
+{\em T} & width \\
+\hline
+{\em T} & height \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::expected\texorpdfstring{$<$}{<}Rectangle$<$\+T$>$, Rectangle\+Shape\+Error\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{classgeo2d_1_1_rectangle_a6fea8e33e12fd4d876d1bf03d0a57a1f}\label{classgeo2d_1_1_rectangle_a6fea8e33e12fd4d876d1bf03d0a57a1f} 
+\index{geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}!init@{init}}
+\index{init@{init}!geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+static constexpr std\+::expected$<$ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}$<$ T $>$, Rectangle\+Shape\+Error $>$ \mbox{\hyperlink{classgeo2d_1_1_rectangle}{geo2d\+::\+Rectangle}}$<$ T $>$\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$}]{vertex1,  }\item[{\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$}]{vertex2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+that static method inits rectangle shape with checks 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Position$<$\+T$>$} & vertex1 \\
+\hline
+{\em Position$<$\+T$>$} & vertex2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::expected\texorpdfstring{$<$}{<}Rectangle$<$\+T$>$, Rectangle\+Shape\+Error\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\Hypertarget{classgeo2d_1_1_rectangle_a965d5f5cc5dbf76e62358ca69f2c6c1a}\label{classgeo2d_1_1_rectangle_a965d5f5cc5dbf76e62358ca69f2c6c1a} 
+\index{geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}!init\_uncheck@{init\_uncheck}}
+\index{init\_uncheck@{init\_uncheck}!geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{init\_uncheck()}{init\_uncheck()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+static constexpr \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgeo2d_1_1_rectangle}{geo2d\+::\+Rectangle}}$<$ T $>$\+::init\+\_\+uncheck (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$}]{vertex,  }\item[{T}]{width,  }\item[{T}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+that static method inits rectangle shape without checks 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Position$<$\+T$>$} & vertex \\
+\hline
+{\em T} & width \\
+\hline
+{\em T} & height \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rectangle$<$\+T$>$\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{classgeo2d_1_1_rectangle_acb454f7ba6c90ac508935a4bddff7a1f}\label{classgeo2d_1_1_rectangle_acb454f7ba6c90ac508935a4bddff7a1f} 
+\index{geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}!init\_uncheck@{init\_uncheck}}
+\index{init\_uncheck@{init\_uncheck}!geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{init\_uncheck()}{init\_uncheck()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+static constexpr \mbox{\hyperlink{classgeo2d_1_1_rectangle}{Rectangle}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgeo2d_1_1_rectangle}{geo2d\+::\+Rectangle}}$<$ T $>$\+::init\+\_\+uncheck (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$}]{vertex1,  }\item[{\mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$}]{vertex2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+that static method inits rectangle shape without checks 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Position$<$\+T$>$} & vertex1 \\
+\hline
+{\em Position$<$\+T$>$} & vertex2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rectangle$<$\+T$>$\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{classgeo2d_1_1_rectangle_a876555caba29dff060cd67396a65bc93}\label{classgeo2d_1_1_rectangle_a876555caba29dff060cd67396a65bc93} 
+\index{geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+void \mbox{\hyperlink{classgeo2d_1_1_rectangle}{geo2d\+::\+Rectangle}}$<$ T $>$\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+setter for position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & Position$<$\+T$>$ position \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{structgeo2d_1_1_shape_aebfea61a29b605bf3a583e615474e8d6}{geo2d\+::\+Shape$<$ T $>$}}.
+
+\Hypertarget{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75}\label{classgeo2d_1_1_rectangle_a763d580aadf05256070613db2010ca75} 
+\index{geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}!vertex@{vertex}}
+\index{vertex@{vertex}!geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vertex()}{vertex()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \& \mbox{\hyperlink{classgeo2d_1_1_rectangle}{geo2d\+::\+Rectangle}}$<$ T $>$\+::vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+getter for vertex 
+
+\begin{DoxyReturn}{Returns}
+Position$<$\+T$>$\& 
+\end{DoxyReturn}
+\Hypertarget{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c}\label{classgeo2d_1_1_rectangle_a6166d2611aef77df242e1adbda00199c} 
+\index{geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}!width@{width}}
+\index{width@{width}!geo2d::Rectangle$<$ T $>$@{geo2d::Rectangle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+constexpr const T \& \mbox{\hyperlink{classgeo2d_1_1_rectangle}{geo2d\+::\+Rectangle}}$<$ T $>$\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+getter for width 
+
+\begin{DoxyReturn}{Returns}
+Position$<$\+T$>$\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/geo2d/shapes/Rectangle.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\doxysection{Init.\+hpp}
+\hypertarget{_init_8hpp_source}{}\label{_init_8hpp_source}\index{include/TurnEngine/wrapper/Init.hpp@{include/TurnEngine/wrapper/Init.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}SDL2/SDL.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}SDL\_image.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}SDL\_ttf.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Enums.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }TurnEngine\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ valid\_\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}}()\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}}(\mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}}(\mbox{\hyperlink{class_turn_engine_1_1_s_d_l2}{SDL2}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_s_d_l2_a55c2615053cf89d7748473a678e0c17a}{SDL2}}(SDLInitFlags\ \textcolor{keyword}{const}\&\ flgs)\ noexcept}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ valid\_\{SDL\_Init(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(flgs))\ ==\ 0\}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_s_d_l2_a8d7ffc6df3810eac785e8b9a0aafd5de}{\string~SDL2}}()\ noexcept\ \{\ \textcolor{keywordflow}{if}\ (valid\_)\ SDL\_Quit();\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \textcolor{keyword}{operator}\ bool()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ valid\_;\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_s_d_l2_a57432f43047d386e9ed3f30287dd6e31}{is\_ok}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ valid\_;\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\_view\ \mbox{\hyperlink{class_turn_engine_1_1_s_d_l2_a61b75ec1a6f9c444cb00cf4fbc85f272}{get\_error}}()\ noexcept\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_GetError();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}}\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ valid\_\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_t_t_f_a706f76e495a5330f7429a31e63aeeb83}{TTF}}(\mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_t_t_f_a706f76e495a5330f7429a31e63aeeb83}{TTF}}(\mbox{\hyperlink{class_turn_engine_1_1_t_t_f}{TTF}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_t_t_f_a706f76e495a5330f7429a31e63aeeb83}{TTF}}()\ noexcept}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ valid\_\{TTF\_Init()\ ==\ 0\}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_t_t_f_aa9bed0014b55bc74e5186f1af230999a}{\string~TTF}}()\ noexcept\ \{\ \textcolor{keywordflow}{if}\ (valid\_)\ TTF\_Quit();\ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \textcolor{keyword}{operator}\ bool()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ valid\_;\ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_t_t_f_a4dcdf746080b9531ef2b85c34a5db805}{is\_ok}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ valid\_;\ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\_view\ \mbox{\hyperlink{class_turn_engine_1_1_t_t_f_a368fd2169dfbfb1cdbd7f65710e14e64}{get\_error}}()\ noexcept\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_GetError();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}}\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ valid\_\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}}()\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}}(\mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}}\&\ operator=(\mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}}(\mbox{\hyperlink{class_turn_engine_1_1_i_m_g}{IMG}}\&\&\ other)\ noexcept}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ valid\_(std::exchange(other.valid\_,\ \textcolor{keyword}{false}))\ \{\}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_i_m_g_a0b52d2f75ac32b56a2bb2ff01e7514da}{IMG}}(IMGInitFlags\ \textcolor{keyword}{const}\&\ flgs)\ noexcept}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ valid\_\{IMG\_Init(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(flgs))\ ==\ 0\}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_i_m_g_a1eb2b5799b7ac048b5071f6684acbe4a}{\string~IMG}}()\ noexcept\ \{\ \textcolor{keywordflow}{if}\ (valid\_)\ IMG\_Quit();\ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \textcolor{keyword}{operator}\ bool()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ valid\_;\ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1_i_m_g_a8abdc995f54f8fb829c8d21a1ebce735}{is\_ok}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ valid\_;\ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\_view\ \mbox{\hyperlink{class_turn_engine_1_1_i_m_g_a3d8ef1bace329cee5f58b1c1bd1d3d69}{get\_error}}()\ noexcept\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ IMG\_GetError();}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \}}
+
+\end{DoxyCode}

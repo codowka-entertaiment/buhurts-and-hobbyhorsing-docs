@@ -1,0 +1,77 @@
+\doxysection{geo2d\+::Shape\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structgeo2d_1_1_shape}{}\label{structgeo2d_1_1_shape}\index{geo2d::Shape$<$ T $>$@{geo2d::Shape$<$ T $>$}}
+
+
+Abstract class for implementing shapes.  
+
+
+
+
+{\ttfamily \#include $<$Shape.\+hpp$>$}
+
+Inheritance diagram for geo2d\+::Shape\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structgeo2d_1_1_shape}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual constexpr bool \mbox{\hyperlink{structgeo2d_1_1_shape_a50073e892ab853b74289c7fb1f98b38a}{contains}} (const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \&position) const noexcept=0
+\begin{DoxyCompactList}\small\item\em that method checks if shape contains point \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structgeo2d_1_1_shape_aebfea61a29b605bf3a583e615474e8d6}{set\+Position}} (const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \&position)=0
+\begin{DoxyCompactList}\small\item\em setter for position \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$Numeric T$>$\newline
+struct geo2d\+::\+Shape$<$ T $>$}
+Abstract class for implementing shapes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structgeo2d_1_1_shape_a50073e892ab853b74289c7fb1f98b38a}\label{structgeo2d_1_1_shape_a50073e892ab853b74289c7fb1f98b38a} 
+\index{geo2d::Shape$<$ T $>$@{geo2d::Shape$<$ T $>$}!contains@{contains}}
+\index{contains@{contains}!geo2d::Shape$<$ T $>$@{geo2d::Shape$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+virtual constexpr bool \mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d\+::\+Shape}}$<$ T $>$\+::contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}
+
+
+
+that method checks if shape contains point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & Position$<$\+T$>$ position \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classgeo2d_1_1_hexagon_ac5a4c6bc28aaf6c93a87e23445b34c82}{geo2d\+::\+Hexagon$<$ T $>$}}, and \mbox{\hyperlink{classgeo2d_1_1_rectangle_ac8625c6219e4562850c6e9ce7ec52942}{geo2d\+::\+Rectangle$<$ T $>$}}.
+
+\Hypertarget{structgeo2d_1_1_shape_aebfea61a29b605bf3a583e615474e8d6}\label{structgeo2d_1_1_shape_aebfea61a29b605bf3a583e615474e8d6} 
+\index{geo2d::Shape$<$ T $>$@{geo2d::Shape$<$ T $>$}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!geo2d::Shape$<$ T $>$@{geo2d::Shape$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily template$<$Numeric T$>$ \\
+virtual void \mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d\+::\+Shape}}$<$ T $>$\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeo2d_1_1_vector}{Position}}$<$ T $>$ \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+setter for position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & Position$<$\+T$>$ position \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classgeo2d_1_1_hexagon_aafca83892f4b4e9321c18f9ca60a932b}{geo2d\+::\+Hexagon$<$ T $>$}}, and \mbox{\hyperlink{classgeo2d_1_1_rectangle_a876555caba29dff060cd67396a65bc93}{geo2d\+::\+Rectangle$<$ T $>$}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/geo2d/shapes/Shape.\+hpp\end{DoxyCompactItemize}

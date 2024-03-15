@@ -1,0 +1,37 @@
+\doxysection{Scene.\+hpp}
+\hypertarget{_scene_8hpp_source}{}\label{_scene_8hpp_source}\index{include/TurnEngine/core/Scene.hpp@{include/TurnEngine/core/Scene.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/core/Object2D.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TurnEngine/render/Drawer.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }TurnEngine::core\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene}{Scene}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ std::vector<Object2D\ *>\ objects;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point<int>}}\ pos;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a7ad68dd7c3ace9d0d003e7d4ee2a2574}{Scene}}(\mbox{\hyperlink{class_turn_engine_1_1_point}{Point<int>}}\ pos,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a27c830cf1a4650751a85a031b1bc2163}{contains}}(\mbox{\hyperlink{class_turn_engine_1_1_point}{Point<int>}}\ pos);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a953299ffa4e3b580153df141bf28443d}{draw}}(\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{render::Drawer}}\ *drawer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_ab3569b2b512c3e2f16ff28a2b60cc387}{addChild}}(\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}}\ *obj);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::vector<Object2D\ *>\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a581589bcd8d9224c080663946aabba23}{getChildren}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}}\ *\mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a2d52b305e05dcfdae034052d1a645e79}{getChild}}(std::string\ \_name)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_turn_engine_1_1_point}{Point<int>}}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a2450455a140176d989f4cebd6fb2fa58}{getPosition}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_acd7949a780d8e1bbbd0dc365f083c663}{removeChild}}(\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}}\ *obj);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_scene_a23045c1a2644e9571e9b8af90dc32ede}{update}}(\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}}\ *\_event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ \ \ \ \ \};}
+\DoxyCodeLine{00066\ \}}
+
+\end{DoxyCode}

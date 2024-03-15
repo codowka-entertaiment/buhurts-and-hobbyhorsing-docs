@@ -1,0 +1,82 @@
+\doxysection{Turn\+Engine\+::Audio Class Reference}
+\hypertarget{class_turn_engine_1_1_audio}{}\label{class_turn_engine_1_1_audio}\index{TurnEngine::Audio@{TurnEngine::Audio}}
+
+
+That class stands for initialization and configuring audio system.  
+
+
+
+
+{\ttfamily \#include $<$Audio.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turn_engine_1_1_audio_a7f819879e8a65485318802fd69537ade}\label{class_turn_engine_1_1_audio_a7f819879e8a65485318802fd69537ade} 
+static void {\bfseries init} (int flags)
+\begin{DoxyCompactList}\small\item\em That static method initializes SDL\+\_\+mixer library. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_turn_engine_1_1_audio_aa40bbb140c8080ab55e6015f88118508}{open}} (int freq=44100, int channels=2, int chunksize=2048)
+\begin{DoxyCompactList}\small\item\em That static method opens audio device. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_audio_afe7f80c8bbced3557a458a8e301bf2b6}\label{class_turn_engine_1_1_audio_afe7f80c8bbced3557a458a8e301bf2b6} 
+static void {\bfseries set\+Sample\+Volume} (int volume)
+\begin{DoxyCompactList}\small\item\em That static method sets sample volume. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_turn_engine_1_1_audio_a5b24eeea9dc1ede6cabc5e478a006eda}{get\+Sample\+Volume}} ()
+\begin{DoxyCompactList}\small\item\em That static method gets sample volume. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_audio_af06e709a80b6976648361e5a0c03b757}\label{class_turn_engine_1_1_audio_af06e709a80b6976648361e5a0c03b757} 
+static void {\bfseries set\+Music\+Volume} (int volume)
+\begin{DoxyCompactList}\small\item\em That static method sets music volume. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_turn_engine_1_1_audio_a2ac383152f06bddb13b046d4bd953ef5}{get\+Music\+Volume}} (\mbox{\hyperlink{class_turn_engine_1_1_music}{Music}} \texorpdfstring{$\ast$}{*}music)
+\begin{DoxyCompactList}\small\item\em That static method gets music volume. \end{DoxyCompactList}\item 
+\Hypertarget{class_turn_engine_1_1_audio_af5da3fa81ac926ff72c49e2d0d58201d}\label{class_turn_engine_1_1_audio_af5da3fa81ac926ff72c49e2d0d58201d} 
+static void {\bfseries close} ()
+\begin{DoxyCompactList}\small\item\em That static method closes opened audio device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+That class stands for initialization and configuring audio system. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1_audio_a2ac383152f06bddb13b046d4bd953ef5}\label{class_turn_engine_1_1_audio_a2ac383152f06bddb13b046d4bd953ef5} 
+\index{TurnEngine::Audio@{TurnEngine::Audio}!getMusicVolume@{getMusicVolume}}
+\index{getMusicVolume@{getMusicVolume}!TurnEngine::Audio@{TurnEngine::Audio}}
+\doxysubsubsection{\texorpdfstring{getMusicVolume()}{getMusicVolume()}}
+{\footnotesize\ttfamily static int Turn\+Engine\+::\+Audio\+::get\+Music\+Volume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_music}{Music}} \texorpdfstring{$\ast$}{*}}]{music }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+That static method gets music volume. 
+
+\begin{DoxyReturn}{Returns}
+Volume percentage (int) 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_audio_a5b24eeea9dc1ede6cabc5e478a006eda}\label{class_turn_engine_1_1_audio_a5b24eeea9dc1ede6cabc5e478a006eda} 
+\index{TurnEngine::Audio@{TurnEngine::Audio}!getSampleVolume@{getSampleVolume}}
+\index{getSampleVolume@{getSampleVolume}!TurnEngine::Audio@{TurnEngine::Audio}}
+\doxysubsubsection{\texorpdfstring{getSampleVolume()}{getSampleVolume()}}
+{\footnotesize\ttfamily static int Turn\+Engine\+::\+Audio\+::get\+Sample\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+That static method gets sample volume. 
+
+\begin{DoxyReturn}{Returns}
+Volume percentage (int) 
+\end{DoxyReturn}
+\Hypertarget{class_turn_engine_1_1_audio_aa40bbb140c8080ab55e6015f88118508}\label{class_turn_engine_1_1_audio_aa40bbb140c8080ab55e6015f88118508} 
+\index{TurnEngine::Audio@{TurnEngine::Audio}!open@{open}}
+\index{open@{open}!TurnEngine::Audio@{TurnEngine::Audio}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily static bool Turn\+Engine\+::\+Audio\+::open (\begin{DoxyParamCaption}\item[{int}]{freq = {\ttfamily 44100},  }\item[{int}]{channels = {\ttfamily 2},  }\item[{int}]{chunksize = {\ttfamily 2048} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+That static method opens audio device. 
+
+\begin{DoxyReturn}{Returns}
+Boolean {\ttfamily true} if audio device opened successfully, else {\ttfamily false} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Audio.\+hpp\end{DoxyCompactItemize}

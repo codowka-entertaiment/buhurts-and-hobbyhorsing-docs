@@ -1,0 +1,248 @@
+\doxysection{Enums.\+hpp}
+\hypertarget{_enums_8hpp_source}{}\label{_enums_8hpp_source}\index{include/TurnEngine/wrapper/Enums.hpp@{include/TurnEngine/wrapper/Enums.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}SDL2/SDL.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}SDL\_image.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }TurnEngine\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{enum\ class}\ SDLInitFlags\ :\ std::uint32\_t\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ TIMER\ =\ SDL\_INIT\_TIMER,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ AUDIO\ =\ SDL\_INIT\_AUDIO,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ VIDEO\ =\ SDL\_INIT\_VIDEO,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ JOYSTICK\ =\ SDL\_INIT\_JOYSTICK,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ HAPTIC\ =\ SDL\_INIT\_HAPTIC,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ GAMECONTROLLER\ =\ SDL\_INIT\_GAMECONTROLLER,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ EVENTS\ =\ SDL\_INIT\_EVENTS,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ EVERYTHING\ =\ SDL\_INIT\_EVERYTHING,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ NOPARACHUTE\ =\ SDL\_INIT\_NOPARACHUTE,}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ SDLInitFlags\ operator|(SDLInitFlags\ \textcolor{keyword}{const}\ \&a,\ SDLInitFlags\ \textcolor{keyword}{const}\ \&b)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}SDLInitFlags\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(a)\ |\ \textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(b));}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{enum\ class}\ IMGInitFlags\ :\ \textcolor{keywordtype}{int}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ JPG\ =\ IMG\_INIT\_JPG,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ PNG\ =\ IMG\_INIT\_PNG,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ TIF\ =\ IMG\_INIT\_TIF,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ WEBP\ =\ IMG\_INIT\_WEBP,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ ALL\ =\ JPG\ |\ PNG\ |\ TIF\ |\ WEBP,}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ IMGInitFlags\ operator|(IMGInitFlags\ \textcolor{keyword}{const}\ \&a,\ IMGInitFlags\ \textcolor{keyword}{const}\ \&b)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}IMGInitFlags\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(a)\ |\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(b));}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{enum\ class}\ MessageBoxFlags\ :\ std::uint32\_t\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ ERROR\ =\ SDL\_MESSAGEBOX\_ERROR,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ WARNING\ =\ SDL\_MESSAGEBOX\_WARNING,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ INFORMATION\ =\ SDL\_MESSAGEBOX\_INFORMATION,}
+\DoxyCodeLine{00048\ \ \ \ \ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{enum\ class}\ WindowFlags\ :\ std::uint32\_t\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ NONE\ =\ 0,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ FULLSCREEN\ =\ SDL\_WINDOW\_FULLSCREEN,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ FULLSCREEN\_DESKTOP\ =\ SDL\_WINDOW\_FULLSCREEN\_DESKTOP,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ OPENGL\ =\ SDL\_WINDOW\_OPENGL,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ VULKAN\ =\ SDL\_WINDOW\_VULKAN,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ HIDDEN\ =\ SDL\_WINDOW\_HIDDEN,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ BORDERLESS\ =\ SDL\_WINDOW\_BORDERLESS,}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ RESIZABLE\ =\ SDL\_WINDOW\_RESIZABLE,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ MINIMIZED\ =\ SDL\_WINDOW\_MINIMIZED,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ MAXIMIZED\ =\ SDL\_WINDOW\_MAXIMIZED,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ GRABBED\ =\ SDL\_WINDOW\_INPUT\_GRABBED,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ ALLOW\_HIGHDPI\ =\ SDL\_WINDOW\_ALLOW\_HIGHDPI,}
+\DoxyCodeLine{00065\ \ \ \ \ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ WindowFlags\ operator|(WindowFlags\ \textcolor{keyword}{const}\ \&a,\ WindowFlags\ \textcolor{keyword}{const}\ \&b)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}WindowFlags\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(a)\ |\ \textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(b));}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ operator\&(WindowFlags\ \textcolor{keyword}{const}\ \&a,\ WindowFlags\ \textcolor{keyword}{const}\ \&b)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{bool}\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(a)\ \&\ \textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(b));}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{enum\ class}\ RendererFlags\ :\ std::uint32\_t\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ SOFTWARE\ =\ SDL\_RENDERER\_SOFTWARE,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ ACCELERATED\ =\ SDL\_RENDERER\_ACCELERATED,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ PRESENTVSYNC\ =\ SDL\_RENDERER\_PRESENTVSYNC,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ TARGETTEXTURE\ =\ SDL\_RENDERER\_TARGETTEXTURE,}
+\DoxyCodeLine{00083\ \ \ \ \ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ RendererFlags\ operator|(RendererFlags\ \textcolor{keyword}{const}\ \&a,\ RendererFlags\ \textcolor{keyword}{const}\ \&b)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}RendererFlags\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(a)\ |\ \textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(b));}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ operator\&(RendererFlags\ \textcolor{keyword}{const}\ \&a,\ RendererFlags\ \textcolor{keyword}{const}\ \&b)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{bool}\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(a)\ \&\ \textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(b));}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{enum\ class}\ BlendMode\ :\ \textcolor{keywordtype}{int}\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ INVALID\ =\ SDL\_BLENDMODE\_INVALID,}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ NONE\ =\ SDL\_BLENDMODE\_NONE,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ BLEND\ =\ SDL\_BLENDMODE\_BLEND,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ ADD\ =\ SDL\_BLENDMODE\_ADD,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ MOD\ =\ SDL\_BLENDMODE\_MOD,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ MUL\ =\ SDL\_BLENDMODE\_MUL,}
+\DoxyCodeLine{00102\ \ \ \ \ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{enum\ class}\ FullscreenFlags\ :\ std::uint32\_t\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ WINDOWED\ =\ 0,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ FULLSCREEN\ =\ SDL\_WINDOW\_FULLSCREEN,}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ FULLSCREEN\_DESKTOP\ =\ SDL\_WINDOW\_FULLSCREEN\_DESKTOP}
+\DoxyCodeLine{00110\ \ \ \ \ \};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{enum\ class}\ TextureAccess\ :\ \textcolor{keywordtype}{int}\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ STATIC\ =\ SDL\_TEXTUREACCESS\_STATIC,}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ STREAMING\ =\ SDL\_TEXTUREACCESS\_STREAMING,}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ TARGET\ =\ SDL\_TEXTUREACCESS\_TARGET,}
+\DoxyCodeLine{00124\ \ \ \ \ \};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{enum\ class}\ PixelFormatEnum\ :\ std::uint32\_t\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ UNKNOWN\ =\ SDL\_PIXELFORMAT\_UNKNOWN,}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ INDEX1LSB\ =\ SDL\_PIXELFORMAT\_INDEX1LSB,}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ INDEX1MSB\ =\ SDL\_PIXELFORMAT\_INDEX1MSB,}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ INDEX4LSB\ =\ SDL\_PIXELFORMAT\_INDEX4LSB,}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ INDEX4MSB\ =\ SDL\_PIXELFORMAT\_INDEX4MSB,}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ INDEX8\ =\ SDL\_PIXELFORMAT\_INDEX8,}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ RGB332\ =\ SDL\_PIXELFORMAT\_RGB332,}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ RGB444\ =\ SDL\_PIXELFORMAT\_RGB444,}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ RGB555\ =\ SDL\_PIXELFORMAT\_RGB555,}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ BGR555\ =\ SDL\_PIXELFORMAT\_BGR555,}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ ARGB4444\ =\ SDL\_PIXELFORMAT\_ARGB4444,}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ RGBA4444\ =\ SDL\_PIXELFORMAT\_RGBA4444,}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ ABGR4444\ =\ SDL\_PIXELFORMAT\_ABGR4444,}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ BGRA4444\ =\ SDL\_PIXELFORMAT\_BGRA4444,}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ ARGB1555\ =\ SDL\_PIXELFORMAT\_ARGB1555,}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ RGBA5551\ =\ SDL\_PIXELFORMAT\_RGBA5551,}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ ABGR1555\ =\ SDL\_PIXELFORMAT\_ABGR1555,}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ BGRA5551\ =\ SDL\_PIXELFORMAT\_BGRA5551,}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ RGB565\ =\ SDL\_PIXELFORMAT\_RGB565,}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ BGR565\ =\ SDL\_PIXELFORMAT\_BGR565,}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ RGB24\ =\ SDL\_PIXELFORMAT\_RGB24,}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ BGR24\ =\ SDL\_PIXELFORMAT\_BGR24,}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ RGB888\ =\ SDL\_PIXELFORMAT\_RGB888,}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ RGBX8888\ =\ SDL\_PIXELFORMAT\_RGBX8888,}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ BGR888\ =\ SDL\_PIXELFORMAT\_BGR888,}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ BGRX8888\ =\ SDL\_PIXELFORMAT\_BGRX8888,}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ ARGB8888\ =\ SDL\_PIXELFORMAT\_ARGB8888,}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ RGBA8888\ =\ SDL\_PIXELFORMAT\_RGBA8888,}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ ABGR8888\ =\ SDL\_PIXELFORMAT\_ABGR8888,}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ BGRA8888\ =\ SDL\_PIXELFORMAT\_BGRA8888,}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ ARGB2101010\ =\ SDL\_PIXELFORMAT\_ARGB2101010,}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ RGBA32\ =\ SDL\_PIXELFORMAT\_RGBA32,}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ ARGB32\ =\ SDL\_PIXELFORMAT\_ARGB32,}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ BGRA32\ =\ SDL\_PIXELFORMAT\_BGRA32,}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ ABGR32\ =\ SDL\_PIXELFORMAT\_ABGR32,}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ YV12\ =\ SDL\_PIXELFORMAT\_YV12,}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ IYUV\ =\ SDL\_PIXELFORMAT\_IYUV,}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ YUY2\ =\ SDL\_PIXELFORMAT\_YUY2,}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ UYUY\ =\ SDL\_PIXELFORMAT\_UYVY,}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ YVYU\ =\ SDL\_PIXELFORMAT\_YVYU,}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ NV12\ =\ SDL\_PIXELFORMAT\_NV12,}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ NV21\ =\ SDL\_PIXELFORMAT\_NV21,}
+\DoxyCodeLine{00171\ \ \ \ \ \};}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keyword}{enum\ class}\ PixelType\ :\ std::uint32\_t\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ UNKNOWN\ =\ SDL\_PIXELTYPE\_UNKNOWN,}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ INDEX1\ =\ SDL\_PIXELTYPE\_INDEX1,}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ INDEX4\ =\ SDL\_PIXELTYPE\_INDEX4,}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ INDEX8\ =\ SDL\_PIXELTYPE\_INDEX8,}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ PACKED8\ =\ SDL\_PIXELTYPE\_PACKED8,}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ PACKED16\ =\ SDL\_PIXELTYPE\_PACKED16,}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ PACKED32\ =\ SDL\_PIXELTYPE\_PACKED32,}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ ARRAYU8\ =\ SDL\_PIXELTYPE\_ARRAYU8,}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ ARRAYU16\ =\ SDL\_PIXELTYPE\_ARRAYU16,}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ ARRAYU32\ =\ SDL\_PIXELTYPE\_ARRAYU32,}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ ARRAYF16\ =\ SDL\_PIXELTYPE\_ARRAYF16,}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ ARRAYF32\ =\ SDL\_PIXELTYPE\_ARRAYF32,}
+\DoxyCodeLine{00188\ \ \ \ \ \};}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keyword}{enum\ class}\ PixelOrder\ :\ std::uint32\_t\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ BITMAP\_NONE\ =\ SDL\_BITMAPORDER\_NONE,}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ BITMAP\_4321\ =\ SDL\_BITMAPORDER\_4321,}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ BITMAP\_1234\ =\ SDL\_BITMAPORDER\_1234,}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ PACKED\_NONE\ =\ SDL\_PACKEDORDER\_NONE,}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ PACKED\_XRGB\ =\ SDL\_PACKEDORDER\_XRGB,}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ PACKED\_RGBX\ =\ SDL\_PACKEDORDER\_RGBX,}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ PACKED\_ARGB\ =\ SDL\_PACKEDORDER\_ARGB,}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ PACKED\_RGBA\ =\ SDL\_PACKEDORDER\_RGBA,}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ PACKED\_XBGR\ =\ SDL\_PACKEDORDER\_XBGR,}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ PACKED\_BGRX\ =\ SDL\_PACKEDORDER\_BGRX,}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ PACKED\_ABGR\ =\ SDL\_PACKEDORDER\_ABGR,}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ PACKED\_BGRA\ =\ SDL\_PACKEDORDER\_BGRA,}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ ARRAY\_NONE\ =\ SDL\_ARRAYORDER\_NONE,}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ ARRAY\_RGB\ =\ SDL\_ARRAYORDER\_RGB,}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ ARRAY\_RGBA\ =\ SDL\_ARRAYORDER\_RGBA,}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ ARRAY\_ARGB\ =\ SDL\_ARRAYORDER\_ARGB,}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ ARRAY\_BGR\ =\ SDL\_ARRAYORDER\_BGR,}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ ARRAY\_BGRA\ =\ SDL\_ARRAYORDER\_BGRA,}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ ARRAY\_ABGR\ =\ SDL\_ARRAYORDER\_ABGR,}
+\DoxyCodeLine{00212\ \ \ \ \ \};}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keyword}{enum\ class}\ PixelLayout\ :\ std::uint32\_t\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ NONE\ =\ SDL\_PACKEDLAYOUT\_NONE,}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ PACKED\_332\ =\ SDL\_PACKEDLAYOUT\_332,}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ PACKED\_444\ =\ SDL\_PACKEDLAYOUT\_4444,}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ PACKED\_1555\ =\ SDL\_PACKEDLAYOUT\_1555,}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ PACKED\_5551\ =\ SDL\_PACKEDLAYOUT\_5551,}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ PACKED\_565\ =\ SDL\_PACKEDLAYOUT\_565,}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ PACKED\_8888\ =\ SDL\_PACKEDLAYOUT\_8888,}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ PACKED\_2101010\ =\ SDL\_PACKEDLAYOUT\_2101010,}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ PACKED\_1010102\ =\ SDL\_PACKEDLAYOUT\_1010102,}
+\DoxyCodeLine{00226\ \ \ \ \ \};}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ TurnEngine::PixelType\ pixel\_type\_for(PixelFormatEnum\ \textcolor{keyword}{const}\ \&format)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}PixelType\textcolor{keyword}{>}(SDL\_PIXELTYPE(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(format)));}
+\DoxyCodeLine{00230\ \ \ \ \ \}}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ PixelOrder\ pixel\_order\_for(PixelFormatEnum\ \textcolor{keyword}{const}\ \&format)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}PixelOrder\textcolor{keyword}{>}(SDL\_PIXELORDER(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(format)));}
+\DoxyCodeLine{00234\ \ \ \ \ \}}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ PixelLayout\ pixel\_layout\_for(PixelFormatEnum\ \textcolor{keyword}{const}\ \&format)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}PixelLayout\textcolor{keyword}{>}(SDL\_PIXELORDER(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(format)));}
+\DoxyCodeLine{00238\ \ \ \ \ \}}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ std::uint32\_t\ bits\_per\_pixel\_for(PixelFormatEnum\ \textcolor{keyword}{const}\ \&format)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_BITSPERPIXEL(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(format));}
+\DoxyCodeLine{00242\ \ \ \ \ \}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ std::uint32\_t\ bytes\_per\_pixel\_for(PixelFormatEnum\ \textcolor{keyword}{const}\ \&format)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_BYTESPERPIXEL(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(format));}
+\DoxyCodeLine{00246\ \ \ \ \ \}}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ is\_pixel\_format\_indexed(PixelFormatEnum\ \textcolor{keyword}{const}\ \&format)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_ISPIXELFORMAT\_INDEXED(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(format));}
+\DoxyCodeLine{00250\ \ \ \ \ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ is\_pixel\_format\_alpha(PixelFormatEnum\ \textcolor{keyword}{const}\ \&format)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_ISPIXELFORMAT\_ALPHA(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(format));}
+\DoxyCodeLine{00254\ \ \ \ \ \}}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ is\_pixel\_format\_four\_cc(PixelFormatEnum\ \textcolor{keyword}{const}\ \&format)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_ISPIXELFORMAT\_FOURCC(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(format));}
+\DoxyCodeLine{00258\ \ \ \ \ \}}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ is\_pixel\_format\_array(PixelFormatEnum\ \textcolor{keyword}{const}\ \&format)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_ISPIXELFORMAT\_ARRAY(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(format));}
+\DoxyCodeLine{00262\ \ \ \ \ \}}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\_view\ pixel\_format\_name\_for(PixelFormatEnum\ \textcolor{keyword}{const}\ \&format)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_GetPixelFormatName(\textcolor{keyword}{static\_cast<}std::uint32\_t\textcolor{keyword}{>}(format));}
+\DoxyCodeLine{00266\ \ \ \ \ \}}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keyword}{enum\ class}\ RendererFlip\ \{}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ NONE\ =\ SDL\_FLIP\_NONE,}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ HORIZONTAL\ =\ SDL\_FLIP\_HORIZONTAL,}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ VERTICAL\ =\ SDL\_FLIP\_VERTICAL,}
+\DoxyCodeLine{00276\ \ \ \ \ \};}
+\DoxyCodeLine{00277\ \}}
+
+\end{DoxyCode}

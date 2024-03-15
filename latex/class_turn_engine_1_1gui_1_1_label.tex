@@ -1,0 +1,183 @@
+\doxysection{Turn\+Engine\+::gui\+::Label Class Reference}
+\hypertarget{class_turn_engine_1_1gui_1_1_label}{}\label{class_turn_engine_1_1gui_1_1_label}\index{TurnEngine::gui::Label@{TurnEngine::gui::Label}}
+
+
+Class which represents labels.  
+
+
+
+
+{\ttfamily \#include $<$Label.\+hpp$>$}
+
+Inheritance diagram for Turn\+Engine\+::gui\+::Label\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_turn_engine_1_1gui_1_1_label}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1gui_1_1_label_a796dda9545fc3e87dafd2b6b76dedcb4}{Label}} (\mbox{\hyperlink{class_turn_engine_1_1_font}{Font}} \texorpdfstring{$\ast$}{*}\+\_\+font, std\+::string \+\_\+text, \mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ int $>$ \+\_\+pos, \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}$<$$>$ \+\_\+color, int \+\_\+depth\+Index, int \+\_\+angle=0, Renderer\+Flip \+\_\+flip=Renderer\+Flip\+::\+NONE)
+\begin{DoxyCompactList}\small\item\em the constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1gui_1_1_label_a6a1c862727407a8bbdd1f1529a01d5e0}{draw}} (\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{render\+::\+Drawer}} \texorpdfstring{$\ast$}{*}drawer)
+\begin{DoxyCompactList}\small\item\em method which draws text in label \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Turn\+Engine\+::core\+::\+Object2D}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_a5495de021ae784de937ab8143fad1718}{Object2D}} (\mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d\+::\+Shape}}$<$ int $>$ \texorpdfstring{$\ast$}{*}shape, int depth\+Index, bool is\+Animated, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ position, int width, int height, \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} \texorpdfstring{$\ast$}{*}texture, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ rect, int angle=0, Renderer\+Flip flip=Renderer\+Flip\+::\+NONE, \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}$<$$>$ color=Color\+::black)
+\begin{DoxyCompactList}\small\item\em the constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_ac974b9fcd856163de544ca42acb32d84}{Object2D}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}} \texorpdfstring{$\ast$}{*}drawable)
+\begin{DoxyCompactList}\small\item\em the constructor \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d}{Object2D}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_a380065e3fdece04957a56cef73f93caf}{get\+Child}} (std\+::string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em Virtual getter for child Objects2D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_object2_d}{Turn\+Engine\+::core\+::\+IObject2D}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries IObject2D} (\mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d\+::\+Shape}}$<$ int $>$ \texorpdfstring{$\ast$}{*}shape, int depth\+Index, bool is\+Animated, \mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ position, int width, int height, \mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} \texorpdfstring{$\ast$}{*}texture, \mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ rect, int angle, Renderer\+Flip flip, \mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}$<$$>$ color)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object}{Turn\+Engine\+::core\+::\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object_aedb3268cc3b4709faafc0bcea5cd6cde}{Object}} (std\+::string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em the constructor \end{DoxyCompactList}\item 
+{\bfseries Object} (const \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object}{Object}} \&obj)
+\item 
+{\bfseries Object} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_object}{Object}} \texorpdfstring{$\ast$}{*}obj)
+\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object_a500708cc4b4503b732243cd9c19f11a2}{set\+Name}} (std\+::string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_turn_engine_1_1core_1_1_object}{Object} name setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer}{Turn\+Engine\+::core\+::\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer_a71e1a88d49928db7cc90d4e6843fb03a}{update}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*}\+\_\+event) override
+\begin{DoxyCompactList}\small\item\em That func is used by \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject}, don\textquotesingle{}t call it explicitly. Derived classes must override that method to use it with game logic. \end{DoxyCompactList}\item 
+void {\bfseries disconnect} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}} \texorpdfstring{$\ast$}{*}subject)
+\begin{DoxyCompactList}\small\item\em That func detaches \doxylink{class_turn_engine_1_1core_1_1_observer}{Observer} class from \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject}. \end{DoxyCompactList}\item 
+void {\bfseries connect} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}} \texorpdfstring{$\ast$}{*}subject)
+\begin{DoxyCompactList}\small\item\em That func attaches \doxylink{class_turn_engine_1_1core_1_1_observer}{Observer} class to \doxylink{class_turn_engine_1_1core_1_1_subject}{Subject}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Event} ()
+\begin{DoxyCompactList}\small\item\em Getter for current event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{Turn\+Engine\+::core\+::\+IObserver}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+IObserver} ()
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Turn\+Engine\+::core\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Subject} () override
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_abccdb683ed11fb4f08dfd42630f7ef34}{attach}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}observer) override
+\begin{DoxyCompactList}\small\item\em method attaches observer to self \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_ab00d4ec446be567d43e04eb835fe4a4c}{detach}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_observer}{IObserver}} \texorpdfstring{$\ast$}{*}observer) override
+\begin{DoxyCompactList}\small\item\em method detaches observer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_a7d8553affdc86bfbe2324bcdd3d28d75}{notify}} () override
+\begin{DoxyCompactList}\small\item\em method notifies all observers about event \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject_a236535078ce9f83bbae82e9dbaabb211}{signal}} (\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*}\+\_\+event)
+\begin{DoxyCompactList}\small\item\em method notifies all observers about event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_subject}{Turn\+Engine\+::core\+::\+ISubject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+ISubject} ()
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_i_object2_d}{Turn\+Engine\+::core\+::\+IObject2D}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgeo2d_1_1_shape}{geo2d\+::\+Shape}}$<$ int $>$ \texorpdfstring{$\ast$}{*} {\bfseries shape}
+\item 
+int {\bfseries depth\+Index}
+\item 
+bool {\bfseries is\+Animated}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_point}{Point}}$<$ int $>$ {\bfseries position}
+\item 
+int {\bfseries width}
+\item 
+int {\bfseries height}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_texture}{Texture}} \texorpdfstring{$\ast$}{*} {\bfseries texture}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1_rect}{Rect}}$<$ int $>$ {\bfseries rect}
+\item 
+int {\bfseries angle}
+\item 
+Renderer\+Flip {\bfseries flip}
+\item 
+\mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}} {\bfseries color}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object}{Turn\+Engine\+::core\+::\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\item 
+uint64\+\_\+t {\bfseries id}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_observer}{Turn\+Engine\+::core\+::\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_turn_engine_1_1core_1_1_event}{Event}} \texorpdfstring{$\ast$}{*} {\bfseries event}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_turn_engine_1_1core_1_1_subject}{Subject}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries subjects}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class which represents labels. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turn_engine_1_1gui_1_1_label_a796dda9545fc3e87dafd2b6b76dedcb4}\label{class_turn_engine_1_1gui_1_1_label_a796dda9545fc3e87dafd2b6b76dedcb4} 
+\index{TurnEngine::gui::Label@{TurnEngine::gui::Label}!Label@{Label}}
+\index{Label@{Label}!TurnEngine::gui::Label@{TurnEngine::gui::Label}}
+\doxysubsubsection{\texorpdfstring{Label()}{Label()}}
+{\footnotesize\ttfamily Turn\+Engine\+::gui\+::\+Label\+::\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1_font}{Font}} \texorpdfstring{$\ast$}{*}}]{\+\_\+font,  }\item[{std\+::string}]{\+\_\+text,  }\item[{\mbox{\hyperlink{struct_turn_engine_1_1xy}{xy}}$<$ int $>$}]{\+\_\+pos,  }\item[{\mbox{\hyperlink{struct_turn_engine_1_1rgba}{rgba}}$<$$>$}]{\+\_\+color,  }\item[{int}]{\+\_\+depth\+Index,  }\item[{int}]{\+\_\+angle = {\ttfamily 0},  }\item[{Renderer\+Flip}]{\+\_\+flip = {\ttfamily RendererFlip\+:\+:NONE} }\end{DoxyParamCaption})}
+
+
+
+the constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Font\texorpdfstring{$\ast$}{*}} & \+\_\+font \\
+\hline
+{\em std\+::string} & \+\_\+text \\
+\hline
+{\em \doxylink{struct_turn_engine_1_1xy}{xy$<$int$>$}} & \+\_\+pos \\
+\hline
+{\em rgba$<$$>$} & \+\_\+color \\
+\hline
+{\em int} & \+\_\+depth\+Index \\
+\hline
+{\em int} & \+\_\+angle = 0 \\
+\hline
+{\em Renderer\+Flip} & \+\_\+flip = Renderer\+Flip\+::\+NONE \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turn_engine_1_1gui_1_1_label_a6a1c862727407a8bbdd1f1529a01d5e0}\label{class_turn_engine_1_1gui_1_1_label_a6a1c862727407a8bbdd1f1529a01d5e0} 
+\index{TurnEngine::gui::Label@{TurnEngine::gui::Label}!draw@{draw}}
+\index{draw@{draw}!TurnEngine::gui::Label@{TurnEngine::gui::Label}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Turn\+Engine\+::gui\+::\+Label\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_turn_engine_1_1render_1_1_drawer}{render\+::\+Drawer}} \texorpdfstring{$\ast$}{*}}]{drawer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+method which draws text in label 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Drawer\texorpdfstring{$\ast$}{*}} & drawer \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_turn_engine_1_1core_1_1_object2_d_ab44afb3e8cedf71763ec61f3974479a1}{Turn\+Engine\+::core\+::\+Object2D}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/gui/Label.\+hpp\end{DoxyCompactItemize}

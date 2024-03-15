@@ -1,0 +1,71 @@
+\doxysection{Turn\+Engine\+::rgba\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{struct_turn_engine_1_1rgba}{}\label{struct_turn_engine_1_1rgba}\index{TurnEngine::rgba$<$ T $>$@{TurnEngine::rgba$<$ T $>$}}
+
+
+RGBA helper struct.  
+
+
+
+
+{\ttfamily \#include $<$Utils.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class U  = T$>$ \newline
+requires std\+::same\+\_\+as$<$U, std\+::uint8\+\_\+t$>$}\\constexpr \mbox{\hyperlink{struct_turn_engine_1_1rgba_a892142a2e2bf46cd5295325a84495413}{operator SDL\+\_\+\+Color}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Convert rgba into a SDL\+\_\+\+Color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_turn_engine_1_1rgba_acdd7d541dfe7a79aca89a5672b914371}\label{struct_turn_engine_1_1rgba_acdd7d541dfe7a79aca89a5672b914371} 
+T {\bfseries r} \{\}
+\item 
+\Hypertarget{struct_turn_engine_1_1rgba_aecd9b47b81a205f9e70ff2bac9714e04}\label{struct_turn_engine_1_1rgba_aecd9b47b81a205f9e70ff2bac9714e04} 
+T {\bfseries g} \{\}
+\item 
+\Hypertarget{struct_turn_engine_1_1rgba_a199f95bb104c7e97741fa4616c2bab11}\label{struct_turn_engine_1_1rgba_a199f95bb104c7e97741fa4616c2bab11} 
+T {\bfseries b} \{\}
+\item 
+\Hypertarget{struct_turn_engine_1_1rgba_add28b43ec7b318c36c27d483c3134f2e}\label{struct_turn_engine_1_1rgba_add28b43ec7b318c36c27d483c3134f2e} 
+T {\bfseries a} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T = std\+::uint8\+\_\+t$>$\newline
+struct Turn\+Engine\+::rgba$<$ T $>$}
+RGBA helper struct. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & representation of rgba values. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_turn_engine_1_1rgba_a892142a2e2bf46cd5295325a84495413}\label{struct_turn_engine_1_1rgba_a892142a2e2bf46cd5295325a84495413} 
+\index{TurnEngine::rgba$<$ T $>$@{TurnEngine::rgba$<$ T $>$}!operator SDL\_Color@{operator SDL\_Color}}
+\index{operator SDL\_Color@{operator SDL\_Color}!TurnEngine::rgba$<$ T $>$@{TurnEngine::rgba$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator SDL\_Color()}{operator SDL\_Color()}}
+{\footnotesize\ttfamily template$<$class T  = std\+::uint8\+\_\+t$>$ \\
+template$<$class U  = T$>$ \newline
+requires std\+::same\+\_\+as$<$U, std\+::uint8\+\_\+t$>$\\
+constexpr \mbox{\hyperlink{struct_turn_engine_1_1rgba}{Turn\+Engine\+::rgba}}$<$ T $>$\+::operator SDL\+\_\+\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Convert rgba into a SDL\+\_\+\+Color. 
+
+\begin{DoxyReturn}{Returns}
+SDL\+\_\+\+Color struct. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Only enabled if T is std\+::uint8\+\_\+t. 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Turn\+Engine/wrapper/Utils.\+hpp\end{DoxyCompactItemize}
